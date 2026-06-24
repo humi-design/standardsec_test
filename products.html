@@ -35,11 +35,12 @@ tr:hover {background-color: #B8E2F2;}
 </head>
 
 <body>
- 
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-    <div id="google_translate_element" class="translate-btn"></div>
+    <div id="google_translate_element_nav" class="translate-btn"></div>
 
     
     <!-- header content begin -->
@@ -187,15 +188,11 @@ tr:hover {background-color: #B8E2F2;}
                           </li>
                       
                           <!-- Complaints -->
-                            <!-- Complaints -->
                           <li role="none">
                             <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                           </li>
                           <li>
-                            <div id="google_translate_nav"></div>
-                          </li>
-                          <li>
-                            <div id="google_translate_nav"></div>
+                            <div id="google_translate_nav_mobile"></div>
                           </li>
                           
                         </ul>
@@ -205,8 +202,8 @@ tr:hover {background-color: #B8E2F2;}
                     <!-- main navigation end -->
                     <!-- Mobile Navigation Begin -->
 <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-<button class="uk-button" href="#mobile-nav-modal" data-uk-toggle aria-label="Open mobile navigation menu">
-    <i class="fas fa-bars" aria-hidden="true"></i>
+<button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById('mobile-nav-modal')).toggle();">
+    <span class="sr-only">Menu</span><i class="fas fa-bars" aria-hidden="true"></i>
 </button>
 </div>
 
@@ -289,7 +286,7 @@ tr:hover {background-color: #B8E2F2;}
                             <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                           </li>
                           <li>
-                            <div id="google_translate_nav"></div>
+                            <div id="google_translate_nav_modal"></div>
                           </li>
 
         </ul>
@@ -321,7 +318,7 @@ tr:hover {background-color: #B8E2F2;}
     <!-- header content end -->
 </header>
 
-    <main>
+    <main id="main-content">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -348,6 +345,7 @@ tr:hover {background-color: #B8E2F2;}
                             At Standard Securities, you don’t need to compromise. Whether you invest on your own, with an advisor, or a little of both — we can support you.
                         </p>
     
+                        <h2 class="uk-h3 uk-margin-medium-top">Our Products</h2>
                         <div class="uk-grid-medium uk-grid-match uk-child-width-1-3@m uk-child-width-1-2@s" data-uk-grid>
                             
                             <!-- Equity -->
@@ -355,11 +353,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-seedling fa-lg"></i>
+                                            <i class="fas fa-seedling fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="Equity.html">Equity <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="Equity.html">Equity <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             We are one of the leading stock brokers in Delhi. Our experienced team of market makers and sales traders prides itself on creating liquidity.
                                         </p>
@@ -372,11 +370,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-chart-bar fa-lg"></i>
+                                            <i class="fas fa-chart-bar fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="Currency.html">Currency <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="Currency.html">Currency <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             Standard Securities offers trading in the Currency Derivatives Segment in National Stock Exchange (NSE) similar in nature to Stock Futures & Option contracts.
                                         </p>
@@ -389,11 +387,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-chart-pie fa-lg"></i>
+                                            <i class="fas fa-chart-pie fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="Commodities.html">Commodities <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="Commodities.html">Commodities <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             For individual investors and financial institutions worldwide, we provide best-in-class commodity brokerage and research. Our leading research team covers all major sectors.
                                         </p>
@@ -406,11 +404,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-chalkboard-teacher fa-lg"></i>
+                                            <i class="fas fa-chalkboard-teacher fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="IPOs.html">IPOs <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="IPOs.html">IPOs <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             Initial Public Offerings can be risky investments. For the individual investor, it is tough to predict what the stock will do on its initial day.
                                         </p>
@@ -423,11 +421,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-funnel-dollar fa-lg"></i>
+                                            <i class="fas fa-funnel-dollar fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="Advisory.html">Advisory <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="Advisory.html">Advisory <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             Partner with a Financial Advisor who works with you one-on-one to create customized solutions driven by your unique retirement goals and needs.
                                         </p>
@@ -440,11 +438,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <div class="uk-card uk-card-default">
                                     <div class="uk-card-body">
                                         <div class="in-icon-wrapper uk-margin-remove-bottom">
-                                            <i class="fas fa-handshake fa-lg"></i>
+                                            <i class="fas fa-handshake fa-lg" aria-hidden="true"></i>
                                         </div>
-                                        <h4 class="uk-margin-top">
-                                            <a href="Depository.html">Depository <i class="fas fa-chevron-right uk-float-right"></i></a>
-                                        </h4>
+                                        <h3 class="uk-margin-top">
+                                            <a href="Depository.html">Depository <i class="fas fa-chevron-right uk-float-right" aria-hidden="true"></i></a>
+                                        </h3>
                                         <p class="uk-text-small uk-margin-small-bottom">
                                             We are one of the leading firms in equity & commodity trading. Standard Securities works totally backed up with fundamentals.
                                         </p>
@@ -491,7 +489,7 @@ tr:hover {background-color: #B8E2F2;}
                 <!-- Header -->
                 <div class="chatbox__header">
                     <div class="chatbox__content--header">
-                        <h2 class="chatbox__heading--header">Chat support</h2>
+                        <h3 class="chatbox__heading--header">Chat support</h3>
                         <p class="chatbox__description--header">Hi. Welcome to Standard Securities. How can I help you?</p>
                     </div>
                 </div>
@@ -540,10 +538,10 @@ tr:hover {background-color: #B8E2F2;}
                   <div class="in-footer-info uk-flex uk-flex-center uk-flex-left@m">
                     <ul class="uk-subnav" aria-label="Footer help section">
                       <li class="uk-visible@m"><span>Need help?</span></li>
-                      <li aria-label="Contact phone number"><i class="uk-margin-small-left fas fa-phone"></i> 02241721101/08</li>
+                      <li aria-label="Contact phone number"><i class="uk-margin-small-left fas fa-phone" aria-hidden="true"></i> <span>02241721101/08</span></li>
                       <li class="uk-visible@m">
                         <a href="mailto:info@standardsec.com" aria-label="Send an email to info@standardsec.com">
-                          <i class="uk-margin-small-left fas fa-envelope-open-text"></i> Email
+                          <i class="uk-margin-small-left fas fa-envelope-open-text" aria-hidden="true"></i> Email
                         </a>
                       </li>
                     </ul>
@@ -595,7 +593,7 @@ tr:hover {background-color: #B8E2F2;}
               <div>
                 <h4>Quick Links</h4>
                 <ul class="uk-list uk-link-text">
-                    <li><a href="accessibility.html" area-label="Read Accessibility Statement">Accessibility</a></li>
+                    <li><a href="accessibility.html" aria-label="Read Accessibility Statement">Accessibility</a></li>
                   <li><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official website">SEBI</a></li>
                   <li><a href="https://www.nseindia.com/" aria-label="Visit NSE official website">NSE</a></li>
                   <li><a href="https://www.bseindia.com/" aria-label="Visit BSE official website">BSE</a></li>
@@ -644,15 +642,15 @@ tr:hover {background-color: #B8E2F2;}
                     <div class="uk-width-1-1 in-footer-disclaimer">
 
                         <div class="col-12">
-                            <h5><strong>Attention Investor</strong></h5>
+                            <h3><strong>Attention Investor</strong></h3>
                           
                             <div class="scrolling-text" aria-label="Investor important updates scrolling text">
-                             <h6><strong> <ol>
+                             <div class="scrolling-content"><ol>
                                 <li>Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</li>
                                 <li>Update your mobile number & email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.</li>
                                 <li>Investors may please refer to the Exchange's Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020 and NSE/INSP/45534 dated August 31, 2020 and other guidelines issued from time to time in this regard.</li>
                                 <li>Check your Securities / MF / Bonds in the consolidated account statement issued by NSDL/CDSL every month. Issued in the interest of Investors.</li>
-                              </ol></strong></h6>
+                              </ol></div>
                             </div>
                           </div>
                           
