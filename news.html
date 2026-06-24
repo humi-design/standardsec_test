@@ -19,9 +19,11 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element" class="translate-btn"></div>
+        <div id="google_translate_element_nav" class="translate-btn"></div>
 
         
         <!-- header content begin -->
@@ -173,10 +175,10 @@
                                 <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_1"></div>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_2"></div>
                               </li>
                               
                             </ul>
@@ -186,7 +188,7 @@
                         <!-- main navigation end -->
                         <!-- Mobile Navigation Begin -->
 <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-    <button class="uk-button" href="#mobile-nav-modal" data-uk-toggle aria-label="Open mobile navigation menu">
+    <button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
         <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 </div>
@@ -300,7 +302,7 @@
         <!-- header content end -->
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -336,7 +338,7 @@
                                     </div>
                                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabom voluptatem.</p>
                                     <div>
-                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </article>
@@ -361,7 +363,7 @@
                                     </div>
                                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabom voluptatem.</p>
                                     <div>
-                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </article>
@@ -398,7 +400,7 @@
                                     </div>
                                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabom voluptatem.</p>
                                     <div>
-                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </article>
@@ -431,7 +433,7 @@
                                     </div>
                                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabom voluptatem.</p>
                                     <div>
-                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+                                        <a href="single.html" class="uk-button uk-button-text">Continue reading <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true" aria-hidden="true"></i></a>
                                     </div>
                                 </div>
                             </article>
@@ -443,7 +445,7 @@
                             <li class="uk-active"><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
-                            <li><a href="#"><i class="fas fa-chevron-right fa-xs"></i></a></li>
+                            <li><a href="#"><i class="fas fa-chevron-right fa-xs" aria-hidden="true"></i></a></li>
                         </ul>
                         <!-- module pagination end -->
                     </div>
@@ -496,7 +498,7 @@
                                                     </div>
                                                     <div class="uk-width-expand uk-margin-left">
                                                         <a href="#">Brexit effects may reflect in business ...
-                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right"></i>Wed Apr 5, 2019</span>
+                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right" aria-hidden="true" aria-hidden="true"></i>Wed Apr 5, 2019</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -508,7 +510,7 @@
                                                     </div>
                                                     <div class="uk-width-expand uk-margin-left">
                                                         <a href="#">Investors bet on a quiet tech revolu ...
-                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right"></i>Tue Apr 15, 2019</span>
+                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right" aria-hidden="true" aria-hidden="true"></i>Tue Apr 15, 2019</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -520,7 +522,7 @@
                                                     </div>
                                                     <div class="uk-width-expand uk-margin-left">
                                                         <a href="#">Destructive weed threatens U.S. corn ...
-                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right"></i>Mon Apr 4, 2019</span>
+                                                            <span class="uk-article-meta uk-margin-remove-bottom"><i class="fas fa-clock fa-sm uk-margin-small-right" aria-hidden="true" aria-hidden="true"></i>Mon Apr 4, 2019</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -534,9 +536,9 @@
                                     <div class="uk-card-body">
                                         <h5 class="uk-heading-bullet uk-text-uppercase uk-margin-remove-bottom">Archive</h5>
                                         <ul class="uk-list in-widget-archive">
-                                            <li><a href="#">March 2020<i class="fas fa-chevron-right uk-float-right"></i></a></li>
-                                            <li><a href="#">February 2020<i class="fas fa-chevron-right uk-float-right"></i></a></li>
-                                            <li><a href="#">January 2020<i class="fas fa-chevron-right uk-float-right"></i></a></li>
+                                            <li><a href="#">March 2020<i class="fas fa-chevron-right uk-float-right" aria-hidden="true" aria-hidden="true"></i></a></li>
+                                            <li><a href="#">February 2020<i class="fas fa-chevron-right uk-float-right" aria-hidden="true" aria-hidden="true"></i></a></li>
+                                            <li><a href="#">January 2020<i class="fas fa-chevron-right uk-float-right" aria-hidden="true" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -589,7 +591,7 @@
                 </div>
             </div>
             <div class="chatbox__button">
-                <button><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-chatbot-live-streaming-flaticons-lineal-color-flat-icons.png" height="65" width="55"/></button>
+                <button><img src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-chatbot-live-streaming-flaticons-lineal-color-flat-icons.png" height="65" width="55"/ alt="Icon"></button>
             </div>
         </div>
     </div>
@@ -970,7 +972,7 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     </script>
 
     <!-- Google Translate Script -->
-<div id="google_translate_element" style="display:none;"></div>
+<div id="google_translate_element_hidden" style="display:none;"></div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(

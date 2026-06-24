@@ -17,10 +17,12 @@
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
   
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element" class="translate-btn"></div>
+        <div id="google_translate_element_nav" class="translate-btn"></div>
 
         
         <!-- header content begin -->
@@ -172,10 +174,10 @@
                                 <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_1"></div>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_2"></div>
                               </li>
                               
                             </ul>
@@ -185,7 +187,7 @@
                         <!-- main navigation end -->
                         <!-- Mobile Navigation Begin -->
 <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-    <button class="uk-button" href="#mobile-nav-modal" data-uk-toggle aria-label="Open mobile navigation menu">
+    <button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
         <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 </div>
@@ -290,7 +292,7 @@
         <!-- header content end -->
     </header>
 
-    <main>
+    <main id="main-content">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -338,7 +340,7 @@
                                     <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
                                     <div class="uk-grid uk-child-width-1-2@m uk-margin-medium-top uk-flex-middle" data-uk-grid>
                                         <div class="uk-width-expand@s uk-text-small uk-flex uk-flex-center uk-flex-left@s uk-flex-middle">
-                                            <i class="fas fa-tags"></i><span class="uk-margin-small-left uk-text-bold">Tags: &nbsp;</span>
+                                            <i class="fas fa-tags" aria-hidden="true"></i><span class="uk-margin-small-left uk-text-bold">Tags: &nbsp;</span>
                                             <a href="#" class="uk-link-muted">Regional</a>, &nbsp;<a href="#" class="uk-link-muted">Commodities</a>, &nbsp;<a href="#" class="uk-link-muted">News</a>
                                         </div>
                                         <div class="uk-width-auto@s uk-flex uk-flex-center uk-flex-right@s">
@@ -352,10 +354,10 @@
                                 <!-- module pagination begin -->
                                 <ul class="uk-pagination uk-flex-center uk-margin-remove-bottom in-pagination-single">
                                     <li>
-                                        <a href="#"><i class="fas fa-chevron-left fa-xs uk-margin-small-right"></i> Prev post</a>
+                                        <a href="#"><i class="fas fa-chevron-left fa-xs uk-margin-small-right" aria-hidden="true"></i> Prev post</a>
                                     </li>
                                     <li>
-                                        <a href="#">Next post <i class="fas fa-chevron-right fa-xs uk-margin-small-left"></i></a>
+                                        <a href="#">Next post <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true"></i></a>
                                     </li>
                                 </ul>
                                 <hr class="uk-margin-top uk-margin-remove-bottom">
@@ -776,7 +778,7 @@
     </script>
 
     <!-- Google Translate Script -->
-<div id="google_translate_element" style="display:none;"></div>
+<div id="google_translate_element_hidden" style="display:none;"></div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(

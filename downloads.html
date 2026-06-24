@@ -37,10 +37,12 @@ tr:hover {background-color: #B8E2F2;}
 </head>
 
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
    
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element" class="translate-btn"></div>
+        <div id="google_translate_element_nav" class="translate-btn"></div>
 
         
         <!-- header content begin -->
@@ -193,10 +195,10 @@ tr:hover {background-color: #B8E2F2;}
                                 <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_1"></div>
                               </li>
                               <li>
-                                <div id="google_translate_nav"></div>
+                                <div id="google_translate_nav_2"></div>
                               </li>
                               
                             </ul>
@@ -206,7 +208,7 @@ tr:hover {background-color: #B8E2F2;}
                         <!-- main navigation end -->
                         <!-- Mobile Navigation Begin -->
 <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-    <button class="uk-button" href="#mobile-nav-modal" data-uk-toggle aria-label="Open mobile navigation menu">
+    <button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
         <i class="fas fa-bars" aria-hidden="true"></i>
     </button>
 </div>
@@ -323,7 +325,7 @@ tr:hover {background-color: #B8E2F2;}
     </header>
 
 
-    <main>
+    <main id="main-content">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -361,7 +363,7 @@ tr:hover {background-color: #B8E2F2;}
                                     </div>
                                     <div class="uk-width-auto@m">
                                         <div class="in-icon-wrapper transparent">
-                                            <i class="fas fa-question fa-3x"></i>
+                                            <i class="fas fa-question fa-3x" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -374,7 +376,7 @@ tr:hover {background-color: #B8E2F2;}
                                     </div>
                                     <div class="uk-width-auto@m">
                                         <div class="in-icon-wrapper transparent">
-                                            <i class="fas fa-unlock-alt fa-3x"></i>
+                                            <i class="fas fa-unlock-alt fa-3x" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -387,7 +389,7 @@ tr:hover {background-color: #B8E2F2;}
                                     </div>
                                     <div class="uk-width-auto@m">
                                         <div class="in-icon-wrapper transparent">
-                                            <i class="fas fa-life-ring fa-3x"></i>
+                                            <i class="fas fa-life-ring fa-3x" aria-hidden="true"></i>
                                         </div>
                                     </div>
                                 </div>
@@ -412,7 +414,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -432,7 +434,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -452,7 +454,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -472,7 +474,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -492,7 +494,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -512,7 +514,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -532,7 +534,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -552,7 +554,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -572,7 +574,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -592,7 +594,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -612,7 +614,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -633,7 +635,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -653,7 +655,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -673,7 +675,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -693,7 +695,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -713,7 +715,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -733,7 +735,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -753,7 +755,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -773,7 +775,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -793,7 +795,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -813,7 +815,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -833,7 +835,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -853,7 +855,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -872,7 +874,7 @@ tr:hover {background-color: #B8E2F2;}
                                                 <div class="uk-grid uk-grid-small">
                                                     <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                                         <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                                            <i class="fas fa-book fa-lg"></i>
+                                                            <i class="fas fa-book fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
                                                         </div>
                                                     </div>
                                                     <div class="uk-width-expand@m">
@@ -1006,7 +1008,7 @@ tr:hover {background-color: #B8E2F2;}
               <div>
                 <h4>Quick Links</h4>
                 <ul class="uk-list uk-link-text">
-                    <li><a href="accessibility.html" area-label="Read Accessibility Statement">Accessibility</a></li>
+                    <li><a href="accessibility.html" aria-label="Read Accessibility Statement">Accessibility</a></li>
                   <li><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official website">SEBI</a></li>
                   <li><a href="https://www.nseindia.com/" aria-label="Visit NSE official website">NSE</a></li>
                   <li><a href="https://www.bseindia.com/" aria-label="Visit BSE official website">BSE</a></li>
@@ -1391,7 +1393,7 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     </script>
 
     <!-- Google Translate Script -->
-<div id="google_translate_element" style="display:none;"></div>
+<div id="google_translate_element_hidden" style="display:none;"></div>
 <script type="text/javascript">
   function googleTranslateElementInit() {
     new google.translate.TranslateElement(
