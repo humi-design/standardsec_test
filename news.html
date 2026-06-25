@@ -28,6 +28,42 @@
         vertical-align: middle;
     }
     .lang-toggle button {
+        padding: 4px 12px;
+        border: 2px solid #fff;
+        background: #0066cc;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+        font-weight: 500;
+    }
+    .lang-toggle button:hover {
+        background: #0052a3;
+        border-color: #fff;
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: #004080;
+        border-color: #ffcc00;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #ffcc00;
+        outline-offset: 2px;
+    }
+    </style>
+
+
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
         padding: 3px 8px;
         border: 1px solid rgba(255,255,255,0.6);
         background: rgba(0,0,0,0.2);
