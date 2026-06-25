@@ -54,6 +54,38 @@ tr:hover {background-color: #B8E2F2;}
         font-family: inherit;
         transition: all 0.2s ease;
     }
+    .lang-toggle button:hover { background: rgba(255,255,255,0.2); }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: rgba(255,255,255,0.3);
+        border-color: #fff;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    </style>
+
+
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
+        padding: 3px 8px;
+        border: 1px solid rgba(255,255,255,0.6);
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
     .lang-toggle button:hover {
         background: rgba(255,255,255,0.2);
     }
@@ -80,10 +112,7 @@ tr:hover {background-color: #B8E2F2;}
             <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
             <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
         </div>
-
-
-    
-    <!-- header content begin -->
+<!-- header content begin -->
     <div class="uk-section uk-padding-remove-vertical">
         <div class="uk-container">
             <div class="uk-grid">
@@ -1008,14 +1037,55 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
   document.body.classList.toggle("dark-mode");
   }
   
-  // Text-to-speech
-  function readContent() {
-  let content = document.querySelector("main") || document.body;
-  let text = content.innerText;
-  let speech = new SpeechSynthesisUtterance(text);
-  speech.lang = "en-IN"; 
-  window.speechSynthesis.speak(speech);
-  }
+  <!-- Improved Read Button Script with Language Detection -->
+    <script>
+    // Text-to-speech with language detection
+    function readContent() {
+        // Get current language from localStorage or default to English
+        const currentLang = localStorage.getItem('preferredLang') || 'en';
+        
+        // Get content from main or body
+        const contentElement = document.querySelector('main') || document.querySelector('#main-content') || document.body;
+        const text = contentElement.innerText;
+        
+        // Cancel any ongoing speech
+        if (window.speechSynthesis.speaking) {
+            window.speechSynthesis.cancel();
+        }
+        
+        // Create speech utterance
+        const speech = new SpeechSynthesisUtterance(text);
+        
+        // Set language based on current preference
+        if (currentLang === 'hi') {
+            speech.lang = 'hi-IN'; // Hindi (India)
+            // Try to find a Hindi voice
+            const voices = window.speechSynthesis.getVoices();
+            const hindiVoice = voices.find(v => v.lang.startsWith('hi'));
+            if (hindiVoice) speech.voice = hindiVoice;
+        } else {
+            speech.lang = 'en-IN'; // English (India)
+            const voices = window.speechSynthesis.getVoices();
+            const englishVoice = voices.find(v => v.lang.startsWith('en-IN') || v.lang.startsWith('en'));
+            if (englishVoice) speech.voice = englishVoice;
+        }
+        
+        speech.rate = 0.9; // Slightly slower
+        speech.pitch = 1;
+        
+        window.speechSynthesis.speak(speech);
+    }
+    
+    // Stop reading
+    function stopReading() {
+        window.speechSynthesis.cancel();
+    }
+    
+    // Load voices (needed for some browsers)
+    window.speechSynthesis.onvoiceschanged = function() {
+        window.speechSynthesis.getVoices();
+    };
+    </script>
   </script>
 
   <!-- Google Translate Script -->
@@ -1032,61 +1102,90 @@ function googleTranslateElementInit() {
 
 
 
+    
+
+
+    
+
+
     <!-- Custom Language Translation Script -->
     <script>
-    const translations = {
-        'hi': {
-            'Products': 'उत्पाद',
-            'About Us': 'हमारे बारे में',
-            'Contact': 'संपर्क',
-            'Login': 'लॉग इन',
-            'Quick Links': 'त्वरित लिंक',
-            'Downloads': 'डाउनलोड',
-            'KYC': 'केवाईसी',
-            'Complaints': 'शिकायतें',
-            'Open Account': 'खाता खोलें',
-            'Open account': 'खाता खोलें',
-            'Open an Account': 'खाता खोलें',
-            'Fund Transfer': 'फंड ट्रांसफर',
-            'Online Trading': 'ऑनलाइन ट्रेडिंग',
-            'Back Office': 'बैक ऑफिस',
-            'Home': 'होम',
-            'History': 'इतिहास',
-            'Our Management': 'हमारा प्रबंधन',
-            'Careers': 'करियर',
-            'Terms': 'नियम',
-            'Privacy Policies': 'गोपनीयता',
-            'Disclaimer': 'अस्वीकरण',
-            'Policies & Procedures': 'नीतियां',
-            'Investor Charter': 'निवेशक चार्टर',
-            'SEBI': 'सेबी',
-            'NSE': 'एनएसई',
-            'BSE': 'बीएसई',
-            'CDSL': 'सीडीएसएल',
-            'Equity': 'इक्विटी',
-            'Equities': 'इक्विटी',
-            'Currency': 'करेंसी',
-            'Commodities': 'कमोडिटी',
-            'IPOs': 'आईपीओ',
-            'Advisory': 'सलाह',
-            'Depository': 'डिपॉजिटरी',
-            'Need help?': 'मदद चाहिए?',
-            'Connect': 'जुड़ें',
-            'Email': 'ईमेल',
-            'Copyright': 'कॉपीराइट',
-            'Attention Investor': 'निवेशकों का ध्यान',
-            'Read more': 'और पढ़ें',
-            'Learn more': 'और जानें',
-            'Menu': 'मेन्यू'
-        }
-    };
+    const translations = {'hi': {
+    "Home": "होम",
+    "Products": "उत्पाद",
+    "About Us": "हमारे बारे में",
+    "Contact": "संपर्क",
+    "Login": "लॉग इन",
+    "Quick Links": "त्वरित लिंक",
+    "Downloads": "डाउनलोड",
+    "KYC": "केवाईसी",
+    "Complaints": "शिकायतें",
+    "Menu": "मेन्यू",
+    "History": "इतिहास",
+    "Our Management": "हमारा प्रबंधन",
+    "Careers": "करियर",
+    "Employee Login": "कर्मचारी लॉग इन",
+    "Smart ODR Login": "स्मार्ट ओडीआर लॉगिन",
+    "Back Office": "बैक ऑफिस",
+    "Open Account": "खाता खोलें",
+    "Open account": "खाता खोलें",
+    "Open an Account": "खाता खोलें",
+    "Fund Transfer": "फंड ट्रांसफर",
+    "Online Trading": "ऑनलाइन ट्रेडिंग",
+    "Equities": "इक्विटी",
+    "Equity": "इक्विटी",
+    "Currency": "करेंसी",
+    "Commodities": "कमोडिटी",
+    "IPOs": "आईपीओ",
+    "Advisory": "सलाह",
+    "Depository": "डिपॉजिटरी",
+    "SEBI": "सेबी",
+    "NSE": "एनएसई",
+    "BSE": "बीएसई",
+    "CDSL": "सीडीएसएल",
+    "MCX India": "एमसीएक्स इंडिया",
+    "SCORES 2.0": "स्कोर 2.0",
+    "Terms": "नियम",
+    "Privacy Policies": "गोपनीयता",
+    "Disclaimer": "अस्वीकरण",
+    "Policies & Procedures": "नीतियां",
+    "Investor Charter": "निवेशक चार्टर",
+    "Need help?": "मदद चाहिए",
+    "Connect": "जुड़ें",
+    "Email": "ईमेल",
+    "Phone": "फोन",
+    "Contact us": "संपर्क करें",
+    "Copyright": "कॉपीराइट",
+    "Attention Investor": "निवेशकों का ध्यान",
+    "Read more": "और पढ़ें",
+    "Learn more": "और जानें",
+    "Open New Account": "नया खाता खोलें",
+    "Account Modification": "खाता संशोधन",
+    "Create Account": "खाता बनाएं",
+    "Submit": "जमा करें",
+    "Send": "भेजें",
+    "Cancel": "रद्द करें",
+    "Close": "बंद करें",
+    "Stay Ahead of the Curve": "रुझान से आगे रहें",
+    "Working Experience in Quality Services": "गुणवत्ता सेवाओं में अनुभव",
+    "25+ Years of Excellence": "25+ वर्षों की उत्कृष्टता",
+    "Do You Know?": "क्या आप जानते हैं",
+    "Risk Disclosures on Derivatives": "डेरिवेटिव पर जोखिम प्रकटीकरण",
+    "Full Name": "पूरा नाम",
+    "Email Address": "ईमेल पता",
+    "Phone Number": "फोन नंबर",
+    "Message": "संदेश",
+    "Subject": "विषय",
+}};
     
     function setLanguage(lang) {
         document.documentElement.lang = lang;
-        document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
-        document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
-        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
-        document.getElementById('lang-hi').classList.toggle('active', lang === 'hi');
+        const langEn = document.getElementById('lang-en');
+        const langHi = document.getElementById('lang-hi');
+        if (langEn) langEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        if (langEn) langEn.classList.toggle('active', lang === 'en');
+        if (langHi) langHi.classList.toggle('active', lang === 'hi');
         localStorage.setItem('preferredLang', lang);
         if (lang === 'hi') {
             translatePageToHindi();
