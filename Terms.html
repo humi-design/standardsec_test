@@ -36,12 +36,52 @@ tr:hover {background-color: #B8E2F2;}
 </head>
 
 <body>
+
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
+        padding: 3px 8px;
+        border: 1px solid rgba(255,255,255,0.6);
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
+    .lang-toggle button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: rgba(255,255,255,0.3);
+        border-color: #fff;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    </style>
+    
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
   
   <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
     <div id="google_translate_element_nav" class="translate-btn"></div>
+
+        <div class="lang-toggle" role="group" aria-label="Language selection">
+            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+        </div>
+
 
     
     <!-- header content begin -->
@@ -861,18 +901,290 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
   }
   </script>
 
-  <!-- Google Translate Script -->
+  <!-- Custom Language Toggle (Hindi/English) -->
+    <style>
+    .lang-toggle {
+        display: inline-flex;
+        gap: 8px;
+        margin-left: 10px;
+    }
+    .lang-toggle button {
+        padding: 4px 10px;
+        border: 1px solid rgba(255,255,255,0.5);
+        background: transparent;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    .lang-toggle button:hover,
+    .lang-toggle button.active {
+        background: rgba(255,255,255,0.2);
+        border-color: #fff;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    [dir="rtl"] .lang-toggle {
+        flex-direction: row-reverse;
+    }
+    </style>
+    <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
+        <button onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+    </div>
+    
+    <!-- Language Translations Data -->
+    <script>
+    const translations = {
+        'hi': {
+            'Products': 'उत्पाद',
+            'About Us': 'हमारे बारे में',
+            'Contact': 'संपर्क करें',
+            'Login': 'लॉग इन',
+            'Quick Links': 'त्वरित लिंक',
+            'Downloads': 'डाउनलोड',
+            'KYC': 'केवाईसी',
+            'Complaints': 'शिकायतें',
+            'Our Products': 'हमारे उत्पाद',
+            'A relationship on your terms.': 'आपकी शर्तों पर एक संबंध।',
+            'Open an Account': 'खाता खोलें',
+            'Home': 'होम',
+            'History': 'इतिहास',
+            'Our Management': 'हमारा प्रबंधन',
+            'Careers': 'करियर',
+            'Investor Relations': 'निवेशक संबंध',
+            'Complaint': 'शिकायत',
+            'Terms': 'नियम और शर्तें',
+            'Privacy Policies': 'गोपनीयता नीति',
+            'Disclaimer': 'अस्वीकरण',
+            'Policies & Procedures': 'नीतियां और प्रक्रियाएं',
+            'Investor Charter': 'निवेशक चार्टर',
+            'SEBI': 'सेबी',
+            'NSE': 'एनएसई',
+            'BSE': 'बीएसई',
+            'CDSL': 'सीडीएसएल',
+            'MCX India': 'एमसीएक्स इंडिया',
+            'SCORES 2.0': 'स्कोर 2.0',
+            'Phone': 'फोन',
+            'Email': 'ईमेल',
+            'Connect': 'जुड़ें',
+            'Open account': 'खाता खोलें',
+            'Fund Transfer': 'फंड ट्रांसफर',
+            'Online Trading': 'ऑनलाइन ट्रेडिंग',
+            'Back Office': 'बैक ऑफिस',
+            'Equities': 'इक्विटी',
+            'Currency': 'करेंसी',
+            'Commodities': 'कमोडिटी',
+            'IPOs': 'आईपीओ',
+            'Advisory': 'सलाह',
+            'Depository': 'डिपॉजिटरी',
+            'Copyright': 'कॉपीराइट',
+            'Attention Investor': 'निवेशकों का ध्यान',
+            'Need help?': 'मदद चाहिए?',
+            'Read more': 'और पढ़ें',
+            'Learn more': 'और जानें'
+        }
+    };
+    
+    let currentLang = 'en';
+    
+    function setLanguage(lang) {
+        currentLang = lang;
+        document.documentElement.lang = lang;
+        
+        // Update toggle buttons
+        document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        
+        // Store preference
+        localStorage.setItem('preferredLang', lang);
+        
+        // Translate page content
+        if (lang === 'hi') {
+            translatePageToHindi();
+        } else {
+            location.reload(); // Reset to English
+        }
+    }
+    
+    function translatePageToHindi() {
+        // Get all translatable elements
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    // Skip script, style, and already translated elements
+                    const parent = node.parentElement;
+                    if (!parent) return NodeFilter.FILTER_REJECT;
+                    const tagName = parent.tagName.toLowerCase();
+                    if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.hasAttribute('data-translated')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        const textNodes = [];
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+        
+        textNodes.forEach(node => {
+            const text = node.textContent.trim();
+            if (text && translations['hi'][text]) {
+                node.textContent = translations['hi'][text];
+                node.parentElement.setAttribute('data-translated', 'true');
+            }
+        });
+    }
+    
+    // Load saved preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang === 'hi') {
+            document.getElementById('lang-hi').click();
+        }
+    });
+    </script>
+    
+    <!-- Google Translate Script -->
 <div id="google_translate_element_hidden" style="display:none;"></div>
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement(
     {pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
-    'google_translate_element'
+    'google_translate_element_nav'
   );
 }
 </script>
 <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+
+
+    <!-- Custom Language Translation Script -->
+    <script>
+    const translations = {
+        'hi': {
+            'Products': 'उत्पाद',
+            'About Us': 'हमारे बारे में',
+            'Contact': 'संपर्क',
+            'Login': 'लॉग इन',
+            'Quick Links': 'त्वरित लिंक',
+            'Downloads': 'डाउनलोड',
+            'KYC': 'केवाईसी',
+            'Complaints': 'शिकायतें',
+            'Open Account': 'खाता खोलें',
+            'Open account': 'खाता खोलें',
+            'Open an Account': 'खाता खोलें',
+            'Fund Transfer': 'फंड ट्रांसफर',
+            'Online Trading': 'ऑनलाइन ट्रेडिंग',
+            'Back Office': 'बैक ऑफिस',
+            'Home': 'होम',
+            'History': 'इतिहास',
+            'Our Management': 'हमारा प्रबंधन',
+            'Careers': 'करियर',
+            'Terms': 'नियम',
+            'Privacy Policies': 'गोपनीयता',
+            'Disclaimer': 'अस्वीकरण',
+            'Policies & Procedures': 'नीतियां',
+            'Investor Charter': 'निवेशक चार्टर',
+            'SEBI': 'सेबी',
+            'NSE': 'एनएसई',
+            'BSE': 'बीएसई',
+            'CDSL': 'सीडीएसएल',
+            'Equity': 'इक्विटी',
+            'Equities': 'इक्विटी',
+            'Currency': 'करेंसी',
+            'Commodities': 'कमोडिटी',
+            'IPOs': 'आईपीओ',
+            'Advisory': 'सलाह',
+            'Depository': 'डिपॉजिटरी',
+            'Need help?': 'मदद चाहिए?',
+            'Connect': 'जुड़ें',
+            'Email': 'ईमेल',
+            'Copyright': 'कॉपीराइट',
+            'Attention Investor': 'निवेशकों का ध्यान',
+            'Read more': 'और पढ़ें',
+            'Learn more': 'और जानें',
+            'Menu': 'मेन्यू'
+        }
+    };
+    
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        
+        // Update toggle buttons
+        document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        
+        // Update active class
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-hi').classList.toggle('active', lang === 'hi');
+        
+        // Store preference
+        localStorage.setItem('preferredLang', lang);
+        
+        // Translate page content
+        if (lang === 'hi') {
+            translatePageToHindi();
+        } else {
+            location.reload();
+        }
+    }
+    
+    function translatePageToHindi() {
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    const parent = node.parentElement;
+                    if (!parent) return NodeFilter.FILTER_REJECT;
+                    const tagName = parent.tagName.toLowerCase();
+                    if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.hasAttribute('data-translated')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.closest('.lang-toggle')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        const textNodes = [];
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+        
+        textNodes.forEach(node => {
+            const text = node.textContent.trim();
+            if (text && translations['hi'][text]) {
+                node.textContent = translations['hi'][text];
+                node.parentElement.setAttribute('data-translated', 'true');
+            }
+        });
+    }
+    
+    // Load saved preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang === 'hi') {
+            setLanguage('hi');
+        }
+    });
+    </script>
 
 </body>
 
