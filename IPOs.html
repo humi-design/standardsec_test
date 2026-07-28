@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#4184dd" />
     <!-- Site Properties -->
-    <title>IPO Services | Standard Securities & Investment Intermediates Ltd.</title>
+    <title>IPO Services | Standard Securities & Investment Intermediates Ltd</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
@@ -33,6 +33,37 @@ th, td {
 }
 
 tr:hover {background-color: #B8E2F2;}
+</style>
+
+
+<style>
+/* Mobile Navigation */
+#mobile-nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+}
+#mobile-nav-modal[hidden] { display: none; }
+#mobile-menu-toggle {
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    min-width: 44px;
+    min-height: 44px;
+}
+#mobile-menu-toggle:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
 </style>
 
 </head>
@@ -428,6 +459,10 @@ tr:hover {background-color: #B8E2F2;}
         </div>
     </div>
     <!-- header content end -->
+
+        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
+            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+        </div>
 </header>
 
     
@@ -1254,6 +1289,74 @@ function googleTranslateElementInit() {
     });
     </script>
 
+
+// Mobile Navigation Fix
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.getElementById('mobile-menu-toggle');
+    var mobileNav = document.getElementById('mobile-nav-modal');
+    var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
+    
+    if (menuToggle && mobileNav) {
+        function toggleMobileMenu() {
+            var isHidden = mobileNav.getAttribute('hidden') !== null;
+            if (isHidden) {
+                mobileNav.removeAttribute('hidden');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                menuToggle.setAttribute('aria-label', 'Close mobile navigation menu');
+                document.body.style.overflow = 'hidden';
+                if (closeBtn) closeBtn.focus();
+            } else {
+                mobileNav.setAttribute('hidden', '');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open mobile navigation menu');
+                document.body.style.overflow = '';
+            }
+        }
+        menuToggle.addEventListener('click', toggleMobileMenu);
+        if (closeBtn) closeBtn.addEventListener('click', toggleMobileMenu);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
+                toggleMobileMenu();
+                menuToggle.focus();
+            }
+        });
+        var navLinks = mobileNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.setAttribute('tabindex', '0');
+        });
+    }
+});
+
+
+<script>
+// Carousel Pause Control
+document.addEventListener('DOMContentLoaded', function() {
+    var pauseBtn = document.getElementById('carousel-pause-btn');
+    var pauseIcon = document.getElementById('pause-icon');
+    var pauseText = document.getElementById('pause-text');
+    var slideshow = document.querySelector('.in-slideshow, [uk-slideshow]');
+    var isPaused = false;
+    
+    if (pauseBtn && slideshow) {
+        pauseBtn.addEventListener('click', function() {
+            isPaused = !isPaused;
+            if (isPaused) {
+                slideshow.setAttribute('autoplay', 'false');
+                pauseIcon.textContent = '▶';
+                pauseText.textContent = 'Play';
+                pauseBtn.setAttribute('aria-label', 'Resume slideshow');
+                pauseBtn.setAttribute('aria-pressed', 'true');
+            } else {
+                slideshow.setAttribute('autoplay', 'true');
+                pauseIcon.textContent = '⏸';
+                pauseText.textContent = 'Pause';
+                pauseBtn.setAttribute('aria-label', 'Pause slideshow');
+                pauseBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    }
+});
+</script>
 </body>
 
 </html>
