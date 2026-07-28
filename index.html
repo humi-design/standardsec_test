@@ -423,7 +423,14 @@ tr:hover {background-color: #B8E2F2;}
                 </div>
             </div>
         </div>
-        <!-- Slideshow Content End -->
+        
+                <!-- WCAG 2.2.2 - Carousel Pause Control -->
+                <div class="uk-text-center" style="margin-top: 10px;">
+                    <button type="button" id="hero-slideshow-pause-btn" class="uk-button uk-button-small uk-button-default" aria-label="Pause slideshow" aria-pressed="false">
+                        <span id="hero-pause-icon">⏸</span> <span id="hero-pause-text">Pause</span>
+                    </button>
+                </div>
+                <!-- Slideshow Content End -->
     
       <!-- Open Account Section -->
 <div class="uk-section">
@@ -582,6 +589,7 @@ tr:hover {background-color: #B8E2F2;}
                 <div class="uk-width-1-1@m">
                   <div class="monee-price-ticker uk-position-bottom" aria-label="Live trading prices">
                     <div class="uk-position-relative uk-visible-toggle" tabindex="0" role="region" aria-label="Price Ticker" data-uk-slider="autoplay: true" data-autoplay-interval="3000">
+                      <button type="button" id="price-ticker-pause-btn" class="uk-button uk-button-small uk-button-default" style="position: absolute; right: 10px; top: 10px; z-index: 100;" aria-label="Pause price ticker" aria-pressed="false"><span id="price-pause-icon">⏸</span></button>
                       <ul class="uk-slider-items uk-child-width-1-5@m uk-child-width-1-2@s" role="list">
                         <li role="listitem">
                           XAUUSD <span class="uk-label uk-label-success" aria-label="XAUUSD up 0.28%">▲ 1478.81 (+0.28%)</span>
@@ -1667,6 +1675,67 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 })();
 </script>
+
+// WCAG 2.2.2 - Hero Slideshow Pause Control
+document.addEventListener('DOMContentLoaded', function() {
+    var heroPauseBtn = document.getElementById('hero-slideshow-pause-btn');
+    var heroPauseIcon = document.getElementById('hero-pause-icon');
+    var heroPauseText = document.getElementById('hero-pause-text');
+    var heroSlideshow = document.querySelector('.in-slideshow');
+    var heroPaused = false;
+    
+    if (heroPauseBtn && heroSlideshow) {
+        heroPauseBtn.addEventListener('click', function() {
+            heroPaused = !heroPaused;
+            if (heroPaused) {
+                heroSlideshow.setAttribute('data-auto-play', 'false');
+                heroPauseIcon.textContent = '▶';
+                heroPauseText.textContent = 'Play';
+                heroPauseBtn.setAttribute('aria-label', 'Resume slideshow');
+                heroPauseBtn.setAttribute('aria-pressed', 'true');
+            } else {
+                heroSlideshow.setAttribute('data-auto-play', 'true');
+                heroPauseIcon.textContent = '⏸';
+                heroPauseText.textContent = 'Pause';
+                heroPauseBtn.setAttribute('aria-label', 'Pause slideshow');
+                heroPauseBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    }
+    
+    // Price Ticker Pause
+    var pricePauseBtn = document.getElementById('price-ticker-pause-btn');
+    var pricePauseIcon = document.getElementById('price-pause-icon');
+    var priceTicker = document.querySelector('[aria-label="Price Ticker"]');
+    var pricePaused = false;
+    
+    if (pricePauseBtn && priceTicker) {
+        pricePauseBtn.addEventListener('click', function() {
+            pricePaused = !pricePaused;
+            if (pricePaused) {
+                priceTicker.setAttribute('data-autoplay', 'false');
+                pricePauseIcon.textContent = '▶';
+                pricePauseBtn.setAttribute('aria-label', 'Resume price ticker');
+                pricePauseBtn.setAttribute('aria-pressed', 'true');
+            } else {
+                priceTicker.setAttribute('data-autoplay', 'true');
+                pricePauseIcon.textContent = '⏸';
+                pricePauseBtn.setAttribute('aria-label', 'Pause price ticker');
+                pricePauseBtn.setAttribute('aria-pressed', 'false');
+            }
+        });
+    }
+    
+    // WCAG 4.1.2 - Mobile nav toggle aria-expanded
+    var mobileNavBtn = document.querySelector('[aria-label="Open mobile navigation menu"]');
+    if (mobileNavBtn) {
+        mobileNavBtn.addEventListener('click', function() {
+            var isExpanded = mobileNavBtn.getAttribute('aria-expanded') === 'true';
+            mobileNavBtn.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+});
+
 </body>
 
 
