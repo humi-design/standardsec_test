@@ -1,0 +1,40 @@
+/* WCAG 2.2 Accessibility Fixes */
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    top: auto;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+.skip-link:focus {
+    position: fixed !important;
+    top: 10px;
+    left: 10px !important;
+    width: auto;
+    height: auto;
+    clip: auto !important;
+}
+
+/* Focus Indicators (2.4.7) */
+a:focus, button:focus, input:focus, select:focus, textarea:focus {
+    outline: 3px solid #012c6d !important;
+    outline-offset: 2px !important;
+}
+
+/* Target Size (2.5.8) */
+footer a, footer li a, .skip-link, .uk-icon-button {
+    min-height: 44px !important;
+    min-width: 44px !important;
+    padding: 10px 12px !important;
+}
+
+/* Color Contrast (1.4.3) */
+footer, footer p, footer li {
+    color: #666666 !important;
+}
+footer h3 {
+    color: #333333 !important;
+}

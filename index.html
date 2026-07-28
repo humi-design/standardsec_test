@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#4184dd" />
     <!-- Site Properties -->
-    <title>Standard Securities & Investment Intermediates Ltd.</title>
+    <title>Home | Standard Securities & Investment Intermediates Ltd.</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
@@ -167,14 +167,14 @@ tr:hover {background-color: #B8E2F2;}
                         <div class="uk-flex uk-flex-right in-header-links">
                           <a href="https://ekyc.standardsec.net:8002" 
                              class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Open a new trading account">
+                             aria-label="Open Account - Open a new trading account">
                              Open Account
                           </a>
                           
                       &nbsp;&nbsp;
                           <a href="http://122.160.199.154:9002/fundTransfer.aspx" 
                              class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Transfer funds securely">
+                             aria-label="Fund Transfer - Transfer funds securely">
                              Fund Transfer
                           </a>
                           &nbsp;&nbsp;
@@ -505,21 +505,21 @@ tr:hover {background-color: #B8E2F2;}
             <!-- Full Name -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="sr-only" for="full-name">Full Name</label>
-              <input class="uk-input" type="text" id="full-name" name="full-name"
+              <input class="uk-input" type="text" id="full-name" autocomplete="name" required aria-required="true" name="full-name"
                 placeholder="Full name" aria-label="Full name">
             </div>
   
             <!-- Email -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="sr-only" for="email">Email Address</label>
-              <input class="uk-input" type="email" id="email" name="email"
+              <input class="uk-input" type="email" id="email" autocomplete="email" required aria-required="true" name="email"
                 placeholder="Email address" aria-label="Email address">
             </div>
   
             <!-- Phone -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="sr-only" for="phone">Phone Number</label>
-              <input class="uk-input" type="tel" id="phone" name="phone"
+              <input class="uk-input" type="tel" id="phone" autocomplete="tel" required aria-required="true" name="phone"
                 placeholder="Phone number" aria-label="Phone number">
             </div>
   
@@ -582,27 +582,27 @@ tr:hover {background-color: #B8E2F2;}
                         <div class="uk-grid uk-grid-collapse uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center monee-custom-tile">
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature2.svg" data-src="img/monee-content-feature2.svg" alt="Currency feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">Currency</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Currency</h3>
                             </div>
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature1.svg" data-src="img/monee-content-feature1.svg" alt="Commodities feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">Commodities</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Commodities</h3>
                             </div>
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature3.svg" data-src="img/monee-content-feature3.svg" alt="Equity feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">Equity</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Equity</h3>
                             </div>
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature4.svg" data-src="img/monee-content-feature4.svg" alt="IPOs feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">IPOs</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">IPOs</h3>
                             </div>
                             <div class="uk-tile uk-tile-default uk-visible@m">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature5.svg" data-src="img/monee-content-feature5.svg" alt="Advisory feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">Advisory</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Advisory</h3>
                             </div>
                             <div class="uk-tile uk-tile-default uk-visible@m">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature6.svg" data-src="img/monee-content-feature6.svg" alt="Depository feature icon" width="50" height="48" data-uk-img>
-                                <h5 class="uk-margin-small-top">Depository</h5>
+                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Depository</h3>
                             </div>
                         </div>
                     </div>
@@ -622,23 +622,23 @@ tr:hover {background-color: #B8E2F2;}
             <div class="uk-card-body">
               <div class="uk-grid uk-grid-collapse uk-child-width-1-5@m uk-child-width-1-2@s uk-text-center" data-uk-grid>
                 <div>
-                  <h2 class="uk-margin-remove-bottom">#1</h2>
+                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">#1</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Ranking in India</span></h2>
                   <p class="uk-margin-remove-top uk-text-small">for spreads^</p>
                 </div>
                 <div>
-                  <h2 class="uk-margin-remove-bottom">~30ms</h2>
+                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">~30ms</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Execution Speed</span></h2>
                   <p class="uk-margin-remove-top uk-text-small">execution speed*</p>
                 </div>
                 <div>
-                  <h2 class="uk-margin-remove-bottom">24/5</h2>
+                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">24/5</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Trading Days</span></h2>
                   <p class="uk-margin-remove-top uk-text-small">support</p>
                 </div>
                 <div>
-                  <h2 class="uk-margin-remove-bottom">0.0</h2>
+                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">0.0</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Penalty Charges</span></h2>
                   <p class="uk-margin-remove-top uk-text-small">spread from 0.0 pips</p>
                 </div>
                 <div class="uk-visible@m">
-                  <h2 class="uk-margin-remove-bottom">150+</h2>
+                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">150+</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Products Available</span></h2>
                   <p class="uk-margin-remove-top uk-text-small">trading instruments</p>
                 </div>
   
@@ -1511,7 +1511,9 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
 
     <!-- Custom Language Translation Script -->
     <script>
-    const translations = {'hi': {
+    const translations = {
+        'en': {},
+        'hi': {
     "Home": "होम",
     "Products": "उत्पाद",
     "About Us": "हमारे बारे में",
@@ -1591,7 +1593,8 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
         if (lang === 'hi') {
             translatePageToHindi();
         } else {
-            location.reload();
+            // Restore English text from data attributes or reload
+            restoreEnglish();
         }
     }
     
@@ -1615,9 +1618,30 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
         textNodes.forEach(node => {
             const text = node.textContent.trim();
             if (text && translations['hi'][text]) {
+                // Save original text before translating
+                if (!node.parentElement.hasAttribute('data-original-text')) {
+                    node.parentElement.setAttribute('data-original-text', node.textContent);
+                }
                 node.textContent = translations['hi'][text];
                 node.parentElement.setAttribute('data-translated', 'true');
             }
+        });
+    }
+    
+    
+    function restoreEnglish() {
+        // Find all elements with data-translated attribute and restore original text
+        var translatedElements = document.querySelectorAll('[data-translated]');
+        translatedElements.forEach(function(el) {
+            var originalText = el.getAttribute('data-original-text');
+            if (originalText) {
+                el.textContent = originalText;
+            }
+            el.removeAttribute('data-translated');
+        });
+        // Remove all data-original-text attributes
+        document.querySelectorAll('[data-original-text]').forEach(function(el) {
+            el.removeAttribute('data-original-text');
         });
     }
     
@@ -1626,6 +1650,35 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     });
     </script>
 
+
+<script>
+var carouselPaused = false;
+function toggleCarouselAutoplay() {
+    var sliderElement = document.querySelector('[uk-slider]');
+    var pauseBtn = document.getElementById('carousel-pause-btn');
+    var pauseIcon = document.getElementById('pause-icon');
+    var playIcon = document.getElementById('play-icon');
+    var pauseText = document.getElementById('pause-text');
+    
+    carouselPaused = !carouselPaused;
+    
+    if (carouselPaused) {
+        sliderElement.setAttribute('autoplay', 'false');
+        pauseIcon.style.display = 'none';
+        playIcon.style.display = 'inline';
+        pauseText.textContent = 'Play';
+        pauseBtn.setAttribute('aria-label', 'Resume automatic slide advancement');
+        pauseBtn.setAttribute('aria-pressed', 'true');
+    } else {
+        sliderElement.setAttribute('autoplay', 'true');
+        pauseIcon.style.display = 'inline';
+        playIcon.style.display = 'none';
+        pauseText.textContent = 'Pause';
+        pauseBtn.setAttribute('aria-label', 'Pause automatic slide advancement');
+        pauseBtn.setAttribute('aria-pressed', 'false');
+    }
+}
+</script>
 </body>
 
 
