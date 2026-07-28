@@ -7678,3 +7678,114 @@ footer h5 {
     color: #333333 !important;
     background: transparent !important;
 }
+
+/* WCAG 2.4.13 - Focus Appearance (Minimum) */
+/* Enhanced focus indicators - at least 3px solid with high contrast */
+
+/* All interactive elements */
+*:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+}
+
+/* Links */
+a:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+}
+
+/* Buttons */
+button:focus,
+.uk-button:focus,
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 3px solid #0066cc !important;
+    outline-offset: 2px !important;
+}
+
+/* Remove outline: none overrides for custom buttons */
+.uk-button-primary:focus,
+.uk-button-secondary:focus,
+.uk-button-danger:focus,
+.btn:focus,
+[class*="uk-button"]:focus {
+    outline: 3px solid #ffcc00 !important;
+    outline-offset: 2px !important;
+}
+
+/* Skip link - extra visible */
+.skip-link:focus {
+    outline: 3px solid #ffcc00 !important;
+    outline-offset: 3px !important;
+}
+
+/* Mobile menu toggle */
+#mobile-menu-toggle:focus {
+    outline: 3px solid #ffcc00 !important;
+    outline-offset: 3px !important;
+}
+
+/* Form inputs */
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    border-color: #0066cc !important;
+    box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.3) !important;
+}
+
+/* Navigation links */
+nav a:focus,
+.uk-nav a:focus {
+    outline: 3px solid #ffcc00 !important;
+    outline-offset: 2px !important;
+    background-color: rgba(0, 102, 204, 0.1) !important;
+}
+
+/* WCAG 1.4.13 - Content on Hover or Focus */
+/* Dropdown menus must be dismissible, hoverable, and persistent */
+
+/* Make dropdowns hoverable with delay */
+.uk-navbar-dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    min-width: 200px;
+    padding: 15px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Show on hover with delay */
+.uk-navbar-nav li:hover > .uk-navbar-dropdown,
+.uk-navbar-nav li:focus-within > .uk-navbar-dropdown {
+    display: block;
+}
+
+/* Dropdown items */
+.uk-navbar-dropdown li {
+    list-style: none;
+}
+
+.uk-navbar-dropdown a {
+    display: block;
+    padding: 8px 15px;
+    color: #333;
+    text-decoration: none;
+    min-height: 44px;
+    line-height: 1.5;
+}
+
+.uk-navbar-dropdown a:hover,
+.uk-navbar-dropdown a:focus {
+    background: #f5f5f5;
+    outline: none;
+}
+
+/* Make dropdowns dismissible with Escape */
+.uk-navbar-dropdown a:focus {
+    outline: 2px solid #0066cc;
+    outline-offset: -2px;
+}
