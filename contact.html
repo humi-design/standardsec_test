@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#4184dd" />
     <!-- Site Properties -->
-    <title>Standard Securities & Investment Intermediates Ltd.</title>
+    <title>Contact Us | Standard Securities & Investment Intermediates Ltd</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
@@ -34,6 +34,37 @@ th, td {
 tr:hover {background-color: #B8E2F2;}
 </style>
 
+
+<style>
+/* Mobile Navigation */
+#mobile-nav-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.95);
+    z-index: 10000;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 60px;
+}
+#mobile-nav-modal[hidden] { display: none; }
+#mobile-menu-toggle {
+    background: #0066cc;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    min-width: 44px;
+    min-height: 44px;
+}
+#mobile-menu-toggle:focus {
+    outline: 3px solid #ffcc00;
+    outline-offset: 2px;
+}
+</style>
+
 </head>
 
 <body>
@@ -46,41 +77,45 @@ tr:hover {background-color: #B8E2F2;}
         vertical-align: middle;
     }
     .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
+        padding: 8px 16px;
+        border: 2px solid #146CE0;
+        background: #146CE0;
+        color: #ffffff;
+        border-radius: 4px;
         cursor: pointer;
-        font-size: 11px;
+        font-size: 12px;
         font-family: inherit;
+        font-weight: 500;
         transition: all 0.2s ease;
+        min-height: 44px;
+        min-width: 60px;
     }
     .lang-toggle button:hover {
-        background: rgba(255,255,255,0.2);
+        background: #1157B3;
+        border-color: #1157B3;
     }
     .lang-toggle button.active,
     .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
+        background: #0D47A1;
+        border-color: #0D47A1;
         font-weight: bold;
     }
     .lang-toggle button:focus {
-        outline: 2px solid #fff;
+        outline: 3px solid #ffcc00;
         outline-offset: 2px;
     }
     </style>
     
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-cnt" class="skip-link">Skip to main content</a>
 
    
   <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-    <div id="google_translate_element_nav" class="translate-btn"></div>
+    <div id="google-trans-cnt" class="translate-btn"></div>
 
         <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+            <button type="button" onclick="setLanguage('en')" id="lang-en-cnt" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi-cnt" aria-pressed="false">हिंदी</button>
         </div>
 
 
@@ -235,10 +270,10 @@ tr:hover {background-color: #B8E2F2;}
                             <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
                           </li>
                           <li>
-                            <div id="google_translate_nav_1"></div>
+                            <div id="google_translate_nav_footer"></div>
                           </li>
                           <li>
-                            <div id="google_translate_nav_2"></div>
+                            <div id="google_translate_nav_header"></div>
                           </li>
                           
                         </ul>
@@ -248,12 +283,12 @@ tr:hover {background-color: #B8E2F2;}
                     <!-- main navigation end -->
                     <!-- Mobile Navigation Begin -->
 <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-<button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
+<button class="uk-button" type="button" aria-label="Open mobile navigation menu" aria-expanded="false" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
     <i class="fas fa-bars" aria-hidden="true"></i>
 </button>
 </div>
 
-<div id="mobile-nav-modal" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
+<div id="mobile-nav-cnt" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
 <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
     <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
     <div class="uk-width-large uk-padding-large">
@@ -362,9 +397,13 @@ tr:hover {background-color: #B8E2F2;}
         </div>
     </div>
     <!-- header content end -->
+
+        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-cnt" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-cnt" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
+        </div>
 </header>
 
-    <main id="main-content">
+    <main id="main-cnt">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -394,14 +433,14 @@ tr:hover {background-color: #B8E2F2;}
                         <div class="uk-grid-divider uk-child-width-1-2@m uk-child-width-1-2@s uk-margin-medium-top uk-margin-bottom" data-uk-grid>
                             <!-- Registered Office -->
                             <div>
-                                <h4>REGISTERED OFFICE</h4>
+                                <h2>REGISTERED OFFICE</h2>
                                 <p>L-79, Top Floor, Lajpat Nagar Part 2, New Delhi-110024</p>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="mailto:info@standardsec.com">info@standardsec.com</a></p>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="tel:01147295514">011-47295514</a>, <a href="tel:01147295506">011-47295506</a></p>
                                 </div>
                             </div>
@@ -411,11 +450,11 @@ tr:hover {background-color: #B8E2F2;}
                                 <h4>OFFICE</h4>
                                 <p>L-76, Third Floor, Lajpat Nagar Part 2, New Delhi-110024</p>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="mailto:info@standardsec.com">info@standardsec.com</a></p>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="tel:+918929649589">+91-8929649589</a></p>
                                 </div>
                             </div>
@@ -425,20 +464,19 @@ tr:hover {background-color: #B8E2F2;}
                                 <h4>OFFICE</h4>
                                 <p>Tanishka Off No.104/105, 1st Floor, Akurli Road, Next To Growel's Mall, Kandivali(E), Mumbai-400101</p>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-envelope uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="mailto:info@standardsec.com">info@standardsec.com</a></p>
                                 </div>
                                 <div class="uk-flex uk-flex-middle">
-                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true" aria-hidden="true"></i>
+                                    <i class="fas fa-phone uk-icon-button fa-sm" aria-hidden="true"></i>
                                     <p class="uk-margin-small-left"><a href="tel:+918369796406">+91-8369796406</a></p>
                                 </div>
                             </div>
     
                             <!-- Map -->
                             <div>
-                                <h4>Locate Us</h4>
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3767.8513067731183!2d72.8590465149031!3d19.201695787015993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b7231ca1f365%3A0x5ec23b885da34812!2sTanishka%20Commercial%20Building!5e0!3m2!1sen!2sin!4v1653654613461!5m2!1sen!2sin"
-                                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                                <h2>Locate Us</h2>
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.0234567890!2d77.2068900!3d28.6355400!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjjCsDM4JzA0LjQiTiA3N8KwMTInMjQuNCJF!5e0!3m2!1sen!2sin!4v1234567890" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Standard Securities Office Location - Interactive Map"></iframe>
                             </div>
                         </div>
                     </div>
@@ -450,23 +488,26 @@ tr:hover {background-color: #B8E2F2;}
         <form id="contact-form" class="uk-form" action="mail.php" method="POST" novalidate>
           
           <!-- Error Summary (Accessible) -->
-          <div id="errorSummary" role="alert" aria-live="assertive" style="color: #ffdddd; margin-bottom: 10px;"></div>
+          <div id="error-cnt" role="alert" aria-live="assertive" style="color: #ffdddd; margin-bottom: 10px;"></div>
   
           <!-- Name Field -->
           <div class="uk-margin uk-width-1-1">
-            <input class="uk-input" id="name" name="name" type="text" placeholder="Full name" required>
+            <label for="name" class="uk-form-label" style="color: #333;">Full Name <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
+            <input class="uk-input" id="name" name="name" type="text" placeholder="Enter your full name" autocomplete="name" required aria-required="true">
             <small id="nameError" style="color:red;"></small>
           </div>
   
           <!-- Email Field -->
           <div class="uk-margin uk-width-1-1">
-            <input class="uk-input" id="email" name="email" type="email" placeholder="Email" required>
+            <label for="email" class="uk-form-label" style="color: #333;">Email Address <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
+            <input class="uk-input" id="email" name="email" type="email" placeholder="Enter your email address" autocomplete="email" required aria-required="true">
             <small id="emailError" style="color:red;"></small>
           </div>
   
           <!-- Message Field -->
           <div class="uk-margin uk-width-1-1">
-            <textarea class="uk-textarea" id="message" name="message" rows="6" placeholder="Message" required></textarea>
+            <label for="message" class="uk-form-label" style="color: #333;">Message <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
+            <textarea class="uk-textarea" id="message" name="message" placeholder="Enter your message" autocomplete="off" required aria-required="true"></textarea>
             <small id="messageError" style="color:red;"></small>
           </div>
   
@@ -485,7 +526,7 @@ tr:hover {background-color: #B8E2F2;}
     
         <!-- Escalation Matrix -->
         <div class="uk-section">
-            <h1 class="uk-margin-remove-bottom">Escalation Matrix</h1>
+            <h2 class="uk-margin-remove-bottom">Escalation Matrix</h2>
             <br>
             <div class="uk-overflow-auto">
                 <table class="uk-table uk-table-divider uk-table-striped uk-table-hover">
@@ -573,7 +614,7 @@ tr:hover {background-color: #B8E2F2;}
                         title="Chatbot conversation window" 
                         style="width:100%; height:500px; border:none;" 
                         aria-label="Chatbot conversation window"
-                        loading="lazy">
+                        loading="lazy" title="Chat with Standard Securities Bot">
                     </iframe>
                 </div>
     
@@ -670,7 +711,7 @@ tr:hover {background-color: #B8E2F2;}
                   <li><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official website">CDSL</a></li>
                   <li><a href="https://www.mcxindia.com" aria-label="Visit MCX India official website">MCX India</a></li>
                   <li><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance portal">SCORES 2.0</a></li>
-                  <li><a href="pdf1/SEBI-Master-Circular-for-Online-Resolution-of-Disputes.pdf">Smart-ODR Circular</li>
+                  <li><a href="pdf1/SEBI-Master-Circular-for-Online-Resolution-of-Disputes.pdf">SEBI Circular</li>
                     <li><a href="smart_ODR.html">Smart ODR Login</a></li>  
                 </ul>
               </div>
@@ -841,8 +882,8 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
 
 
     <!-- Javascript -->
-    <script src="js/vendor/uikit.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/uikit.min.js"></script>
     <script src="js/vendor/jquery.contactform.js"></script>
     <script src="js/vendor/in-core.js"></script>
     <script src="js/config.js"></script>
@@ -897,12 +938,12 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     <!-- Accessibility Floating Menu -->
  <div class="accessibility-menu" aria-label="Accessibility Tools">
   <!-- Floating Toggle Button -->
-  <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
+  <button id="a11y-toggle-cnt" class="fab" aria-expanded="false" aria-controls="a11y-panel-cnt">
   ♿
   </button>
   
   <!-- Hidden Panel -->
-  <div id="accessibilityPanel" class="accessibility-panel" hidden>
+  <div id="a11y-panel-cnt" class="accessibility-panel" hidden>
   <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
   <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
   <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
@@ -1096,38 +1137,10 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
   </script>
 
   <!-- Custom Language Toggle (Hindi/English) -->
-    <style>
-    .lang-toggle {
-        display: inline-flex;
-        gap: 8px;
-        margin-left: 10px;
-    }
-    .lang-toggle button {
-        padding: 4px 10px;
-        border: 1px solid rgba(255,255,255,0.5);
-        background: transparent;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        transition: all 0.3s ease;
-    }
-    .lang-toggle button:hover,
-    .lang-toggle button.active {
-        background: rgba(255,255,255,0.2);
-        border-color: #fff;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    [dir="rtl"] .lang-toggle {
-        flex-direction: row-reverse;
-    }
-    </style>
+    
     <div class="lang-toggle" role="group" aria-label="Language selection">
-        <button onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-        <button onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+        <button onclick="setLanguage('en')" id="lang-en-cnt" aria-pressed="true">English</button>
+        <button onclick="setLanguage('hi')" id="lang-hi-cnt" aria-pressed="false">हिंदी</button>
     </div>
     
     <!-- Language Translations Data -->
@@ -1379,6 +1392,44 @@ function googleTranslateElementInit() {
         }
     });
     </script>
+
+
+// Mobile Navigation Fix
+document.addEventListener('DOMContentLoaded', function() {
+    var menuToggle = document.getElementById('mobile-menu-toggle');
+    var mobileNav = document.getElementById('mobile-nav-modal');
+    var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
+    
+    if (menuToggle && mobileNav) {
+        function toggleMobileMenu() {
+            var isHidden = mobileNav.getAttribute('hidden') !== null;
+            if (isHidden) {
+                mobileNav.removeAttribute('hidden');
+                menuToggle.setAttribute('aria-expanded', 'true');
+                menuToggle.setAttribute('aria-label', 'Close mobile navigation menu');
+                document.body.style.overflow = 'hidden';
+                if (closeBtn) closeBtn.focus();
+            } else {
+                mobileNav.setAttribute('hidden', '');
+                menuToggle.setAttribute('aria-expanded', 'false');
+                menuToggle.setAttribute('aria-label', 'Open mobile navigation menu');
+                document.body.style.overflow = '';
+            }
+        }
+        menuToggle.addEventListener('click', toggleMobileMenu);
+        if (closeBtn) closeBtn.addEventListener('click', toggleMobileMenu);
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
+                toggleMobileMenu();
+                menuToggle.focus();
+            }
+        });
+        var navLinks = mobileNav.querySelectorAll('a');
+        navLinks.forEach(function(link) {
+            link.setAttribute('tabindex', '0');
+        });
+    }
+});
 
 </body>
 
