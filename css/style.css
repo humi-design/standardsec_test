@@ -8572,3 +8572,711 @@ html[lang=""] {
         color: ButtonText !important;
     }
 }
+
+/* ========================================================================
+   COMPREHENSIVE SITE-WIDE STYLES
+   All pages: index, about, products, contact, complaint, etc.
+   ======================================================================== */
+
+/* ========================================================================
+   TABLE STYLING (Global improvements for all tables)
+   ======================================================================== */
+
+table {
+    border-collapse: collapse !important;
+    width: 100% !important;
+    margin: 1rem 0;
+    font-size: 0.9375rem;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 0.875rem 1rem !important;
+    text-align: left !important;
+    border-bottom: 1px solid var(--color-gray-200) !important;
+    vertical-align: middle;
+}
+
+th {
+    background-color: var(--color-secondary) !important;
+    color: var(--color-white) !important;
+    font-weight: 600;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+}
+
+th:first-child {
+    border-top-left-radius: var(--radius);
+}
+
+th:last-child {
+    border-top-right-radius: var(--radius);
+}
+
+td {
+    color: var(--color-gray-700);
+}
+
+tr:hover td {
+    background-color: rgba(20, 108, 224, 0.05) !important;
+}
+
+tr:last-child td:first-child {
+    border-bottom-left-radius: var(--radius);
+}
+
+tr:last-child td:last-child {
+    border-bottom-right-radius: var(--radius);
+}
+
+/* Responsive table wrapper */
+.table-responsive {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* Zebra striping */
+.uk-table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--color-gray-50);
+}
+
+/* ========================================================================
+   FORM IMPROVEMENTS (All forms across site)
+   ======================================================================== */
+
+.uk-form-label {
+    display: block;
+    font-weight: 500;
+    color: var(--color-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.9375rem;
+}
+
+.uk-input,
+.uk-select,
+.uk-textarea {
+    border-radius: var(--radius) !important;
+    border: 2px solid var(--color-gray-300) !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    width: 100%;
+    background-color: #fff;
+}
+
+.uk-input:hover,
+.uk-select:hover,
+.uk-textarea:hover {
+    border-color: var(--color-gray-400) !important;
+}
+
+.uk-input:focus,
+.uk-select:focus,
+.uk-textarea:focus {
+    border-color: var(--color-primary) !important;
+    box-shadow: 0 0 0 3px rgba(20, 108, 224, 0.15) !important;
+    outline: none !important;
+}
+
+.uk-input::placeholder {
+    color: var(--color-gray-500);
+}
+
+/* Form groups */
+.uk-form-group {
+    margin-bottom: 1.25rem;
+}
+
+/* Form stacked on mobile */
+@media (max-width: 640px) {
+    .uk-form-label {
+        font-size: 0.875rem;
+    }
+    
+    .uk-input,
+    .uk-select,
+    .uk-textarea {
+        font-size: 16px;
+        padding: 0.625rem 0.875rem !important;
+    }
+}
+
+/* ========================================================================
+   CARD IMPROVEMENTS (All cards across site)
+   ======================================================================== */
+
+.uk-card {
+    border-radius: var(--radius-lg) !important;
+    border: 1px solid var(--color-gray-200);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.uk-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.uk-card-body {
+    padding: 1.5rem;
+}
+
+.uk-card-media-top img,
+.uk-card-media-bottom img {
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+/* ========================================================================
+   SECTION SPACING (Consistent vertical rhythm)
+   ======================================================================== */
+
+.uk-section {
+    padding: 4rem 0;
+}
+
+.uk-section + .uk-section {
+    padding-top: 0;
+}
+
+@media (max-width: 960px) {
+    .uk-section {
+        padding: 3rem 0;
+    }
+}
+
+@media (max-width: 640px) {
+    .uk-section {
+        padding: 2rem 0;
+    }
+}
+
+/* ========================================================================
+   TYPOGRAPHY IMPROVEMENTS (All pages)
+   ======================================================================== */
+
+h1, h2, h3, h4, h5, h6,
+.uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+    margin-bottom: 1rem;
+}
+
+h1, .uk-h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h2, .uk-h2 {
+    font-size: 2rem;
+    line-height: 1.25;
+}
+
+h3, .uk-h3 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+}
+
+h4, .uk-h4 {
+    font-size: 1.25rem;
+}
+
+p {
+    line-height: 1.7;
+    margin-bottom: 1rem;
+    color: var(--color-gray-700);
+}
+
+.uk-text-lead {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: var(--color-gray-600);
+}
+
+.uk-heading-line::before,
+.uk-heading-line::after {
+    border-bottom-color: var(--color-primary-light) !important;
+}
+
+/* ========================================================================
+   LIST STYLES (All lists across site)
+   ======================================================================== */
+
+.uk-list > li {
+    position: relative;
+    padding-left: 1.5rem;
+    line-height: 1.7;
+}
+
+.uk-list > li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.6em;
+    width: 6px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 50%;
+}
+
+.uk-list-bullet > li::before {
+    background-color: var(--color-primary);
+}
+
+.uk-list-divider > li:nth-child(n+2) {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid var(--color-gray-200);
+}
+
+/* ========================================================================
+   BUTTON IMPROVEMENTS (All buttons across site)
+   ======================================================================== */
+
+.uk-button {
+    font-weight: 500;
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    letter-spacing: 0.01em;
+}
+
+.uk-button:hover {
+    transform: translateY(-1px);
+}
+
+.uk-button-primary {
+    background-color: var(--color-primary) !important;
+    border-color: var(--color-primary) !important;
+}
+
+.uk-button-primary:hover {
+    background-color: var(--color-primary-dark) !important;
+    border-color: var(--color-primary-dark) !important;
+}
+
+.uk-button-secondary {
+    background-color: var(--color-secondary) !important;
+    border-color: var(--color-secondary) !important;
+}
+
+.uk-button-default {
+    background-color: transparent;
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.uk-button-default:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+.uk-button-large {
+    padding: 1rem 2rem;
+    font-size: 1.0625rem;
+    min-height: 52px;
+}
+
+.uk-button-small {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    min-height: 36px;
+}
+
+/* ========================================================================
+   ICON STYLES (All icons across site)
+   ======================================================================== */
+
+.uk-icon-button {
+    border-radius: var(--radius) !important;
+    background-color: var(--color-gray-100);
+    color: var(--color-secondary);
+    transition: all 0.2s ease;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.uk-icon-button:hover {
+    background-color: var(--color-primary) !important;
+    color: #fff !important;
+}
+
+/* ========================================================================
+   ALERT/NOTIFICATION STYLES
+   ======================================================================== */
+
+.uk-alert {
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    border: none;
+}
+
+.uk-alert-success {
+    background-color: rgba(46, 204, 113, 0.1);
+    color: #27ae60;
+    border-left: 4px solid #2ecc71;
+}
+
+.uk-alert-warning {
+    background-color: rgba(255, 152, 0, 0.1);
+    color: #e67e00;
+    border-left: 4px solid #ff9800;
+}
+
+.uk-alert-danger {
+    background-color: rgba(244, 67, 54, 0.1);
+    color: #e74c3c;
+    border-left: 4px solid #f44336;
+}
+
+.uk-alert-primary {
+    background-color: rgba(20, 108, 224, 0.1);
+    color: var(--color-primary);
+    border-left: 4px solid var(--color-primary);
+}
+
+/* ========================================================================
+   BREADCRUMB IMPROVEMENTS
+   ======================================================================== */
+
+.uk-breadcrumb {
+    font-size: 0.875rem;
+}
+
+.uk-breadcrumb > * > * {
+    color: var(--color-gray-600);
+    transition: color 0.2s ease;
+}
+
+.uk-breadcrumb > * > *:hover {
+    color: var(--color-primary);
+}
+
+.uk-breadcrumb > :last-child > * {
+    color: var(--color-secondary);
+    font-weight: 500;
+}
+
+/* ========================================================================
+   GRID AND LAYOUT IMPROVEMENTS
+   ======================================================================== */
+
+.uk-grid {
+    margin-left: -1.5rem;
+}
+
+.uk-grid > * {
+    padding-left: 1.5rem;
+}
+
+.uk-grid-collapse {
+    margin-left: 0;
+}
+
+.uk-grid-collapse > * {
+    padding-left: 0;
+}
+
+/* Container max-width consistency */
+.uk-container {
+    max-width: 1400px;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    .uk-container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* ========================================================================
+   RESPONSIVE GRID FIXES
+   ======================================================================== */
+
+/* Ensure equal height cards in grids */
+.uk-grid-match > * {
+    display: flex;
+    flex-direction: column;
+}
+
+.uk-grid-match > * > .uk-card {
+    flex: 1;
+}
+
+/* ========================================================================
+   IMAGE STYLING
+   ======================================================================== */
+
+.uk-img {
+    border-radius: var(--radius);
+}
+
+.uk-border-rounded {
+    border-radius: var(--radius-lg) !important;
+}
+
+.uk-border-circle {
+    border-radius: 50% !important;
+}
+
+/* Image shadow */
+.in-img-shadow {
+    box-shadow: var(--shadow-xl);
+}
+
+/* ========================================================================
+   LABEL/BADGE IMPROVEMENTS
+   ======================================================================== */
+
+.uk-label {
+    border-radius: var(--radius-sm);
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+
+.uk-label-success {
+    background-color: var(--color-success);
+}
+
+.uk-label-warning {
+    background-color: var(--color-warning);
+}
+
+.uk-label-danger {
+    background-color: var(--color-danger);
+    color: #fff;
+}
+
+.uk-label-primary {
+    background-color: var(--color-primary);
+}
+
+/* ========================================================================
+   TRANSITION TOGGLES
+   ======================================================================== */
+
+.uk-transition-toggle {
+    cursor: pointer;
+}
+
+.uk-transition-toggle:hover .uk-icon-button {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ========================================================================
+   OVERLAY IMPROVEMENTS
+   ======================================================================== */
+
+.uk-overlay {
+    border-radius: inherit;
+}
+
+.uk-overlay-primary {
+    background: linear-gradient(135deg, rgba(1, 44, 109, 0.9) 0%, rgba(20, 108, 224, 0.7) 100%);
+}
+
+/* ========================================================================
+   POSITION IMPROVEMENTS
+   ======================================================================== */
+
+.uk-position-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uk-position-center-left,
+.uk-position-center-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ========================================================================
+   SLIDENAV IMPROVEMENTS
+   ======================================================================== */
+
+.uk-slidenav {
+    border-radius: var(--radius);
+    background-color: rgba(255, 255, 255, 0.9);
+    color: var(--color-secondary);
+    transition: all 0.2s ease;
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.uk-slidenav:hover {
+    background-color: var(--color-primary);
+    color: #fff;
+}
+
+/* ========================================================================
+   PAGINATION IMPROVEMENTS
+   ======================================================================== */
+
+.uk-pagination > li > a {
+    border-radius: var(--radius);
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.uk-pagination > li:hover > a {
+    background-color: var(--color-gray-100);
+}
+
+/* ========================================================================
+   TABBABLE CONTENT
+   ======================================================================== */
+
+.uk-tab {
+    border-bottom: 2px solid var(--color-gray-200);
+}
+
+.uk-tab > li > a {
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    padding: 0.75rem 1rem;
+    color: var(--color-gray-600);
+    transition: all 0.2s ease;
+}
+
+.uk-tab > li > a:hover {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary-light);
+}
+
+.uk-tab > li.uk-active > a {
+    color: var(--color-primary);
+    border-bottom-color: var(--color-primary);
+}
+
+/* ========================================================================
+   SCROLLSPY ANIMATIONS
+   ======================================================================== */
+
+[data-uk-scrollspy] {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+[data-uk-scrollspy].uk-scrollspy-inview {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========================================================================
+   SPECIFIC PAGE IMPROVEMENTS
+   ======================================================================== */
+
+/* Products page tiles */
+.monee-custom-tile .uk-tile {
+    padding: 2rem 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.monee-custom-tile .uk-tile:hover {
+    background-color: var(--color-gray-50);
+}
+
+/* Stats section */
+.monee-custom-card .uk-grid-collapse > div {
+    border-right: 2px solid var(--color-primary-light);
+}
+
+.monee-custom-card .uk-grid-collapse > div:nth-child(5),
+.monee-custom-card .uk-grid-collapse > div:last-child {
+    border-right: none;
+}
+
+@media (max-width: 960px) {
+    .monee-custom-card .uk-grid-collapse > div {
+        border-right: none;
+        border-bottom: 2px solid var(--color-primary-light);
+    }
+}
+
+/* Price ticker */
+.monee-price-ticker {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border-radius: var(--radius);
+}
+
+/* ========================================================================
+   ACCESSIBILITY FOCUS STATES
+   ======================================================================== */
+
+a:focus-visible,
+button:focus-visible,
+.uk-button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid var(--color-primary) !important;
+    outline-offset: 2px !important;
+}
+
+/* High visibility for critical elements */
+.uk-button:focus,
+.skip-link:focus,
+button:focus,
+.uk-icon-button:focus {
+    outline: 3px solid #fbbf24 !important;
+    outline-offset: 3px !important;
+}
+
+/* ========================================================================
+   PRINT STYLES
+   ======================================================================== */
+
+@media print {
+    header,
+    .in-slideshow,
+    .chatbox,
+    .in-mobile-nav,
+    .footer-socials,
+    .uk-button {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12pt;
+        color: #000;
+        background: #fff;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #000;
+        page-break-after: avoid;
+    }
+    
+    table {
+        border: 1px solid #ccc;
+    }
+    
+    th {
+        background-color: #f5f5f5 !important;
+        color: #000 !important;
+    }
+    
+    a {
+        text-decoration: underline;
+    }
+}
