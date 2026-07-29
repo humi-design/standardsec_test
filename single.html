@@ -12,94 +12,239 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-redesign.css">
+    
+    
+    
 
-<style>
-/* Mobile Navigation */
-#mobile-nav-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    z-index: 10000;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 60px;
-}
-#mobile-nav-modal[hidden] { display: none; }
-#mobile-menu-toggle {
-    background: #0066cc;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    min-width: 44px;
-    min-height: 44px;
-}
-#mobile-menu-toggle:focus {
-    outline: 3px solid #ffcc00;
-    outline-offset: 2px;
-}
-</style>
 
+
+    <!-- CSS - Modern Design System -->
+    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/uikit-compat.css">
+    <!--     <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
+                        <img src="img/logo.png" alt="Standard Securities & Investment Intermediates Ltd. logo" width="180" height="48">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="header-nav-link">Home</a>
+                    <a href="products.html" class="header-nav-link">Products</a>
+
+                    <!-- About Us Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="about.html" class="dropdown-item" role="menuitem">History</a>
+                            <a href="management.html" class="dropdown-item" role="menuitem">Our Management</a>
+                            <a href="careers.html" class="dropdown-item" role="menuitem">Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="header-nav-link">Contact</a>
+
+                    <!-- Login Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Login
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" class="dropdown-item" role="menuitem">Employee Login</a>
+                            <a href="smart_ODR.html" class="dropdown-item" role="menuitem">Smart ODR Login</a>
+                            <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="dropdown-item" role="menuitem">Back Office</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Quick Links
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" style="min-width: 320px;" role="menu">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                <div>
+                                    <a href="downloads.html" class="dropdown-item" role="menuitem">Downloads</a>
+                                    <a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" class="dropdown-item" role="menuitem">Evoting Login</a>
+                                    <a href="customers.html" class="dropdown-item" role="menuitem">Customers</a>
+                                    <a href="https://www.sebi.gov.in/" class="dropdown-item" role="menuitem">SEBI</a>
+                                    <a href="https://www.nseindia.com/" class="dropdown-item" role="menuitem">NSE</a>
+                                    <a href="https://www.bseindia.com/" class="dropdown-item" role="menuitem">BSE</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.cdslindia.com/" class="dropdown-item" role="menuitem">CDSL</a>
+                                    <a href="https://www.mcxindia.com" class="dropdown-item" role="menuitem">MCX India</a>
+                                    <a href="https://scores.sebi.gov.in" class="dropdown-item" role="menuitem">SCORES 2.0</a>
+                                    <a href="pdf1/Basic_Details.xlsx" class="dropdown-item" role="menuitem">Basic Details</a>
+                                    <a href="pdf1/kmp%20details_24.pdf" class="dropdown-item" role="menuitem">KMP Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KYC Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            KYC
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://ekyc.standardsec.net:8002/" class="dropdown-item" role="menuitem">Open New Account</a>
+                            <a href="https://ekyc.standardsec.net:9000/directpan.aspx" class="dropdown-item" role="menuitem">Account Modification</a>
+                        </div>
+                    </div>
+
+                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Language Toggle -->
+                    <div class="lang-toggle" role="group" aria-label="Language selection">
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">EN</button>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिं</button>
+                    </div>
+                    
+                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
+                </div>
+
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    
+
+
+    
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <!-- CSS -->
+    
+    
+    
+
+
+
+    <!-- CSS - Modern Design System -->
+    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/uikit-compat.css">
 </head>
 
 <body>
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 8px 16px;
-        border: 2px solid #146CE0;
-        background: #146CE0;
-        color: #ffffff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-family: inherit;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        min-height: 44px;
-        min-width: 60px;
-    }
-    .lang-toggle button:hover {
-        background: #1157B3;
-        border-color: #1157B3;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #0D47A1;
-        border-color: #0D47A1;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 3px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    .lang-toggle button:hover {
-        background: #0052a3;
-        border-color: #fff;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #004080;
-        border-color: #ffcc00;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
     
@@ -107,7 +252,7 @@
 
     
 
-    <a href="#main-art" class="skip-link">Skip to main content</a>
+    
 
   
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
@@ -119,275 +264,254 @@
             <button type="button" onclick="setLanguage('hi')" id="lang-hi-art" aria-pressed="false">हिंदी</button>
         </div>
 <!-- header content begin -->
-        <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                       
-                        
-                    </div>
+        <div class="uk-section uk-padding    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-
-                    
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-button uk-visible@s">
-                        <div class="uk-flex uk-flex-right in-header-links">
-                          <a href="https://ekyc.standardsec.net:8002" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Open a new trading account">
-                             Open Account
-                          </a>
-                          
-                      &nbsp;&nbsp;
-                          <a href="http://122.160.199.154:9002/fundTransfer.aspx" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Transfer funds securely">
-                             Fund Transfer
-                          </a>
-                          &nbsp;&nbsp;
-                          <a href="https://etrade.standardsec.com:3000/#/app" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Access online trading portal">
-                             Online Trading
-                          </a>
-                          &nbsp;&nbsp;
-                          <a href="http://backoffice.standardsec.net:8085/capexweb/capexweb/" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded"
-                             aria-label="Access back office system">
-                             Back Office
-                          </a>
-
-                        </div>
-                      </div>
-                    
-                    <div class="uk-width-1-1">
-                        <hr class="uk-margin-remove-top">
-                    </div>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
+                        <img src="img/logo.png" alt="Standard Securities & Investment Intermediates Ltd. logo" width="180" height="48">
+                    </a>
                 </div>
-                <div class="uk-grid uk-margin-remove-top">
-                    <div class="uk-width-1-2 uk-width-expand@m">
-                        <!-- header logo begin -->
-                        <div class="in-header-logo uk-flex uk-flex-middle">
-                            <a class="uk-logo" href="index.html" aria-label="Go to Standard Securities homepage">
-                                <img src="img/logo.png" data-src="img/logo.png" 
-                                width="350" height="350" data-uk-img alt="Standard Securities & Investment Intermediates Ltd. logo"></a>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="header-nav-link">Home</a>
+                    <a href="products.html" class="header-nav-link">Products</a>
+
+                    <!-- About Us Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="about.html" class="dropdown-item" role="menuitem">History</a>
+                            <a href="management.html" class="dropdown-item" role="menuitem">Our Management</a>
+                            <a href="careers.html" class="dropdown-item" role="menuitem">Careers</a>
                         </div>
-                        <!-- header logo end -->
                     </div>
-                    <div class="in-navbar-wrapper uk-width-1-2 uk-width-auto@m">
-                        <!-- main navigation begin -->
-                        <nav class="uk-navbar-container uk-visible@m" data-uk-navbar aria-label="Main navigation">
-                            <ul class="uk-navbar-nav" role="menubar">
-                              
-                              <!-- Home -->
-                              <li role="none">
-                                <a href="index.html" role="menuitem" aria-label="Go to Home page" aria-current="page">Home</a>
-                              </li>
-                          
-                              <!-- Products -->
-                              <li role="none">
-                                <a href="products.html" role="menuitem" aria-label="View Products page">Products</a>
-                              </li>
-                          
-                              <!-- About Us -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open About Us menu">About Us</a>
-                                <div class="uk-navbar-dropdown" aria-label="About Us submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="about.html" aria-label="Read company History">History</a></li>
-                                    <li role="menuitem"><a href="management.html" aria-label="Meet Our Management team">Our Management</a></li>
-                                    <li role="menuitem"><a href="careers.html" aria-label="Explore Careers at our company">Careers</a></li>
-                                  </ul>
+
+                    <a href="contact.html" class="header-nav-link">Contact</a>
+
+                    <!-- Login Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Login
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" class="dropdown-item" role="menuitem">Employee Login</a>
+                            <a href="smart_ODR.html" class="dropdown-item" role="menuitem">Smart ODR Login</a>
+                            <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="dropdown-item" role="menuitem">Back Office</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Quick Links
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" style="min-width: 320px;" role="menu">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                <div>
+                                    <a href="downloads.html" class="dropdown-item" role="menuitem">Downloads</a>
+                                    <a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" class="dropdown-item" role="menuitem">Evoting Login</a>
+                                    <a href="customers.html" class="dropdown-item" role="menuitem">Customers</a>
+                                    <a href="https://www.sebi.gov.in/" class="dropdown-item" role="menuitem">SEBI</a>
+                                    <a href="https://www.nseindia.com/" class="dropdown-item" role="menuitem">NSE</a>
+                                    <a href="https://www.bseindia.com/" class="dropdown-item" role="menuitem">BSE</a>
                                 </div>
-                              </li>
-                          
-                              <!-- Contact -->
-                              <li role="none">
-                                <a href="contact.html" role="menuitem" aria-label="Go to Contact page">Contact</a>
-                              </li>
-                          
-                              <!-- Login -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Login menu">Login</a>
-                                <div class="uk-navbar-dropdown" aria-label="Login submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" aria-label="Employee Login page">Employee Login</a></li>
-                                    <li role="menuitem"><a href="https://smartodr.in/login" aria-label="Smart ODR Login page">Smart ODR Login</a></li>
-                                    <li role="menuitem"><a href="http://backoffice.standardsec.net:8085/capexweb/capexweb/" aria-label="Back Office Login page">Back Office</a></li>
-                                  </ul>
+                                <div>
+                                    <a href="https://www.cdslindia.com/" class="dropdown-item" role="menuitem">CDSL</a>
+                                    <a href="https://www.mcxindia.com" class="dropdown-item" role="menuitem">MCX India</a>
+                                    <a href="https://scores.sebi.gov.in" class="dropdown-item" role="menuitem">SCORES 2.0</a>
+                                    <a href="pdf1/Basic_Details.xlsx" class="dropdown-item" role="menuitem">Basic Details</a>
+                                    <a href="pdf1/kmp%20details_24.pdf" class="dropdown-item" role="menuitem">KMP Details</a>
                                 </div>
-                              </li>
-                          
-                              <!-- Quick Links -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Quick Links menu">Quick Links</a>
-                                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2" aria-label="Quick Links submenu">
-                                  <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
-                                    <div>
-                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                        <li role="menuitem"><a href="downloads.html" aria-label="Go to Downloads page">Downloads</a></li>
-                                        <li role="menuitem"><a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" aria-label="Evoting Login page">Evoting Login</a></li>
-                                        <li role="menuitem"><a href="pdf1/Basic_Details.xlsx" aria-label="Download Basic Details Excel file">Basic Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/kmp details_24.pdf" aria-label="Download KMP Details PDF file">KMP Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/AP_Details.pdf" aria-label="Download AP Details PDF file">AP Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/Start_Your_Financial_Journey_with.pptx" aria-label="Download Start Your Financial Journey PowerPoint">Start Your Journey</a></li>
-                                        <li role="menuitem"><a href="customers.html" aria-label="Go to Customers page">Customers</a></li>
-                                        <li role="menuitem"><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official site">SEBI</a></li>
-                                        <li role="menuitem"><a href="https://www.nseindia.com/" aria-label="Visit NSE official site">NSE</a></li>
-                                        <li role="menuitem"><a href="https://www.bseindia.com/" aria-label="Visit BSE official site">BSE</a></li>
-                                        <li role="menuitem"><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official site">CDSL</a></li>
-                                        <li role="menuitem"><a href="https://www.mcxindia.com" aria-label="Visit MCX India official site">MCX India</a></li>
-                                        <li role="menuitem"><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance redressal portal">SCORES 2.0</a></li>
-                                      </ul>
-                                    </div>
-                                    <div>
-                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                        <li role="none">
-                                          <span>Start investing today and grow with Standard — call us now</span>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                          
-                              <!-- KYC -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open KYC menu">KYC</a>
-                                <div class="uk-navbar-dropdown" aria-label="KYC submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:8002/" aria-label="Open New Account via eKYC">Open New Account</a></li>
-                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:9000/directpan.aspx" aria-label="Modify Account via eKYC">Account Modification</a></li>
-                                  </ul>
-                                </div>
-                              </li>
-                          
-                              <!-- Complaints -->
-                                <!-- Complaints -->
-                              <li role="none">
-                                <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav_1"></div>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav_2"></div>
-                              </li>
-                              
-                            </ul>
-                          </nav>
-                          
-                          
-                        <!-- main navigation end -->
-                        <!-- Mobile Navigation Begin -->
-<div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-    <button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById(\'#mobile-nav-modal\')).toggle();" data-uk-toggle >
-        <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-</div>
+                            </div>
+                        </div>
+                    </div>
 
-<div id="mobile-nav-art" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
-    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
-        <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
-        <div class="uk-width-large uk-padding-large">
-            <ul class="uk-nav-primary uk-nav-parent-icon in-margin-negative-top@s" data-uk-nav role="menu">
+                    <!-- KYC Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            KYC
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://ekyc.standardsec.net:8002/" class="dropdown-item" role="menuitem">Open New Account</a>
+                            <a href="https://ekyc.standardsec.net:9000/directpan.aspx" class="dropdown-item" role="menuitem">Account Modification</a>
+                        </div>
+                    </div>
 
-                <!-- Home -->
-                <li role="none">
-                    <a href="index.html" role="menuitem" aria-label="Go to Home page">Home</a>
+                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Language Toggle -->
+                    <div class="lang-toggle" role="group" aria-label="Language selection">
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">EN</button>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिं</button>
+                    </div>
+                    
+                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
+                </div>
+
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
                 </li>
-
-                <!-- Products -->
-                <li role="none">
-                    <a href="products.html" role="menuitem" aria-label="View Products page">Products</a>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
                 </li>
-
-                <!-- About Us -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open About Us submenu">About Us</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="About Us submenu">
-                        <li role="menuitem"><a href="about.html" aria-label="Read company History">History</a></li>
-                        <li role="menuitem"><a href="management.html" aria-label="Meet Our Management team">Our Management</a></li>
-                        <li role="menuitem"><a href="careers.html" aria-label="Explore Careers at our company">Careers</a></li>
-                    </ul>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
                 </li>
-
-                <!-- Contact -->
-                <li role="none">
-                    <a href="contact.html" role="menuitem" aria-label="Go to Contact page">Contact</a>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
                 </li>
-
-                <!-- Login -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Login submenu">Login</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="Login submenu">
-                        <li role="menuitem"><a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" aria-label="Employee Login page">Employee Login</a></li>
-                        <li role="menuitem"><a href="https://smartodr.in/login" aria-label="Smart ODR Login page">Smart ODR Login</a></li>
-                        <li role="menuitem"><a href="http://backoffice.standardsec.net:8085/capexweb/capexweb/" aria-label="Back Office Login page">Back Office</a></li>
-                    </ul>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
                 </li>
-
-                <!-- Quick Links -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Quick Links submenu">Quick Links</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="Quick Links submenu">
-                        <li role="menuitem"><a href="downloads.html" aria-label="Go to Downloads page">Downloads</a></li>
-                        <li role="menuitem"><a href="pdf1/Standardsec_QRCode.pdf" aria-label="Pay Now PDF">Pay now!</a></li>
-                        <li role="menuitem"><a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" aria-label="Evoting Login page">Evoting Login</a></li>
-                        <li role="menuitem"><a href="pdf1/Basic_Details.xlsx" aria-label="Download Basic Details Excel file">Basic Details</a></li>
-                        <li role="menuitem"><a href="pdf1/kmp details_24.pdf" aria-label="Download KMP Details PDF file">KMP Details</a></li>
-                        <li role="menuitem"><a href="pdf1/AP_Details.pdf" aria-label="Download AP Details PDF file">AP Details</a></li>
-                        <li role="menuitem"><a href="pdf1/FREEZING-Unfreezing.doc" aria-label="Download Freezing-Unfreezing Word file">Freezing-Unfreezing</a></li>
-                        <li role="menuitem"><a href="pdf1/KYC-Validation-Process.pdf" aria-label="Download KYC Validation Process PDF">KYC Validation Process</a></li>
-                        <li role="menuitem"><a href="pdf1/Start_Your_Financial_Journey_with.pptx" aria-label="Download Start Your Financial Journey PowerPoint">Start Your Journey</a></li>
-                        <li role="menuitem"><a href="customers.html" aria-label="Go to Customers page">Customers</a></li>
-                        <li role="menuitem"><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official site">SEBI</a></li>
-                        <li role="menuitem"><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance redressal portal">SCORES 2.0</a></li>
-                        <li role="menuitem"><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official site">CDSL</a></li>
-                        <li role="menuitem"><a href="https://www.bseindia.com/" aria-label="Visit BSE official site">BSE</a></li>
-                        <li role="menuitem"><a href="https://www.nseindia.com/" aria-label="Visit NSE official site">NSE</a></li>
-                    </ul>
-                </li>
-
-                 <!-- Complaints -->
-                              <li role="none">
-                                <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav"></div>
-                              </li>
-
             </ul>
 
-            <!-- Action Buttons -->
-            <div class="dropdown">
-                <a href="https://ekyc.standardsec.net:8002" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Open account">Open account</a>
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
             </div>
-            <div class="dropdown">
-                <a href="http://122.160.199.154:9002/fundTransfer.aspx" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Fund Transfer">Fund Transfer</a>
-            </div>
-            <div class="dropdown">
-                <a href="https://etrade.standardsec.com:3000/#/app" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Online Trading">Online Trading</a>
-            </div>
-            <div class="dropdown">
-                <a href="http://backoffice.standardsec.net:8085/capexweb/capexweb/" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Back Office">Back Office</a>
-            </div>
-
         </div>
     </div>
-</div>
-<!-- Mobile Navigation End -->
 
-                
-                    </div>
-                </div>
+    <!-- Main Content -->
+    <main id="main-content">
+
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
             </div>
         </div>
-        <!-- header content end -->
+    </div>
+
+    <!-- Main Content -->
     
-        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
+
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
+            </div>
         </div>
-</header>
+    </div>
+
+    <!-- Main Content -->
+    
+
 
     
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
@@ -439,7 +563,7 @@
 
     
 
-    <a href="#main-art" class="skip-link">Skip to main content</a>
+    
 
   
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
@@ -721,7 +845,7 @@
         </div>
 </header>
 
-    <main id="main-art">
+    
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -778,680 +902,183 @@
                                     <p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt.</p>
                                     <blockquote class="in-blockquote" cite="#">
                                         <p class="uk-margin-small-bottom">At vero eose accusamus iusto dignissim ducimus blanditiis praesentium voluptatum deleniti atque oddi corrupti quos dolores ettios quas membrant</p>
-                                        <footer>
-                                            <cite>Mark Harris</cite>
-                                        </footer>
-                                    </blockquote>
-                                    <p>Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, aut reiciendis voluptatibus maiores consequatur perferendis doloribus asperiores repellat.</p>
-                                    <h3>The solutions</h3>
-                                    <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus.</p>
-                                    <div class="uk-grid uk-child-width-1-2@m uk-margin-medium-top uk-flex-middle" data-uk-grid>
-                                        <div class="uk-width-expand@s uk-text-small uk-flex uk-flex-center uk-flex-left@s uk-flex-middle">
-                                            <i class="fas fa-tags" aria-hidden="true"></i><span class="uk-margin-small-left uk-text-bold">Tags: &nbsp;</span>
-                                            <a href="#" class="uk-link-muted">Regional</a>, &nbsp;<a href="#" class="uk-link-muted">Commodities</a>, &nbsp;<a href="#" class="uk-link-muted">News</a>
-                                        </div>
-                                        <div class="uk-width-auto@s uk-flex uk-flex-center uk-flex-right@s">
-                                            <a href="" class="uk-icon-button fab fa-facebook-f brand-facebook uk-margin-small-right" data-uk-tooltip="Share with Facebook"></a>
-                                            <a href="" class="uk-icon-button fab fa-twitter brand-twitter uk-margin-small-right" data-uk-tooltip="Share with Twitter"></a>
-                                            <a href="" class="uk-icon-button fab fa-pinterest-p brand-pinterest uk-margin-small-right" data-uk-tooltip="Share with Pinterest"></a>
-                                            <a href="" class="uk-icon-button fas fa-envelope generic-email" data-uk-tooltip="Share with Email"></a>
-                                        </div>
-                                    </div>
-                                </article>
-                                <!-- module pagination begin -->
-                                <ul class="uk-pagination uk-flex-center uk-margin-remove-bottom in-pagination-single">
-                                    <li>
-                                        <a href="#"><i class="fas fa-chevron-left fa-xs uk-margin-small-right" aria-hidden="true"></i> Prev post</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Next post <i class="fas fa-chevron-right fa-xs uk-margin-small-left" aria-hidden="true"></i></a>
-                                    </li>
-                                </ul>
-                                <hr class="uk-margin-top uk-margin-remove-bottom">
-                                <!-- module pagination end -->
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- article end -->
-                <!-- comment list begin -->
-                <div class="uk-section uk-section-small">
-                    <div class="uk-grid">
-                        <div class="uk-flex uk-flex-center">
-                            <div class="uk-width-3-5@m">
-                                <div class="uk-label uk-margin-medium-top uk-margin-remove-bottom">3 responses to</div>
-                                <h3 class="uk-margin-small-top uk-margin-small-bottom">"World food prices back down in March after two-year high"</h3>
-                                <ul class="uk-comment-list">
-                                    <li>
-                                        <article class="uk-comment uk-visible-toggle" tabindex="-1">
-                                            <div class="uk-grid uk-grid-medium">
-                                                <div class="uk-width-auto">
-                                                    <header class="uk-comment-header">
-                                                        <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
-                                                    
-        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
-        </div>
-</header>
-                                                </div>
-                                                <div class="uk-width-expand">
-                                                    <div class="uk-comment-body uk-position-relative">
-                                                        <div class="uk-position-top-right uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
-                                                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Mark Harris</a></h4>
-                                                        <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">April 25, 2019</a></p>
-                                                        <p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequ vel illum qui dolorem eum fugiat quo voluptas nulla pariatur sunt in culpa qui officia deserunt mollit anim id est laborum adipisci velit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                        <ul>
-                                            <li>
-                                                <article class="uk-comment uk-comment-primary uk-visible-toggle" tabindex="-1">
-                                                    <div class="uk-grid uk-grid-medium">
-                                                        <div class="uk-width-auto">
-                                                            <header class="uk-comment-header">
-                                                                <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
-                                                            
-        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
-        </div>
-</header>
-                                                        </div>
-                                                        <div class="uk-width-expand">
-                                                            <div class="uk-comment-body uk-position-relative">
-                                                                <div class="uk-position-top-right uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
-                                                                <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Dennis Olson</a></h4>
-                                                                <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">April 27, 2019</a></p>
-                                                                <p>Tuis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequ vel illum qui dolorem.</p>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </article>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <article class="uk-comment uk-visible-toggle" tabindex="-1">
-                                            <div class="uk-grid uk-grid-medium">
-                                                <div class="uk-width-auto">
-                                                    <header class="uk-comment-header">
-                                                        <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
-                                                    
-        <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
-        </div>
-</header>
-                                                </div>
-                                                <div class="uk-width-expand">
-                                                    <div class="uk-comment-body uk-position-relative">
-                                                        <div class="uk-position-top-right uk-hidden-hover"><a class="uk-link-muted" href="#">Reply</a></div>
-                                                        <h4 class="uk-comment-title uk-margin-remove"><a class="uk-link-reset" href="#">Peter Morrison</a></h4>
-                                                        <p class="uk-comment-meta uk-margin-remove-top"><a class="uk-link-reset" href="#">April 25, 2019</a></p>
-                                                        <p>Molestiae consequ vel illum qui dolorem eum fugiat quo voluptas nulla pariatur sunt in culpa qui officia deserunt mollit anim id est laborum adipisci velit.</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- comment list end -->
-                <!-- comment form begin -->
-                <div class="uk-section">
-                    <div class="uk-grid uk-margin-small-bottom">
-                        <div class="uk-width-expand@m">
-                            <div class="uk-flex uk-flex-center">
-                                <div class="uk-width-3-5@m">
-                                    <h3 class="uk-margin-bottom">Leave a comment</h3>
-                                    <form id="comment-form" class="uk-form uk-margin-small-bottom">
-                                        <div class="uk-margin uk-width-1-1">
-                                            <input class="uk-input" id="name" value="" type="text" placeholder="Full name">
-                                        </div>
-                                        <div class="uk-margin uk-width-1-1">
-                                            <input class="uk-input" id="email" value="" type="email" placeholder="Email address">
-                                        </div>
-                                        <div class="uk-margin uk-width-1-1">
-                                            <textarea class="uk-textarea" id="comment" rows="5" placeholder="Comment"></textarea>
-                                        </div>
-                                        <div>
-                                            <button class="uk-button uk-button-primary uk-border-rounded uk-width-expand" id="submit" type="submit" name="submit">Post Comment</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- comment form end -->
-            </div>
-        </div>
-        <!-- section blog end -->
-    </main>
+                                            
 
-     <footer>
-        <!-- footer content begin -->
-        <div class="uk-section uk-padding-remove-vertical uk-margin-medium-top">
-            <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-1">
-                        <hr>
-                        <div class="uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
-                            <div class="in-footer-info uk-flex uk-flex-center uk-flex-left@m">
-                                <ul class="uk-subnav">
-                                    <li class="uk-visible@m"><span>need help?</span></li>
-                                    <li><i class="uk-margin-small-left fas fa-phone fa-7x"></i> 1-800-123-4567</li>
-                                    <li><a href="#"><i class="uk-margin-small-left fas fa-comments"></i> Live Chat</a></li>
-                                    <li class="uk-visible@m"><a href="mailto:"><i class="uk-margin-small-left fas fa-envelope-open-text"></i> Email</a></li>
-                                </ul>
-                            </div>
-                            <div>
-                                <div class="uk-flex uk-flex-center uk-flex-right@m in-footer-socials">
-                                    <span class="uk-visible@m">connect</span>
-                                    <a href="#" class="uk-icon-button fab fa-facebook-f brand-facebook"></a>
-                                    <a href="#" class="uk-icon-button fab fa-twitter brand-twitter uk-margin-small-left"></a>
-                                    <a href="#" class="uk-icon-button fab fa-youtube brand-youtube uk-margin-small-left"></a>
-                                </div>
-                            </div>
-                        </div>
-                        <hr>
+    <!-- Footer -->
+        
+
+    <!-- Footer -->
+        </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Standard Securities logo" width="160" height="43" class="mb-6">
+                    <p class="text-gray-400">Standard Securities & Investment Intermediates Ltd. One of India's leading stock broking firms with 35+ years of experience.</p>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#" class="footer-social-link" aria-label="Visit our Facebook page">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our Twitter profile">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our YouTube channel">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon fill="#0f172a" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
                     </div>
                 </div>
-                <div class="uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s" data-uk-grid>
-                    <div>
-                        <h4>Markets</h4>
-                        <ul class="uk-list uk-link-text">
-                            <li><a href="Equity.html">Equities</a></li>
-                            <li><a href="Currency.html">Currency</a></li>
-                            <li><a href="Commodities.html">Commodities</a></li>
-                            <li><a href="IPOs.html">IPOs</a></li>
-                            <li><a href="Advisory.html">Advisory</a></li>
-                            <li><a href="Depository.html">Depository</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Our Menus</h4>
-                        <ul class="uk-list uk-link-text">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="products.html">Products</a></li>
-                            <li><a href="about.html">About US</a></li>
-                            <li><a href="contact.html">Contact</a></li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Policies and Terms</h4>
-                        <ul class="uk-list uk-link-text">
-                            <li><a href="Terms.html">Terms</a></li>
-                            <li><a href="http://www.standardsec.com/policies-procedures/">Policies and Procedures</a></li>
-                            <li><a href="http://www.standardsec.com/wp-content/themes/standardsec/images/pdf/privacypolicy.pdf">Privacy Policy</a></li>
-                            <li><a href="http://www.standardsec.com/wp-content/themes/standardsec/images/pdf/disclaimer.pdf">Disclaimer</a></li>
-                        </ul>
-                    </div>
-                    <div class="in-footer-address">
-                        <h4>Contact us</h4>
-                        <p>Tanishka Commercial Office N0.104/105<br>
-                            1st Floor,Akurli Road<br>
-                            Next To Growel’s Mall,Kandivali(E),<br>
-                            ,Mumbai-400101</p>
-                    </div>
+
+                <!-- Products Column -->
+                <div>
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="Equity.html">Equities</a></li>
+                        <li><a href="Currency.html">Currency</a></li>
+                        <li><a href="Commodities.html">Commodities</a></li>
+                        <li><a href="IPOs.html">IPOs</a></li>
+                        <li><a href="Advisory.html">Advisory</a></li>
+                        <li><a href="Depository.html">Depository</a></li>
+                    </ul>
                 </div>
-                <div class="uk-grid">
-                    <div class="uk-width-1-1 uk-text-small">
-                        <div class="uk-card uk-card-small uk-card-secondary uk-margin-bottom">
-                            <div class="uk-card-body">
-                                <div class="in-footer-copyright" data-uk-grid>
-                                    <div class="uk-width-1-2@m uk-text-center uk-text-left@m">
-                                        <p>Copyright ©2022 Humisense company. All Rights Reserved.</p>
-                                    </div>
-                                    <div class="uk-width-1-2@m">
-                                        <div class="uk-flex uk-flex-center uk-flex-right@m">
-                                            <span><img src="img/monee-footer-mastercard.svg" data-src="img/monee-footer-mastercard.svg" alt="monee-mastercard" width="42" height="22" data-uk-img></span>
-                                            <span><img src="img/monee-footer-visa.svg" data-src="img/monee-footer-visa.svg" alt="monee-visa" width="42" height="21" data-uk-img></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="uk-width-1-1 in-footer-disclaimer">
-                        <p>Monee Capital Advisors Corporation is an investment advisor registered with the Securities and Exchange Commission ("SEC"). Any reference to the advisory services refers to Monee Capital Advisors Corporation. Registration does not imply a certain level of skill or training nor does it imply endorsement by the SEC.​ Past performance is not a guarantee of future return, nor is it necessarily indicative of future performance. Keep in mind investing involves risk.</p>
-                    </div>
+
+                <!-- Company Column -->
+                <div>
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="customers.html">Customers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="Terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="procedures.html">Policies</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Regulatory Column -->
+                <div>
+                    <h3 class="footer-title">Regulatory</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.sebi.gov.in/" target="_blank" rel="noopener">SEBI</a></li>
+                        <li><a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a></li>
+                        <li><a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a></li>
+                        <li><a href="https://www.cdslindia.com/" target="_blank" rel="noopener">CDSL</a></li>
+                        <li><a href="https://www.mcxindia.com" target="_blank" rel="noopener">MCX</a></li>
+                        <li><a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">SCORES 2.0</a></li>
+                    </ul>
                 </div>
             </div>
-            <div class="uk-visible@m">
-                <a href="#" class="in-totop fas fa-chevron-up" data-uk-scroll></a>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">Copyright ©2024 Standard Securities & Investment Intermediates Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-4 text-sm text-gray-500">
+                    <img src="img/monee-footer-mastercard.svg" alt="Mastercard" width="42" height="22" style="opacity: 0.7;">
+                    <img src="img/monee-footer-visa.svg" alt="Visa" width="42" height="21" style="opacity: 0.7;">
+                </div>
             </div>
         </div>
-        <!-- footer content end -->
     </footer>
 
-    <!-- Javascript -->
+    <!-- Accessibility Toggle -->
+    <div class="accessibility-menu" aria-label="Accessibility Tools">
+        <button id="a11y-toggle" class="fab" aria-expanded="false" aria-controls="a11y-panel" aria-label="Open accessibility menu">
+            ♿
+        </button>
+        <div id="a11y-panel" class="accessibility-panel" hidden>
+            <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
+            <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌓</button>
+            <a href="accessibility.html" aria-label="Accessibility Statement">♿ Info</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/uikit.min.js"></script>
-    <script src="js/vendor/in-core.js"></script>
-    <script src="js/config.js"></script>
-
-     <!-- Container where toolbar will be inserted -->
-
-    <!-- Accessibility Floating Menu -->
- <div class="accessibility-menu" aria-label="Accessibility Tools">
-    <!-- Floating Toggle Button -->
-    <button id="a11y-toggle-art" class="fab" aria-expanded="false" aria-controls="a11y-panel-art">
-    ♿
-    </button>
+    <script src="js/app.js"></script>
     
-    <!-- Hidden Panel -->
-    <div id="a11y-panel-art" class="accessibility-panel" hidden>
-    <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
-    <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
-    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
-    <button onclick="readContent()" aria-label="Read page aloud">🔊 Read</button>
-    <a href="accessibility.html" aria-label="Accessibility Statement">♿ Accessibility</a>
-    </div>
-    </div>
-    
-    <!-- CSS -->
-    <style>
-    /* Floating button (FAB) */
-    /* Floating button (circular) */
-    .fab {
-    position: fixed;
-    bottom: 200px;
-    right: 15px;
-    width: 60px; /* same width */
-    height: 60px; /* same height */
-    border-radius: 10%; /* makes it a circle */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    overflow: hidden; /* ensures image/icons don’t overflow */
-    padding: 0; /* removes extra space */
-    }
-    .fab img, 
-    .fab svg {
-    width: 50%; /* make icon fit nicely inside circle */
-    height: 50%;
-    object-fit: contain;
-    }
-    
-    .fab:hover, .fab:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Hidden menu */
-    .fab-menu {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    }
-    
-    .fab-menu button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s;
-    }
-    
-    .fab-menu button:hover,
-    .fab-menu button:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Panel (initially hidden) */
-    .accessibility-panel {
-    position:fixed;
-    bottom: 120px;
-    right: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-    }
-    
-    /* Buttons inside panel */
-    .accessibility-panel button,
-    .accessibility-panel a {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    }
-    
-    .accessibility-panel button:hover,
-    .accessibility-panel a:hover {
-    background: #0056b3;
-    }
-    
-    .accessibility-panel button:focus,
-    .accessibility-panel a:focus {
-    outline: 3px solid yellow; /* WCAG focus visible */
-    }
-    
-    /* Dark mode */
-    body.dark-mode {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-    }
-    
-    /* Override headings, paragraphs, lists */
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6,
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode a,
-    body.dark-mode span,
-    body.dark-mode strong {
-    color: #ffffff !important;
-    }
-    
-    /* Links */
-    body.dark-mode a {
-    color: #4da6ff !important;
-    }
-    
-    /* Inputs & labels */
-    body.dark-mode button,
-    body.dark-mode input,
-    body.dark-mode label {
-    color: #ffffff !important;
-    }
-    
-    /* Footer */
-    body.dark-mode footer {
-    color: #ffffff !important;
-    }
-    
-    /* Tables */
-    body.dark-mode table, 
-    body.dark-mode th, 
-    body.dark-mode td {
-    color: #ffffff !important;
-    border-color: #666 !important;
-    }
-    </style>
-    
-    <!-- JS -->
     <script>
-    const toggleBtn = document.getElementById("accessibilityToggle");
-    const panel = document.getElementById("accessibilityPanel");
-    
-    toggleBtn.addEventListener("click", () => {
-    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
-    toggleBtn.setAttribute("aria-expanded", !expanded);
-    panel.hidden = expanded; // Toggle show/hide
-    });
-    
-    // Font resize
-    function changeFontSize(delta) {
-    let body = document.body;
-    let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-    body.style.fontSize = (currentSize + delta) + 'px';
-    }
-    
-    // Dark mode toggle
-    function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    }
-    
-    <!-- Improved Read Button Script with Language Detection -->
-    <script>
-    // Text-to-speech with language detection
-    function readContent() {
-        // Get current language from localStorage or default to English
-        const currentLang = localStorage.getItem('preferredLang') || 'en';
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileClose = document.querySelector('.mobile-nav-close');
+            
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', function() {
+                    const isHidden = mobileNav.hidden;
+                    mobileNav.hidden = !isHidden;
+                    mobileToggle.setAttribute('aria-expanded', isHidden);
+                    document.body.style.overflow = isHidden ? 'hidden' : '';
+                });
+                
+                mobileClose?.addEventListener('click', function() {
+                    mobileNav.hidden = true;
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+                
+                // Close on Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !mobileNav.hidden) {
+                        mobileNav.hidden = true;
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        mobileToggle.focus();
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Accessibility Panel Toggle
+            const a11yToggle = document.getElementById('a11y-toggle');
+            const a11yPanel = document.getElementById('a11y-panel');
+            
+            if (a11yToggle && a11yPanel) {
+                a11yToggle.addEventListener('click', function() {
+                    const isHidden = a11yPanel.hidden;
+                    a11yPanel.hidden = !isHidden;
+                    a11yToggle.setAttribute('aria-expanded', isHidden);
+                });
+            }
+        });
         
-        // Get content from main or body
-        const contentElement = document.querySelector('main') || document.querySelector('#main-content') || document.body;
-        const text = contentElement.innerText;
-        
-        // Cancel any ongoing speech
-        if (window.speechSynthesis.speaking) {
-            window.speechSynthesis.cancel();
+        // Language Toggle
+        function setLanguage(lang) {
+            const langEn = document.getElementById('lang-en');
+            const langHi = document.getElementById('lang-hi');
+            
+            if (langEn) langEn.setAttribute('aria-pressed', lang === 'en');
+            if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi');
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
         }
         
-        // Create speech utterance
-        const speech = new SpeechSynthesisUtterance(text);
-        
-        // Set language based on current preference
-        if (currentLang === 'hi') {
-            speech.lang = 'hi-IN'; // Hindi (India)
-            // Try to find a Hindi voice
-            const voices = window.speechSynthesis.getVoices();
-            const hindiVoice = voices.find(v => v.lang.startsWith('hi'));
-            if (hindiVoice) speech.voice = hindiVoice;
-        } else {
-            speech.lang = 'en-IN'; // English (India)
-            const voices = window.speechSynthesis.getVoices();
-            const englishVoice = voices.find(v => v.lang.startsWith('en-IN') || v.lang.startsWith('en'));
-            if (englishVoice) speech.voice = englishVoice;
+        // Accessibility Functions
+        function changeFontSize(direction) {
+            const html = document.documentElement;
+            const current = parseInt(getComputedStyle(html).fontSize) || 16;
+            html.style.fontSize = (current + direction) + 'px';
         }
         
-        speech.rate = 0.9; // Slightly slower
-        speech.pitch = 1;
-        
-        window.speechSynthesis.speak(speech);
-    }
-    
-    // Stop reading
-    function stopReading() {
-        window.speechSynthesis.cancel();
-    }
-    
-    // Load voices (needed for some browsers)
-    window.speechSynthesis.onvoiceschanged = function() {
-        window.speechSynthesis.getVoices();
-    };
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
-    </script>
-
-    <!-- Google Translate Script -->
-<div id="google_translate_element_hidden" style="display:none;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
-      'google_translate_element'
-    );
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
-    
-
-
-    
-
-
-    <!-- Custom Language Translation Script -->
-    <script>
-    const translations = {'hi': {
-    "Home": "होम",
-    "Products": "उत्पाद",
-    "About Us": "हमारे बारे में",
-    "Contact": "संपर्क",
-    "Login": "लॉग इन",
-    "Quick Links": "त्वरित लिंक",
-    "Downloads": "डाउनलोड",
-    "KYC": "केवाईसी",
-    "Complaints": "शिकायतें",
-    "Menu": "मेन्यू",
-    "History": "इतिहास",
-    "Our Management": "हमारा प्रबंधन",
-    "Careers": "करियर",
-    "Employee Login": "कर्मचारी लॉग इन",
-    "Smart ODR Login": "स्मार्ट ओडीआर लॉगिन",
-    "Back Office": "बैक ऑफिस",
-    "Open Account": "खाता खोलें",
-    "Open account": "खाता खोलें",
-    "Open an Account": "खाता खोलें",
-    "Fund Transfer": "फंड ट्रांसफर",
-    "Online Trading": "ऑनलाइन ट्रेडिंग",
-    "Equities": "इक्विटी",
-    "Equity": "इक्विटी",
-    "Currency": "करेंसी",
-    "Commodities": "कमोडिटी",
-    "IPOs": "आईपीओ",
-    "Advisory": "सलाह",
-    "Depository": "डिपॉजिटरी",
-    "SEBI": "सेबी",
-    "NSE": "एनएसई",
-    "BSE": "बीएसई",
-    "CDSL": "सीडीएसएल",
-    "MCX India": "एमसीएक्स इंडिया",
-    "SCORES 2.0": "स्कोर 2.0",
-    "Terms": "नियम",
-    "Privacy Policies": "गोपनीयता",
-    "Disclaimer": "अस्वीकरण",
-    "Policies & Procedures": "नीतियां",
-    "Investor Charter": "निवेशक चार्टर",
-    "Need help?": "मदद चाहिए",
-    "Connect": "जुड़ें",
-    "Email": "ईमेल",
-    "Phone": "फोन",
-    "Contact us": "संपर्क करें",
-    "Copyright": "कॉपीराइट",
-    "Attention Investor": "निवेशकों का ध्यान",
-    "Read more": "और पढ़ें",
-    "Learn more": "और जानें",
-    "Open New Account": "नया खाता खोलें",
-    "Account Modification": "खाता संशोधन",
-    "Create Account": "खाता बनाएं",
-    "Submit": "जमा करें",
-    "Send": "भेजें",
-    "Cancel": "रद्द करें",
-    "Close": "बंद करें",
-    "Stay Ahead of the Curve": "रुझान से आगे रहें",
-    "Working Experience in Quality Services": "गुणवत्ता सेवाओं में अनुभव",
-    "25+ Years of Excellence": "25+ वर्षों की उत्कृष्टता",
-    "Do You Know?": "क्या आप जानते हैं",
-    "Risk Disclosures on Derivatives": "डेरिवेटिव पर जोखिम प्रकटीकरण",
-    "Full Name": "पूरा नाम",
-    "Email Address": "ईमेल पता",
-    "Phone Number": "फोन नंबर",
-    "Message": "संदेश",
-    "Subject": "विषय",
-}};
-    
-    function setLanguage(lang) {
-        document.documentElement.lang = lang;
-        const langEn = document.getElementById('lang-en');
-        const langHi = document.getElementById('lang-hi');
-        if (langEn) langEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
-        if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
-        if (langEn) langEn.classList.toggle('active', lang === 'en');
-        if (langHi) langHi.classList.toggle('active', lang === 'hi');
-        localStorage.setItem('preferredLang', lang);
-        if (lang === 'hi') {
-            translatePageToHindi();
-        } else {
-            location.reload();
-        }
-    }
-    
-    function translatePageToHindi() {
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-            acceptNode: function(node) {
-                const parent = node.parentElement;
-                if (!parent) return NodeFilter.FILTER_REJECT;
-                const tagName = parent.tagName.toLowerCase();
-                if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                if (parent.hasAttribute('data-translated') || parent.closest('.lang-toggle')) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                return NodeFilter.FILTER_ACCEPT;
-            }
-        });
-        const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
-        textNodes.forEach(node => {
-            const text = node.textContent.trim();
-            if (text && translations['hi'][text]) {
-                node.textContent = translations['hi'][text];
-                node.parentElement.setAttribute('data-translated', 'true');
-            }
-        });
-    }
-    
-    document.addEventListener('DOMContentLoaded', function() {
-        if (localStorage.getItem('preferredLang') === 'hi') setLanguage('hi');
-    });
-    </script>
-
-
-// Mobile Navigation Fix
-document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('mobile-menu-toggle');
-    var mobileNav = document.getElementById('mobile-nav-modal');
-    var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
-    
-    if (menuToggle && mobileNav) {
-        function toggleMobileMenu() {
-            var isHidden = mobileNav.getAttribute('hidden') !== null;
-            if (isHidden) {
-                mobileNav.removeAttribute('hidden');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                menuToggle.setAttribute('aria-label', 'Close mobile navigation menu');
-                document.body.style.overflow = 'hidden';
-                if (closeBtn) closeBtn.focus();
-            } else {
-                mobileNav.setAttribute('hidden', '');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open mobile navigation menu');
-                document.body.style.overflow = '';
-            }
-        }
-        menuToggle.addEventListener('click', toggleMobileMenu);
-        if (closeBtn) closeBtn.addEventListener('click', toggleMobileMenu);
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
-                toggleMobileMenu();
-                menuToggle.focus();
-            }
-        });
-        var navLinks = mobileNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.setAttribute('tabindex', '0');
-        });
-    }
-});
-
 </body>
-
 </html>

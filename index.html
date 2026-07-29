@@ -6,1800 +6,689 @@
     <meta charset="utf-8">
     <meta name="description" content="Standard Securities - Home. Leading stock broking firm in India with 35+ years of experience.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#146CE0" />
+    <meta name="theme-color" content="#146CE0">
+    
     <!-- Site Properties -->
     <title>Home | Standard Securities - Online Trading Platform</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-redesign.css">
-    <link rel="stylesheet" href="css/style_bot.css">
-
-
+    
+    <!-- CSS - Modern Design System -->
+    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/uikit-compat.css">
+    
+    <!-- Google Translate -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    
-    <style>
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #DDD;
-}
-
-tr:hover {background-color: #B8E2F2;}
-
-/* WCAG 2.1.1, 2.4.5, 1.4.10 - Mobile Navigation Fix */
-#mobile-nav-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.9);
-    z-index: 10000;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 60px;
-}
-#mobile-nav-modal[hidden] {
-    display: none;
-}
-#mobile-nav-modal .uk-modal-close-full {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-}
-#mobile-menu-toggle:focus {
-    outline: 3px solid #ffcc00;
-    outline-offset: 2px;
-}
-</style>
-
-
-
 </head>
 
 <body>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 8px 16px;
-        border: 2px solid #146CE0;
-        background: #146CE0;
-        color: #ffffff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-family: inherit;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        min-height: 44px;
-        min-width: 60px;
-    }
-    .lang-toggle button:hover {
-        background: #1157B3;
-        border-color: #1157B3;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #0D47A1;
-        border-color: #0D47A1;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 3px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    </style>
-    
-    <a href="#main-idx" class="skip-link">Skip to main content</a>
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
+                        <img src="img/logo.png" alt="Standard Securities & Investment Intermediates Ltd. logo" width="180" height="48">
+                    </a>
+                </div>
 
-
-    
-
-    <header data-uk-sticky="top: 400; cls-active: in-sticky">
-
-        <div id="google-trans-idx" class="translate-btn"></div>
-
-        <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en-idx" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi-idx" aria-pressed="false">हिंदी</button>
-        </div>
-
-
-        
-        <!-- header content begin -->
-        <div class="uk-section uk-padding-remove-vertical">
-            <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                       
-                        
-                    </div>
-
-
+                <!-- Desktop Navigation -->
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="header-nav-link active" aria-current="page">Home</a>
+                    <a href="products.html" class="header-nav-link">Products</a>
                     
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-button uk-visible@s">
-                        <div class="uk-flex uk-flex-right in-header-links">
-                          <a href="https://ekyc.standardsec.net:8002" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded" style="min-height: 44px; min-width: 44px;"
-                             aria-label="Open Account - Open a new trading account">
-                             Open Account
-                          </a>
-                          
-                      &nbsp;&nbsp;
-                          <a href="http://122.160.199.154:9002/fundTransfer.aspx" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded" style="min-height: 44px; min-width: 44px;"
-                             aria-label="Fund Transfer - Transfer funds securely">
-                             Fund Transfer
-                          </a>
-                          &nbsp;&nbsp;
-                          <a href="https://etrade.standardsec.com:3000/#/app" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded" style="min-height: 44px; min-width: 44px;"
-                             aria-label="Online Trading - Access online trading portal">
-                             Online Trading
-                          </a>
-                          &nbsp;&nbsp;
-                          <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" 
-                             class="uk-button uk-button-primary uk-button-small uk-border-rounded" style="min-height: 44px; min-width: 44px;"
-                             aria-label="Back Office - Access back office system">
-                             Back Office
-                          </a>
-
+                    <!-- About Us Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="about.html" class="dropdown-item" role="menuitem">History</a>
+                            <a href="management.html" class="dropdown-item" role="menuitem">Our Management</a>
+                            <a href="careers.html" class="dropdown-item" role="menuitem">Careers</a>
                         </div>
-                      </div>
+                    </div>
+
+                    <a href="contact.html" class="header-nav-link">Contact</a>
+
+                    <!-- Login Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Login
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" class="dropdown-item" role="menuitem">Employee Login</a>
+                            <a href="smart_ODR.html" class="dropdown-item" role="menuitem">Smart ODR Login</a>
+                            <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="dropdown-item" role="menuitem">Back Office</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Quick Links
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" style="min-width: 320px;" role="menu">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                <div>
+                                    <a href="downloads.html" class="dropdown-item" role="menuitem">Downloads</a>
+                                    <a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" class="dropdown-item" role="menuitem">Evoting Login</a>
+                                    <a href="customers.html" class="dropdown-item" role="menuitem">Customers</a>
+                                    <a href="https://www.sebi.gov.in/" class="dropdown-item" role="menuitem">SEBI</a>
+                                    <a href="https://www.nseindia.com/" class="dropdown-item" role="menuitem">NSE</a>
+                                    <a href="https://www.bseindia.com/" class="dropdown-item" role="menuitem">BSE</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.cdslindia.com/" class="dropdown-item" role="menuitem">CDSL</a>
+                                    <a href="https://www.mcxindia.com" class="dropdown-item" role="menuitem">MCX India</a>
+                                    <a href="https://scores.sebi.gov.in" class="dropdown-item" role="menuitem">SCORES 2.0</a>
+                                    <a href="pdf1/Basic_Details.xlsx" class="dropdown-item" role="menuitem">Basic Details</a>
+                                    <a href="pdf1/kmp%20details_24.pdf" class="dropdown-item" role="menuitem">KMP Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KYC Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            KYC
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://ekyc.standardsec.net:8002/" class="dropdown-item" role="menuitem">Open New Account</a>
+                            <a href="https://ekyc.standardsec.net:9000/directpan.aspx" class="dropdown-item" role="menuitem">Account Modification</a>
+                        </div>
+                    </div>
+
+                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Language Toggle -->
+                    <div class="lang-toggle" role="group" aria-label="Language selection">
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">EN</button>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिं</button>
+                    </div>
                     
-                    <div class="uk-width-1-1">
-                        <hr class="uk-margin-remove-top">
-                    </div>
+                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
                 </div>
-                <div class="uk-grid uk-margin-remove-top">
-                    <div class="uk-width-1-2 uk-width-expand@m">
-                        <!-- header logo begin -->
-                        <div class="in-header-logo uk-flex uk-flex-middle">
-                            <a class="uk-logo" href="index.html" aria-label="Go to Standard Securities homepage">
-                                <img src="img/logo.png" data-src="img/logo.png" 
-                                width="350" height="350" data-uk-img alt="Standard Securities & Investment Intermediates Ltd. logo"></a>
-                        </div>
-                        <!-- header logo end -->
-                    </div>
-                    <div class="in-navbar-wrapper uk-width-1-2 uk-width-auto@m">
-                        <!-- main navigation begin -->
-                        <nav class="uk-navbar-container uk-visible@m" data-uk-navbar aria-label="Main navigation">
-                            <ul class="uk-navbar-nav" role="menubar">
-                              
-                              <!-- Home -->
-                              <li role="none">
-                                <a href="index.html" role="menuitem" aria-label="Go to Home page" aria-current="page">Home</a>
-                              </li>
-                          
-                              <!-- Products -->
-                              <li role="none">
-                                <a href="products.html" role="menuitem" aria-label="View Products page">Products</a>
-                              </li>
-                          
-                              <!-- About Us -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open About Us menu">About Us</a>
-                                <div class="uk-navbar-dropdown" aria-label="About Us submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="about.html" aria-label="Read company History">History</a></li>
-                                    <li role="menuitem"><a href="management.html" aria-label="Meet Our Management team">Our Management</a></li>
-                                    <li role="menuitem"><a href="careers.html" aria-label="Explore Careers at our company">Careers</a></li>
-                                  </ul>
-                                </div>
-                              </li>
-                          
-                              <!-- Contact -->
-                              <li role="none">
-                                <a href="contact.html" role="menuitem" aria-label="Go to Contact page">Contact</a>
-                              </li>
-                          
-                              <!-- Login -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Login menu">Login</a>
-                                <div class="uk-navbar-dropdown" aria-label="Login submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" aria-label="Employee Login page">Employee Login</a></li>
-                                    <li role="menuitem"><a href="smart_ODR.html" aria-label="Smart ODR Login page">Smart ODR Login</a></li>
-                                    <li role="menuitem"><a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" aria-label="Back Office Login page">Back Office</a></li>
-                                  </ul>
-                                </div>
-                              </li>
-                          
-                              <!-- Quick Links -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Quick Links menu">Quick Links</a>
-                                <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2" aria-label="Quick Links submenu">
-                                  <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
-                                    <div>
-                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                        <li role="menuitem"><a href="downloads.html" aria-label="Go to Downloads page">Downloads</a></li>
-                                        <li role="menuitem"><a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" aria-label="Evoting Login page">Evoting Login</a></li>
-                                        <li role="menuitem"><a href="pdf1/Basic_Details.xlsx" aria-label="Download Basic Details Excel file">Basic Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/kmp details_24.pdf" aria-label="Download KMP Details PDF file">KMP Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/AP_Details.pdf" aria-label="Download AP Details PDF file">AP Details</a></li>
-                                        <li role="menuitem"><a href="pdf1/Start_Your_Financial_Journey_with.pptx" aria-label="Download Start Your Financial Journey PowerPoint">Start Your Journey</a></li>
-                                        <li role="menuitem"><a href="customers.html" aria-label="Go to Customers page">Customers</a></li>
-                                        <li role="menuitem"><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official site">SEBI</a></li>
-                                        <li role="menuitem"><a href="https://www.nseindia.com/" aria-label="Visit NSE official site">NSE</a></li>
-                                        <li role="menuitem"><a href="https://www.bseindia.com/" aria-label="Visit BSE official site">BSE</a></li>
-                                        <li role="menuitem"><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official site">CDSL</a></li>
-                                        <li role="menuitem"><a href="https://www.mcxindia.com" aria-label="Visit MCX India official site">MCX India</a></li>
-                                        <li role="menuitem"><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance redressal portal">SCORES 2.0</a></li>
-                                        <li role="menuitem"><a href="https://www.nseindia.com/static/trade/members-client-registration-documents" aria-label="Visit KYC Documents In Vernacular Language">KYC Documents In Vernacular Language</a></li>
 
-                                      </ul>
-                                    </div>
-                                    <div>
-                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                        <li role="none">
-                                          <span>Start investing today and grow with Standard — call us now</span>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                </div>
-                              </li>
-                          
-                              <!-- KYC -->
-                              <li role="none">
-                                <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open KYC menu">KYC</a>
-                                <div class="uk-navbar-dropdown" aria-label="KYC submenu">
-                                  <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:8002/" aria-label="Open New Account via eKYC">Open New Account</a></li>
-                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:9000/directpan.aspx" aria-label="Modify Account via eKYC">Account Modification</a></li>
-                                  </ul>
-                                </div>
-                              </li>
-                          
-                              <!-- Complaints -->
-                                <!-- Complaints -->
-                              <li role="none">
-                                <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav_footer"></div>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav_header"></div>
-                              </li>
-                              
-                            </ul>
-                          </nav>
-                          
-                          
-                        <!-- main navigation end -->
-                        <!-- Mobile Navigation Begin -->
-<div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-    <button class="uk-button" type="button" aria-label="Open mobile navigation menu" aria-expanded="false" aria-expanded="false" onclick="UIkit.toggle(document.getElementById('mobile-nav-modal')).toggle();" data-uk-toggle >
-        <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-</div>
-
-<div id="mobile-nav-idx" class="uk-modal-full uk-flex-top" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" hidden>
-    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
-        <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
-        <div class="uk-width-large uk-padding-large">
-            <ul class="uk-nav-primary uk-nav-parent-icon in-margin-negative-top@s" data-uk-nav role="menu">
-
-                <!-- Home -->
-                <li role="none">
-                    <a href="index.html" role="menuitem" aria-label="Go to Home page">Home</a>
-                </li>
-
-                <!-- Products -->
-                <li role="none">
-                    <a href="products.html" role="menuitem" aria-label="View Products page">Products</a>
-                </li>
-
-                <!-- About Us -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open About Us submenu">About Us</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="About Us submenu">
-                        <li role="menuitem"><a href="about.html" aria-label="Read company History">History</a></li>
-                        <li role="menuitem"><a href="management.html" aria-label="Meet Our Management team">Our Management</a></li>
-                        <li role="menuitem"><a href="careers.html" aria-label="Explore Careers at our company">Careers</a></li>
-                    </ul>
-                </li>
-
-                <!-- Contact -->
-                <li role="none">
-                    <a href="contact.html" role="menuitem" aria-label="Go to Contact page">Contact</a>
-                </li>
-
-                <!-- Login -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Login submenu">Login</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="Login submenu">
-                        <li role="menuitem"><a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" aria-label="Employee Login page">Employee Login</a></li>
-                        <li role="menuitem"><a href="smart_ODR.html" aria-label="Smart ODR Login page">Smart ODR Login</a></li>
-                        <li role="menuitem"><a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" aria-label="Back Office Login page">Back Office</a></li>
-                    </ul>
-                </li>
-
-                <!-- Quick Links -->
-                <li role="none" class="uk-parent">
-                    <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Quick Links submenu">Quick Links</a>
-                    <ul class="uk-nav-sub" role="menu" aria-label="Quick Links submenu">
-                        <li role="menuitem"><a href="downloads.html" aria-label="Go to Downloads page">Downloads</a></li>
-                        <li role="menuitem"><a href="pdf1/Standardsec_QRCode.pdf" aria-label="Pay Now PDF">Pay now!</a></li>
-                        <li role="menuitem"><a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" aria-label="Evoting Login page">Evoting Login</a></li>
-                        <li role="menuitem"><a href="pdf1/Basic_Details.xlsx" aria-label="Download Basic Details Excel file">Basic Details</a></li>
-                        <li role="menuitem"><a href="pdf1/kmp details_24.pdf" aria-label="Download KMP Details PDF file">KMP Details</a></li>
-                        <li role="menuitem"><a href="pdf1/AP_Details.pdf" aria-label="Download AP Details PDF file">AP Details</a></li>
-                        <li role="menuitem"><a href="pdf1/FREEZING-Unfreezing.doc" aria-label="Download Freezing-Unfreezing Word file">Freezing-Unfreezing</a></li>
-                        <li role="menuitem"><a href="pdf1/KYC-Validation-Process.pdf" aria-label="Download KYC Validation Process PDF">KYC Validation Process</a></li>
-                        <li role="menuitem"><a href="pdf1/Start_Your_Financial_Journey_with.pptx" aria-label="Download Start Your Financial Journey PowerPoint">Start Your Journey</a></li>
-                        <li role="menuitem"><a href="customers.html" aria-label="Go to Customers page">Customers</a></li>
-                        <li role="menuitem"><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official site">SEBI</a></li>
-                        <li role="menuitem"><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance redressal portal">SCORES 2.0</a></li>
-                        <li role="menuitem"><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official site">CDSL</a></li>
-                        <li role="menuitem"><a href="https://www.bseindia.com/" aria-label="Visit BSE official site">BSE</a></li>
-                        <li role="menuitem"><a href="https://www.nseindia.com/" aria-label="Visit NSE official site">NSE</a></li>
-                        <li role="menuitem"><a href="https://www.nseindia.com/static/trade/members-client-registration-documents" aria-label="Visit KYC Documents In Vernacular Language">KYC Documents In Vernacular Language</a></li>
-                     
-                    </ul>
-                </li>
-
-                 <!-- KYC -->
-                 <li role="none" class="uk-parent">
-                  <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open KYC menu">KYC</a>
-   
-                    <ul class="uk-nav-sub" role="menu">
-                      <li role="menuitem"><a href="https://ekyc.standardsec.net:8002/" aria-label="Open New Account via eKYC">Open New Account</a></li>
-                      <li role="menuitem"><a href="https://ekyc.standardsec.net:9000/directpan.aspx" aria-label="Modify Account via eKYC">Account Modification</a></li>
-                    </ul>
-                  
-                </li>
-
-                 <!-- Complaints -->
-                              <li role="none">
-                                <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
-                              </li>
-                              <li>
-                                <div id="google_translate_nav"></div>
-                              </li>
-
-            </ul>
-
-            <!-- Action Buttons -->
-            <div class="dropdown">
-                <a href="https://ekyc.standardsec.net:8002" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Open account">Open account</a>
-            </div>
-            <div class="dropdown">
-                <a href="http://122.160.199.154:9002/fundTransfer.aspx" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Fund Transfer">Fund Transfer</a>
-            </div>
-            <div class="dropdown">
-                <a href="https://etrade.standardsec.com:3000/#/app" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Online Trading">Online Trading</a>
-            </div>
-            <div class="dropdown">
-                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="uk-button uk-button-primary uk-border-rounded uk-align-center" role="button" aria-label="Back Office">Back Office</a>
-            </div>
-
-        </div>
-    </div>
-</div>
-<!-- Mobile Navigation End -->
-
-                
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- header content end -->
-    </header>
-
-    <main id="main-idx">
-        <!-- Slideshow Content Begin -->
-        <div class="uk-section uk-padding-remove-vertical uk-margin-bottom" data-uk-scrollspy="cls:uk-animation-fade; delay: 200">
-            <div class="uk-container">
-                <div class="in-slideshow uk-position-relative uk-visible-toggle" aria-label="Homepage slideshow">
-                    <ul class="uk-slideshow-items">
-                        <li>
-                            <div class="uk-height-1-1 uk-light monee-custom-slideshow" data-uk-grid>
-                                <div class="uk-position-center-left uk-width-1-2@m uk-height-1-1 uk-overlay uk-background-primary">
-                                    <img class="uk-position-left in-img-stretch uk-animation-slide-bottom-small"
-                                         src="img/in-lazy.gif"
-                                         data-src="img/monee-slideshow-graph.png"
-                                         alt="Graph illustrating strong investment foundations"
-                                         data-uk-img>
-                                    <div class="uk-position-center-left uk-padding uk-text-center uk-text-left@m monee-slide1-text">
-                                        <div class="uk-animation-slide-top-small">
-                                            <h2 class="uk-margin-remove-bottom" style="color: #ffffff; font-size: 1rem; font-weight: 400;">Setting strong</h2>
-                                            <p class="uk-margin-remove-top" style="color: #ffffff; font-size: 2.5rem; font-weight: 700; margin-bottom: 0;">foundations</p>
-                                            <a href="https://ekyc.standardsec.net:8002" class="uk-button uk-button-primary uk-button-large uk-border-rounded" style="background-color: #0052a3; border-color: #0052a3; color: #ffffff;">Open an Account</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="uk-position-center-right uk-width-1-2@m uk-height-1-1 uk-visible@m">
-                                    <img class="uk-position-right in-img-stretch uk-animation-slide-bottom-small"
-                                         src="img/in-lazy.gif"
-                                         data-src="img/home_slider_1.jpg"
-                                         alt="Investment opportunity visual"
-                                         data-uk-img>
-                                </div>
-                            </div>
-                        </li>
-                        <li>
-                            <div class="uk-height-1-1 uk-light monee-custom-slideshow" data-uk-grid>
-                                <img class="in-img-stretch" src="img/in-lazy.gif" data-src="img/home_slider_2.jpg"
-                                     alt="Start investing visual"
-                                     width="1100" height="438" data-uk-img>
-                                <div class="uk-position-center uk-width-1-1@m uk-overlay monee-slide2-text">
-                                    <div class="uk-text-center uk-animation-slide-top-small">
-                                        <h2 class="uk-margin-remove-bottom" style="color: #ffffff; font-size: 2.5rem; font-weight: 700;">Start investing now</h2>
-                                        <p class="uk-text-lead uk-margin-remove-top uk-visible@m">Lightning-fast execution. Exceptional client service.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="uk-position-bottom-right uk-position-medium">
-                        <ul class="uk-dotnav" aria-label="Slideshow navigation">
-                            <li data-uk-slideshow-item="0"><a href="#">Slide 1</a></li>
-                            <li data-uk-slideshow-item="1"><a href="#">Slide 2</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-                <!-- WCAG 2.2.2 - Carousel Pause Control -->
-                <div class="uk-text-center" style="margin-top: 10px;">
-                    <button type="button" id="hero-slideshow-pause-btn" class="uk-button uk-button-small uk-button-default" aria-label="Pause slideshow" aria-pressed="false">
-                        <span id="hero-pause-icon">⏸</span> <span id="hero-pause-text">Pause</span>
-                    </button>
-                </div>
-                <!-- Slideshow Content End -->
-    
-      <!-- Open Account Section -->
-<div class="uk-section">
-    <div class="uk-container">
-      <div class="uk-grid">
-        <div class="uk-width-1-1 monee-register-form">
-          <hr>
-          <h2 class="uk-margin-small-bottom">Open your account</h2>
-          <p class="uk-text-lead uk-margin-remove-top uk-visible@m">
-            Connect with over 5 million investors in the world’s leading social investment network
-          </p>
-  
-          <form class="uk-grid uk-grid-small uk-margin-bottom" data-uk-grid>
-            <!-- Full Name -->
-            <div class="uk-width-1-1 uk-width-1-5@m">
-              <label class="uk-form-label" for="full-name">Full Name <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="text" id="full-name" name="full-name" autocomplete="name"
-                placeholder="Enter your full name" aria-label="Full name" required aria-required="true">
-            </div>
-  
-            <!-- Email -->
-            <div class="uk-width-1-1 uk-width-1-5@m">
-              <label class="uk-form-label" for="email">Email Address <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="email" id="email" name="email" autocomplete="email"
-                placeholder="Enter your email address" aria-label="Email address" required aria-required="true">
-            </div>
-  
-            <!-- Phone -->
-            <div class="uk-width-1-1 uk-width-1-5@m">
-              <label class="uk-form-label" for="phone">Phone Number <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="tel" id="phone" name="phone" autocomplete="tel"
-                placeholder="Enter your phone number" aria-label="Phone number" required aria-required="true">
-            </div>
-  
-            <!-- Submit Button -->
-            <div class="uk-width-1-1 uk-width-1-5@m">
-              <button class="uk-button uk-button-primary uk-border-rounded uk-width-expand uk-width-auto@m"
-                type="submit">
-                Create Account
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-  
-        <!-- Open Account Section End -->
-    
-        <!-- Trade Platform Section -->
-        <div class="uk-section">
-            <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-1">
-                        <div class="uk-card uk-card-secondary uk-background-center-right uk-background-contain uk-background-image@m" style="background-image: url(img/monee-content-platform.png);">
-                            <div class="uk-card-body">
-                                <div class="uk-grid">
-                                    <div class="uk-width-1-1 uk-width-1-2@m uk-margin-small-left">
-                                        <div class="uk-flex uk-flex-left uk-margin-bottom">
-                                            <span class="uk-margin-medium-right">
-                                                <a href="https://play.google.com/store/apps/details?id=com.standardsec.xts&hl=en_IN&gl=US">
-                                                    <img src="img/monee-content-os3.svg" data-src="img/monee-content-os3.svg" alt="Download on Google Play" width="33" height="38" data-uk-img>
-                                                </a>
-                                            </span>
-                                            <span class="uk-margin-medium-right">
-                                                <a href="https://apps.apple.com/sa/app/ssiil-trade/id1605614705">
-                                                    <img src="img/monee-content-os2.svg" data-src="img/monee-content-os2.svg" alt="Download on App Store" width="33" height="38" data-uk-img>
-                                                </a>
-                                            </span>
-                                        </div>
-                                        <h2 class="uk-margin-small-top uk-margin-remove-bottom">Trade on world-class platform</h2>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Features Section -->
-        <div class="uk-section">
-                <h1 class="uk-visually-hidden">Standard Securities & Investment Intermediates Ltd - Trading Platform</h1>
-            <div class="uk-container">
-                <div class="uk-grid" data-uk-grid>
-                    <div class="uk-width-1-3@m uk-margin-top">
-                        <h2>A partner invested in your success</h2>
-                        <p>Trade with confidence and benefit from the reliability of a trusted broker with a proven record of stability, security, and strength.</p>
-                        <a class="uk-button uk-button-primary uk-button-large uk-border-rounded" href="https://ekyc.standardsec.net:8002">Open an Account</a>
-                    </div>
-                    <div class="uk-width-expand@m">
-                        <div class="uk-grid uk-grid-collapse uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center monee-custom-tile">
-                            <div class="uk-tile uk-tile-default">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature2.svg" data-src="img/monee-content-feature2.svg" alt="Currency feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Currency</h3>
-                            </div>
-                            <div class="uk-tile uk-tile-default">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature1.svg" data-src="img/monee-content-feature1.svg" alt="Commodities feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Commodities</h3>
-                            </div>
-                            <div class="uk-tile uk-tile-default">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature3.svg" data-src="img/monee-content-feature3.svg" alt="Equity feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Equity</h3>
-                            </div>
-                            <div class="uk-tile uk-tile-default">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature4.svg" data-src="img/monee-content-feature4.svg" alt="IPOs feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">IPOs</h3>
-                            </div>
-                            <div class="uk-tile uk-tile-default uk-visible@m">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature5.svg" data-src="img/monee-content-feature5.svg" alt="Advisory feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Advisory</h3>
-                            </div>
-                            <div class="uk-tile uk-tile-default uk-visible@m">
-                                <img class="uk-margin-remove-bottom" src="img/monee-content-feature6.svg" data-src="img/monee-content-feature6.svg" alt="Depository feature icon" width="50" height="48" data-uk-img>
-                                <h3 class="uk-margin-small-top" style="font-size: 1.25rem;">Depository</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Remaining Sections (Experience, Services, Risk Disclosure) -->
-        <!-- Same improvements applied: alt text, headings, labels -->
-
-        <!-- section content begin -->
-<div class="uk-section">
-    <div class="uk-container">
-      <div class="uk-grid">
-        <div class="uk-width-1-1 monee-custom-card">
-          <div class="uk-card">
-            <div class="uk-card-body">
-              <div class="uk-grid uk-grid-collapse uk-child-width-1-5@m uk-child-width-1-2@s uk-text-center" data-uk-grid>
-                <div>
-                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">#1</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Ranking in India</span></h2>
-                  <p class="uk-margin-remove-top uk-text-small">for spreads^</p>
-                </div>
-                <div>
-                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">~30ms</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Execution Speed</span></h2>
-                  <p class="uk-margin-remove-top uk-text-small">execution speed*</p>
-                </div>
-                <div>
-                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">24/5</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Trading Days</span></h2>
-                  <p class="uk-margin-remove-top uk-text-small">support</p>
-                </div>
-                <div>
-                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">0.0</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Penalty Charges</span></h2>
-                  <p class="uk-margin-remove-top uk-text-small">spread from 0.0 pips</p>
-                </div>
-                <div class="uk-visible@m">
-                  <h2 class="uk-margin-remove-bottom"><span class="stat-value">150+</span><span class="stat-label" style="display: block; font-size: 0.6em; font-weight: 400;">Products Available</span></h2>
-                  <p class="uk-margin-remove-top uk-text-small">trading instruments</p>
-                </div>
-  
-                <!-- Price ticker -->
-                <div class="uk-width-1-1@m">
-                  <div class="monee-price-ticker uk-position-bottom" aria-label="Live trading prices">
-                    <div class="uk-position-relative uk-visible-toggle" tabindex="0" role="region" aria-label="Price Ticker" data-uk-slider="autoplay: true" data-autoplay-interval="3000">
-                      <button type="button" id="price-ticker-pause-btn" class="uk-button uk-button-small uk-button-default" style="position: absolute; right: 10px; top: 10px; z-index: 100;" aria-label="Pause price ticker" aria-pressed="false"><span id="price-pause-icon">⏸</span></button>
-                      <ul class="uk-slider-items uk-child-width-1-5@m uk-child-width-1-2@s" role="list">
-                        <li role="listitem">
-                          XAUUSD <span class="uk-label uk-label-success" aria-label="XAUUSD up 0.28%">▲ 1478.81 (+0.28%)</span>
-                        </li>
-                        <li role="listitem">
-                          GBPUSD <span class="uk-label uk-label-danger" aria-label="GBPUSD down 1.07%">▼ 1.3191 (-1.07%)</span>
-                        </li>
-                        <li role="listitem">
-                          EURUSD <span class="uk-label uk-label-danger" aria-label="EURUSD down 0.11%">▼ 1.1159 (-0.11%)</span>
-                        </li>
-                        <li role="listitem">
-                          USDJPY <span class="uk-label uk-label-success" aria-label="USDJPY up 0.05%">▲ 109.59 (+0.05%)</span>
-                        </li>
-                        <li role="listitem">
-                          USDCAD <span class="uk-label uk-label-success" aria-label="USDCAD up 0.18%">▲ 1.3172 (+0.18%)</span>
-                        </li>
-                        <li role="listitem">
-                          USDCHF <span class="uk-label uk-label-success" aria-label="USDCHF up 0.06%">▲ 0.9776 (+0.06%)</span>
-                        </li>
-                        <li role="listitem">
-                          AUDUSD <span class="uk-label uk-label-danger" aria-label="AUDUSD down 0.08%">▼ 0.67064 (-0.08%)</span>
-                        </li>
-                        <li role="listitem">
-                          GBPJPY <span class="uk-label uk-label-success" aria-label="GBPJPY up 0.12%">▲ 141.91 (+0.12%)</span>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <!-- end ticker -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section uk-margin-small-bottom">
-    <div class="uk-container">
-      <div class="uk-grid uk-flex-middle" data-uk-grid>
-        
-        <!-- Image Section -->
-        <div class="uk-width-auto@m uk-width-1-2@s">
-          <img 
-            class="uk-border-rounded uk-margin-small-top in-img-shadow" 
-            src="img/in-lazy.gif" 
-            data-src="img/home_exp_bld.jpg" 
-            alt="Experienced team working in quality services" 
-            width="500" height="350"
-            data-uk-img
-          >
-        </div>
-  
-        <!-- Text Section -->
-        <div class="uk-width-expand@m uk-width-1-2@s uk-margin-top">
-          <div class="uk-margin-large-left in-margin-remove-left@s">
-            
-            <!-- Headings -->
-            <h2 class="uk-margin-top uk-margin-remove-bottom">
-              Working Experience in Quality Services
-            </h2>
-            <h3 class="uk-margin-remove-top uk-text-primary">
-              25+ Years of Excellence
-            </h3>
-            <hr>
-  
-            <!-- Paragraphs (readability improved) -->
-            <p>
-              <strong>Standard Securities</strong> is one of the top stock broking firms 
-              in New Delhi, with over <strong>35 years of experience</strong> in both 
-              equity and commodity markets. Our company has built a strong 
-              foundation based on long-term customer relationships.
-            </p>
-  
-            <p>
-              Moving forward with the times, we continue to maintain high standards 
-              of investment and client service. In today’s fast-changing environment, 
-              Standard Securities always stays updated with the latest technology, 
-              innovative assets, and skilled human resources.
-            </p>
-  
-            <p>
-              We provide our clients with <strong>risk-free investment strategies</strong> 
-              and <strong>Systematic Investment Planning (SIP)</strong> to achieve 
-              maximum returns on their investments.
-            </p>
-  
-            <p>
-              Standard Securities remains synonymous with growth due to our 
-              innovative products, on-time delivery, advanced research, and 
-              best-in-class client servicing. 
-              <br><br>
-              <span class="uk-text-bold uk-text-primary">
-                Open a free Demat account today and enjoy the lowest brokerage 
-                in the market — activated within an hour!
-              </span>
-            </p>
-  
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-  <!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section">
-    <div class="uk-container">
-      <div class="uk-grid uk-child-width-1-1 uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center" data-uk-grid>
-  
-        <!-- Section Heading -->
-        <div class="uk-width-1-1">
-          <h2 class="uk-text-bold uk-heading-line">
-            <span>Stay Ahead of the Curve</span>
-          </h2>
-        </div>
-  
-        <!-- Commodities -->
-        <div class="uk-transition-toggle">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/commodity.jpg"
-                 alt="Commodity trading and research services"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="Commodities.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about Commodities"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">Commodities</h3>
-          <p class="uk-margin-small-top">
-            For individual investors and institutions worldwide, we provide best-in-class 
-            commodity brokerage and research. Our leading teams cover all major sectors.
-          </p>
-        </div>
-  
-        <!-- Currency -->
-        <div class="uk-transition-toggle">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/currency.jpg"
-                 alt="Currency derivatives trading"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="Currency.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about Currency Trading"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">Currency</h3>
-          <p class="uk-margin-small-top">
-            Trade in the Currency Derivatives Segment at NSE with features similar 
-            to Stock Futures & Options. Designed for flexibility and growth.
-          </p>
-        </div>
-  
-        <!-- Equity -->
-        <div class="uk-transition-toggle">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/equity.jpg"
-                 alt="Equity stock broking services"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="Equity.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about Equity Trading"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">Equity</h3>
-          <p class="uk-margin-small-top">
-            One of Delhi’s leading stock brokers. Our experienced team creates 
-            liquidity in illiquid markets and supports long-term growth.
-          </p>
-        </div>
-  
-        <!-- IPOs -->
-        <div class="uk-transition-toggle">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/ipo.jpg"
-                 alt="IPO investment opportunities"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="IPOs.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about IPOs"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">IPOs</h3>
-          <p class="uk-margin-small-top">
-            IPOs can be risky, but we simplify the process for retail investors 
-            with research-driven insights and transparent guidance.
-          </p>
-        </div>
-  
-        <!-- Advisory -->
-        <div class="uk-transition-toggle">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/advisory.jpg"
-                 alt="Financial advisory services"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="Advisory.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about Advisory Services"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">Advisory</h3>
-          <p class="uk-margin-small-top">
-            Partner with financial advisors who create customized solutions 
-            for your retirement, investments, and long-term wealth goals.
-          </p>
-        </div>
-  
-        <!-- Depository -->
-        <div class="uk-transition-toggle uk-visible@m">
-          <div class="uk-inline-clip">
-            <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
-                 src="img/in-lazy.gif"
-                 data-src="img/depository.jpg"
-                 alt="Depository services for trading"
-                 width="340" height="160"
-                 data-uk-img>
-            <div class="uk-position-small uk-position-bottom-right">
-              <a href="Depository.html"
-                 class="uk-icon-button uk-text-white uk-background-primary fas fa-link fa-sm uk-transition-slide-right-small"
-                 aria-label="Learn more about Depository Services"></a>
-            </div>
-          </div>
-          <h3 class="uk-margin-top uk-margin-remove-bottom">Depository</h3>
-          <p class="uk-margin-small-top">
-            Trusted depository services with a strong research-backed approach, 
-            supporting both equity and commodity market investors.
-          </p>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-  <!-- section content end -->
-<!-- section content begin -->
-<div class="uk-section uk-margin-small-bottom">
-    <div class="uk-container">
-      <div class="uk-grid uk-flex-middle" data-uk-grid>
-        
-        <!-- Image -->
-        <div class="uk-width-auto@m uk-width-1-2@s">
-          <img class="uk-border-rounded uk-margin-small-top in-img-shadow"
-               src="img/in-lazy.gif"
-               data-src="img/invest_risk.jpg"
-               alt="Illustration showing investment risk awareness"
-               width="500" height="350"
-               data-uk-img>
-        </div>
-  
-        <!-- Content -->
-        <div class="uk-width-expand@m uk-width-1-2@s uk-margin-top">
-          <div class="uk-margin-large-left in-margin-remove-left@s">
-  
-            <!-- Heading hierarchy fixed -->
-            <h2 class="uk-margin-top uk-margin-remove-bottom">Do You Know?</h2>
-            <h3 class="uk-margin-remove-top">Risk Disclosures on Derivatives</h3>
-            <hr>
-  
-            <!-- Accessible List -->
-            <ul class="uk-list uk-list-bullet uk-text-justify">
-              <li>
-                9 out of 10 individual traders in the equity Futures and Options segment incur net losses.
-              </li>
-              <li>
-                On average, loss-making traders register net trading losses close to ₹50,000.
-              </li>
-              <li>
-                Beyond net trading losses, loss makers spend an additional 28% of their losses as transaction costs.
-              </li>
-              <li>
-                Even profit-making traders incur between 15% to 50% of their profits as transaction costs.
-              </li>
-            </ul>
-  
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </div>
-  <!-- section content end -->
-        
-    
-    </main>
-    
-
-    <div class="container">
-        <div class="chatbox" aria-live="polite">
-            <!-- Chat support panel -->
-            <div class="chatbox__support" aria-label="Chat support panel">
-                <!-- Header -->
-                <div class="chatbox__header">
-                    <div class="chatbox__content--header">
-                        <h2 class="chatbox__heading--header">Chat support</h2>
-                        <p class="chatbox__description--header">Hi. Welcome to Standard Securities. How can I help you?</p>
-                    </div>
-                </div>
-    
-                <!-- Messages / Chatbot iframe -->
-                <div class="chatbox__messages" role="region" aria-label="Chat messages">
-                    <iframe 
-                        src="https://webchat.botframework.com/embed/standardsec-bot-final?s=SvJm2QLqSrs…" 
-                        title="Chatbot conversation window" 
-                        style="width:100%; height:500px; border:none;" 
-                        aria-label="Chatbot conversation window"
-                        loading="lazy" title="Chat with Standard Securities Bot">
-                    </iframe>
-                </div>
-    
-                <!-- Footer for message input (if needed in future) -->
-                <div class="chatbox__footer chatbox__send--footer" role="form" aria-label="Send message">
-                    <!-- You can add input and send button here if needed -->
-                </div>
-            </div>
-    
-            <!-- Floating Chat Button -->
-            <div class="chatbox__button">
-                <button aria-label="Open chatbot" type="button">
-                    <img 
-                        src="https://img.icons8.com/external-flaticons-lineal-color-flat-icons/64/000000/external-chatbot-live-streaming-flaticons-lineal-color-flat-icons.png" 
-                        alt="Open chat with bot" 
-                        width="55" 
-                        height="65">
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
                 </button>
             </div>
         </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem" aria-current="page">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
+            </div>
+        </div>
     </div>
-    
-    
 
-    <footer>
-        <!-- footer content begin -->
-        <div class="uk-section uk-padding-remove-vertical uk-margin-medium-top">
-          <div class="uk-container">
-            <div class="uk-grid">
-              <div class="uk-width-1-1">
-                <hr>
-                <div class="uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
-                  <!-- Help Info -->
-                  <div class="in-footer-info uk-flex uk-flex-center uk-flex-left@m">
-                    <ul class="uk-subnav" aria-label="Footer help section">
-                      <li class="uk-visible@m"><span>Need help?</span></li>
-                      <li aria-label="Contact phone number"><i class="uk-margin-small-left fas fa-phone"></i> 02241721101/08</li>
-                      <li class="uk-visible@m">
-                        <a href="mailto:info@standardsec.com" aria-label="Send an email to info@standardsec.com">
-                          <i class="uk-margin-small-left fas fa-envelope-open-text"></i> Email
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-      
-                  <!-- Social Media -->
-                  <div>
-                    <div class="uk-flex uk-flex-center uk-flex-right@m in-footer-socials" aria-label="Social media links">
-                      <span class="uk-visible@m">Connect</span>
-                      <a href="#" class="uk-icon-button fab fa-facebook-f brand-facebook" aria-label="Visit our Facebook page"></a>
-                      <a href="#" class="uk-icon-button fab fa-twitter brand-twitter uk-margin-small-left" aria-label="Visit our Twitter profile"></a>
-                      <a href="#" class="uk-icon-button fab fa-youtube brand-youtube uk-margin-small-left" aria-label="Visit our YouTube channel"></a>
-                    </div>
-                  </div>
-                </div>
-                <hr>
-              </div>
-            </div>
-      
-            <!-- Footer Links -->
-            <div class="uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s" data-uk-grid aria-label="Footer navigation links">
-              <div>
-                <h4>Products</h4>
-                <ul class="uk-list uk-link-text">
-                  <li><a href="Equity.html" aria-label="View Equity products">Equities</a></li>
-                  <li><a href="Currency.html" aria-label="View Currency products">Currency</a></li>
-                  <li><a href="Commodities.html" aria-label="View Commodities products">Commodities</a></li>
-                  <li><a href="IPOs.html" aria-label="View IPO products">IPOs</a></li>
-                  <li><a href="Advisory.html" aria-label="View Advisory services">Advisory</a></li>
-                  <li><a href="Depository.html" aria-label="View Depository services">Depository</a></li>
-                </ul>
-              </div>
-      
-              <div>
-                <h4>Menus</h4>
-                <ul class="uk-list uk-link-text">
-                  <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
-                  <li><a href="products.html" aria-label="Go to Products page">Products</a></li>
-                  <li><a href="about.html" aria-label="Learn more About Us">About Us</a></li>
-                  <li><a href="contact.html" aria-label="Go to Contact page">Contact</a></li>
-                  <li><a href="Terms.html" aria-label="Read Terms and Conditions">Terms</a></li>
-                  <li><a href="privacy.html" aria-label="Read Privacy Policies">Privacy Policies</a></li>
-                  <li><a href="disclaimer.html" aria-label="Read Disclaimer">Disclaimer</a></li>
-                  <li><a href="procedures.html" aria-label="Read Policies and Procedures">Policies & Procedures</a></li>
-                  <li><a href="invester_charter.html" aria-label="Read Investor Charter">Investor Charter</a></li>
-                </ul>
-              </div>
-      
-                <div>
-                <h4>Quick Links</h4>
-                <ul class="uk-list uk-link-text">
-                    <li><a href="accessibility.html" aria-label="Read Accessibility Statement">Accessibility</a></li>
-                  <li><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official website">SEBI</a></li>
-                  <li><a href="https://www.nseindia.com/" aria-label="Visit NSE official website">NSE</a></li>
-                  <li><a href="https://www.bseindia.com/" aria-label="Visit BSE official website">BSE</a></li>
-                  <li><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official website">CDSL</a></li>
-                  <li><a href="https://www.mcxindia.com" aria-label="Visit MCX India official website">MCX India</a></li>
-                  <li><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance portal">SCORES 2.0</a></li>
-                  <li><a href="pdf1/SEBI-Master-Circular-for-Online-Resolution-of-Disputes.pdf">SEBI Circular</li>
-                    <li><a href="smart_ODR.html">Smart ODR Login</a></li>  
-                </ul>
-              </div>
-      
-              <div class="in-footer-address">
-                <h4>Contact us</h4>
-                <p>
-                  Tanishka Commercial Office No.104/105<br>
-                  1st Floor, Akurli Road<br>
-                  Next To Growel’s Mall, Kandivali(E),<br>
-                  Mumbai-400101
-                </p>
-              </div>
-            </div>
-      
-            <!-- Copyright & Payment -->
-            <div class="uk-grid">
-              <div class="uk-width-1-1 uk-text-small">
-                <div class="uk-card uk-card-small uk-card-secondary uk-margin-bottom">
-                  <div class="uk-card-body">
-                    <div class="in-footer-copyright" data-uk-grid>
-                      <div class="uk-width-1-2@m uk-text-center uk-text-left@m">
-                        <p>Copyright ©2022 Standard Securities & Investment Intermediates Pvt Ltd.</p>
-                      </div>
-                      <div class="uk-width-1-2@m">
-                        <div class="uk-flex uk-flex-center uk-flex-right@m" aria-label="Accepted payment methods">
-                          <span>
-                            <img src="img/monee-footer-mastercard.svg" alt="Mastercard logo" width="42" height="22">
-                          </span>
-                          <span>
-                            <img src="img/monee-footer-visa.svg" alt="Visa logo" width="42" height="21">
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                    <div class="uk-width-1-1 in-footer-disclaimer">
-
-                        <div class="col-12">
-                            <h5><strong>Attention Investor</strong></h5>
-                          
-                            <div class="scrolling-text" aria-label="Investor important updates scrolling text">
-                             <h6><strong> <ol>
-                                <li>Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</li>
-                                <li>Update your mobile number & email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.</li>
-                                <li>Investors may please refer to the Exchange's Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020 and NSE/INSP/45534 dated August 31, 2020 and other guidelines issued from time to time in this regard.</li>
-                                <li>Check your Securities / MF / Bonds in the consolidated account statement issued by NSDL/CDSL every month. Issued in the interest of Investors.</li>
-                              </ol></strong></h6>
+    <!-- Main Content -->
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="section section--white pt-0" aria-label="Welcome to Standard Securities">
+            <div class="container">
+                <div class="hero animate-fade-in-up">
+                    <div class="hero-inner">
+                        <div class="hero-content">
+                            <span class="hero-tagline">Setting Strong Foundations</span>
+                            <h1 class="hero-title">Your Trusted Partner in Financial Growth</h1>
+                            <p class="hero-subtitle">Trade with confidence on India's leading trading platform with lightning-fast execution and exceptional client service.</p>
+                            <div class="flex gap-4 flex-wrap">
+                                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-lg">Open an Account</a>
+                                <a href="products.html" class="btn btn-white btn-lg">Explore Products</a>
                             </div>
-                          </div>
-                          
-                          
-                        
-
+                        </div>
+                        <div class="hero-image">
+                            <img src="img/home_slider_1.jpg" alt="Trading platform dashboard showing market data and charts" loading="eager">
+                        </div>
                     </div>
+                    <div class="hero-dots" role="tablist" aria-label="Slideshow navigation">
+                        <button class="hero-dot active" role="tab" aria-label="Slide 1" aria-selected="true"></button>
+                        <button class="hero-dot" role="tab" aria-label="Slide 2" aria-selected="false"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Trading Platforms Section -->
+        <section class="section section--white" aria-label="Trading platforms">
+            <div class="container">
+                <div class="card card-shadow-md">
+                    <div class="card-body">
+                        <div class="flex items-center justify-between flex-wrap gap-6">
+                            <div>
+                                <h2 class="mb-2">Trade on World-Class Platform</h2>
+                                <p class="text-secondary mb-0">Lightning-fast execution. Exceptional client service.</p>
+                            </div>
+                            <div class="flex gap-4">
+                                <a href="https://play.google.com/store/apps/details?id=com.standardsec.xts&hl=en_IN&gl=US" aria-label="Download on Google Play Store">
+                                    <img src="img/monee-content-os3.svg" alt="Get it on Google Play" width="140" height="42">
+                                </a>
+                                <a href="https://apps.apple.com/sa/app/ssiil-trade/id1605614705" aria-label="Download on App Store">
+                                    <img src="img/monee-content-os2.svg" alt="Download on App Store" width="140" height="42">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Features Section -->
+        <section class="section section--muted" aria-labelledby="features-heading">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 2fr; gap: 48px; align-items: start;">
+                    <div>
+                        <h2 id="features-heading" class="mb-4">A Partner Invested in Your Success</h2>
+                        <p class="text-secondary mb-6">Trade with confidence and benefit from the reliability of a trusted broker with a proven record of stability, security, and strength.</p>
+                        <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-lg">Open an Account</a>
+                    </div>
+                    <div class="tile-grid">
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature2.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>Currency</h3>
+                            <p>Trade currency derivatives at NSE</p>
+                        </article>
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature1.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>Commodities</h3>
+                            <p>Best-in-class commodity brokerage</p>
+                        </article>
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature3.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>Equity</h3>
+                            <p>Delhi's leading stock broker</p>
+                        </article>
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature4.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>IPOs</h3>
+                            <p>Research-driven IPO investments</p>
+                        </article>
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature5.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>Advisory</h3>
+                            <p>Customized wealth solutions</p>
+                        </article>
+                        <article class="tile">
+                            <div class="tile-icon">
+                                <img src="img/monee-content-feature6.svg" alt="" aria-hidden="true">
+                            </div>
+                            <h3>Depository</h3>
+                            <p>Trusted CDSL depository services</p>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                     <div class="uk-width-1-1 in-footer-disclaimer">
-                        <p>
-                          
+        <!-- Stats Section -->
+        <section class="section section--primary" aria-label="Company statistics">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <div class="stat-value">#1</div>
+                        <div class="stat-label">Ranking in India</div>
+                        <div class="stat-description">for spreads</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">~30ms</div>
+                        <div class="stat-label">Execution Speed</div>
+                        <div class="stat-description">ultra-low latency</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">24/5</div>
+                        <div class="stat-label">Trading Days</div>
+                        <div class="stat-description">support available</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">35+</div>
+                        <div class="stat-label">Years Experience</div>
+                        <div class="stat-description">in markets</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-value">150+</div>
+                        <div class="stat-label">Products</div>
+                        <div class="stat-description">trading instruments</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                            Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully before investing. Please refer the Risk Disclosure Document issued by SEBI and go through the Rights and Obligations and Do's and Dont's issued by Stock Exchanges and Depositories before trading on the Stock Exchanges. For commodities derivatives please note that Commodities Derivatives are highly leveraged instruments. PMS is not offered in Commodity Derivative Segment. Before investing in the asset class consider your investment objectives, level of experience and risk appetite carefully.
-                           <br>
-                           
-                            Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related documents carefully before investing.
-                            <br>
-                            <br>
-                           
-                        
-                            <strong>  
-                            
-                            For any complaints related to Standard Securities & Investment Intermediates Ltd email at Compliance@standardsec.com.
-For any complaints related to Standard Securities & Investment Intermediates Ltd email at grievance@standardsec.com. Please ensure you carefully read the risk Disclosure Document.
-Procedure to file a complaint on SEBI SCORES: Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective communication, Speedy redressal of the grievances.</strong>
-                          
-                          <br>
-                          ATTENTION INVESTORS :
-<ol>
-<li>Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</li>
-<li>Update your mobile number & email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.</li>
-<li>Pay 20% upfront margin of the transaction value to trade in cash market segment.
-<li>Investors may please refer to the Exchange's Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020 and NSE/INSP/45534 dated August 31, 2020 and other guidelines issued from time to time in this regard.</li>
-<li>Check your Securities /MF/ Bonds in the consolidated account statement issued by NSDL/CDSL every month.
-<li>Beware of fixed/guaranteed/regular returns/ capital protection schemes. Brokers or their authorized persons or any of their associates are not authorized to offer fixed/guaranteed/regular returns/ capital protection on your investment or authorized to enter into any loan agreement with you to pay interest on the funds offered by you. Please note that in case of default of a member claim for funds or securities given to the broker under any arrangement/ agreement of indicative return will not be accepted by the relevant Committee of the Exchange as per the approved norms.</li>
-<li>Do not keep funds idle with the Stock Broker. Please note that your stock broker has to return the credit balance lying with them, within three working days in case you have not done any transaction within last 30 calendar days. Please note that in case of default of a Member, claim for funds and securities, without any transaction on the exchange will not be accepted by the relevant Committee of the Exchange as per the approved norms.</li>
-<li>Check the frequency of accounts settlement opted for. If you have opted for running account, please ensure that your broker settles your account and, in any case, not later than once in 90 days (or 30 days if you have opted for 30 days settlement). In case of declaration of trading member as defaulter, the claims of clients against such defaulter member would be subject to norms for eligibility of claims for compensation from IPF to the clients of the defaulter member. These norms are available on Exchange website at following link.</li>
-<li>Brokers are not permitted to accept transfer of securities as margin. Securities offered as margin/ collateral MUST remain in the account of the client and can be pledged to the broker only by way of ‘margin pledge’, created in the Depository system. Clients are not permitted to place any securities with the broker or associate of the broker or authorized person of the broker for any reason. Broker can take securities belonging to clients only for settlement of securities sold by the client.</li>
-<li>Always keep your contact details viz. Mobile number/Email ID updated with the stock broker. Email and mobile number is mandatory and you must provide the same to your broker for updation in Exchange records. You must immediately take up the matter with Stock Broker/Exchange if you are not receiving the messages from Exchange/Depositories regularly.</li>
-<li>Don't ignore any emails/SMSs received from the Exchange for trades done by you. Verify the same with the Contract notes/Statement of accounts received from your broker and report discrepancy, if any, to your broker in writing immediately and if the Stock Broker does not respond, please take this up with the Exchange/Depositories forthwith.</li>
-<li>Check messages sent by Exchanges on a weekly basis regarding funds and securities balances reported by the trading member, compare it with the weekly statement of account sent by broker and immediately raise a concern to the exchange if you notice a discrepancy.</li>
-<li>Please do not transfer funds, for the purposes of trading to anyone, including an authorized person or an associate of the broker, other than a SEBI registered Stock broker.</li>
-.......... Issued in the interest of Investors.
-<li>In accordance with applicable Exchange regulations, clients are required to inform us of any short sale
-transactions executed on a Trading Day no later than 8:00 PM on the same day by writing to RMS@standardsec.com.
-
-Please note that short selling is permitted only in securities eligible for trading in
-the Futures & Options (F&O) segment.Short selling in securities that are not part of the
-F&O segment is strictly prohibited.
-
-For any clarification, you may contact our support team</li>
-</ol>
-
-    <p class="uk-text-small uk-margin-remove-bottom"><a href="pdf/Annexure I_Advisory for KYC updation.pdf" aria-label="Download Advisory on KYC Compliance PDF">Advisory – KYC Compliance</a></p>
-                          
-                            <br>
-                            <br>
-                            
-       <!--     <p>
-“Investors are requested to note that Stock broker (Standard Securities & Investment Intermediates Ltd)    is permitted to receive/pay money from/to investor through designated bank accounts only named as client bank accounts. Stock broker (Standard Securities & Investment Intermediates Ltd) is also required to disclose these client bank accounts to Stock Exchange. Hence, you are requested to use following client bank accounts only for the purpose of dealings in your trading account with us. The details of these client bank accounts are also displayed by the Stock Exchange on their website under
-“Membership→→→Notice Board→→→Member & AP Details”.
-     
- </p>   -->
- 
- <p>
-     Investors are requested to note that Stock broker, Standard Securities And Investment Intermediates Ltd, 
-     is permitted to receive money from investor through designated bank accounts only named as Up streaming Client
-     Nodal Bank Account (USCNBA). Stock broker, Standard Securities And Investment Intermediates Ltd, is also required to 
-     disclose these USCNB accounts to Stock Exchange. Hence, you are requested to use following USCNB accounts only for the purpose of 
-     dealings in your trading account with us. The details of 
-     these USCNB accounts are also displayed by Stock Exchanges on their website under “Know/ Locate your Stock Broker.
- </p>
-                            
- <strong>Details of Client Account</strong>
- 
-
- 
- <p>
-     
- <table style="width:50%">
-  <tr>
-    <th>Bank Name</th>
-    <th>Bank Account</th> 
-    <th>Bank IFSC</th>
-  </tr>
-  <tr>
-    <td>HDFC BANK LTD.</td>
-    <td>00032560005087</td> 
-    <td>HDFC0000003</td>
-  </tr>
-</table>
-
- </p>
-</br> 
- 
- </br>
- <p>
-                            
-                            Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related documents carefully before investing.<br>
-NSE CASH & NSE F&O MEMBERCODE 08054 | MCX MEMBER CODE 55100 | MSEI MEMBER CODE 66800 | SEBI REGN. NO. NSE CASH INZ000224239
-NSE F&O INF230805437 | MCX (SEBI REGN. NO)-INZ000224239 | MCX FMC UNIQUE MEMBER CODE-MCX/TCM/CORP/0297
-MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (DP Id 12086900)
-
+        <!-- Experience Section -->
+        <section class="section section--white" aria-labelledby="experience-heading">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                    <div class="relative">
+                        <img src="img/home_exp_bld.jpg" alt="Standard Securities office building representing 35 years of excellence" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                    </div>
+                    <div>
+                        <h2 id="experience-heading" class="mb-2">Working Experience in Quality Services</h2>
+                        <p class="text-primary font-semibold mb-6">25+ Years of Excellence</p>
+                        <hr class="mb-6">
+                        <p class="text-secondary mb-4">
+                            <strong>Standard Securities</strong> is one of the top stock broking firms in New Delhi, with over <strong>35 years of experience</strong> in both equity and commodity markets. Our company has built a strong foundation based on long-term customer relationships.
+                        </p>
+                        <p class="text-secondary mb-4">
+                            Moving forward with the times, we continue to maintain high standards of investment and client service. In today's fast-changing environment, Standard Securities always stays updated with the latest technology, innovative assets, and skilled human resources.
+                        </p>
+                        <p class="text-secondary mb-6">
+                            We provide our clients with <strong>risk-free investment strategies</strong> and <strong>Systematic Investment Planning (SIP)</strong> to achieve maximum returns on their investments.
+                        </p>
+                        <p class="text-primary font-semibold mb-0">
+                            Open a free Demat account today and enjoy the lowest brokerage in the market — activated within an hour!
                         </p>
                     </div>
                 </div>
             </div>
-            <div class="uk-visible@m">
-                <a href="#" class="in-totop fas fa-chevron-up" data-uk-scroll aria-label="Back to top"></a>
+        </section>
+
+        <!-- Services Section -->
+        <section class="section section--muted" aria-labelledby="services-heading">
+            <div class="container">
+                <div class="text-center mb-12">
+                    <h2 id="services-heading">Stay Ahead of the Curve</h2>
+                </div>
+                <div class="card-grid card-grid-3">
+                    <!-- Commodities Card -->
+                    <article class="card card-hover">
+                        <img src="img/commodity.jpg" alt="Commodity trading and research services" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">Commodities</h3>
+                            <p class="text-secondary mb-4">For individual investors and institutions worldwide, we provide best-in-class commodity brokerage and research. Our leading teams cover all major sectors.</p>
+                            <a href="Commodities.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Currency Card -->
+                    <article class="card card-hover">
+                        <img src="img/currency.jpg" alt="Currency derivatives trading" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">Currency</h3>
+                            <p class="text-secondary mb-4">Trade in the Currency Derivatives Segment at NSE with features similar to Stock Futures & Options. Designed for flexibility and growth.</p>
+                            <a href="Currency.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Equity Card -->
+                    <article class="card card-hover">
+                        <img src="img/equity.jpg" alt="Equity stock broking services" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">Equity</h3>
+                            <p class="text-secondary mb-4">One of Delhi's leading stock brokers. Our experienced team creates liquidity in illiquid markets and supports long-term growth.</p>
+                            <a href="Equity.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- More Services Section -->
+        <section class="section section--white" aria-label="Additional services">
+            <div class="container">
+                <div class="card-grid card-grid-3">
+                    <!-- IPOs Card -->
+                    <article class="card card-hover">
+                        <img src="img/ipo.jpg" alt="IPO investment opportunities" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">IPOs</h3>
+                            <p class="text-secondary mb-4">IPOs can be risky, but we simplify the process for retail investors with research-driven insights and transparent guidance.</p>
+                            <a href="IPOs.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Advisory Card -->
+                    <article class="card card-hover">
+                        <img src="img/advisory.jpg" alt="Financial advisory services" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">Advisory</h3>
+                            <p class="text-secondary mb-4">Partner with financial advisors who create customized solutions for your retirement, investments, and long-term wealth goals.</p>
+                            <a href="Advisory.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                    
+                    <!-- Depository Card -->
+                    <article class="card card-hover">
+                        <img src="img/depository.jpg" alt="Depository services for trading" class="w-full rounded-t-xl" loading="lazy">
+                        <div class="card-body">
+                            <h3 class="mb-3">Depository</h3>
+                            <p class="text-secondary mb-4">Trusted depository services with a strong research-backed approach, supporting both equity and commodity market investors.</p>
+                            <a href="Depository.html" class="btn btn-outline btn-sm">Learn More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Risk Disclosure Section -->
+        <section class="section section--muted" aria-labelledby="risk-heading">
+            <div class="container">
+                <div class="grid" style="grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+                    <div>
+                        <img src="img/invest_risk.jpg" alt="Investment risk awareness illustration" class="rounded-2xl shadow-lg w-full" loading="lazy">
+                    </div>
+                    <div>
+                        <h2 id="risk-heading" class="mb-2">Do You Know?</h2>
+                        <h3 class="text-primary mb-6">Risk Disclosures on Derivatives</h3>
+                        <hr class="mb-6">
+                        <ul class="text-secondary" style="list-style: disc; padding-left: 24px;">
+                            <li class="mb-3">9 out of 10 individual traders in the equity Futures and Options segment incur net losses.</li>
+                            <li class="mb-3">On average, loss-making traders register net trading losses close to ₹50,000.</li>
+                            <li class="mb-3">Beyond net trading losses, loss makers spend an additional 28% of their losses as transaction costs.</li>
+                            <li>Even profit-making traders incur between 15% to 50% of their profits as transaction costs.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="section section--white" aria-label="Call to action">
+            <div class="container">
+                <div class="cta">
+                    <h2 class="cta-title">Ready to Start Investing?</h2>
+                    <p class="cta-description">Open your free Demat account today and experience the lowest brokerage rates in the market. Account activation within an hour.</p>
+                    <div class="cta-actions">
+                        <a href="https://ekyc.standardsec.net:8002" class="btn btn-white btn-xl">Open Account Free</a>
+                        <a href="contact.html" class="btn btn-outline btn-xl" style="border-color: white; color: white;">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Standard Securities logo" width="160" height="43" class="mb-6">
+                    <p class="text-gray-400">Standard Securities & Investment Intermediates Ltd. One of India's leading stock broking firms with 35+ years of experience in equity and commodity markets.</p>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#" class="footer-social-link" aria-label="Visit our Facebook page">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our Twitter profile">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our YouTube channel">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon fill="#0f172a" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products Column -->
+                <div>
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="Equity.html">Equities</a></li>
+                        <li><a href="Currency.html">Currency</a></li>
+                        <li><a href="Commodities.html">Commodities</a></li>
+                        <li><a href="IPOs.html">IPOs</a></li>
+                        <li><a href="Advisory.html">Advisory</a></li>
+                        <li><a href="Depository.html">Depository</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div>
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="customers.html">Customers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="Terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="procedures.html">Policies</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Regulatory Column -->
+                <div>
+                    <h3 class="footer-title">Regulatory</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.sebi.gov.in/" target="_blank" rel="noopener">SEBI</a></li>
+                        <li><a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a></li>
+                        <li><a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a></li>
+                        <li><a href="https://www.cdslindia.com/" target="_blank" rel="noopener">CDSL</a></li>
+                        <li><a href="https://www.mcxindia.com" target="_blank" rel="noopener">MCX</a></li>
+                        <li><a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">SCORES 2.0</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Contact Info -->
+            <div class="grid mb-8" style="grid-template-columns: repeat(4, 1fr); gap: 32px;">
+                <div>
+                    <h3 class="footer-title">Contact Us</h3>
+                    <p class="text-gray-400 text-sm">
+                        Tanishka Commercial<br>
+                        Office No.104/105<br>
+                        1st Floor, Akurli Road<br>
+                        Kandivali(E), Mumbai-400101
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Get In Touch</h3>
+                    <p class="text-gray-400 text-sm mb-2">
+                        <strong>Phone:</strong> 022-41721101/08
+                    </p>
+                    <p class="text-gray-400 text-sm mb-2">
+                        <strong>Email:</strong> info@standardsec.com
+                    </p>
+                    <p class="text-gray-400 text-sm">
+                        <strong>Complaints:</strong> Compliance@standardsec.com
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Registrations</h3>
+                    <p class="text-gray-400 text-sm">
+                        NSE Cash & F&O: INZ000224239<br>
+                        MCX: INZ000224239<br>
+                        CDSL: IN-DP-386-2018<br>
+                        DP ID: 12086900
+                    </p>
+                </div>
+                <div>
+                    <h3 class="footer-title">Need Help?</h3>
+                    <p class="text-gray-400 text-sm mb-4">Our support team is available during trading hours to assist you.</p>
+                    <a href="contact.html" class="btn btn-outline btn-sm" style="border-color: rgba(255,255,255,0.3); color: white;">Contact Support</a>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">Copyright ©2024 Standard Securities & Investment Intermediates Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-4 text-sm text-gray-500">
+                    <img src="img/monee-footer-mastercard.svg" alt="Mastercard" width="42" height="22" style="opacity: 0.7;">
+                    <img src="img/monee-footer-visa.svg" alt="Visa" width="42" height="21" style="opacity: 0.7;">
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="mt-8 pt-8 border-t border-gray-700">
+                <h4 class="text-sm font-semibold text-white mb-4">Important Disclosures</h4>
+                <div class="text-gray-400 text-sm" style="max-height: 200px; overflow-y: auto;">
+                    <p class="mb-4"><strong>Attention Investors:</strong></p>
+                    <ul style="list-style: disc; padding-left: 20px; margin-bottom: 16px;">
+                        <li class="mb-2">Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</li>
+                        <li class="mb-2">Update your mobile number & email Id with your stock broker/depository participant and receive OTP directly from depository.</li>
+                        <li class="mb-2">Check your Securities / MF / Bonds in the consolidated account statement issued by NSDL/CDSL every month.</li>
+                        <li class="mb-2">Investors may refer to the Exchange's Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020.</li>
+                        <li>Beware of fixed/guaranteed/regular returns/ capital protection schemes.</li>
+                    </ul>
+                    <p class="mb-2"><strong>Disclaimer:</strong> Investment in securities market are subject to market risks. Read all the related documents carefully before investing. Please refer the Risk Disclosure Document issued by SEBI and go through Rights and Obligations and Do's and Dont's issued by Stock Exchanges before trading.</p>
+                </div>
             </div>
         </div>
-        <!-- footer content end -->
     </footer>
 
-    <!-- Javascript -->
+    <!-- Accessibility Toggle -->
+    <div class="accessibility-menu" aria-label="Accessibility Tools">
+        <button id="a11y-toggle" class="fab" aria-expanded="false" aria-controls="a11y-panel" aria-label="Open accessibility menu">
+            ♿
+        </button>
+        <div id="a11y-panel" class="accessibility-panel" hidden>
+            <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
+            <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌓</button>
+            <a href="accessibility.html" aria-label="Accessibility Statement">♿ Info</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/uikit.min.js"></script>
-    <script src="js/vendor/in-core.js"></script>
     <script src="js/app.js"></script>
-    <script src="js/config.js"></script>
-    <script src="js/search.js"></script>
-
-    <!-- Container where toolbar will be inserted -->
-
-    <!-- Accessibility Floating Menu -->
- <div class="accessibility-menu" aria-label="Accessibility Tools">
-    <!-- Floating Toggle Button -->
-    <button id="a11y-toggle-idx" class="fab" aria-expanded="false" aria-controls="a11y-panel-idx">
-    ♿
-    </button>
     
-    <!-- Hidden Panel -->
-    <div id="a11y-panel-idx" class="accessibility-panel" hidden>
-    <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
-    <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
-    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
-    <button onclick="readContent()" aria-label="Read page aloud">🔊 Read</button>
-    <a href="accessibility.html" aria-label="Accessibility Statement">♿ Accessibility</a>
-    </div>
-    </div>
-    
-    <!-- CSS -->
-    <style>
-    /* Floating button (FAB) */
-    /* Floating button (circular) */
-    .fab {
-    position: fixed;
-    bottom: 200px;
-    right: 15px;
-    width: 60px; /* same width */
-    height: 60px; /* same height */
-    border-radius: 10%; /* makes it a circle */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    overflow: hidden; /* ensures image/icons don’t overflow */
-    padding: 0; /* removes extra space */
-    }
-    .fab img, 
-    .fab svg {
-    width: 50%; /* make icon fit nicely inside circle */
-    height: 50%;
-    object-fit: contain;
-    }
-    
-    .fab:hover, .fab:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Hidden menu */
-    .fab-menu {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    }
-    
-    .fab-menu button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s;
-    }
-    
-    .fab-menu button:hover,
-    .fab-menu button:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Panel (initially hidden) */
-    .accessibility-panel {
-    position:fixed;
-    bottom: 120px;
-    right: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-    }
-    
-    /* Buttons inside panel */
-    .accessibility-panel button,
-    .accessibility-panel a {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    }
-    
-    .accessibility-panel button:hover,
-    .accessibility-panel a:hover {
-    background: #0056b3;
-    }
-    
-    .accessibility-panel button:focus,
-    .accessibility-panel a:focus {
-    outline: 3px solid yellow; /* WCAG focus visible */
-    }
-    
-    /* Dark mode */
-    body.dark-mode {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-    }
-    
-    /* Override headings, paragraphs, lists */
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6,
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode a,
-    body.dark-mode span,
-    body.dark-mode strong {
-    color: #ffffff !important;
-    }
-    
-    /* Links */
-    body.dark-mode a {
-    color: #4da6ff !important;
-    }
-    
-    /* Inputs & labels */
-    body.dark-mode button,
-    body.dark-mode input,
-    body.dark-mode label {
-    color: #ffffff !important;
-    }
-    
-    /* Footer */
-    body.dark-mode footer {
-    color: #ffffff !important;
-    }
-    
-    /* Tables */
-    body.dark-mode table, 
-    body.dark-mode th, 
-    body.dark-mode td {
-    color: #ffffff !important;
-    border-color: #666 !important;
-    }
-    </style>
-    
-    <!-- JS -->
     <script>
-    const toggleBtn = document.getElementById("accessibilityToggle");
-    const panel = document.getElementById("accessibilityPanel");
-    
-    toggleBtn.addEventListener("click", () => {
-    const expanded = toggleBtn.getAttribute("aria-expanded") === "true";
-    toggleBtn.setAttribute("aria-expanded", !expanded);
-    panel.hidden = expanded; // Toggle show/hide
-    });
-    
-    // Font resize
-    function changeFontSize(delta) {
-    let body = document.body;
-    let currentSize = parseFloat(window.getComputedStyle(body, null).getPropertyValue('font-size'));
-    body.style.fontSize = (currentSize + delta) + 'px';
-    }
-    
-    // Dark mode toggle
-    function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    }
-    
-    // Text-to-speech
-    function readContent() {
-    let content = document.querySelector("main") || document.body;
-    let text = content.innerText;
-    let speech = new SpeechSynthesisUtterance(text);
-    speech.lang = "en-IN"; 
-    window.speechSynthesis.speak(speech);
-    }
-    </script>
-
-    <!-- Custom Language Toggle (Hindi/English) -->
-    
-
-    <!-- Language Translations Data -->
-    <script>
-    const translations = {
-        'en': {
-            'Products': 'Products',
-            'About Us': 'About Us',
-            'Contact': 'Contact',
-            'Login': 'Login',
-            'Home': 'Home',
-            'Learn More': 'Learn More',
-            'Read more': 'Read more'
-        },
-        'hi': {
-            'Products': 'उत्पाद',
-            'About Us': 'हमारे बारे में',
-            'Contact': 'संपर्क करें',
-            'Login': 'लॉग इन',
-            'Home': 'होम',
-            'Learn More': 'और जानें',
-            'Read more': 'और पढ़ें'
-        }
-    };
-    
-    let currentLang = 'en';
-    
-    // setLanguage defined below
-    }
-    }
-    
-    // translatePageToHindi removed - use setLanguage instead
-    });
-    </script>
-    
-    <!-- Google Translate Script -->
-<div id="google_translate_element_hidden" style="display:none;"></div>
-<script type="text/javascript">
-  function googleTranslateElementInit() {
-    new google.translate.TranslateElement(
-      {pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
-      'google_translate_element_nav'
-    );
-  }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-
-
-
-    <!-- Custom Language Translation Script -->
-    <script>
-    const translations = {
-        'en': {
-            'Products': 'Products',
-            'About Us': 'About Us',
-            'Contact': 'Contact',
-            'Login': 'Login',
-            'Home': 'Home',
-            'Learn More': 'Learn More',
-            'Read more': 'Read more'
-        },
-        'hi': {
-            'Products': 'उत्पाद',
-            'About Us': 'हमारे बारे में',
-            'Contact': 'संपर्क करें',
-            'Login': 'लॉग इन',
-            'Home': 'होम',
-            'Learn More': 'और जानें',
-            'Read more': 'और पढ़ें'
-        }
-    };
-    
-    // setLanguage defined below
-    } else {
-            location.reload();
-        }
-    }
-    
-    function translatePageToHindi() {
-        const walker = document.createTreeWalker(
-            document.body,
-            NodeFilter.SHOW_TEXT,
-            {
-                acceptNode: function(node) {
-                    const parent = node.parentElement;
-                    if (!parent) return NodeFilter.FILTER_REJECT;
-                    const tagName = parent.tagName.toLowerCase();
-                    if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
-                        return NodeFilter.FILTER_REJECT;
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileClose = document.querySelector('.mobile-nav-close');
+            
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', function() {
+                    const isHidden = mobileNav.hidden;
+                    mobileNav.hidden = !isHidden;
+                    mobileToggle.setAttribute('aria-expanded', isHidden);
+                    document.body.style.overflow = isHidden ? 'hidden' : '';
+                });
+                
+                mobileClose?.addEventListener('click', function() {
+                    mobileNav.hidden = true;
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+                
+                // Close on Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !mobileNav.hidden) {
+                        mobileNav.hidden = true;
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        mobileToggle.focus();
+                        document.body.style.overflow = '';
                     }
-                    if (parent.hasAttribute('data-translated')) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    if (parent.closest('.lang-toggle')) {
-                        return NodeFilter.FILTER_REJECT;
-                    }
-                    return NodeFilter.FILTER_ACCEPT;
-                }
+                });
             }
-        );
-        
-        const textNodes = [];
-        while (walker.nextNode()) {
-            textNodes.push(walker.currentNode);
-        }
-        
-        textNodes.forEach(node => {
-            const text = node.textContent.trim();
-            if (text && translations['hi'][text]) {
-                node.textContent = translations['hi'][text];
-                node.parentElement.setAttribute('data-translated', 'true');
+            
+            // Accessibility Panel Toggle
+            const a11yToggle = document.getElementById('a11y-toggle');
+            const a11yPanel = document.getElementById('a11y-panel');
+            
+            if (a11yToggle && a11yPanel) {
+                a11yToggle.addEventListener('click', function() {
+                    const isHidden = a11yPanel.hidden;
+                    a11yPanel.hidden = !isHidden;
+                    a11yToggle.setAttribute('aria-expanded', isHidden);
+                });
             }
         });
-    }
-    
-    // Load saved preference on page load
-    
+        
+        // Language Toggle
+        function setLanguage(lang) {
+            const langEn = document.getElementById('lang-en');
+            const langHi = document.getElementById('lang-hi');
+            
+            if (langEn) langEn.setAttribute('aria-pressed', lang === 'en');
+            if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi');
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Accessibility Functions
+        function changeFontSize(direction) {
+            const html = document.documentElement;
+            const current = parseInt(getComputedStyle(html).fontSize) || 16;
+            html.style.fontSize = (current + direction) + 'px';
+        }
+        
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
     </script>
-
-
-<script>
-// WCAG 2.2.2 - Carousel Pause Control
-var carouselPaused = false;
-
-function toggleCarouselAutoplay() {
-    var sliderElement = document.querySelector('[uk-slider]');
-    var pauseBtn = document.getElementById('carousel-pause-btn');
-    var pauseIcon = document.getElementById('pause-icon');
-    var playIcon = document.getElementById('play-icon');
-    var pauseText = document.getElementById('pause-text');
-    
-    carouselPaused = !carouselPaused;
-    
-    if (carouselPaused) {
-        // Pause the slider
-        sliderElement.setAttribute('autoplay', 'false');
-        pauseIcon.style.display = 'none';
-        playIcon.style.display = 'inline';
-        pauseText.textContent = 'Play';
-        pauseBtn.setAttribute('aria-label', 'Resume automatic slide advancement');
-        pauseBtn.setAttribute('aria-pressed', 'true');
-    } else {
-        // Resume autoplay
-        sliderElement.setAttribute('autoplay', 'true');
-        pauseIcon.style.display = 'inline';
-        playIcon.style.display = 'none';
-        pauseText.textContent = 'Pause';
-        pauseBtn.setAttribute('aria-label', 'Pause automatic slide advancement');
-        pauseBtn.setAttribute('aria-pressed', 'false');
-    }
-}
-
-// Ensure keyboard accessibility for carousel dots
-document.addEventListener('DOMContentLoaded', function() {
-    var dots = document.querySelectorAll('.uk-slider-items .uk-dotnav button');
-    dots.forEach(function(dot, index) {
-        dot.setAttribute('aria-label', 'Slide ' + (index + 1));
-        dot.setAttribute('role', 'tab');
-    });
-});
-</script>
-
-<script>
-// WCAG 3.1.2 - Working Language Toggle
-(function() {
-    // Consolidated translations
-    var translations = {
-        'en': {
-            'Products': 'Products',
-            'About Us': 'About Us',
-            'Contact': 'Contact',
-            'Login': 'Login',
-            'Home': 'Home',
-            'Learn More': 'Learn More',
-            'Read more': 'Read more',
-            'Start Investing Now': 'Start Investing Now',
-            'Trade on world-class platform': 'Trade on world-class platform'
-        },
-        'hi': {
-            'Products': 'उत्पाद',
-            'About Us': 'हमारे बारे में',
-            'Contact': 'संपर्क करें',
-            'Login': 'लॉग इन',
-            'Home': 'होम',
-            'Learn More': 'और जानें',
-            'Read more': 'और पढ़ें',
-            'Start Investing Now': 'अभी निवेश शुरू करें',
-            'Trade on world-class platform': 'विश्व-स्तरीय प्लेटफॉर्म पर व्यापार करें'
-        }
-    };
-
-    function setLanguage(lang) {
-        if (!translations[lang]) lang = 'en';
-        
-        // Update button states
-        var langEn = document.getElementById('lang-en');
-        var langHi = document.getElementById('lang-hi');
-        
-        if (langEn) {
-            langEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
-            langEn.classList.toggle('active', lang === 'en');
-        }
-        if (langHi) {
-            langHi.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
-            langHi.classList.toggle('active', lang === 'hi');
-        }
-        
-        // Update document language attribute
-        document.documentElement.lang = lang;
-        
-        // Translate elements with data-translate attribute
-        var elements = document.querySelectorAll('[data-translate]');
-        elements.forEach(function(el) {
-            var key = el.getAttribute('data-translate');
-            if (translations[lang][key]) {
-                el.textContent = translations[lang][key];
-            }
-        });
-        
-        // Store preference
-        localStorage.setItem('preferredLanguage', lang);
-        
-        // Dispatch event for other components
-        window.dispatchEvent(new CustomEvent('languageChanged', { detail: { language: lang } }));
-    }
-
-    // Initialize on DOM ready
-    function init() {
-        var langEn = document.getElementById('lang-en');
-        var langHi = document.getElementById('lang-hi');
-        
-        if (langEn) {
-            langEn.addEventListener('click', function() { setLanguage('en'); });
-        }
-        if (langHi) {
-            langHi.addEventListener('click', function() { setLanguage('hi'); });
-        }
-        
-        // Load saved preference
-        var savedLang = localStorage.getItem('preferredLanguage');
-        if (savedLang && translations[savedLang]) {
-            setLanguage(savedLang);
-        }
-    }
-
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-})();
-</script>
-
-<script>
-
-// WCAG 2.2.2 - Hero Slideshow Pause Control
-document.addEventListener('DOMContentLoaded', function() {
-    var heroPauseBtn = document.getElementById('hero-slideshow-pause-btn');
-    var heroPauseIcon = document.getElementById('hero-pause-icon');
-    var heroPauseText = document.getElementById('hero-pause-text');
-    var heroSlideshow = document.querySelector('.in-slideshow');
-    var heroPaused = false;
-    
-    if (heroPauseBtn && heroSlideshow) {
-        heroPauseBtn.addEventListener('click', function() {
-            heroPaused = !heroPaused;
-            if (heroPaused) {
-                heroSlideshow.setAttribute('data-auto-play', 'false');
-                heroPauseIcon.textContent = '▶';
-                heroPauseText.textContent = 'Play';
-                heroPauseBtn.setAttribute('aria-label', 'Resume slideshow');
-                heroPauseBtn.setAttribute('aria-pressed', 'true');
-            } else {
-                heroSlideshow.setAttribute('data-auto-play', 'true');
-                heroPauseIcon.textContent = '⏸';
-                heroPauseText.textContent = 'Pause';
-                heroPauseBtn.setAttribute('aria-label', 'Pause slideshow');
-                heroPauseBtn.setAttribute('aria-pressed', 'false');
-            }
-        });
-    }
-    
-    // Price Ticker Pause
-    var pricePauseBtn = document.getElementById('price-ticker-pause-btn');
-    var pricePauseIcon = document.getElementById('price-pause-icon');
-    var priceTicker = document.querySelector('[aria-label="Price Ticker"]');
-    var pricePaused = false;
-    
-    if (pricePauseBtn && priceTicker) {
-        pricePauseBtn.addEventListener('click', function() {
-            pricePaused = !pricePaused;
-            if (pricePaused) {
-                priceTicker.setAttribute('data-autoplay', 'false');
-                pricePauseIcon.textContent = '▶';
-                pricePauseBtn.setAttribute('aria-label', 'Resume price ticker');
-                pricePauseBtn.setAttribute('aria-pressed', 'true');
-            } else {
-                priceTicker.setAttribute('data-autoplay', 'true');
-                pricePauseIcon.textContent = '⏸';
-                pricePauseBtn.setAttribute('aria-label', 'Pause price ticker');
-                pricePauseBtn.setAttribute('aria-pressed', 'false');
-            }
-        });
-    }
-    
-    // WCAG 4.1.2 - Mobile nav toggle aria-expanded
-    var mobileNavBtn = document.querySelector('[aria-label="Open mobile navigation menu"]');
-    if (mobileNavBtn) {
-        mobileNavBtn.addEventListener('click', function() {
-            var isExpanded = mobileNavBtn.getAttribute('aria-expanded') === 'true';
-            mobileNavBtn.setAttribute('aria-expanded', !isExpanded);
-        });
-    }
-});
-
-
-// WCAG 2.1.1, 1.4.10, 2.4.5 - Mobile Navigation Fix
-document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('mobile-menu-toggle');
-    var mobileNav = document.getElementById('mobile-nav-modal');
-    var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
-    
-    if (menuToggle && mobileNav) {
-        // Toggle mobile menu
-        function toggleMobileMenu() {
-            var isHidden = mobileNav.getAttribute('hidden') !== null;
-            if (isHidden) {
-                mobileNav.removeAttribute('hidden');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                menuToggle.setAttribute('aria-label', 'Close mobile navigation menu');
-                document.body.style.overflow = 'hidden';
-                // Focus on close button
-                if (closeBtn) closeBtn.focus();
-            } else {
-                mobileNav.setAttribute('hidden', '');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open mobile navigation menu');
-                document.body.style.overflow = '';
-            }
-        }
-        
-        menuToggle.addEventListener('click', toggleMobileMenu);
-        
-        // Close on close button click
-        if (closeBtn) {
-            closeBtn.addEventListener('click', toggleMobileMenu);
-        }
-        
-        // Close on Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
-                toggleMobileMenu();
-                menuToggle.focus();
-            }
-        });
-        
-        // Keyboard accessibility - make all links focusable
-        var navLinks = mobileNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.setAttribute('tabindex', '0');
-        });
-    }
-});
-
-</script>
-
 </body>
-
-
 </html>
-
-
-

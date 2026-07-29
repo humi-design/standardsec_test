@@ -2,90 +2,15 @@
 <html lang="en">
 <head>
     <title>Complaint Form</title>
+    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/uikit-compat.css">
 
-<style>
-/* Mobile Navigation */
-#mobile-nav-modal {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.95);
-    z-index: 10000;
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding-top: 60px;
-}
-#mobile-nav-modal[hidden] { display: none; }
-#mobile-menu-toggle {
-    background: #0066cc;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    min-width: 44px;
-    min-height: 44px;
-}
-#mobile-menu-toggle:focus {
-    outline: 3px solid #ffcc00;
-    outline-offset: 2px;
-}
-</style>
+
 
 </head>
 <body>
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 8px 16px;
-        border: 2px solid #146CE0;
-        background: #146CE0;
-        color: #ffffff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-family: inherit;
-        font-weight: 500;
-        transition: all 0.2s ease;
-        min-height: 44px;
-        min-width: 60px;
-    }
-    .lang-toggle button:hover {
-        background: #1157B3;
-        border-color: #1157B3;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #0D47A1;
-        border-color: #0D47A1;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 3px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    .lang-toggle button:hover {
-        background: #0052a3;
-        border-color: #fff;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #004080;
-        border-color: #ffcc00;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
     
@@ -93,8 +18,40 @@
 
     
 
-        <a href="#main-cmp" class="skip-link">Skip to main content</a>
+    <!-- Skip Link for Accessibility -->
+    <a href="#main-cmp" class="skip-link">Skip to main content</a>
 
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <div class="header-logo">
+                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
+                        <img src="img/logo.png" alt="Standard Securities logo" width="180" height="48">
+                    </a>
+                </div>
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="header-nav-link">Home</a>
+                    <a href="products.html" class="header-nav-link">Products</a>
+                    <a href="about.html" class="header-nav-link">About Us</a>
+                    <a href="contact.html" class="header-nav-link">Contact</a>
+                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
+                </nav>
+                <div class="header-actions">
+                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
+                </div>
+                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
     <main id="main-cmp">
         <div class="uk-container uk-padding">
             <h1>Register a Complaint</h1>
