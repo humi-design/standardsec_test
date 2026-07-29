@@ -75,16 +75,32 @@ tr:hover {background-color: #B8E2F2;}
         vertical-align: middle;
     }
     .lang-toggle button {
-        padding: 4px 12px;
-        border: 2px solid #fff;
-        background: #0066cc;
-        color: #fff;
+        padding: 8px 16px;
+        border: 2px solid #146CE0;
+        background: #146CE0;
+        color: #ffffff;
         border-radius: 4px;
         cursor: pointer;
         font-size: 12px;
         font-family: inherit;
-        transition: all 0.2s ease;
         font-weight: 500;
+        transition: all 0.2s ease;
+        min-height: 44px;
+        min-width: 60px;
+    }
+    .lang-toggle button:hover {
+        background: #1157B3;
+        border-color: #1157B3;
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: #0D47A1;
+        border-color: #0D47A1;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 3px solid #ffcc00;
+        outline-offset: 2px;
     }
     .lang-toggle button:hover {
         background: #0052a3;
@@ -103,80 +119,20 @@ tr:hover {background-color: #B8E2F2;}
     </style>
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover { background: rgba(255,255,255,0.2); }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover {
-        background: rgba(255,255,255,0.2);
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-abt" class="skip-link">Skip to main content</a>
 
   <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-    <div id="google_translate_element_nav" class="translate-btn"></div>
+    <div id="google-trans-abt" class="translate-btn"></div>
 
         <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+            <button type="button" onclick="setLanguage('en')" id="lang-en-abt" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi-abt" aria-pressed="false">हिंदी</button>
         </div>
 <!-- header content begin -->
     <div class="uk-section uk-padding-remove-vertical">
@@ -346,7 +302,7 @@ tr:hover {background-color: #B8E2F2;}
 </button>
 </div>
 
-<div id="mobile-nav-modal" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
+<div id="mobile-nav-abt" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
 <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
     <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
     <div class="uk-width-large uk-padding-large">
@@ -459,12 +415,12 @@ tr:hover {background-color: #B8E2F2;}
     <!-- header content end -->
 
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-abt" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-abt" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
 
 
-    <main id="main-content">
+    <main id="main-abt">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
           <div class="uk-container">
@@ -500,7 +456,7 @@ tr:hover {background-color: #B8E2F2;}
                       </div>
                     </div>
                     <div class="uk-width-expand">
-                      <h3>Philosophy</h3>
+                      <h2>Philosophy</h2>
                       <p>
                         At Standard Securities we believe in the growth as a family who's constantly working and monitoring the process along with you.
                       </p>
@@ -515,7 +471,7 @@ tr:hover {background-color: #B8E2F2;}
                       </div>
                     </div>
                     <div class="uk-width-expand">
-                      <h3>History</h3>
+                      <h2>History</h2>
                       <p>
                         Standard Securities was created with the idea of giving the cutting edge knowledge, vision and customer centric approach.
                       </p>
@@ -530,7 +486,7 @@ tr:hover {background-color: #B8E2F2;}
                       </div>
                     </div>
                     <div class="uk-width-expand">
-                      <h3>Culture</h3>
+                      <h2>Culture</h2>
                       <p>
                         At Standard Securities our team members they love to share, help and believe in growing together as a family.
                       </p>
@@ -558,11 +514,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2012</h4>
+                                <h3 class="uk-margin-small-bottom">2012</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   MCX , DP & BSE Services. Expanding retail businesses and sub-brokers.
                                 </p>
@@ -579,11 +535,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2009</h4>
+                                <h3 class="uk-margin-small-bottom">2009</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">Enter into new segment of Real Estate.</p>
                               </div>
                             </div>
@@ -598,11 +554,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2008</h4>
+                                <h3 class="uk-margin-small-bottom">2008</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   Created strong tie ups in art industry and stepped in Art Advisory Services.
                                 </p>
@@ -619,11 +575,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2006</h4>
+                                <h3 class="uk-margin-small-bottom">2006</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   Distribution Of Financial Products: IPOs & Mutual Funds.
                                 </p>
@@ -640,11 +596,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2002</h4>
+                                <h3 class="uk-margin-small-bottom">2002</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   Arbitrage: Proprietary & client funds monetizing market mis-pricings.
                                 </p>
@@ -661,11 +617,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2001</h4>
+                                <h3 class="uk-margin-small-bottom">2001</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">More than 50 Branches / Pan India Presence.</p>
                               </div>
                             </div>
@@ -680,11 +636,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">2000</h4>
+                                <h3 class="uk-margin-small-bottom">2000</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   Research Services: (Equity) Fundamental & Technical Research.
                                 </p>
@@ -701,11 +657,11 @@ tr:hover {background-color: #B8E2F2;}
                             <div class="uk-grid uk-grid-small">
                               <div class="uk-width-auto@m uk-flex uk-flex-middle">
                                 <div class="in-icon-wrapper in-margin-remove-left@s uk-margin-left uk-margin-right">
-                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true" aria-hidden="true"></i>
+                                  <i class="fas fa-pen-nib fa-lg" aria-hidden="true"></i>
                                 </div>
                               </div>
                               <div class="uk-width-expand@m">
-                                <h4 class="uk-margin-small-bottom">1994</h4>
+                                <h3 class="uk-margin-small-bottom">1994</h3>
                                 <p class="uk-text-small uk-margin-remove-bottom">
                                   Equity Brokerage: Trading platforms with research support.
                                 </p>
@@ -748,7 +704,7 @@ tr:hover {background-color: #B8E2F2;}
                         title="Chatbot conversation window" 
                         style="width:100%; height:500px; border:none;" 
                         aria-label="Chatbot conversation window"
-                        loading="lazy">
+                        loading="lazy" title="Chat with Standard Securities Bot">
                     </iframe>
                 </div>
     
@@ -1029,12 +985,12 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     <!-- Accessibility Floating Menu -->
     <div class="accessibility-menu" aria-label="Accessibility Tools">
       <!-- Floating Toggle Button -->
-      <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
+      <button id="a11y-toggle-abt" class="fab" aria-expanded="false" aria-controls="a11y-panel-abt">
       ♿
       </button>
       
       <!-- Hidden Panel -->
-      <div id="accessibilityPanel" class="accessibility-panel" hidden>
+      <div id="a11y-panel-abt" class="accessibility-panel" hidden>
       <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
       <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
       <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>

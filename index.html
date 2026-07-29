@@ -74,43 +74,47 @@ tr:hover {background-color: #B8E2F2;}
         vertical-align: middle;
     }
     .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
+        padding: 8px 16px;
+        border: 2px solid #146CE0;
+        background: #146CE0;
+        color: #ffffff;
+        border-radius: 4px;
         cursor: pointer;
-        font-size: 11px;
+        font-size: 12px;
         font-family: inherit;
+        font-weight: 500;
         transition: all 0.2s ease;
+        min-height: 44px;
+        min-width: 60px;
     }
     .lang-toggle button:hover {
-        background: rgba(255,255,255,0.2);
+        background: #1157B3;
+        border-color: #1157B3;
     }
     .lang-toggle button.active,
     .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
+        background: #0D47A1;
+        border-color: #0D47A1;
         font-weight: bold;
     }
     .lang-toggle button:focus {
-        outline: 2px solid #fff;
+        outline: 3px solid #ffcc00;
         outline-offset: 2px;
     }
     </style>
     
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-idx" class="skip-link">Skip to main content</a>
 
 
     
 
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element_nav" class="translate-btn"></div>
+        <div id="google-trans-idx" class="translate-btn"></div>
 
         <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+            <button type="button" onclick="setLanguage('en')" id="lang-en-idx" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi-idx" aria-pressed="false">हिंदी</button>
         </div>
 
 
@@ -284,7 +288,7 @@ tr:hover {background-color: #B8E2F2;}
     </button>
 </div>
 
-<div id="mobile-nav-modal" class="uk-modal-full uk-flex-top" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" hidden>
+<div id="mobile-nav-idx" class="uk-modal-full uk-flex-top" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" hidden>
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
         <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
         <div class="uk-width-large uk-padding-large">
@@ -397,7 +401,7 @@ tr:hover {background-color: #B8E2F2;}
         <!-- header content end -->
     </header>
 
-    <main id="maincontent">
+    <main id="main-idx">
         <!-- Slideshow Content Begin -->
         <div class="uk-section uk-padding-remove-vertical uk-margin-bottom" data-uk-scrollspy="cls:uk-animation-fade; delay: 200">
             <div class="uk-container">
@@ -475,21 +479,21 @@ tr:hover {background-color: #B8E2F2;}
             <!-- Full Name -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="uk-form-label" for="full-name">Full Name <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="text" id="full-name" autocomplete="name" name="full-name" autocomplete="name"
+              <input class="uk-input" style="border-color: #666;" type="text" id="full-name" name="full-name" autocomplete="name"
                 placeholder="Enter your full name" aria-label="Full name" required aria-required="true">
             </div>
   
             <!-- Email -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="uk-form-label" for="email">Email Address <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="email" id="email" autocomplete="email" name="email" autocomplete="email"
+              <input class="uk-input" style="border-color: #666;" type="email" id="email" name="email" autocomplete="email"
                 placeholder="Enter your email address" aria-label="Email address" required aria-required="true">
             </div>
   
             <!-- Phone -->
             <div class="uk-width-1-1 uk-width-1-5@m">
               <label class="uk-form-label" for="phone">Phone Number <span aria-hidden="true" style="color: #d32f2f;">*</span></label>
-              <input class="uk-input" style="border-color: #666;" type="tel" id="phone" autocomplete="tel" name="phone" autocomplete="tel"
+              <input class="uk-input" style="border-color: #666;" type="tel" id="phone" name="phone" autocomplete="tel"
                 placeholder="Enter your phone number" aria-label="Phone number" required aria-required="true">
             </div>
   
@@ -944,7 +948,7 @@ tr:hover {background-color: #B8E2F2;}
                         title="Chatbot conversation window" 
                         style="width:100%; height:500px; border:none;" 
                         aria-label="Chatbot conversation window"
-                        loading="lazy">
+                        loading="lazy" title="Chat with Standard Securities Bot">
                     </iframe>
                 </div>
     
@@ -1224,12 +1228,12 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     <!-- Accessibility Floating Menu -->
  <div class="accessibility-menu" aria-label="Accessibility Tools">
     <!-- Floating Toggle Button -->
-    <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
+    <button id="a11y-toggle-idx" class="fab" aria-expanded="false" aria-controls="a11y-panel-idx">
     ♿
     </button>
     
     <!-- Hidden Panel -->
-    <div id="accessibilityPanel" class="accessibility-panel" hidden>
+    <div id="a11y-panel-idx" class="accessibility-panel" hidden>
     <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
     <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
     <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
@@ -1423,35 +1427,7 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     </script>
 
     <!-- Custom Language Toggle (Hindi/English) -->
-    <style>
-    .lang-toggle {
-        display: inline-flex;
-        gap: 8px;
-        margin-left: 10px;
-    }
-    .lang-toggle button {
-        padding: 4px 10px;
-        border: 1px solid rgba(255,255,255,0.5);
-        background: transparent;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        transition: all 0.3s ease;
-    }
-    .lang-toggle button:hover,
-    .lang-toggle button.active {
-        background: rgba(255,255,255,0.2);
-        border-color: #fff;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    [dir="rtl"] .lang-toggle {
-        flex-direction: row-reverse;
-    }
-    </style>
+    
 
     <!-- Language Translations Data -->
     <script>

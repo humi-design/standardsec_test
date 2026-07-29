@@ -57,16 +57,32 @@
         vertical-align: middle;
     }
     .lang-toggle button {
-        padding: 4px 12px;
-        border: 2px solid #fff;
-        background: #0066cc;
-        color: #fff;
+        padding: 8px 16px;
+        border: 2px solid #146CE0;
+        background: #146CE0;
+        color: #ffffff;
         border-radius: 4px;
         cursor: pointer;
         font-size: 12px;
         font-family: inherit;
-        transition: all 0.2s ease;
         font-weight: 500;
+        transition: all 0.2s ease;
+        min-height: 44px;
+        min-width: 60px;
+    }
+    .lang-toggle button:hover {
+        background: #1157B3;
+        border-color: #1157B3;
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: #0D47A1;
+        border-color: #0D47A1;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 3px solid #ffcc00;
+        outline-offset: 2px;
     }
     .lang-toggle button:hover {
         background: #0052a3;
@@ -85,81 +101,21 @@
     </style>
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover { background: rgba(255,255,255,0.2); }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover {
-        background: rgba(255,255,255,0.2);
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-art" class="skip-link">Skip to main content</a>
 
   
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element_nav" class="translate-btn"></div>
+        <div id="google-trans-art" class="translate-btn"></div>
 
         <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+            <button type="button" onclick="setLanguage('en')" id="lang-en-art" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi-art" aria-pressed="false">हिंदी</button>
         </div>
 <!-- header content begin -->
         <div class="uk-section uk-padding-remove-vertical">
@@ -328,7 +284,7 @@
     </button>
 </div>
 
-<div id="mobile-nav-modal" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
+<div id="mobile-nav-art" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
         <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
         <div class="uk-width-large uk-padding-large">
@@ -428,7 +384,7 @@
         <!-- header content end -->
     
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
 
@@ -473,117 +429,24 @@
 
 <body>
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 4px 12px;
-        border: 2px solid #fff;
-        background: #0066cc;
-        color: #fff;
-        border-radius: 4px;
-        cursor: pointer;
-        font-size: 12px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-        font-weight: 500;
-    }
-    .lang-toggle button:hover {
-        background: #0052a3;
-        border-color: #fff;
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: #004080;
-        border-color: #ffcc00;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #ffcc00;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover { background: rgba(255,255,255,0.2); }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
 
-    <style>
-    .lang-toggle {
-        display: inline-flex !important;
-        gap: 6px;
-        margin-left: 15px;
-        vertical-align: middle;
-    }
-    .lang-toggle button {
-        padding: 3px 8px;
-        border: 1px solid rgba(255,255,255,0.6);
-        background: rgba(0,0,0,0.2);
-        color: #fff;
-        border-radius: 3px;
-        cursor: pointer;
-        font-size: 11px;
-        font-family: inherit;
-        transition: all 0.2s ease;
-    }
-    .lang-toggle button:hover {
-        background: rgba(255,255,255,0.2);
-    }
-    .lang-toggle button.active,
-    .lang-toggle button[aria-pressed="true"] {
-        background: rgba(255,255,255,0.3);
-        border-color: #fff;
-        font-weight: bold;
-    }
-    .lang-toggle button:focus {
-        outline: 2px solid #fff;
-        outline-offset: 2px;
-    }
-    </style>
+    
 
-    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <a href="#main-art" class="skip-link">Skip to main content</a>
 
   
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
-        <div id="google_translate_element_nav" class="translate-btn"></div>
+        <div id="google-trans-art" class="translate-btn"></div>
 
         <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+            <button type="button" onclick="setLanguage('en')" id="lang-en-art" aria-pressed="true">English</button>
+            <button type="button" onclick="setLanguage('hi')" id="lang-hi-art" aria-pressed="false">हिंदी</button>
         </div>
 <!-- header content begin -->
         <div class="uk-section uk-padding-remove-vertical">
@@ -752,7 +615,7 @@
     </button>
 </div>
 
-<div id="mobile-nav-modal" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
+<div id="mobile-nav-art" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
         <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
         <div class="uk-width-large uk-padding-large">
@@ -852,11 +715,11 @@
         <!-- header content end -->
     
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
 
-    <main id="main-content">
+    <main id="main-art">
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -888,25 +751,9 @@
                             <div class="uk-width-3-5@m">
                                 <article class="uk-article">
                                     <div class="in-single-offset">
-                                        <p class="uk-article-meta uk-margin-remove-bottom"><span class="uk-label uk-label uk-visible@m">News</span> Wed Apr 5, 2019 &nbsp;&nbsp;</h1>
-<main id="main-content">
-<h1 class="uk-visually-hidden">News Article - Standard Securities</h1>
-        <!-- breadcrumb content begin -->
-        <div class="uk-section uk-section-small">
-            <div class="uk-container">
-                <div class="in-breadcrumb" data-uk-grid>
-                    <div class="uk-width-1-1">
-                        <ul class="uk-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="#">Company</a></li>
-                            <li><a href="news.html">Blog</a></li>
-                            <li>World food prices ...</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- breadcrumb content end -->
+                                        <p class="uk-article-meta uk-margin-remove-bottom"><span class="uk-label uk-label uk-visible@m">News</span> Wed Apr 5, 2019</p>
+                                        <h1 class="uk-visually-hidden">News Article - Standard Securities</h1>
+                                </div>
         <!-- section blog begin -->
         <div class="uk-section uk-padding-remove-vertical">
             <div class="uk-container uk-margin-small-top">
@@ -981,7 +828,7 @@
                                                         <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
                                                     
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
                                                 </div>
@@ -1004,7 +851,7 @@
                                                                 <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
                                                             
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
                                                         </div>
@@ -1029,7 +876,7 @@
                                                         <img class="uk-border-circle uk-comment-avatar" src="img/in-img-blog6.jpg" data-src="img/in-img-blog6.jpg" width="70" height="70" alt="" data-uk-img>
                                                     
         <div class="in-mobile-nav uk-height-1-1 uk-flex uk-flex-right uk-flex-middle uk-hidden@m">
-            <button class="uk-button uk-position-center-right" type="button" id="mobile-menu-toggle" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-modal"><i class="fas fa-bars" aria-hidden="true"></i></button>
+            <button class="uk-button uk-position-center-right" type="button" id="menu-toggle-art" aria-label="Open mobile navigation menu" aria-expanded="false" aria-controls="mobile-nav-art" aria-label="Toggle"><i class="fas fa-bars" aria-hidden="true"></i></button>
         </div>
 </header>
                                                 </div>
@@ -1189,12 +1036,12 @@
     <!-- Accessibility Floating Menu -->
  <div class="accessibility-menu" aria-label="Accessibility Tools">
     <!-- Floating Toggle Button -->
-    <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
+    <button id="a11y-toggle-art" class="fab" aria-expanded="false" aria-controls="a11y-panel-art">
     ♿
     </button>
     
     <!-- Hidden Panel -->
-    <div id="accessibilityPanel" class="accessibility-panel" hidden>
+    <div id="a11y-panel-art" class="accessibility-panel" hidden>
     <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
     <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
     <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
