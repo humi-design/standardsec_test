@@ -1,0 +1,533 @@
+#!/usr/bin/env python3
+"""
+Batch Update Script for Standard Securities Website
+Updates all HTML pages to use the new modern design system
+"""
+
+import os
+import re
+import shutil
+from pathlib import Path
+
+# Define the HTML pages to update (excluding index.html which is already done)
+PAGES_TO_UPDATE = [
+    'about.html',
+    'products.html',
+    'contact.html',
+    'careers.html',
+    'complaint_new.html',
+    'complaint.html',
+    'customers.html',
+    'history.html',
+    'management.html',
+    'team.html',
+    'Advisory.html',
+    'Commodities.html',
+    'Currency.html',
+    'Depository.html',
+    'Equity.html',
+    'IPOs.html',
+    'Terms.html',
+    'privacy.html',
+    'disclaimer.html',
+    'procedures.html',
+    'news.html',
+    'single.html',
+    'accessibility.html',
+    'downloads.html',
+    'pay.html',
+    'smart_ODR.html',
+    'signin.html',
+    'invester_charter.html',
+    '404.html',
+]
+
+# New header template
+NEW_HEADER = '''    <!-- Skip Link for Accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" role="banner">
+        <div class="container">
+            <div class="header-inner">
+                <!-- Logo -->
+                <div class="header-logo">
+                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
+                        <img src="img/logo.png" alt="Standard Securities & Investment Intermediates Ltd. logo" width="180" height="48">
+                    </a>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="header-nav" role="navigation" aria-label="Main navigation">
+                    <a href="index.html" class="header-nav-link">Home</a>
+                    <a href="products.html" class="header-nav-link">Products</a>
+
+                    <!-- About Us Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            About Us
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="about.html" class="dropdown-item" role="menuitem">History</a>
+                            <a href="management.html" class="dropdown-item" role="menuitem">Our Management</a>
+                            <a href="careers.html" class="dropdown-item" role="menuitem">Careers</a>
+                        </div>
+                    </div>
+
+                    <a href="contact.html" class="header-nav-link">Contact</a>
+
+                    <!-- Login Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Login
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://p3plcpnl0076.prod.phx3.secureserver.net:2096/logout/?locale=en" class="dropdown-item" role="menuitem">Employee Login</a>
+                            <a href="smart_ODR.html" class="dropdown-item" role="menuitem">Smart ODR Login</a>
+                            <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="dropdown-item" role="menuitem">Back Office</a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            Quick Links
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" style="min-width: 320px;" role="menu">
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+                                <div>
+                                    <a href="downloads.html" class="dropdown-item" role="menuitem">Downloads</a>
+                                    <a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" class="dropdown-item" role="menuitem">Evoting Login</a>
+                                    <a href="customers.html" class="dropdown-item" role="menuitem">Customers</a>
+                                    <a href="https://www.sebi.gov.in/" class="dropdown-item" role="menuitem">SEBI</a>
+                                    <a href="https://www.nseindia.com/" class="dropdown-item" role="menuitem">NSE</a>
+                                    <a href="https://www.bseindia.com/" class="dropdown-item" role="menuitem">BSE</a>
+                                </div>
+                                <div>
+                                    <a href="https://www.cdslindia.com/" class="dropdown-item" role="menuitem">CDSL</a>
+                                    <a href="https://www.mcxindia.com" class="dropdown-item" role="menuitem">MCX India</a>
+                                    <a href="https://scores.sebi.gov.in" class="dropdown-item" role="menuitem">SCORES 2.0</a>
+                                    <a href="pdf1/Basic_Details.xlsx" class="dropdown-item" role="menuitem">Basic Details</a>
+                                    <a href="pdf1/kmp%20details_24.pdf" class="dropdown-item" role="menuitem">KMP Details</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KYC Dropdown -->
+                    <div class="dropdown">
+                        <a href="#" class="header-nav-link" aria-haspopup="true" aria-expanded="false">
+                            KYC
+                            <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" aria-hidden="true" style="margin-left: 4px;">
+                                <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" fill="none"/>
+                            </svg>
+                        </a>
+                        <div class="dropdown-menu" role="menu">
+                            <a href="https://ekyc.standardsec.net:8002/" class="dropdown-item" role="menuitem">Open New Account</a>
+                            <a href="https://ekyc.standardsec.net:9000/directpan.aspx" class="dropdown-item" role="menuitem">Account Modification</a>
+                        </div>
+                    </div>
+
+                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
+                </nav>
+
+                <!-- Header Actions -->
+                <div class="header-actions">
+                    <!-- Language Toggle -->
+                    <div class="lang-toggle" role="group" aria-label="Language selection">
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">EN</button>
+                        <button type="button" class="btn btn-sm btn-outline" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिं</button>
+                    </div>
+                    
+                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
+                </div>
+
+                <!-- Mobile Navigation Toggle -->
+                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-nav">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="3" y1="6" x2="21" y2="6"></line>
+                        <line x1="3" y1="12" x2="21" y2="12"></line>
+                        <line x1="3" y1="18" x2="21" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Navigation -->
+    <div id="mobile-nav" class="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu" hidden>
+        <div class="mobile-nav-content">
+            <div class="mobile-nav-header">
+                <img src="img/logo.png" alt="Standard Securities logo" width="150" height="40">
+                <button class="mobile-nav-close" aria-label="Close navigation menu">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <line x1="18" y1="6" x2="6" y2="18"></line>
+                        <line x1="6" y1="6" x2="18" y2="18"></line>
+                    </svg>
+                </button>
+            </div>
+            
+            <ul class="mobile-nav-list" role="menubar">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="about.html" class="mobile-nav-link" role="menuitem">About Us</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint_new.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+
+            <div class="mobile-nav-actions">
+                <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-full">Open Account</a>
+                <a href="https://etrade.standardsec.com:3000/#/app" class="btn btn-outline btn-full">Online Trading</a>
+                <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" class="btn btn-outline btn-full">Back Office</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content">
+'''
+
+# New footer template
+NEW_FOOTER = '''    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Brand Column -->
+                <div class="footer-brand">
+                    <img src="img/logo.png" alt="Standard Securities logo" width="160" height="43" class="mb-6">
+                    <p class="text-gray-400">Standard Securities & Investment Intermediates Ltd. One of India's leading stock broking firms with 35+ years of experience.</p>
+                    <div class="flex gap-3 mt-6">
+                        <a href="#" class="footer-social-link" aria-label="Visit our Facebook page">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our Twitter profile">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg>
+                        </a>
+                        <a href="#" class="footer-social-link" aria-label="Visit our YouTube channel">
+                            <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon fill="#0f172a" points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Products Column -->
+                <div>
+                    <h3 class="footer-title">Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="Equity.html">Equities</a></li>
+                        <li><a href="Currency.html">Currency</a></li>
+                        <li><a href="Commodities.html">Commodities</a></li>
+                        <li><a href="IPOs.html">IPOs</a></li>
+                        <li><a href="Advisory.html">Advisory</a></li>
+                        <li><a href="Depository.html">Depository</a></li>
+                    </ul>
+                </div>
+
+                <!-- Company Column -->
+                <div>
+                    <h3 class="footer-title">Company</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="management.html">Management</a></li>
+                        <li><a href="careers.html">Careers</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="customers.html">Customers</a></li>
+                    </ul>
+                </div>
+
+                <!-- Resources Column -->
+                <div>
+                    <h3 class="footer-title">Resources</h3>
+                    <ul class="footer-links">
+                        <li><a href="downloads.html">Downloads</a></li>
+                        <li><a href="Terms.html">Terms</a></li>
+                        <li><a href="privacy.html">Privacy</a></li>
+                        <li><a href="disclaimer.html">Disclaimer</a></li>
+                        <li><a href="procedures.html">Policies</a></li>
+                        <li><a href="accessibility.html">Accessibility</a></li>
+                    </ul>
+                </div>
+
+                <!-- Regulatory Column -->
+                <div>
+                    <h3 class="footer-title">Regulatory</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.sebi.gov.in/" target="_blank" rel="noopener">SEBI</a></li>
+                        <li><a href="https://www.nseindia.com/" target="_blank" rel="noopener">NSE</a></li>
+                        <li><a href="https://www.bseindia.com/" target="_blank" rel="noopener">BSE</a></li>
+                        <li><a href="https://www.cdslindia.com/" target="_blank" rel="noopener">CDSL</a></li>
+                        <li><a href="https://www.mcxindia.com" target="_blank" rel="noopener">MCX</a></li>
+                        <li><a href="https://scores.sebi.gov.in" target="_blank" rel="noopener">SCORES 2.0</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="footer-bottom">
+                <p class="footer-copyright">Copyright ©2024 Standard Securities & Investment Intermediates Pvt Ltd. All rights reserved.</p>
+                <div class="flex gap-4 text-sm text-gray-500">
+                    <img src="img/monee-footer-mastercard.svg" alt="Mastercard" width="42" height="22" style="opacity: 0.7;">
+                    <img src="img/monee-footer-visa.svg" alt="Visa" width="42" height="21" style="opacity: 0.7;">
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Accessibility Toggle -->
+    <div class="accessibility-menu" aria-label="Accessibility Tools">
+        <button id="a11y-toggle" class="fab" aria-expanded="false" aria-controls="a11y-panel" aria-label="Open accessibility menu">
+            ♿
+        </button>
+        <div id="a11y-panel" class="accessibility-panel" hidden>
+            <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
+            <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
+            <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌓</button>
+            <a href="accessibility.html" aria-label="Accessibility Statement">♿ Info</a>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/uikit.min.js"></script>
+    <script src="js/app.js"></script>
+    
+    <script>
+        // Mobile Navigation Toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const mobileNav = document.getElementById('mobile-nav');
+            const mobileClose = document.querySelector('.mobile-nav-close');
+            
+            if (mobileToggle && mobileNav) {
+                mobileToggle.addEventListener('click', function() {
+                    const isHidden = mobileNav.hidden;
+                    mobileNav.hidden = !isHidden;
+                    mobileToggle.setAttribute('aria-expanded', isHidden);
+                    document.body.style.overflow = isHidden ? 'hidden' : '';
+                });
+                
+                mobileClose?.addEventListener('click', function() {
+                    mobileNav.hidden = true;
+                    mobileToggle.setAttribute('aria-expanded', 'false');
+                    document.body.style.overflow = '';
+                });
+                
+                // Close on Escape
+                document.addEventListener('keydown', function(e) {
+                    if (e.key === 'Escape' && !mobileNav.hidden) {
+                        mobileNav.hidden = true;
+                        mobileToggle.setAttribute('aria-expanded', 'false');
+                        mobileToggle.focus();
+                        document.body.style.overflow = '';
+                    }
+                });
+            }
+            
+            // Accessibility Panel Toggle
+            const a11yToggle = document.getElementById('a11y-toggle');
+            const a11yPanel = document.getElementById('a11y-panel');
+            
+            if (a11yToggle && a11yPanel) {
+                a11yToggle.addEventListener('click', function() {
+                    const isHidden = a11yPanel.hidden;
+                    a11yPanel.hidden = !isHidden;
+                    a11yToggle.setAttribute('aria-expanded', isHidden);
+                });
+            }
+        });
+        
+        // Language Toggle
+        function setLanguage(lang) {
+            const langEn = document.getElementById('lang-en');
+            const langHi = document.getElementById('lang-hi');
+            
+            if (langEn) langEn.setAttribute('aria-pressed', lang === 'en');
+            if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi');
+            
+            document.documentElement.lang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Accessibility Functions
+        function changeFontSize(direction) {
+            const html = document.documentElement;
+            const current = parseInt(getComputedStyle(html).fontSize) || 16;
+            html.style.fontSize = (current + direction) + 'px';
+        }
+        
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
+'''
+
+# Old CSS link pattern to remove and replace
+OLD_CSS_LINKS = '''    <!-- CSS -->
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style-redesign.css">
+    <link rel="stylesheet" href="css/style_bot.css">'''
+
+NEW_CSS_LINKS = '''    <!-- CSS - Modern Design System -->
+    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/uikit-compat.css">'''
+
+
+def update_page(filepath):
+    """Update a single HTML page with the new design system."""
+    print(f"Updating: {filepath}")
+    
+    # Create backup
+    backup_path = f"{filepath}.backup"
+    shutil.copy2(filepath, backup_path)
+    
+    with open(filepath, 'r', encoding='utf-8') as f:
+        content = f.read()
+    
+    # Check if it's a valid HTML page with the old structure
+    # Either has old CSS links OR doesn't have new CSS link
+    has_old_css = '<link rel="stylesheet" href="css/uikit.css">' in content
+    has_new_css = 'modern-design-system.css' in content
+    
+    if not has_old_css and has_new_css:
+        print(f"  Skipping {filepath} - already updated")
+        return False
+    elif not has_old_css and not has_new_css:
+        print(f"  Skipping {filepath} - not a standard page")
+        return False
+    
+    # Find the body tag
+    body_match = re.search(r'<body[^>]*>', content)
+    if not body_match:
+        print(f"  Skipping {filepath} - no body tag found")
+        return False
+    
+    body_start = body_match.end()
+    
+    # Find the header tag
+    header_match = re.search(r'<header[^>]*>', content)
+    header_end_match = re.search(r'</header>', content)
+    
+    if not header_match or not header_end_match:
+        print(f"  Warning: {filepath} - no header found, using body start")
+        # Replace body content from body tag to </body>
+        body_content_start = body_start
+    else:
+        # Replace from after <body> to before <header>
+        body_content_start = header_match.start()
+    
+    # Find the <main> tag
+    main_match = re.search(r'<main[^>]*id="[^"]*main[^"]*"[^>]*>', content)
+    main_end_match = re.search(r'</main>', content)
+    
+    # Find the footer tag
+    footer_match = re.search(r'<footer[^>]*>', content)
+    
+    if footer_match:
+        footer_start = footer_match.start()
+    elif main_end_match:
+        footer_start = main_end_match.end()
+    else:
+        # Find </body>
+        body_end_match = re.search(r'</body>', content)
+        if body_end_match:
+            footer_start = body_end_match.start()
+        else:
+            print(f"  Error: {filepath} - cannot find footer or body end")
+            return False
+    
+    # Extract the main content between </header> and <footer>
+    if header_end_match and footer_match:
+        main_content = content[header_end_match.end():footer_match.start()]
+    elif main_match and main_end_match:
+        main_content = content[main_match.start():main_end_match.end()]
+    else:
+        main_content = content[body_start:footer_start]
+    
+    # Clean up main content - remove skip link if already exists
+    main_content = re.sub(r'<a[^>]*class="[^"]*skip-link[^"]*"[^>]*>.*?</a>', '', main_content, flags=re.DOTALL)
+    main_content = re.sub(r'<a[^>]*href="#main[^"]*"[^>]*>Skip to main content</a>', '', main_content)
+    
+    # Remove any nested <main> tags from the content (they're already in our wrapper)
+    main_content = re.sub(r'<main[^>]*>', '', main_content)
+    main_content = re.sub(r'</main>', '', main_content)
+    
+    # Update CSS links
+    if OLD_CSS_LINKS in content:
+        content = content.replace(OLD_CSS_LINKS, NEW_CSS_LINKS)
+    else:
+        # Try to find and replace individual links
+        content = re.sub(r'<link[^>]*href="css/uikit\.css"[^>]*>', '', content)
+        content = re.sub(r'<link[^>]*href="css/style\.css"[^>]*>', '', content)
+        content = re.sub(r'<link[^>]*href="css/style-redesign\.css"[^>]*>', '', content)
+        content = re.sub(r'<link[^>]*href="css/style_bot\.css"[^>]*>', '', content)
+        content = content.replace('</head>', f'{NEW_CSS_LINKS}\n</head>')
+    
+    # Remove inline styles from head
+    content = re.sub(r'<style[^>]*>.*?</style>', '', content, flags=re.DOTALL)
+    
+    # Build new content
+    new_content = content[:body_match.start()] + NEW_HEADER + main_content + NEW_FOOTER
+    
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(new_content)
+    
+    print(f"  ✓ Updated successfully")
+    return True
+
+
+def main():
+    """Main function to update all pages."""
+    print("=" * 60)
+    print("Standard Securities - Batch Page Update")
+    print("=" * 60)
+    print()
+    
+    success_count = 0
+    fail_count = 0
+    
+    for page in PAGES_TO_UPDATE:
+        if os.path.exists(page):
+            try:
+                if update_page(page):
+                    success_count += 1
+                else:
+                    fail_count += 1
+            except Exception as e:
+                print(f"  ✗ Error: {e}")
+                fail_count += 1
+        else:
+            print(f"Skipping: {page} (not found)")
+    
+    print()
+    print("=" * 60)
+    print(f"Update complete!")
+    print(f"  Success: {success_count}")
+    print(f"  Failed/Skipped: {fail_count}")
+    print("=" * 60)
+
+
+if __name__ == "__main__":
+    main()
