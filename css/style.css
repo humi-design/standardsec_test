@@ -7597,10 +7597,6 @@ footer .uk-list li a {
 
 /* Footer text contrast */
 footer, footer p, footer li, footer span {
-    color: #666666 !important;
-}
-
-footer h3, footer h4 {
     color: #333333 !important;
 }
 
@@ -7637,17 +7633,28 @@ footer h3, footer h4 {
 }
 
 /* WCAG 2.5.8 - Target Size Minimum (44x44px) */
-/* Footer links */
-.in-footer-nav li a,
-.footer-links a,
-.footer-links li a,
-.footer a,
+/* Footer links - preserve original display and layout */
+footer ul,
+footer ul li,
+footer .uk-list,
+footer .uk-list li {
+    display: block !important;
+}
+
 footer a {
+    display: inline-block !important;
     min-height: 44px !important;
-    min-width: 44px !important;
-    padding: 10px 15px !important;
-    display: inline-flex !important;
-    align-items: center !important;
+    padding: 8px 12px !important;
+    vertical-align: top !important;
+    line-height: 1.5 !important;
+    box-sizing: border-box !important;
+}
+
+footer ul.uk-list li a {
+    display: inline-block !important;
+    min-height: 36px !important;
+    padding: 4px 0 !important;
+    line-height: 1.5 !important;
 }
 
 /* All interactive elements */
@@ -7664,39 +7671,56 @@ header .uk-button {
 }
 
 /* WCAG 1.4.3 - Text Contrast Fixes */
-/* Footer headings - Use BLACK for visibility */
-.footer h5,
-.footer .footer-heading {
-    color: #000000 !important; /* Black for footer headings */
-}
-
-footer h4,
-footer h5 {
-    color: #000000 !important; /* Black for footer section headings */
-}
-
-/* Footer column headings specifically */
+/* Footer headings - Use BLACK for visibility, maintain layout */
 footer h3,
-footer h4 {
+footer h4,
+footer h5,
+.footer h3,
+.footer h4,
+.footer h5 {
     color: #000000 !important;
     font-weight: bold !important;
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
 }
 
 /* Footer link text - black for visibility */
-footer a,
 footer p,
 footer li,
-.footer a,
-.footer p,
-.footer li,
-.uk-footer a {
-    color: #333333 !important; /* Dark gray/black for footer content */
+footer span:not(.uk-icon-button):not(.fab):not(.fas) {
+    color: #333333 !important;
+}
+
+footer a:not(.uk-icon-button) {
+    color: #0066cc !important;
+}
+
+footer a:not(.uk-icon-button):hover {
+    color: #004080 !important;
 }
 
 /* Footer "Need help?" text */
+footer .uk-subnav {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
 footer .uk-subnav li,
+footer .uk-subnav li a,
 footer .uk-subnav span {
     color: #333333 !important;
+    font-size: inherit !important;
+    line-height: 1.5 !important;
+}
+
+/* Footer column alignment - fix grid */
+footer .uk-child-width-1-4\@m > div {
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+footer .uk-child-width-1-4\@m > div h4 {
+    margin-top: 0 !important;
 }
 
 /* Stats values - ensure contrast */
