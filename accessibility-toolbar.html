@@ -3,10 +3,25 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Accessibility Toolbar - Standard Securities">
+    <meta name="theme-color" content="#146CE0">
     <title>Accessibility Toolbar | Standard Securities</title>
-    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/premium-design.css">
     <link rel="stylesheet" href="css/uikit-compat.css">
     <link rel="stylesheet" href="css/accessibility-toolbar.css">
+    
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
 
@@ -27,6 +42,24 @@
                     <a href="contact.html" class="header-nav-link">Contact</a>
                 </nav>
                 <div class="header-actions">
+                    <!-- Google Translate Widget -->
+                    <div id="google_translate_element" aria-label="Translate page to Hindi"></div>
+                    
+                    <!-- Dark Mode Toggle -->
+                    <button type="button" class="dark-mode-toggle" onclick="toggleDarkMode()" aria-label="Toggle dark mode" title="Toggle dark mode">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <circle cx="12" cy="12" r="5"></circle>
+                            <line x1="12" y1="1" x2="12" y2="3"></line>
+                            <line x1="12" y1="21" x2="12" y2="23"></line>
+                            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                            <line x1="1" y1="12" x2="3" y2="12"></line>
+                            <line x1="21" y1="12" x2="23" y2="12"></line>
+                            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                        </svg>
+                    </button>
+
                     <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
                 </div>
             </div>
@@ -85,17 +118,48 @@
                     toggle.setAttribute('aria-expanded', isHidden);
                 });
             }
+            
+            // Restore dark mode preference
+            var savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            var savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
         });
         
         function changeFontSize(direction) {
             var html = document.documentElement;
             var current = parseInt(getComputedStyle(html).fontSize) || 16;
-            html.style.fontSize = (current + direction) + 'px';
+            var newSize = Math.max(12, Math.min(24, current + (direction * 2)));
+            html.style.fontSize = newSize + 'px';
+            localStorage.setItem('fontSize', newSize);
         }
         
         function toggleDarkMode() {
             document.body.classList.toggle('dark-mode');
+            var isDarkMode = document.body.classList.contains('dark-mode');
+            localStorage.setItem('darkMode', isDarkMode);
         }
+        
+        // Keyboard navigation support
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                var panels = document.querySelectorAll('.accessibility-panel');
+                panels.forEach(function(panel) {
+                    panel.hidden = true;
+                });
+                
+                var toggles = document.querySelectorAll('[aria-controls]');
+                toggles.forEach(function(toggle) {
+                    toggle.setAttribute('aria-expanded', 'false');
+                });
+            }
+        });
     </script>
 </body>
 </html>

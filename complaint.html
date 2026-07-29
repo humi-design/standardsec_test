@@ -2,21 +2,23 @@
 <html lang="en">
 <head>
     <title>Complaint Form</title>
-    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/premium-design.css">
     <link rel="stylesheet" href="css/uikit-compat.css">
 
-
-
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 <body>
-
-    
-
-
-    
-
-
-    
 
     <!-- Skip Link for Accessibility -->
     <a href="#main-cmp" class="skip-link">Skip to main content</a>
@@ -75,13 +77,6 @@
             </form>
         </div>
     </main>
-
-
-    
-
-
-    
-
 
     <!-- Custom Language Translation Script -->
     <script>
@@ -195,12 +190,34 @@
         });
     }
     
-    document.addEventListener('DOMContentLoaded', function() {
+    // Restore dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
+            document.addEventListener('DOMContentLoaded', function() {
         if (localStorage.getItem('preferredLang') === 'hi') setLanguage('hi');
     });
     
     // Mobile Navigation Fix
-document.addEventListener('DOMContentLoaded', function() {
+// Restore dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
+            document.addEventListener('DOMContentLoaded', function() {
     var menuToggle = document.getElementById('mobile-menu-toggle');
     var mobileNav = document.getElementById('mobile-nav-modal');
     var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
@@ -237,7 +254,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
     </script>
 
-
 <div id="mobile-nav-cmp" class="uk-modal-full uk-flex-top" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" hidden>
     <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
         <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
@@ -257,8 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     </div>
 </div>
-
-
 
 </body>
 </html>

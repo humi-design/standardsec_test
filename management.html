@@ -12,27 +12,26 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS - Modern Design System -->
-    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/premium-design.css">
     <link rel="stylesheet" href="css/uikit-compat.css">
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    
-    
 
-
-
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
-
-    
-
-
-    
-
-
-    
 
     <a href="#main-mgt" class="skip-link">Skip to main content</a>
 
@@ -49,8 +48,7 @@
         <div class="uk-container">
             <div class="uk-grid">
                 <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                   
-                    
+
                 </di    <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -213,8 +211,6 @@
     <!-- Main Content -->
     <main id="main-content">
 
-
-    
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -273,9 +269,7 @@
                                             Neelam Dhingra carries rich experience of 25 years in financial sector across operations management, business development & market analysis. Entrepreneurship in her DNA, she finally set out to give wings to her dream by setting up Standard Securities.
                                         </p>
                                     </div>
-    
-                                   
-    
+
                                     <div>
                                         <img class="uk-border-circle uk-margin-small-top uk-margin-remove-bottom" 
                                              src="img/director4.jpeg" 
@@ -286,9 +280,7 @@
                                             A graduate from Symbiosis, Pune looks after day to day of the company. Inspiring leader with a great vision. His key roles & responsibilities include business development, RMS & administrative work of SSIIL.
                                         </p>
                                     </div>
-    
-                                    
-    
+
                                     <div>
                                         <img class="uk-border-circle uk-margin-small-top uk-margin-remove-bottom" 
                                              src="img/Director2.png" 
@@ -332,10 +324,7 @@
             </div>
         </div>
         <!-- section content end -->
-    
-    
-    
-     
+
     <div class="container">
         <div class="chatbox" aria-live="polite">
             <!-- Chat support panel -->
@@ -377,8 +366,6 @@
             </div>
         </div>
     </div>
-    
-    
 
         </main>
 
@@ -486,7 +473,18 @@
     
     <script>
         // Mobile Navigation Toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        // Restore dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
+            document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileClose = document.querySelector('.mobile-nav-close');

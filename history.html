@@ -12,31 +12,28 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS - Modern Design System -->
-    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/premium-design.css">
     <link rel="stylesheet" href="css/uikit-compat.css">
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    
-    
 
-
-
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
 
-    
-
-
-    
-
-
-    
-
     <a href="#main-hst" class="skip-link">Skip to main content</a>
-
-  
 
     <header data-uk-sticky="top: 400; cls-active: in-sticky">
 
@@ -214,8 +211,6 @@
     <!-- Main Content -->
     <main id="main-content">
 
-
-    
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -277,9 +272,7 @@
                             2001	More than 50 Branches/ Pan India Presence.<br>
                             2000	Research Services : (Equity) Fundamental & Technical Research.<br>
                             1994	Equity Brokerage: Providing trading platforms to clients supported with research services..</b></p>
-                           
-                            
-                            
+
                         </div>
                     </div>
                 </div>
@@ -292,8 +285,7 @@
                 <div class="uk-grid">
                     <div class="uk-width-2-3@m">
                         <div class="uk-grid uk-grid-small" data-uk-grid>
-                           
-                            
+
                                                                     </div>
                             </div>
                         </div>
@@ -331,9 +323,7 @@
         <!-- section content begin -->
         
         <!-- section content end -->
-    
 
-    
     <div class="container">
         <div class="chatbox">
             <div class="chatbox__support">
@@ -464,7 +454,18 @@
     
     <script>
         // Mobile Navigation Toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        // Restore dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
+            document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileClose = document.querySelector('.mobile-nav-close');

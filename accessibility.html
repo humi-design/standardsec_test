@@ -12,27 +12,26 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS - Modern Design System -->
-    <link rel="stylesheet" href="css/modern-design-system.css">
+    <link rel="stylesheet" href="css/premium-design.css">
     <link rel="stylesheet" href="css/uikit-compat.css">
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
-    
-    
-    
 
-
-
+    <!-- Google Translate Widget -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,hi',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </head>
 
 <body>
-
-    
-
-
-    
-
-
-    
 
     <a href="#main-a11y" class="skip-link">Skip to main content</a>
 
@@ -49,8 +48,7 @@
         <div class="uk-container">
             <div class="uk-grid">
                 <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                   
-                    
+
                     <!-- Skip Link for Accessibility -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
@@ -213,9 +211,6 @@
     <!-- Main Content -->
     <main id="main-content">
 
-
-          
-    
         <!-- breadcrumb content begin -->
         <div class="uk-section uk-section-small">
             <div class="uk-container">
@@ -295,8 +290,7 @@
                             <!-- Submit Button -->
                             <button class="uk-button uk-button-primary" type="submit">Submit Report</button>
                           </form>
-                          
-                  
+
                           <h2>Alternative Contact</h2>
                           <p>
                             You may also contact us directly:<br>
@@ -308,11 +302,7 @@
             </div>
         </div>
         <!-- section content end -->
-    
-    
-    
-    
-    
+
     <div class="container">
         <div class="chatbox" aria-live="polite">
             <!-- Chat support panel -->
@@ -354,8 +344,6 @@
             </div>
         </div>
     </div>
-    
-    
 
         </main>
 
@@ -463,7 +451,18 @@
     
     <script>
         // Mobile Navigation Toggle
-        document.addEventListener('DOMContentLoaded', function() {
+        // Restore dark mode preference
+            const savedDarkMode = localStorage.getItem('darkMode');
+            if (savedDarkMode === 'true') {
+                document.body.classList.add('dark-mode');
+            }
+            
+            // Restore font size preference
+            const savedFontSize = localStorage.getItem('fontSize');
+            if (savedFontSize) {
+                document.documentElement.style.fontSize = savedFontSize + 'px';
+            }
+            document.addEventListener('DOMContentLoaded', function() {
             const mobileToggle = document.querySelector('.mobile-nav-toggle');
             const mobileNav = document.getElementById('mobile-nav');
             const mobileClose = document.querySelector('.mobile-nav-close');
