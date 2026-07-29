@@ -1,101 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Accessibility Toolbar | Standard Securities</title>
-    <link rel="stylesheet" href="css/modern-design-system.css">
-    <link rel="stylesheet" href="css/uikit-compat.css">
-    <link rel="stylesheet" href="css/accessibility-toolbar.css">
-</head>
-<body>
-
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <header class="header" role="banner">
-        <div class="container">
-            <div class="header-inner">
-                <div class="header-logo">
-                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
-                        <img src="img/logo.png" alt="Standard Securities logo" width="180" height="48">
-                    </a>
-                </div>
-                <nav class="header-nav" role="navigation" aria-label="Main navigation">
-                    <a href="index.html" class="header-nav-link">Home</a>
-                    <a href="products.html" class="header-nav-link">Products</a>
-                    <a href="about.html" class="header-nav-link">About Us</a>
-                    <a href="contact.html" class="header-nav-link">Contact</a>
-                </nav>
-                <div class="header-actions">
-                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    <main id="main-content" class="section section--white">
-        <div class="container">
-            <h1>Accessibility Toolbar</h1>
-            <p>Use the floating accessibility button in the bottom-left corner to access accessibility tools.</p>
-            
-            <div class="card card-shadow mt-8">
-                <div class="card-body">
-                    <h2>Available Features</h2>
-                    <ul class="mt-4">
-                        <li><strong>A+ / A-</strong> - Increase or decrease text size</li>
-                        <li><strong>Dark Mode</strong> - Toggle dark mode for reduced eye strain</li>
-                        <li><strong>Read Aloud</strong> - Listen to page content</li>
-                    </ul>
-                    <p class="mt-4 text-muted">These tools help make our website accessible to all users.</p>
-                </div>
-            </div>
-        </div>
-    </main>
-
-    <footer class="footer" role="contentinfo">
-        <div class="container">
-            <div class="footer-bottom">
-                <p class="footer-copyright">Copyright ©2024 Standard Securities & Investment Intermediates Pvt Ltd.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Accessibility Menu -->
-    <div class="accessibility-menu" aria-label="Accessibility Tools">
-        <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
-            ♿
-        </button>
-        <div id="accessibilityPanel" class="accessibility-panel" hidden>
-            <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
-            <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
-            <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌓</button>
-            <a href="accessibility.html" aria-label="Accessibility Statement">♿ Info</a>
-        </div>
+<!-- accessibility-toolbar.html -->
+<div class="accessibility-menu" aria-label="Accessibility Tools">
+    <!-- Floating Toggle Button -->
+    <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
+      ♿
+    </button>
+  
+    <!-- Hidden Panel -->
+    <div id="accessibilityPanel" class="accessibility-panel" hidden>
+      <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
+      <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
+      <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
+      <button onclick="readContent()" aria-label="Read page aloud">🔊 Read</button>
+      <a href="accessibility.html" aria-label="Accessibility Statement">♿ Accessibility</a>
     </div>
-
-    <script src="js/vendor/jquery.min.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            var toggle = document.getElementById('accessibilityToggle');
-            var panel = document.getElementById('accessibilityPanel');
-            if (toggle && panel) {
-                toggle.addEventListener('click', function() {
-                    var isHidden = panel.hidden;
-                    panel.hidden = !isHidden;
-                    toggle.setAttribute('aria-expanded', isHidden);
-                });
-            }
-        });
-        
-        function changeFontSize(direction) {
-            var html = document.documentElement;
-            var current = parseInt(getComputedStyle(html).fontSize) || 16;
-            html.style.fontSize = (current + direction) + 'px';
-        }
-        
-        function toggleDarkMode() {
-            document.body.classList.toggle('dark-mode');
-        }
-    </script>
-</body>
-</html>
+  </div>
+  
+  <link rel="stylesheet" href="accessibility-toolbar.css">
+  <script src="accessibility-toolbar.js"></script>
+  

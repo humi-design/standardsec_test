@@ -1,167 +1,124 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <title>Complaint Form</title>
-    <link rel="stylesheet" href="css/modern-design-system.css">
-    <link rel="stylesheet" href="css/uikit-compat.css">
-
-
-
 </head>
 <body>
 
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
+        padding: 3px 8px;
+        border: 1px solid rgba(255,255,255,0.6);
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
+    .lang-toggle button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: rgba(255,255,255,0.3);
+        border-color: #fff;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    </style>
     
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-
+<h2>Register a Complaint</h2>
+<form method="post" action="complaint.php">
+    <label for="customer_name">Customer Name:</label><br>
+    <input type="text" id="customer_name" name="customer_name" required><br>
     
-
-
+    <label for="customer_email">Customer Email:</label><br>
+    <input type="email" id="customer_email" name="customer_email" required><br>
     
-
-    <!-- Skip Link for Accessibility -->
-    <a href="#main-cmp" class="skip-link">Skip to main content</a>
-
-    <!-- Header -->
-    <header class="header" role="banner">
-        <div class="container">
-            <div class="header-inner">
-                <div class="header-logo">
-                    <a href="index.html" aria-label="Standard Securities - Go to homepage">
-                        <img src="img/logo.png" alt="Standard Securities logo" width="180" height="48">
-                    </a>
-                </div>
-                <nav class="header-nav" role="navigation" aria-label="Main navigation">
-                    <a href="index.html" class="header-nav-link">Home</a>
-                    <a href="products.html" class="header-nav-link">Products</a>
-                    <a href="about.html" class="header-nav-link">About Us</a>
-                    <a href="contact.html" class="header-nav-link">Contact</a>
-                    <a href="complaint_new.html" class="header-nav-link">Complaints</a>
-                </nav>
-                <div class="header-actions">
-                    <a href="https://ekyc.standardsec.net:8002" class="btn btn-primary btn-sm">Open Account</a>
-                </div>
-                <button class="mobile-nav-toggle" aria-label="Open navigation menu" aria-expanded="false">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="3" y1="6" x2="21" y2="6"></line>
-                        <line x1="3" y1="12" x2="21" y2="12"></line>
-                        <line x1="3" y1="18" x2="21" y2="18"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-cmp">
-        <div class="uk-container uk-padding">
-            <h1>Register a Complaint</h1>
-            <form method="post" action="complaint.php">
-                <div class="uk-margin">
-                    <label for="customer_name">Customer Name: <span aria-hidden="true" style="color: #d32f2f;">*</span></label><br>
-                    <input class="uk-input" type="text" id="customer_name" name="customer_name" required aria-required="true" autocomplete="name">
-                </div>
-
-                <div class="uk-margin">
-                    <label for="customer_email">Customer Email: <span aria-hidden="true" style="color: #d32f2f;">*</span></label><br>
-                    <input class="uk-input" type="email" id="customer_email" name="customer_email" required aria-required="true" autocomplete="email">
-                </div>
-
-                <div class="uk-margin">
-                    <label for="complaint">Complaint: <span aria-hidden="true" style="color: #d32f2f;">*</span></label><br>
-                    <textarea class="uk-textarea" id="complaint" name="complaint" rows="4" required aria-required="true"></textarea>
-                </div>
-
-                <button class="uk-button uk-button-primary" type="submit">Submit</button>
-            </form>
-        </div>
-    </main>
-
-
+    <label for="complaint">Complaint:</label><br>
+    <textarea id="complaint" name="complaint" rows="4" required></textarea><br>
     
-
-
-    
+    <input type="submit" value="Submit">
+</form>
 
 
     <!-- Custom Language Translation Script -->
     <script>
-    const translations = {'hi': {
-    "Home": "होम",
-    "Products": "उत्पाद",
-    "About Us": "हमारे बारे में",
-    "Contact": "संपर्क",
-    "Login": "लॉग इन",
-    "Quick Links": "त्वरित लिंक",
-    "Downloads": "डाउनलोड",
-    "KYC": "केवाईसी",
-    "Complaints": "शिकायतें",
-    "Menu": "मेन्यू",
-    "History": "इतिहास",
-    "Our Management": "हमारा प्रबंधन",
-    "Careers": "करियर",
-    "Employee Login": "कर्मचारी लॉग इन",
-    "Smart ODR Login": "स्मार्ट ओडीआर लॉगिन",
-    "Back Office": "बैक ऑफिस",
-    "Open Account": "खाता खोलें",
-    "Open account": "खाता खोलें",
-    "Open an Account": "खाता खोलें",
-    "Fund Transfer": "फंड ट्रांसफर",
-    "Online Trading": "ऑनलाइन ट्रेडिंग",
-    "Equities": "इक्विटी",
-    "Equity": "इक्विटी",
-    "Currency": "करेंसी",
-    "Commodities": "कमोडिटी",
-    "IPOs": "आईपीओ",
-    "Advisory": "सलाह",
-    "Depository": "डिपॉजिटरी",
-    "SEBI": "सेबी",
-    "NSE": "एनएसई",
-    "BSE": "बीएसई",
-    "CDSL": "सीडीएसएल",
-    "MCX India": "एमसीएक्स इंडिया",
-    "SCORES 2.0": "स्कोर 2.0",
-    "Terms": "नियम",
-    "Privacy Policies": "गोपनीयता",
-    "Disclaimer": "अस्वीकरण",
-    "Policies & Procedures": "नीतियां",
-    "Investor Charter": "निवेशक चार्टर",
-    "Need help?": "मदद चाहिए",
-    "Connect": "जुड़ें",
-    "Email": "ईमेल",
-    "Phone": "फोन",
-    "Contact us": "संपर्क करें",
-    "Copyright": "कॉपीराइट",
-    "Attention Investor": "निवेशकों का ध्यान",
-    "Read more": "और पढ़ें",
-    "Learn more": "और जानें",
-    "Open New Account": "नया खाता खोलें",
-    "Account Modification": "खाता संशोधन",
-    "Create Account": "खाता बनाएं",
-    "Submit": "जमा करें",
-    "Send": "भेजें",
-    "Cancel": "रद्द करें",
-    "Close": "बंद करें",
-    "Stay Ahead of the Curve": "रुझान से आगे रहें",
-    "Working Experience in Quality Services": "गुणवत्ता सेवाओं में अनुभव",
-    "25+ Years of Excellence": "25+ वर्षों की उत्कृष्टता",
-    "Do You Know?": "क्या आप जानते हैं",
-    "Risk Disclosures on Derivatives": "डेरिवेटिव पर जोखिम प्रकटीकरण",
-    "Full Name": "पूरा नाम",
-    "Email Address": "ईमेल पता",
-    "Phone Number": "फोन नंबर",
-    "Message": "संदेश",
-    "Subject": "विषय",
-}};
+    const translations = {
+        'hi': {
+            'Products': 'उत्पाद',
+            'About Us': 'हमारे बारे में',
+            'Contact': 'संपर्क',
+            'Login': 'लॉग इन',
+            'Quick Links': 'त्वरित लिंक',
+            'Downloads': 'डाउनलोड',
+            'KYC': 'केवाईसी',
+            'Complaints': 'शिकायतें',
+            'Open Account': 'खाता खोलें',
+            'Open account': 'खाता खोलें',
+            'Open an Account': 'खाता खोलें',
+            'Fund Transfer': 'फंड ट्रांसफर',
+            'Online Trading': 'ऑनलाइन ट्रेडिंग',
+            'Back Office': 'बैक ऑफिस',
+            'Home': 'होम',
+            'History': 'इतिहास',
+            'Our Management': 'हमारा प्रबंधन',
+            'Careers': 'करियर',
+            'Terms': 'नियम',
+            'Privacy Policies': 'गोपनीयता',
+            'Disclaimer': 'अस्वीकरण',
+            'Policies & Procedures': 'नीतियां',
+            'Investor Charter': 'निवेशक चार्टर',
+            'SEBI': 'सेबी',
+            'NSE': 'एनएसई',
+            'BSE': 'बीएसई',
+            'CDSL': 'सीडीएसएल',
+            'Equity': 'इक्विटी',
+            'Equities': 'इक्विटी',
+            'Currency': 'करेंसी',
+            'Commodities': 'कमोडिटी',
+            'IPOs': 'आईपीओ',
+            'Advisory': 'सलाह',
+            'Depository': 'डिपॉजिटरी',
+            'Need help?': 'मदद चाहिए?',
+            'Connect': 'जुड़ें',
+            'Email': 'ईमेल',
+            'Copyright': 'कॉपीराइट',
+            'Attention Investor': 'निवेशकों का ध्यान',
+            'Read more': 'और पढ़ें',
+            'Learn more': 'और जानें',
+            'Menu': 'मेन्यू'
+        }
+    };
     
     function setLanguage(lang) {
         document.documentElement.lang = lang;
-        const langEn = document.getElementById('lang-en');
-        const langHi = document.getElementById('lang-hi');
-        if (langEn) langEn.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
-        if (langHi) langHi.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
-        if (langEn) langEn.classList.toggle('active', lang === 'en');
-        if (langHi) langHi.classList.toggle('active', lang === 'hi');
+        
+        // Update toggle buttons
+        document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        
+        // Update active class
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-hi').classList.toggle('active', lang === 'hi');
+        
+        // Store preference
         localStorage.setItem('preferredLang', lang);
+        
+        // Translate page content
         if (lang === 'hi') {
             translatePageToHindi();
         } else {
@@ -170,22 +127,33 @@
     }
     
     function translatePageToHindi() {
-        const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
-            acceptNode: function(node) {
-                const parent = node.parentElement;
-                if (!parent) return NodeFilter.FILTER_REJECT;
-                const tagName = parent.tagName.toLowerCase();
-                if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
-                    return NodeFilter.FILTER_REJECT;
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    const parent = node.parentElement;
+                    if (!parent) return NodeFilter.FILTER_REJECT;
+                    const tagName = parent.tagName.toLowerCase();
+                    if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.hasAttribute('data-translated')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.closest('.lang-toggle')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
                 }
-                if (parent.hasAttribute('data-translated') || parent.closest('.lang-toggle')) {
-                    return NodeFilter.FILTER_REJECT;
-                }
-                return NodeFilter.FILTER_ACCEPT;
             }
-        });
+        );
+        
         const textNodes = [];
-        while (walker.nextNode()) textNodes.push(walker.currentNode);
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+        
         textNodes.forEach(node => {
             const text = node.textContent.trim();
             if (text && translations['hi'][text]) {
@@ -195,70 +163,14 @@
         });
     }
     
+    // Load saved preference on page load
     document.addEventListener('DOMContentLoaded', function() {
-        if (localStorage.getItem('preferredLang') === 'hi') setLanguage('hi');
-    });
-    
-    // Mobile Navigation Fix
-document.addEventListener('DOMContentLoaded', function() {
-    var menuToggle = document.getElementById('mobile-menu-toggle');
-    var mobileNav = document.getElementById('mobile-nav-modal');
-    var closeBtn = mobileNav ? mobileNav.querySelector('.uk-modal-close-full') : null;
-    
-    if (menuToggle && mobileNav) {
-        function toggleMobileMenu() {
-            var isHidden = mobileNav.getAttribute('hidden') !== null;
-            if (isHidden) {
-                mobileNav.removeAttribute('hidden');
-                menuToggle.setAttribute('aria-expanded', 'true');
-                menuToggle.setAttribute('aria-label', 'Close mobile navigation menu');
-                document.body.style.overflow = 'hidden';
-                if (closeBtn) closeBtn.focus();
-            } else {
-                mobileNav.setAttribute('hidden', '');
-                menuToggle.setAttribute('aria-expanded', 'false');
-                menuToggle.setAttribute('aria-label', 'Open mobile navigation menu');
-                document.body.style.overflow = '';
-            }
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang === 'hi') {
+            setLanguage('hi');
         }
-        menuToggle.addEventListener('click', toggleMobileMenu);
-        if (closeBtn) closeBtn.addEventListener('click', toggleMobileMenu);
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape' && !mobileNav.hasAttribute('hidden')) {
-                toggleMobileMenu();
-                menuToggle.focus();
-            }
-        });
-        var navLinks = mobileNav.querySelectorAll('a');
-        navLinks.forEach(function(link) {
-            link.setAttribute('tabindex', '0');
-        });
-    }
-});
+    });
     </script>
-
-
-<div id="mobile-nav-cmp" class="uk-modal-full uk-flex-top" role="dialog" aria-modal="true" aria-label="Mobile navigation menu" hidden>
-    <div class="uk-modal-dialog uk-flex uk-flex-center uk-flex-middle" data-uk-height-viewport>
-        <button class="uk-modal-close-full uk-close-large fas fa-times" type="button" aria-label="Close mobile navigation menu"></button>
-        <div class="uk-width-large uk-padding-large">
-            <ul class="uk-nav-primary uk-nav-parent-icon in-margin-negative-top@s" data-uk-nav role="menu">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="signin.html">Login</a></li>
-                <li><a href="downloads.html">Downloads</a></li>
-                <li><a href="complaint_new.html">Complaints</a></li>
-            </ul>
-            <div class="dropdown" style="margin-top: 20px;">
-                <a href="https://ekyc.standardsec.net:8002" class="uk-button uk-button-primary uk-border-rounded uk-align-center">Open Account</a>
-            </div>
-        </div>
-    </div>
-</div>
-
-
 
 </body>
 </html>
