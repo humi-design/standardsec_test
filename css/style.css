@@ -306,19 +306,20 @@ p {
 header {
     transition: background-color ease 300ms, box-shadow ease 300ms;
     background-color: var(--color-white);
-    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    box-shadow: var(--shadow-sm);
     position: relative;
     z-index: 100;
 }
 
 header .in-header-subnav {
-    font-size: 0.75rem;
-    padding: 0.35rem 0;
+    font-size: 0.8125rem;
+    margin: var(--space-4) 0;
     color: var(--color-gray-600);
 }
 
 header .in-header-button {
-    padding: 0.5rem 0;
+    margin-top: var(--space-4);
+    padding: var(--space-2) 0;
 }
 
 header .in-header-button .uk-button {
@@ -326,15 +327,15 @@ header .in-header-button .uk-button {
     font-weight: 500;
     text-transform: capitalize;
     border-radius: var(--radius);
-    padding: 0.4rem 0.875rem;
-    min-height: 36px;
-    font-size: 0.8125rem;
+    padding: var(--space-3) var(--space-5);
+    min-height: var(--target-size-min);
     transition: all var(--transition-base);
     letter-spacing: 0.01em;
 }
 
 header .in-header-button .uk-button:hover {
     transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
 }
 
 header .in-header-button .uk-button-default {
@@ -366,20 +367,21 @@ header .in-header-button .uk-button-primary:hover {
 
 header .in-header-logo {
     height: auto;
-    padding: 0.5rem 0;
-    margin-left: 0;
+    padding: var(--space-4) 0;
+    margin-left: var(--space-4);
     display: flex;
     align-items: center;
-    min-height: 60px;
+    min-height: 80px;
 }
 
 header .in-navbar-wrapper {
-    min-height: 50px;
+    min-height: 70px;
     display: flex;
     align-items: center;
 }
 
 header .uk-navbar-container {
+    margin: var(--space-3) 0 var(--space-4) 0;
     padding: 0;
     width: 100%;
 }
@@ -387,10 +389,15 @@ header .uk-navbar-container {
 /* Navigation styles */
 header .uk-navbar-nav {
     display: flex;
-    gap: 0;
+    gap: var(--space-1);
     list-style: none;
     margin: 0;
     padding: 0;
+    pointer-events: auto;
+}
+
+header .uk-navbar-nav > li {
+    pointer-events: auto;
 }
 
 header .uk-navbar-nav > li {
@@ -400,13 +407,13 @@ header .uk-navbar-nav > li {
 header .uk-navbar-nav > li > a {
     display: flex;
     align-items: center;
-    padding: 0.75rem 0.875rem;
+    padding: var(--space-3) var(--space-4);
     font-family: var(--font-sans);
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
     font-weight: 500;
     color: var(--color-secondary);
     text-decoration: none;
-    min-height: 44px;
+    min-height: var(--target-size-min);
     transition: all var(--transition-fast);
     border-radius: var(--radius);
     position: relative;
@@ -425,9 +432,8 @@ header .uk-navbar-nav > li > a::after {
 }
 
 header .uk-navbar-nav > li > a:hover::after,
-header .uk-navbar-nav > li > a:focus::after,
-header .uk-navbar-nav > li.uk-open > a::after {
-    width: calc(100% - 1.75rem);
+header .uk-navbar-nav > li > a:focus::after {
+    width: calc(100% - 2rem);
 }
 
 header .uk-navbar-nav > li > a:hover,
@@ -438,6 +444,7 @@ header .uk-navbar-nav > li > a:focus {
 
 header .uk-navbar-nav > li > a[aria-current="page"] {
     color: var(--color-primary);
+    background-color: rgba(20, 108, 224, 0.08);
 }
 
 /* ========================================================================
@@ -448,7 +455,7 @@ header .uk-navbar-nav > li > a[aria-current="page"] {
     background-color: rgba(255, 255, 255, 0.98);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-md);
     z-index: 1000;
 }
 
@@ -468,19 +475,18 @@ header .uk-navbar-nav > li > a[aria-current="page"] {
 }
 
 .in-sticky .in-header-logo {
-    padding: 0.25rem 0;
-    margin-left: 0;
+    padding: var(--space-2) 0;
+    margin-left: var(--space-4);
 }
 
 .in-sticky .in-header-logo img {
-    max-width: 150px;
+    max-width: 170px;
 }
 
 .in-sticky .uk-navbar-nav > li > a {
     position: relative;
     top: 0;
-    padding: 0.6rem 0.75rem;
-    min-height: 50px;
+    min-height: 60px;
 }
 
 .in-sticky .uk-navbar-dropdown {
@@ -495,7 +501,18 @@ header .uk-navbar-nav > li > a[aria-current="page"] {
 
     .in-sticky .in-header-logo {
         margin: 0;
-        padding: 0.25rem 0;
+        padding: var(--space-2) 0;
+    }
+}
+
+/* Sticky mediaquery */
+@media (max-width: 960px) {
+    .in-sticky .in-mobile-nav a {
+        margin: var(--space-4) 0;
+    }
+
+    .in-sticky .in-header-logo {
+        margin: 0;
     }
 }
 
@@ -503,114 +520,75 @@ header .uk-navbar-nav > li > a[aria-current="page"] {
    5. MOBILE NAVIGATION
    ======================================================================== */
 
-/* Mobile navigation hamburger */
-.uk-navbar-toggle {
-    position: relative;
-    z-index: 1002;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 44px;
-    height: 44px;
-    cursor: pointer;
-}
-
-.uk-navbar-toggle::before {
-    content: "\f0c9";
-    font-family: "Font Awesome 5 Free";
-    font-weight: 900;
-    font-size: 1.25rem;
-    color: var(--color-secondary);
-}
-
-.uk-navbar-toggle:hover::before,
-.uk-navbar-toggle:focus::before {
-    color: var(--color-primary);
-}
-
-/* Mobile nav overlay */
-.uk-modal-full {
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1001;
-}
-
-.uk-modal-dialog {
-    background: var(--color-white);
-    padding: 1rem;
-    max-width: 320px;
-    width: 85%;
-    height: 100%;
-    margin: 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    overflow-y: auto;
-}
-
-/* Close button */
-.uk-close-large {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-gray-100);
-    border: 1px solid var(--color-gray-300);
-    border-radius: var(--radius);
-    cursor: pointer;
-    font-size: 1.25rem;
-    color: var(--color-gray-600);
-    z-index: 1003;
-}
-
-.uk-close-large:hover,
-.uk-close-large:focus {
-    background: var(--color-gray-200);
-    color: var(--color-secondary);
-}
-
 @media (max-width: 960px) {
-    /* Mobile nav links */
     .in-mobile-nav a {
-        margin: 0.5rem 0;
+        margin: var(--space-4) var(--space-4) var(--space-4) 0;
         display: flex;
         align-items: center;
-        padding: 0.75rem 1rem;
+        padding: var(--space-3) var(--space-4);
         font-size: 1rem;
         font-weight: 500;
         color: var(--color-secondary);
         border-radius: var(--radius);
         transition: all var(--transition-fast);
-        min-height: 44px;
-        border: 1px solid var(--color-gray-200);
+        min-height: var(--target-size-min);
     }
 
     .in-mobile-nav a i {
-        font-size: 1.125rem;
-        margin-right: 0.75rem;
+        font-size: 1.25rem;
+        margin-right: var(--space-3);
+        position: relative;
+        top: 0;
         color: var(--color-primary);
-        width: 24px;
-        text-align: center;
     }
 
     .in-mobile-nav a:hover,
     .in-mobile-nav a:focus {
         background-color: rgba(20, 108, 224, 0.08);
         color: var(--color-primary);
-        border-color: var(--color-primary);
+    }
+
+    .in-mobile-nav a,
+    .uk-close-large {
+        border: 1px solid var(--color-gray-300);
+        border-radius: var(--radius);
+        padding: var(--space-2) var(--space-4);
+    }
+
+    .uk-close-large {
+        font-size: 1.25rem;
+        color: var(--color-gray-600);
+        top: var(--space-5);
+        right: var(--space-5);
+        padding: var(--space-3) var(--space-4);
+        background: var(--color-white);
+        border-radius: var(--radius);
+        border: 1px solid var(--color-gray-300);
+    }
+
+    .uk-close-large:hover,
+    .uk-close-large:focus {
+        background: var(--color-gray-100);
+    }
+
+    .uk-modal-dialog .uk-nav-sub i {
+        margin: 0 0 0 var(--space-2);
+    }
+
+    .uk-modal-dialog .uk-nav-primary {
+        border-bottom: 1px solid var(--color-gray-200);
+        margin-bottom: var(--space-8);
+        padding-bottom: var(--space-6);
     }
     
-    /* Mobile nav modal adjustments */
+    /* Mobile navigation modal */
     .uk-modal-full {
         background: rgba(0, 0, 0, 0.5);
     }
     
     .uk-modal-dialog {
         background: var(--color-white);
-        padding: 1rem;
+        padding: var(--space-6);
     }
 }
 
@@ -8184,37 +8162,37 @@ footer .uk-list li a {
     color: #ffffff !important;
 }
 
-/* Footer text contrast - DARK text on WHITE background for WCAG AA */
-/* Footer has white background */
+/* Footer text contrast - WHITE text on BLUE background for WCAG AA */
+/* Footer has blue background (var(--color-secondary) = #012c6d) */
 footer, footer p, footer li, footer span {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
 }
 
-/* Footer headings - dark blue for contrast */
+/* Footer headings - white for contrast */
 footer h3,
 footer h4,
 footer h5,
 footer .footer h3,
 footer .footer h4,
 footer .footer h5 {
-    color: #012c6d !important;
+    color: #ffffff !important;
     font-weight: bold !important;
 }
 
-/* Footer links - blue for contrast */
+/* Footer links - white/light blue for contrast */
 footer a:not(.uk-icon-button):not(.fab) {
-    color: #0066cc !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 footer a:not(.uk-icon-button):not(.fab):hover {
-    color: #012c6d !important;
+    color: #ffffff !important;
 }
 
 /* Footer subnav items */
 footer .uk-subnav li,
 footer .uk-subnav li a,
 footer .uk-subnav span {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Price ticker badges */
@@ -8288,32 +8266,32 @@ header .uk-button {
 }
 
 /* WCAG 1.4.3 - Text Contrast Fixes */
-/* Footer headings - dark blue for visibility on white background */
+/* Footer headings - WHITE for visibility on blue background */
 footer h3,
 footer h4,
 footer h5,
 .footer h3,
 .footer h4,
 .footer h5 {
-    color: #012c6d !important;
+    color: #ffffff !important;
     font-weight: bold !important;
     margin-bottom: 12px !important;
     line-height: 1.3 !important;
 }
 
-/* Footer link text - dark for visibility on white background */
+/* Footer link text - WHITE/LIGHT for visibility on blue background */
 footer p,
 footer li,
 footer span:not(.uk-icon-button):not(.fab):not(.fas) {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 footer a:not(.uk-icon-button) {
-    color: #0066cc !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 footer a:not(.uk-icon-button):hover {
-    color: #012c6d !important;
+    color: #ffffff !important;
 }
 
 /* Footer "Need help?" text */
@@ -8325,7 +8303,7 @@ footer .uk-subnav {
 footer .uk-subnav li,
 footer .uk-subnav li a,
 footer .uk-subnav span {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-size: inherit !important;
     line-height: 1.5 !important;
 }
