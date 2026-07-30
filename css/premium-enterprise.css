@@ -962,6 +962,32 @@ footer a:focus {
    10. ACCESSIBILITY - WCAG 2.2 AA COMPLIANT
    ======================================================================== */
 
+/* Auto-scrolling animations - respect reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .scrolling-text ol {
+        animation: none;
+    }
+    
+    .scrolling-text {
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    
+    [data-uk-slider="autoplay: true"] {
+        animation: none !important;
+    }
+    
+    .uk-slideshow-items {
+        animation: none !important;
+    }
+    
+    [data-uk-scrollspy],
+    [data-uk-scrollspy] * {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
 /* Skip link */
 .skip-link {
     position: absolute;
