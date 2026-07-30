@@ -1655,6 +1655,7 @@ button:focus {
     width: 40px;
     height: 2px;
     background: var(--color-primary-accent);
+    pointer-events: none;
 }
 
 .premium-footer-column ul {
@@ -2502,6 +2503,7 @@ button:focus {
     right: 24px;
     height: 1px;
     background: linear-gradient(90deg, transparent, #e2e8f0, transparent);
+    pointer-events: none;
 }
 
 .mobile-nav-links li:last-child::after {
@@ -2532,6 +2534,7 @@ button:focus {
     background: var(--color-primary);
     transform: scaleY(0);
     transition: transform 0.2s ease;
+    pointer-events: none;
 }
 
 .mobile-nav-links a:hover,

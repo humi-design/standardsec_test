@@ -516,6 +516,7 @@ footer h4::after {
     width: 40px;
     height: 2px;
     background-color: var(--ss-primary);
+    pointer-events: none;
 }
 
 footer a {

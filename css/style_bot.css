@@ -42,6 +42,7 @@
     max-height: 500px;
     z-index: -123456;
     opacity: 0;
+    pointer-events: none;
     transition: all 0.3s ease-in-out;
     border-radius: 16px;
     overflow: hidden;
