@@ -13,9 +13,9 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/premium-enterprise.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_bot.css">
-
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
     
@@ -76,29 +76,21 @@ tr:hover {background-color: #B8E2F2;}
 
     
 
-    <header data-uk-sticky="top: 400; cls-active: in-sticky">
-
-        <div id="google_translate_element_nav" class="translate-btn"></div>
-
-        <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
-        </div>
-
-
-        
-        <!-- header content begin -->
-        <div class="uk-section uk-padding-remove-vertical">
+    <!-- Premium Enterprise Header -->
+    <header data-uk-sticky="top: 400; cls-active: in-sticky" class="premium-header">
+        <!-- Top utility bar -->
+        <div class="premium-topbar">
             <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                       
-                        
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                    <div class="in-header-subnav">
+                        <div id="google_translate_element_nav" class="translate-btn"></div>
+                        <div class="lang-toggle" role="group" aria-label="Language selection">
+                            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
+                            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+                        </div>
                     </div>
-
-
                     
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-button uk-visible@s">
+                    <div class="in-header-button uk-visible@s">
                         <div class="uk-flex uk-flex-right in-header-links">
                           <a href="https://ekyc.standardsec.net:8002" 
                              class="uk-button uk-button-primary uk-button-small uk-border-rounded"
@@ -127,13 +119,15 @@ tr:hover {background-color: #B8E2F2;}
 
                         </div>
                       </div>
-                    
-                    <div class="uk-width-1-1">
-                        <hr class="uk-margin-remove-top">
-                    </div>
                 </div>
-                <div class="uk-grid uk-margin-remove-top">
-                    <div class="uk-width-1-2 uk-width-expand@m">
+            </div>
+        </div>
+
+        <!-- Main navigation bar -->
+        <div class="premium-navbar">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-middle" data-uk-grid>
+                    <div class="uk-width-expand">
                         <!-- header logo begin -->
                         <div class="in-header-logo uk-flex uk-flex-middle">
                             <a class="uk-logo" href="index.html" aria-label="Go to Standard Securities homepage">
@@ -142,7 +136,7 @@ tr:hover {background-color: #B8E2F2;}
                         </div>
                         <!-- header logo end -->
                     </div>
-                    <div class="in-navbar-wrapper uk-width-1-2 uk-width-auto@m">
+                    <div class="in-navbar-wrapper uk-width-auto">
                         <!-- main navigation begin -->
                         <nav class="uk-navbar-container uk-visible@m" data-uk-navbar aria-label="Main navigation">
                             <ul class="uk-navbar-nav" role="menubar">
@@ -370,10 +364,10 @@ tr:hover {background-color: #B8E2F2;}
     </header>
 
     <main id="maincontent">
-        <!-- Slideshow Content Begin -->
-        <div class="uk-section uk-padding-remove-vertical uk-margin-bottom" data-uk-scrollspy="cls:uk-animation-fade; delay: 200">
+        <!-- Premium Hero Section -->
+        <section class="premium-hero" aria-label="Hero section">
             <div class="uk-container">
-                <div class="in-slideshow uk-position-relative uk-visible-toggle" aria-label="Homepage slideshow">
+                <div class="in-slideshow uk-position-relative uk-visible-toggle uk-border-rounded-large" aria-label="Homepage slideshow">
                     <ul class="uk-slideshow-items">
                         <li>
                             <div class="uk-height-1-1 uk-light monee-custom-slideshow" data-uk-grid>
@@ -422,14 +416,16 @@ tr:hover {background-color: #B8E2F2;}
                     </div>
                 </div>
             </div>
-        </div>
-        <!-- Slideshow Content End -->
+        </section>
+        <!-- Hero Section End -->
     
-      <!-- Open Account Section -->
+      <!-- Open Account Section - Premium -->
+<section class="premium-account-section" aria-label="Account registration">
 <div class="uk-section">
     <div class="uk-container">
       <div class="uk-grid">
         <div class="uk-width-1-1 monee-register-form">
+          <div class="premium-card">
           <hr>
           <h2 class="uk-margin-small-bottom">Open your account</h2>
           <p class="uk-text-lead uk-margin-remove-top uk-visible@m">
@@ -466,19 +462,20 @@ tr:hover {background-color: #B8E2F2;}
               </button>
             </div>
           </form>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  
-        <!-- Open Account Section End -->
+</section>
     
-        <!-- Trade Platform Section -->
+        <!-- Trade Platform Section - Premium -->
+<section class="premium-platform-section" aria-label="Trading platform">
         <div class="uk-section">
             <div class="uk-container">
                 <div class="uk-grid">
                     <div class="uk-width-1-1">
-                        <div class="uk-card uk-card-secondary uk-background-center-right uk-background-contain uk-background-image@m" style="background-image: url(img/monee-content-platform.png);">
+                        <div class="uk-card uk-card-secondary uk-background-center-right uk-background-contain uk-background-image@m premium-platform-card" style="background-image: url(img/monee-content-platform.png);">
                             <div class="uk-card-body">
                                 <div class="uk-grid">
                                     <div class="uk-width-1-1 uk-width-1-2@m uk-margin-small-left">
@@ -503,18 +500,20 @@ tr:hover {background-color: #B8E2F2;}
                 </div>
             </div>
         </div>
+</section>
     
-        <!-- Features Section -->
+        <!-- Features Section - Premium -->
+<section class="premium-features-section" aria-label="Features and services">
         <div class="uk-section">
             <div class="uk-container">
                 <div class="uk-grid" data-uk-grid>
-                    <div class="uk-width-1-3@m uk-margin-top">
+                    <div class="uk-width-1-3@m uk-margin-top premium-features-text">
                         <h2>A partner invested in your success</h2>
                         <p>Trade with confidence and benefit from the reliability of a trusted broker with a proven record of stability, security, and strength.</p>
                         <a class="uk-button uk-button-primary uk-button-large uk-border-rounded" href="https://ekyc.standardsec.net:8002">Open an Account</a>
                     </div>
                     <div class="uk-width-expand@m">
-                        <div class="uk-grid uk-grid-collapse uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center monee-custom-tile">
+                        <div class="uk-grid uk-grid-collapse uk-child-width-1-3@m uk-child-width-1-2@s uk-text-center monee-custom-tile premium-feature-tiles">
                             <div class="uk-tile uk-tile-default">
                                 <img class="uk-margin-remove-bottom" src="img/monee-content-feature2.svg" data-src="img/monee-content-feature2.svg" alt="Currency feature icon" width="50" height="48" data-uk-img>
                                 <h5 class="uk-margin-small-top">Currency</h5>
@@ -544,35 +543,38 @@ tr:hover {background-color: #B8E2F2;}
                 </div>
             </div>
         </div>
+</section>
     
         <!-- Remaining Sections (Experience, Services, Risk Disclosure) -->
         <!-- Same improvements applied: alt text, headings, labels -->
 
-        <!-- section content begin -->
+        <!-- Stats Section - Premium -->
+<section class="premium-stats-section" aria-label="Trading statistics">
+<!-- section content begin -->
 <div class="uk-section">
     <div class="uk-container">
       <div class="uk-grid">
         <div class="uk-width-1-1 monee-custom-card">
-          <div class="uk-card">
+          <div class="uk-card premium-stats-card">
             <div class="uk-card-body">
               <div class="uk-grid uk-grid-collapse uk-child-width-1-5@m uk-child-width-1-2@s uk-text-center" data-uk-grid>
-                <div>
+                <div class="premium-stat-item">
                   <h2 class="uk-margin-remove-bottom">#1</h2>
                   <p class="uk-margin-remove-top uk-text-small">for spreads^</p>
                 </div>
-                <div>
+                <div class="premium-stat-item">
                   <h2 class="uk-margin-remove-bottom">~30ms</h2>
                   <p class="uk-margin-remove-top uk-text-small">execution speed*</p>
                 </div>
-                <div>
+                <div class="premium-stat-item">
                   <h2 class="uk-margin-remove-bottom">24/5</h2>
                   <p class="uk-margin-remove-top uk-text-small">support</p>
                 </div>
-                <div>
+                <div class="premium-stat-item">
                   <h2 class="uk-margin-remove-bottom">0.0</h2>
                   <p class="uk-margin-remove-top uk-text-small">spread from 0.0 pips</p>
                 </div>
-                <div class="uk-visible@m">
+                <div class="uk-visible@m premium-stat-item">
                   <h2 class="uk-margin-remove-bottom">150+</h2>
                   <p class="uk-margin-remove-top uk-text-small">trading instruments</p>
                 </div>
@@ -618,7 +620,11 @@ tr:hover {background-color: #B8E2F2;}
       </div>
     </div>
   </div>
+</section>
   <!-- section content end -->
+
+        <!-- Experience Section - Premium -->
+<section class="premium-experience-section" aria-label="Company experience">
 <!-- section content begin -->
 <div class="uk-section uk-margin-small-bottom">
     <div class="uk-container">
@@ -687,7 +693,11 @@ tr:hover {background-color: #B8E2F2;}
       </div>
     </div>
   </div>
+</section>
   <!-- section content end -->
+
+        <!-- Services Section - Premium -->
+<section class="premium-services-section" aria-label="Our services">
 <!-- section content begin -->
 <div class="uk-section">
     <div class="uk-container">
@@ -701,7 +711,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- Commodities -->
-        <div class="uk-transition-toggle">
+        <div class="uk-transition-toggle premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -723,7 +733,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- Currency -->
-        <div class="uk-transition-toggle">
+        <div class="uk-transition-toggle premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -745,7 +755,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- Equity -->
-        <div class="uk-transition-toggle">
+        <div class="uk-transition-toggle premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -767,7 +777,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- IPOs -->
-        <div class="uk-transition-toggle">
+        <div class="uk-transition-toggle premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -789,7 +799,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- Advisory -->
-        <div class="uk-transition-toggle">
+        <div class="uk-transition-toggle premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -811,7 +821,7 @@ tr:hover {background-color: #B8E2F2;}
         </div>
   
         <!-- Depository -->
-        <div class="uk-transition-toggle uk-visible@m">
+        <div class="uk-transition-toggle uk-visible@m premium-service-card">
           <div class="uk-inline-clip">
             <img class="uk-border-rounded uk-margin-remove-bottom uk-width-1-1"
                  src="img/in-lazy.gif"
@@ -835,7 +845,11 @@ tr:hover {background-color: #B8E2F2;}
       </div>
     </div>
   </div>
+</section>
   <!-- section content end -->
+
+        <!-- Risk Disclosure Section - Premium -->
+<section class="premium-risk-section" aria-label="Risk disclosures">
 <!-- section content begin -->
 <div class="uk-section uk-margin-small-bottom">
     <div class="uk-container">
@@ -882,6 +896,7 @@ tr:hover {background-color: #B8E2F2;}
       </div>
     </div>
   </div>
+</section>
   <!-- section content end -->
         
     
