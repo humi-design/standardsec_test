@@ -1,0 +1,185 @@
+/* ========================================================================
+   MOBILE CLICK FIX - Makes all mobile elements clickable
+   Add this AFTER all other CSS files
+   ======================================================================== */
+
+/* Fix 1: Ensure mobile navigation is clickable */
+@media (max-width: 960px) {
+    /* Mobile nav toggle must be clickable */
+    .mobile-nav-toggle-wrapper,
+    .mobile-nav-toggle {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        z-index: 10000 !important;
+        position: relative !important;
+    }
+    
+    /* Mobile nav panel links must be clickable */
+    .mobile-nav-panel a,
+    .mobile-nav-panel button,
+    .mobile-nav-dropdown a,
+    .mobile-nav-dropdown button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+    
+    /* Mobile nav actions must be clickable */
+    .mobile-nav-actions a {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Mobile nav overlay should NOT block clicks when closed */
+    .mobile-nav-overlay {
+        pointer-events: none !important;
+    }
+    
+    .mobile-nav-overlay.is-active {
+        pointer-events: auto !important;
+    }
+    
+    /* Mobile nav panel must be clickable when open */
+    .mobile-nav-panel {
+        pointer-events: auto !important;
+    }
+    
+    .mobile-nav-panel:not(.is-active) {
+        pointer-events: none !important;
+        transform: translateX(100%) !important;
+    }
+    
+    .mobile-nav-panel.is-active {
+        pointer-events: auto !important;
+        transform: translateX(0) !important;
+    }
+}
+
+/* Fix 2: Ensure slideshow/slider elements are clickable */
+@media (max-width: 960px) {
+    .uk-slideshow,
+    .in-slideshow,
+    .monee-custom-slideshow {
+        pointer-events: auto !important;
+    }
+    
+    .uk-slideshow-items {
+        pointer-events: auto !important;
+    }
+    
+    .uk-slideshow-items li {
+        pointer-events: auto !important;
+    }
+    
+    /* Ensure buttons inside slideshow are clickable */
+    .in-slideshow a,
+    .in-slideshow button,
+    .monee-custom-slideshow a,
+    .monee-custom-slideshow button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+}
+
+/* Fix 3: Ensure all buttons and links are clickable */
+@media (max-width: 960px) {
+    a,
+    button,
+    input,
+    select,
+    textarea,
+    label,
+    [onclick],
+    .uk-button,
+    .uk-icon,
+    .uk-slidenav {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+    
+    /* Remove any overlay that might block clicks */
+    body > div:not(.mobile-nav-overlay):not(.mobile-nav-panel) {
+        pointer-events: auto !important;
+    }
+}
+
+/* Fix 4: Ensure header navigation is clickable on mobile */
+@media (max-width: 960px) {
+    header,
+    .in-header,
+    .in-sticky {
+        pointer-events: auto !important;
+    }
+    
+    header a,
+    header button,
+    .in-header a,
+    .in-header button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+    
+    /* Hamburger menu button */
+    .in-header-button,
+    .in-header-button .uk-button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        display: block !important;
+        visibility: visible !important;
+    }
+}
+
+/* Fix 5: Ensure dropdown menus work on mobile */
+@media (max-width: 960px) {
+    .uk-dropdown,
+    .uk-navbar-dropdown,
+    .has-dropdown .mobile-nav-dropdown {
+        pointer-events: auto !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .has-dropdown button {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+}
+
+/* Fix 6: Remove any full-screen overlay blocking clicks */
+@media (max-width: 960px) {
+    .uk-modal,
+    .uk-modal-dialog {
+        pointer-events: auto !important;
+    }
+    
+    /* Only modal backdrop should block, not modal content */
+    .uk-modal-dialog > * {
+        pointer-events: auto !important;
+    }
+}
+
+/* Fix 7: Ensure forms are clickable */
+@media (max-width: 960px) {
+    form,
+    input,
+    select,
+    textarea,
+    button[type="submit"] {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+}
+
+/* Fix 8: Footer links must be clickable */
+@media (max-width: 960px) {
+    footer,
+    .premium-footer,
+    footer a,
+    .premium-footer a {
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+}
