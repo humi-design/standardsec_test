@@ -1464,6 +1464,461 @@ button:focus {
 }
 
 /* ========================================================================
+   13. PREMIUM FOOTER REDESIGN
+   ======================================================================== */
+
+/* Footer Container */
+.premium-footer {
+    background: var(--color-primary);
+    color: var(--color-white);
+    padding: var(--space-16) 0 var(--space-8);
+    margin-top: var(--space-16);
+}
+
+.premium-footer-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 var(--space-10);
+}
+
+/* Footer Top Bar */
+.premium-footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-6);
+    margin-bottom: var(--space-8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.premium-footer-help {
+    display: flex;
+    align-items: center;
+}
+
+.premium-footer-contact {
+    display: flex;
+    align-items: center;
+    gap: var(--space-6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.premium-footer-contact li {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.premium-footer-contact li i {
+    color: var(--color-primary-accent);
+}
+
+.premium-footer-contact li a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    transition: color var(--transition-fast);
+}
+
+.premium-footer-contact li a:hover,
+.premium-footer-contact li a:focus {
+    color: var(--color-primary-accent);
+}
+
+.premium-footer-social {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-sm);
+}
+
+.premium-footer-social .uk-icon-button {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-white);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all var(--transition-base);
+    text-decoration: none;
+}
+
+.premium-footer-social .uk-icon-button:hover,
+.premium-footer-social .uk-icon-button:focus {
+    background: var(--color-primary-accent);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+}
+
+/* Footer Grid - 4 Equal Columns */
+.premium-footer-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-12);
+    margin-bottom: var(--space-10);
+}
+
+.premium-footer-column h4 {
+    color: var(--color-white);
+    font-size: var(--text-base);
+    font-weight: var(--font-semibold);
+    margin-bottom: var(--space-5);
+    text-transform: uppercase;
+    letter-spacing: var(--tracking-wider);
+    position: relative;
+    padding-bottom: var(--space-3);
+}
+
+.premium-footer-column h4::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--color-primary-accent);
+}
+
+.premium-footer-column ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.premium-footer-column ul li {
+    margin-bottom: var(--space-3);
+}
+
+.premium-footer-column ul li a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    transition: all var(--transition-fast);
+    display: inline-block;
+    padding: var(--space-1) 0;
+}
+
+.premium-footer-column ul li a:hover,
+.premium-footer-column ul li a:focus {
+    color: var(--color-primary-accent);
+    padding-left: var(--space-2);
+}
+
+.premium-footer-address {
+    font-style: normal;
+}
+
+.premium-footer-address p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    margin: 0;
+}
+
+/* Footer Bottom - Copyright */
+.premium-footer-bottom {
+    padding-top: var(--space-6);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: var(--space-6);
+}
+
+.premium-footer-copyright {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.premium-footer-copyright p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: var(--text-sm);
+    margin: 0;
+}
+
+.premium-footer-payments {
+    display: flex;
+    gap: var(--space-3);
+    align-items: center;
+}
+
+.premium-footer-payments img {
+    opacity: 0.8;
+    transition: opacity var(--transition-fast);
+}
+
+.premium-footer-payments img:hover {
+    opacity: 1;
+}
+
+/* Footer Disclaimer */
+.premium-footer-disclaimer {
+    margin-top: var(--space-8);
+    padding: var(--space-6);
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: var(--radius-lg);
+}
+
+.premium-footer-disclaimer h5 {
+    color: var(--color-primary-accent);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+}
+
+.premium-footer-disclaimer ol {
+    margin: 0;
+    padding-left: var(--space-6);
+}
+
+.premium-footer-disclaimer li {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: var(--text-sm);
+    line-height: var(--leading-relaxed);
+    margin-bottom: var(--space-2);
+}
+
+/* Footer Back to Top */
+.in-totop {
+    position: absolute;
+    right: var(--space-6);
+    bottom: var(--space-6);
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary-accent);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    transition: all var(--transition-base);
+    box-shadow: var(--shadow-md);
+}
+
+.in-totop:hover,
+.in-totop:focus {
+    background: var(--color-white);
+    transform: translateY(-4px);
+    color: var(--color-primary);
+}
+
+/* Responsive Footer */
+@media (max-width: 960px) {
+    .premium-footer-inner {
+        padding: 0 var(--space-6);
+    }
+
+    .premium-footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8);
+    }
+
+    .premium-footer-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .premium-footer-contact {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .premium-footer-copyright {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    .premium-footer {
+        padding: var(--space-10) 0 var(--space-6);
+    }
+
+    .premium-footer-inner {
+        padding: 0 var(--space-4);
+    }
+
+    .premium-footer-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+
+    .premium-footer-column {
+        text-align: center;
+    }
+
+    .premium-footer-column h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .in-totop {
+        right: var(--space-4);
+        bottom: var(--space-4);
+    }
+}
+
+/* ========================================================================
+   14. ACCESSIBILITY FLOATING WIDGET
+   ======================================================================== */
+
+.accessibility-menu {
+    position: fixed;
+    bottom: var(--space-6);
+    right: var(--space-6);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: var(--space-3);
+}
+
+/* Floating Toggle Button */
+.fab {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--radius-full);
+    background: var(--color-primary);
+    color: var(--color-white);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    transition: all var(--transition-base);
+    min-width: 44px;
+    min-height: 44px;
+}
+
+.fab:hover,
+.fab:focus {
+    background: var(--color-primary-hover);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-xl);
+}
+
+.fab:focus {
+    outline: 3px solid var(--color-primary-accent);
+    outline-offset: 2px;
+}
+
+/* Accessibility Panel */
+.accessibility-panel {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--bg-primary);
+    padding: var(--space-4);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-2xl);
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all var(--transition-base);
+    pointer-events: none;
+}
+
+/* Hidden state using class */
+.accessibility-panel.is-hidden {
+    display: none !important;
+}
+
+/* Visible state */
+.accessibility-panel:not(.is-hidden) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.accessibility-panel button,
+.accessibility-panel a {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    background: var(--color-gray-100);
+    color: var(--color-gray-800);
+    border: none;
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+    font-weight: var(--font-medium);
+    cursor: pointer;
+    text-decoration: none;
+    text-align: left;
+    transition: all var(--transition-fast);
+    min-height: var(--target-size-min);
+    width: 100%;
+}
+
+.accessibility-panel button:hover,
+.accessibility-panel button:focus,
+.accessibility-panel a:hover,
+.accessibility-panel a:focus {
+    background: var(--color-primary);
+    color: var(--color-white);
+}
+
+.accessibility-panel button:focus,
+.accessibility-panel a:focus {
+    outline: 3px solid var(--color-primary-accent);
+    outline-offset: -3px;
+}
+
+/* Accessibility Panel Header */
+.accessibility-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: var(--space-3);
+    margin-bottom: var(--space-2);
+    border-bottom: 1px solid var(--color-gray-200);
+}
+
+.accessibility-panel-title {
+    font-weight: var(--font-semibold);
+    color: var(--color-gray-800);
+    font-size: var(--text-sm);
+}
+
+/* Keyboard Focus Within Panel */
+.accessibility-panel:focus-within {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .accessibility-panel {
+        transition: none;
+    }
+
+    .fab:hover,
+    .fab:focus {
+        transform: none;
+    }
+}
+
+/* ========================================================================
    13. UTILITIES
    ======================================================================== */
 
