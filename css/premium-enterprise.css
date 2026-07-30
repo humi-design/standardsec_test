@@ -1518,6 +1518,32 @@ button:focus {
     border-radius: var(--radius-sm) !important;
 }
 
+/* ========================================================================
+   EMERGENCY FIX - FORCE CLICKABILITY
+   ======================================================================== */
+   
+/* Ensure body and main content are clickable */
+body, 
+body * {
+    pointer-events: auto !important;
+}
+
+/* Exception: hidden elements should not be clickable */
+.mobile-nav-overlay:not(.is-active),
+.mobile-nav-panel:not(.is-active),
+.accessibility-panel:not(.is-active),
+[aria-hidden="true"]:not(.is-active) {
+    pointer-events: none !important;
+}
+
+/* Accessibility FAB must always be clickable */
+.fab,
+.accessibility-menu,
+.chatbox,
+.chatbox__button {
+    pointer-events: auto !important;
+}
+
 .uk-border-rounded-medium {
     border-radius: var(--radius) !important;
 }
