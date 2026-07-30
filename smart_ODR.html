@@ -526,6 +526,7 @@
     </style>
 </head>
 
+
 <body>
 
     <style>
@@ -566,29 +567,21 @@
 
     
 
-    <header data-uk-sticky="top: 400; cls-active: in-sticky">
-
-        <div id="google_translate_element_nav" class="translate-btn"></div>
-
-        <div class="lang-toggle" role="group" aria-label="Language selection">
-            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
-            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
-        </div>
-
-
-        
-        <!-- header content begin -->
-        <div class="uk-section uk-padding-remove-vertical">
+    <!-- Premium Enterprise Header -->
+    <header data-uk-sticky="top: 400; cls-active: in-sticky" class="premium-header">
+        <!-- Top utility bar -->
+        <div class="premium-topbar">
             <div class="uk-container">
-                <div class="uk-grid">
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-subnav">
-                       
-                        
+                <div class="uk-flex uk-flex-between uk-flex-middle">
+                    <div class="in-header-subnav">
+                        <div id="google_translate_element_nav" class="translate-btn"></div>
+                        <div class="lang-toggle" role="group" aria-label="Language selection">
+                            <button type="button" onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
+                            <button type="button" onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+                        </div>
                     </div>
-
-
                     
-                    <div class="uk-width-1-2@m uk-width-1-2@s in-header-button uk-visible@s">
+                    <div class="in-header-button uk-visible@s">
                         <div class="uk-flex uk-flex-right in-header-links">
                           <a href="https://ekyc.standardsec.net:8002" 
                              class="uk-button uk-button-primary uk-button-small uk-border-rounded"
@@ -617,13 +610,15 @@
 
                         </div>
                       </div>
-                    
-                    <div class="uk-width-1-1">
-                        <hr class="uk-margin-remove-top">
-                    </div>
                 </div>
-                <div class="uk-grid uk-margin-remove-top">
-                    <div class="uk-width-1-2 uk-width-expand@m">
+            </div>
+        </div>
+
+        <!-- Main navigation bar -->
+        <div class="premium-navbar">
+            <div class="uk-container">
+                <div class="uk-flex uk-flex-middle" data-uk-grid>
+                    <div class="uk-width-expand">
                         <!-- header logo begin -->
                         <div class="in-header-logo uk-flex uk-flex-middle">
                             <a class="uk-logo" href="index.html" aria-label="Go to Standard Securities homepage">
@@ -632,14 +627,14 @@
                         </div>
                         <!-- header logo end -->
                     </div>
-                    <div class="in-navbar-wrapper uk-width-1-2 uk-width-auto@m">
+                    <div class="in-navbar-wrapper uk-width-auto">
                         <!-- main navigation begin -->
                         <nav class="uk-navbar-container uk-visible@m" data-uk-navbar aria-label="Main navigation">
                             <ul class="uk-navbar-nav" role="menubar">
                               
                               <!-- Home -->
                               <li role="none">
-                                <a href="index.html" role="menuitem" aria-label="Go to Home page">Home</a>
+                                <a href="index.html" role="menuitem" aria-label="Go to Home page" aria-current="page">Home</a>
                               </li>
                           
                               <!-- Products -->
@@ -681,22 +676,32 @@
                                 <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open Quick Links menu">Quick Links</a>
                                 <div class="uk-navbar-dropdown uk-navbar-dropdown-width-2" aria-label="Quick Links submenu">
                                   <div class="uk-navbar-dropdown-grid uk-child-width-1-2" data-uk-grid>
-                                      <div>
-                                        <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                          <li role="menuitem"><a href="Equity.html" aria-label="View Equity products">Equities</a></li>
-                                          <li role="menuitem"><a href="Currency.html" aria-label="View Currency products">Currency</a></li>
-                                          <li role="menuitem"><a href="Commodities.html" aria-label="View Commodities products">Commodities</a></li>
-                                          <li role="menuitem"><a href="IPOs.html" aria-label="View IPO products">IPOs</a></li>
-                                        </ul>
-                                      </div>
-                                      <div>
-                                        <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                          <li role="menuitem"><a href="Advisory.html" aria-label="View Advisory services">Advisory</a></li>
-                                          <li role="menuitem"><a href="Depository.html" aria-label="View Depository services">Depository</a></li>
-                                          <li role="menuitem"><a href="complaint.html" aria-label="View Complaints page">Complaints</a></li>
-                                          <li role="menuitem"><a href="news.html" aria-label="View News page">News</a></li>
-                                        </ul>
-                                      </div>
+                                    <div>
+                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
+                                        <li role="menuitem"><a href="downloads.html" aria-label="Go to Downloads page">Downloads</a></li>
+                                        <li role="menuitem"><a href="https://evoting.cdslindia.com/Evoting/EvotingLogin" aria-label="Evoting Login page">Evoting Login</a></li>
+                                        <li role="menuitem"><a href="pdf1/Basic_Details.xlsx" aria-label="Download Basic Details Excel file">Basic Details</a></li>
+                                        <li role="menuitem"><a href="pdf1/kmp details_24.pdf" aria-label="Download KMP Details PDF file">KMP Details</a></li>
+                                        <li role="menuitem"><a href="pdf1/AP_Details.pdf" aria-label="Download AP Details PDF file">AP Details</a></li>
+                                        <li role="menuitem"><a href="pdf1/Start_Your_Financial_Journey_with.pptx" aria-label="Download Start Your Financial Journey PowerPoint">Start Your Journey</a></li>
+                                        <li role="menuitem"><a href="customers.html" aria-label="Go to Customers page">Customers</a></li>
+                                        <li role="menuitem"><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official site">SEBI</a></li>
+                                        <li role="menuitem"><a href="https://www.nseindia.com/" aria-label="Visit NSE official site">NSE</a></li>
+                                        <li role="menuitem"><a href="https://www.bseindia.com/" aria-label="Visit BSE official site">BSE</a></li>
+                                        <li role="menuitem"><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official site">CDSL</a></li>
+                                        <li role="menuitem"><a href="https://www.mcxindia.com" aria-label="Visit MCX India official site">MCX India</a></li>
+                                        <li role="menuitem"><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance redressal portal">SCORES 2.0</a></li>
+                                        <li role="menuitem"><a href="https://www.nseindia.com/static/trade/members-client-registration-documents" aria-label="Visit KYC Documents In Vernacular Language">KYC Documents In Vernacular Language</a></li>
+
+                                      </ul>
+                                    </div>
+                                    <div>
+                                      <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
+                                        <li role="none">
+                                          <span>Start investing today and grow with Standard — call us now</span>
+                                        </li>
+                                      </ul>
+                                    </div>
                                   </div>
                                 </div>
                               </li>
@@ -706,18 +711,40 @@
                                 <a href="#" role="menuitem" aria-haspopup="true" aria-expanded="false" aria-label="Open KYC menu">KYC</a>
                                 <div class="uk-navbar-dropdown" aria-label="KYC submenu">
                                   <ul class="uk-nav uk-navbar-dropdown-nav" role="menu">
-                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:8002" aria-label="Open KYC form">KYC Form</a></li>
-                                    <li role="menuitem"><a href="pdf1/Ckyc_form.pdf" aria-label="Download CKYC form">CKYC Form</a></li>
-                                    <li role="menuitem"><a href="pdf1/Standard_KYC.pdf" aria-label="Download KYC checklist">KYC Checklist</a></li>
+                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:8002/" aria-label="Open New Account via eKYC">Open New Account</a></li>
+                                    <li role="menuitem"><a href="https://ekyc.standardsec.net:9000/directpan.aspx" aria-label="Modify Account via eKYC">Account Modification</a></li>
                                   </ul>
                                 </div>
                               </li>
+                          
+                              <!-- Complaints -->
+                                <!-- Complaints -->
+                              <li role="none">
+                                <a href="complaint_new.html" role="menuitem" aria-label="Submit or check Complaints">Complaints</a>
+                              </li>
+                              <li>
+                                <div id="google_translate_nav_1"></div>
+                              </li>
+                              <li>
+                                <div id="google_translate_nav_2"></div>
+                              </li>
+                              
                             </ul>
-                        </nav>
+                          </nav>
+                          
+                          
                         <!-- main navigation end -->
-                        <!-- mobile navigation toggle begin -->
-                        <button class="uk-button" type="button" aria-label="Open mobile navigation menu" onclick="UIkit.toggle(document.getElementById('#mobile-nav-modal')).toggle();" data-uk-toggle >
-                            <i class="fas fa-bars"></i>
+                    </div>
+                    <!-- Mobile Navigation Toggle -->
+                    <div class="mobile-nav-toggle-wrapper" id="mobileNavWrapper">
+                        <button
+                            class="mobile-nav-toggle"
+                            id="mobileNavToggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="mobileNavPanel"
+                            aria-label="Open navigation menu">
+                            <span class="hamburger-icon" aria-hidden="true">☰</span>
                         </button>
                     </div>
                 </div>
@@ -725,6 +752,7 @@
         </div>
         <!-- header content end -->
     </header>
+
 
     <!-- Mobile Navigation -->
 <div id="mobile-nav-modal" class="uk-modal-full" data-uk-modal aria-label="Mobile navigation menu">
@@ -1097,11 +1125,11 @@
     
 </body>
 
-    <footer>
+    
+<footer class="premium-footer" role="contentinfo">
         <!-- footer content begin -->
-        <div class="uk-section uk-padding-remove-vertical uk-margin-medium-top">
-          <div class="uk-container">
-            <div class="uk-grid">
+        <div class="premium-footer-inner">
+          <div class="uk-grid">
               <div class="uk-width-1-1">
                 <hr>
                 <div class="uk-child-width-1-1 uk-child-width-1-2@m" data-uk-grid>
@@ -1133,7 +1161,7 @@
             </div>
       
             <!-- Footer Links -->
-            <div class="uk-child-width-1-1 uk-child-width-1-4@m uk-child-width-1-2@s" data-uk-grid aria-label="Footer navigation links">
+            <div class="premium-footer-grid" aria-label="Footer navigation links">
               <div>
                 <h4>Products</h4>
                 <ul class="uk-list uk-link-text">
@@ -1164,15 +1192,15 @@
                 <div>
                 <h4>Quick Links</h4>
                 <ul class="uk-list uk-link-text">
-                    <li><a href="accessibility.html" aria-label="Read Accessibility Statement">Accessibility</a></li>
+                  <li><a href="accessibility.html" aria-label="Read Accessibility Statement">Accessibility</a></li>
                   <li><a href="https://www.sebi.gov.in/" aria-label="Visit SEBI official website">SEBI</a></li>
                   <li><a href="https://www.nseindia.com/" aria-label="Visit NSE official website">NSE</a></li>
                   <li><a href="https://www.bseindia.com/" aria-label="Visit BSE official website">BSE</a></li>
                   <li><a href="https://www.cdslindia.com/" aria-label="Visit CDSL official website">CDSL</a></li>
                   <li><a href="https://www.mcxindia.com" aria-label="Visit MCX India official website">MCX India</a></li>
                   <li><a href="https://scores.sebi.gov.in" aria-label="Visit SEBI SCORES 2.0 grievance portal">SCORES 2.0</a></li>
-                  <li><a href="pdf1/SEBI-Master-Circular-for-Online-Resolution-of-Disputes.pdf">Smart-ODR Circular</li>
-                    <li><a href="smart_ODR.html">Smart ODR Login</a></li>  
+                  <li><a href="pdf1/SEBI-Master-Circular-for-Online-Resolution-of-Disputes.pdf">Smart-ODR Circular</a></li>
+                  <li><a href="smart_ODR.html">Smart ODR Login</a></li>  
                 </ul>
               </div>
       
@@ -1181,7 +1209,7 @@
                 <p>
                   Tanishka Commercial Office No.104/105<br>
                   1st Floor, Akurli Road<br>
-                  Next To Growel's Mall, Kandivali(E),<br>
+                  Next To Growel’s Mall, Kandivali(E),<br>
                   Mumbai-400101
                 </p>
               </div>
@@ -1221,11 +1249,35 @@
                                 <li>Stock Brokers can accept securities as margin from clients only by way of pledge in the depository system w.e.f. September 1, 2020.</li>
                                 <li>Update your mobile number & email Id with your stock broker/depository participant and receive OTP directly from depository on your email id and/or mobile number to create pledge.</li>
                                 <li>Investors may please refer to the Exchange's Frequently Asked Questions (FAQs) issued vide circular reference NSE/INSP/45191 dated July 31, 2020 and NSE/INSP/45534 dated August 31, 2020 and other guidelines issued from time to time in this regard.</li>
-                                <li>Check your Securities / MF / Bonds in the consolidated account statement issued by NSDL/CDSL every month.</li>
-                                <li>Beware of fixed/guaranteed/regular returns/ capital protection schemes. Brokers or their authorized persons or any of their associates are not authorized to offer fixed/guaranteed/regular returns/ capital protection on your investment or authorized to enter into any loan agreement with you to pay interest on the funds offered by you.</li>
-                             </ol></strong></h6>
+                                <li>Check your Securities / MF / Bonds in the consolidated account statement issued by NSDL/CDSL every month. Issued in the interest of Investors.</li>
+                              </ol></strong></h6>
                             </div>
-                            <p class="uk-text-small uk-margin-remove-top"><strong>Procedure to file a complaint on SEBI SCORES: Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective communication, Speedy redressal of the grievances.</strong></p>
+                          </div>
+                          
+                          
+                        
+
+                    </div>
+
+
+
+                     <div class="uk-width-1-1 in-footer-disclaimer">
+                        <p>
+                          
+
+                            Disclaimer: Investment in securities market are subject to market risks, read all the related documents carefully before investing. Please refer the Risk Disclosure Document issued by SEBI and go through the Rights and Obligations and Do's and Dont's issued by Stock Exchanges and Depositories before trading on the Stock Exchanges. For commodities derivatives please note that Commodities Derivatives are highly leveraged instruments. PMS is not offered in Commodity Derivative Segment. Before investing in the asset class consider your investment objectives, level of experience and risk appetite carefully.
+                           <br>
+                           
+                            Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related documents carefully before investing.
+                            <br>
+                            <br>
+                           
+                        
+                            <strong>  
+                            
+                            For any complaints related to Standard Securities & Investment Intermediates Ltd email at Compliance@standardsec.com.
+For any complaints related to Standard Securities & Investment Intermediates Ltd email at grievance@standardsec.com. Please ensure you carefully read the risk Disclosure Document.
+Procedure to file a complaint on SEBI SCORES: Register on SCORES portal. Mandatory details for filing complaints on SCORES: Name, PAN, Address, Mobile Number, E-mail ID. Benefits: Effective communication, Speedy redressal of the grievances.</strong>
                           
                           <br>
                           ATTENTION INVESTORS :
@@ -1238,7 +1290,7 @@
 <li>Beware of fixed/guaranteed/regular returns/ capital protection schemes. Brokers or their authorized persons or any of their associates are not authorized to offer fixed/guaranteed/regular returns/ capital protection on your investment or authorized to enter into any loan agreement with you to pay interest on the funds offered by you. Please note that in case of default of a member claim for funds or securities given to the broker under any arrangement/ agreement of indicative return will not be accepted by the relevant Committee of the Exchange as per the approved norms.</li>
 <li>Do not keep funds idle with the Stock Broker. Please note that your stock broker has to return the credit balance lying with them, within three working days in case you have not done any transaction within last 30 calendar days. Please note that in case of default of a Member, claim for funds and securities, without any transaction on the exchange will not be accepted by the relevant Committee of the Exchange as per the approved norms.</li>
 <li>Check the frequency of accounts settlement opted for. If you have opted for running account, please ensure that your broker settles your account and, in any case, not later than once in 90 days (or 30 days if you have opted for 30 days settlement). In case of declaration of trading member as defaulter, the claims of clients against such defaulter member would be subject to norms for eligibility of claims for compensation from IPF to the clients of the defaulter member. These norms are available on Exchange website at following link.</li>
-<li>Brokers are not permitted to accept transfer of securities as margin. Securities offered as margin/ collateral MUST remain in the account of the client and can be pledged to the broker only by way of 'margin pledge', created in the Depository system. Clients are not permitted to place any securities with the broker or associate of the broker or authorized person of the broker for any reason. Broker can take securities belonging to clients only for settlement of securities sold by the client.</li>
+<li>Brokers are not permitted to accept transfer of securities as margin. Securities offered as margin/ collateral MUST remain in the account of the client and can be pledged to the broker only by way of ‘margin pledge’, created in the Depository system. Clients are not permitted to place any securities with the broker or associate of the broker or authorized person of the broker for any reason. Broker can take securities belonging to clients only for settlement of securities sold by the client.</li>
 <li>Always keep your contact details viz. Mobile number/Email ID updated with the stock broker. Email and mobile number is mandatory and you must provide the same to your broker for updation in Exchange records. You must immediately take up the matter with Stock Broker/Exchange if you are not receiving the messages from Exchange/Depositories regularly.</li>
 <li>Don't ignore any emails/SMSs received from the Exchange for trades done by you. Verify the same with the Contract notes/Statement of accounts received from your broker and report discrepancy, if any, to your broker in writing immediately and if the Stock Broker does not respond, please take this up with the Exchange/Depositories forthwith.</li>
 <li>Check messages sent by Exchanges on a weekly basis regarding funds and securities balances reported by the trading member, compare it with the weekly statement of account sent by broker and immediately raise a concern to the exchange if you notice a discrepancy.</li>
@@ -1259,35 +1311,47 @@ For any clarification, you may contact our support team</li>
                             <br>
                             <br>
                             
-	       <p>Investors are requested to note that Stock broker, Standard Securities And Investment Intermediates Ltd, 
-	     permitted to receive money from investor through designated bank accounts only named as Up streaming Client
-	     Nodal Bank Account (USCNBA). Stock broker, Standard Securities And Investment Intermediates Ltd, is also required to 
-	     disclose these USCNB accounts to Stock Exchange. Hence, you are requested to use following USCNB accounts only for the purpose of 
-	     dealings in your trading account with us. The details of 
-	     these USCNB accounts are also displayed by Stock Exchanges on their website under "Know/ Locate your Stock Broker.
-	 </p>
-                            
-	 <strong>Details of Client Account</strong>
+       <!--     <p>
+“Investors are requested to note that Stock broker (Standard Securities & Investment Intermediates Ltd)    is permitted to receive/pay money from/to investor through designated bank accounts only named as client bank accounts. Stock broker (Standard Securities & Investment Intermediates Ltd) is also required to disclose these client bank accounts to Stock Exchange. Hence, you are requested to use following client bank accounts only for the purpose of dealings in your trading account with us. The details of these client bank accounts are also displayed by the Stock Exchange on their website under
+“Membership→→→Notice Board→→→Member & AP Details”.
+     
+ </p>   -->
  
-	 <p>    
-	 <table style="width:50%">
-	  <tr>
-	    <th>Bank Name</th>
-	    <th>Bank Account</th> 
-	    <th>Bank IFSC</th>
-	  </tr>
-	  <tr>
-	    <td>HDFC BANK LTD.</td>
-	    <td>00032560005087</td> 
-	    <td>HDFC0000003</td>
-	  </tr>
-	</table>
+ <p>
+     Investors are requested to note that Stock broker, Standard Securities And Investment Intermediates Ltd, 
+     is permitted to receive money from investor through designated bank accounts only named as Up streaming Client
+     Nodal Bank Account (USCNBA). Stock broker, Standard Securities And Investment Intermediates Ltd, is also required to 
+     disclose these USCNB accounts to Stock Exchange. Hence, you are requested to use following USCNB accounts only for the purpose of 
+     dealings in your trading account with us. The details of 
+     these USCNB accounts are also displayed by Stock Exchanges on their website under “Know/ Locate your Stock Broker.
+ </p>
+                            
+ <strong>Details of Client Account</strong>
+ 
 
-	 </p>
+ 
+ <p>
+     
+ <table style="width:50%">
+  <tr>
+    <th>Bank Name</th>
+    <th>Bank Account</th> 
+    <th>Bank IFSC</th>
+  </tr>
+  <tr>
+    <td>HDFC BANK LTD.</td>
+    <td>00032560005087</td> 
+    <td>HDFC0000003</td>
+  </tr>
+</table>
+
+ </p>
 </br> 
  
  </br>
- <p>Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related documents carefully before investing.<br>
+ <p>
+                            
+                            Mutual funds disclaimer: Mutual Fund investment are subject to market risk. Read all the scheme related documents carefully before investing.<br>
 NSE CASH & NSE F&O MEMBERCODE 08054 | MCX MEMBER CODE 55100 | MSEI MEMBER CODE 66800 | SEBI REGN. NO. NSE CASH INZ000224239
 NSE F&O INF230805437 | MCX (SEBI REGN. NO)-INZ000224239 | MCX FMC UNIQUE MEMBER CODE-MCX/TCM/CORP/0297
 MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (DP Id 12086900)
@@ -1313,253 +1377,300 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
 
     <!-- Container where toolbar will be inserted -->
 
-    <!-- Accessibility Floating Menu -->
- <div class="accessibility-menu" aria-label="Accessibility Tools">
-    <!-- Floating Toggle Button -->
-    <button id="accessibilityToggle" class="fab" aria-expanded="false" aria-controls="accessibilityPanel">
-    ♿
-    </button>
-    
-    <!-- Hidden Panel -->
-    <div id="accessibilityPanel" class="accessibility-panel" hidden>
-    <button onclick="changeFontSize(1)" aria-label="Increase text size">A+</button>
-    <button onclick="changeFontSize(-1)" aria-label="Decrease text size">A-</button>
-    <button onclick="toggleDarkMode()" aria-label="Toggle dark mode">🌙 Dark Mode</button>
-    <button onclick="readContent()" aria-label="Read page aloud">🔊 Read</button>
-    <a href="accessibility.html" aria-label="Accessibility Statement">♿ Accessibility</a>
+        <!-- Accessibility Floating Widget -->
+    <div class="accessibility-menu" aria-label="Accessibility Tools">
+        <button 
+            id="accessibilityToggle" 
+            class="fab" 
+            aria-expanded="false" 
+            aria-controls="accessibilityPanel"
+            aria-haspopup="true"
+            type="button">
+            <span aria-hidden="true">♿</span>
+            <span class="sr-only">Accessibility Options</span>
+        </button>
+
+        <div 
+            id="accessibilityPanel" 
+            class="accessibility-panel is-hidden"
+            role="dialog"
+            aria-label="Accessibility options"
+            aria-hidden="true">
+            <div class="accessibility-panel-header">
+                <span class="accessibility-panel-title">Accessibility</span>
+            </div>
+            <button type="button" onclick="changeFontSize(1)" aria-label="Increase text size">
+                <span aria-hidden="true">A+</span>
+                <span class="sr-only">Increase text size</span>
+            </button>
+            <button type="button" onclick="changeFontSize(-1)" aria-label="Decrease text size">
+                <span aria-hidden="true">A-</span>
+                <span class="sr-only">Decrease text size</span>
+            </button>
+            <button type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode" id="darkModeBtn">
+                <span aria-hidden="true">🌙</span>
+                <span>Dark Mode</span>
+            </button>
+            <button type="button" onclick="readContent()" aria-label="Read page content aloud">
+                <span aria-hidden="true">🔊</span>
+                <span>Read Aloud</span>
+            </button>
+            <a href="accessibility.html" aria-label="View Accessibility Statement">
+                <span aria-hidden="true">♿</span>
+                <span>Accessibility Statement</span>
+            </a>
+        </div>
     </div>
-    </div>
-    
-    <!-- CSS -->
+
+    <!-- Dark Mode CSS -->
     <style>
-    /* Floating button (FAB) */
-    /* Floating button (circular) */
-    .fab {
-    position: fixed;
-    bottom: 200px;
-    right: 15px;
-    width: 60px; /* same width */
-    height: 60px; /* same height */
-    border-radius: 10%; /* makes it a circle */
-    background-color: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 24px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-    overflow: hidden; /* ensures image/icons don't overflow */
-    padding: 0; /* removes extra space */
-    }
-    .fab img, 
-    .fab svg {
-    width: 50%; /* make icon fit nicely inside circle */
-    height: 50%;
-    object-fit: contain;
-    }
-    
-    .fab:hover, .fab:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Hidden menu */
-    .fab-menu {
-    position: fixed;
-    bottom: 250px;
-    right: 40px;
-    display: none;
-    flex-direction: column;
-    gap: 10px;
-    }
-    
-    .fab-menu button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-size: 16px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s;
-    }
-    
-    .fab-menu button:hover,
-    .fab-menu button:focus {
-    background-color: #0056b3;
-    outline: 2px solid white;
-    outline-offset: 2px;
-    }
-    
-    /* Panel (initially hidden) */
-    .accessibility-panel {
-    position:fixed;
-    bottom: 120px;
-    right: 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background: white;
-    padding: 12px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
-    }
-    
-    /* Buttons inside panel */
-    .accessibility-panel button,
-    .accessibility-panel a {
-    background: #007bff;
-    color: #fff;
-    border: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 14px;
-    cursor: pointer;
-    text-align: center;
-    text-decoration: none;
-    }
-    
-    .accessibility-panel button:hover,
-    .accessibility-panel a:hover {
-    background: #0056b3;
-    }
-    
-    .accessibility-panel button:focus,
-    .accessibility-panel a:focus {
-    outline: 3px solid yellow; /* WCAG focus visible */
-    }
-    
-    /* Dark mode */
-    body.dark-mode {
-    background-color: #121212 !important;
-    color: #ffffff !important;
-    }
-    
-    /* Override headings, paragraphs, lists */
-    body.dark-mode h1,
-    body.dark-mode h2,
-    body.dark-mode h3,
-    body.dark-mode h4,
-    body.dark-mode h5,
-    body.dark-mode h6,
-    body.dark-mode p,
-    body.dark-mode li,
-    body.dark-mode a,
-    body.dark-mode span,
-    body.dark-mode strong {
-    color: #ffffff !important;
-    }
-    
-    /* Links */
-    body.dark-mode a {
-    color: #4da6ff !important;
-    }
-    
-    /* Inputs & labels */
-    body.dark-mode button,
-    body.dark-mode input,
-    body.dark-mode label {
-    color: #ffffff !important;
-    }
-    
-    /* Footer */
-    body.dark-mode footer {
-    color: #ffffff !important;
-    }
-    
-    /* Tables */
-    body.dark-mode table, 
-    body.dark-mode th, 
-    body.dark-mode td {
-    color: #ffffff !important;
-    border-color: #666 !important;
-    }
+    body.dark-mode { background-color: #121212 !important; color: #ffffff !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+    body.dark-mode p, body.dark-mode li, body.dark-mode a, body.dark-mode span, body.dark-mode strong { color: #ffffff !important; }
+    body.dark-mode header { background: #1a1a1a !important; }
+    body.dark-mode footer, body.dark-mode .premium-footer { background: #0a0a0a !important; }
+    body.dark-mode .uk-card, body.dark-mode .uk-tile { background: #1a1a1a !important; }
+    body.dark-mode input, body.dark-mode textarea, body.dark-mode select { background: #2a2a2a !important; color: #ffffff !important; border-color: #444 !important; }
+    body.dark-mode a { color: #6db3ff !important; }
+    body.dark-mode .accessibility-panel { background: #1a1a1a !important; border: 1px solid #333; }
+    body.dark-mode .accessibility-panel button, body.dark-mode .accessibility-panel a { background: #2a2a2a !important; color: #ffffff !important; }
+    body.dark-mode .accessibility-panel button:hover, body.dark-mode .accessibility-panel a:hover { background: var(--color-primary) !important; }
     </style>
-    
-    <!-- JS -->
+
+    <!-- Accessibility Widget JavaScript -->
     <script>
-    const toggleBtn = document.getElementById("accessibilityToggle");
-    const panel = document.getElementById("accessibilityPanel");
-    
-    toggleBtn.addEventListener("click", () => {
-      const isExpanded = toggleBtn.getAttribute("aria-expanded") === "true";
-      toggleBtn.setAttribute("aria-expanded", !isExpanded);
-      panel.hidden = isExpanded;
-    });
-    
-    let fontSize = 16;
+    (function() {
+        var toggleBtn = document.getElementById("accessibilityToggle");
+        var panel = document.getElementById("accessibilityPanel");
+        var isOpen = false;
+        
+        function openPanel() {
+            isOpen = true;
+            panel.classList.remove("is-hidden");
+            panel.setAttribute("aria-hidden", "false");
+            toggleBtn.setAttribute("aria-expanded", "true");
+            var firstBtn = panel.querySelector("button, a");
+            if (firstBtn) firstBtn.focus();
+        }
+        
+        function closePanel() {
+            isOpen = false;
+            panel.classList.add("is-hidden");
+            panel.setAttribute("aria-hidden", "true");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtn.focus();
+        }
+        
+        function togglePanel() {
+            if (isOpen) { closePanel(); } 
+            else { openPanel(); }
+        }
+        
+        if (toggleBtn && panel) {
+            toggleBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                togglePanel();
+            });
+            
+            toggleBtn.addEventListener("keydown", function(e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    togglePanel();
+                }
+            });
+        }
+        
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && isOpen) { closePanel(); }
+        });
+        
+        document.addEventListener("click", function(e) {
+            if (isOpen && !panel.contains(e.target) && !toggleBtn.contains(e.target)) {
+                closePanel();
+            }
+        });
+    })();
     
     function changeFontSize(delta) {
-      fontSize += delta;
-      if (fontSize < 12) fontSize = 12;
-      if (fontSize > 28) fontSize = 28;
-      document.body.style.fontSize = fontSize + "px";
+        var html = document.documentElement;
+        var current = parseFloat(window.getComputedStyle(html).fontSize) || 16;
+        var newSize = Math.max(12, Math.min(24, current + (delta * 2)));
+        html.style.fontSize = newSize + "px";
     }
     
     function toggleDarkMode() {
-      document.body.classList.toggle("dark-mode");
+        document.body.classList.toggle("dark-mode");
+        var isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDark);
     }
     
     function readContent() {
-      const content = document.body.innerText;
-      const utterance = new SpeechSynthesisUtterance(content);
-      speechSynthesis.speak(utterance);
+        var content = document.querySelector("main") || document.body;
+        var text = content.innerText;
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+            var utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "en-IN";
+            utterance.rate = 1;
+            utterance.pitch = 1;
+            window.speechSynthesis.speak(utterance);
+        }
     }
     
-    // Close panel when clicking outside
-    document.addEventListener("click", (e) => {
-      if (!toggleBtn.contains(e.target) && !panel.contains(e.target)) {
-        toggleBtn.setAttribute("aria-expanded", "false");
-        panel.hidden = true;
-      }
-    });
-    </script>
-    
-    <!-- Google Translate Script -->
-  <div id="google_translate_element_hidden" style="display:none;"></div>
-  <script type="text/javascript">
-    function googleTranslateElementInit() {
-      new google.translate.TranslateElement(
-        {pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
-        'google_translate_element_nav'
-      );
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
     }
-  </script>
-  <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-  
-  
+    <\/script> html>
+<html lang="en" dir="ltr">
 
-    <!-- Custom Language Translation Script -->
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Premium HTML Template by Indonez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4184dd" />
+    <!-- Site Properties -->
+    <title>Standard Securities & Investment Intermediates Ltd.</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/premium-enterprise.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_bot.css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
+    
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #B8E2F2;}
+</style>
+</head>
+
+<body>
+
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
+        padding: 3px 8px;
+        border: 1px solid rgba(255,255,255,0.6);
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
+    .lang-toggle button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: rgba(255,255,255,0.3);
+        border-color: #fff;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    </style>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+    
+
+    <!-- Premium Enterprise Header -->
+
+    <!-- Javascript -->
+    <script src="js/vendor/uikit.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/in-core.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/search.js"></script>
+
+    <!-- Container where toolbar will be inserted -->
+
+    <!-- Accessibility Floating Menu -->
+ <div <!-- Custom Language Toggle (Hindi/English) -->
+    <style>
+    .lang-toggle {
+        display: inline-flex;
+        gap: 8px;
+        margin-left: 10px;
+    }
+    .lang-toggle button {
+        padding: 4px 10px;
+        border: 1px solid rgba(255,255,255,0.5);
+        background: transparent;
+        color: #fff;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 12px;
+        transition: all 0.3s ease;
+    }
+    .lang-toggle button:hover,
+    .lang-toggle button.active {
+        background: rgba(255,255,255,0.2);
+        border-color: #fff;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    [dir="rtl"] .lang-toggle {
+        flex-direction: row-reverse;
+    }
+    </style>
+    <div class="lang-toggle" role="group" aria-label="Language selection">
+        <button onclick="setLanguage('en')" id="lang-en" aria-pressed="true">English</button>
+        <button onclick="setLanguage('hi')" id="lang-hi" aria-pressed="false">हिंदी</button>
+    </div>
+    
+    <!-- Language Translations Data -->
     <script>
     const translations = {
         'hi': {
             'Products': 'उत्पाद',
             'About Us': 'हमारे बारे में',
-            'Contact': 'संपर्क',
+            'Contact': 'संपर्क करें',
             'Login': 'लॉग इन',
             'Quick Links': 'त्वरित लिंक',
             'Downloads': 'डाउनलोड',
             'KYC': 'केवाईसी',
             'Complaints': 'शिकायतें',
-            'Open Account': 'खाता खोलें',
-            'Open account': 'खाता खोलें',
+            'Our Products': 'हमारे उत्पाद',
+            'A relationship on your terms.': 'आपकी शर्तों पर एक संबंध।',
             'Open an Account': 'खाता खोलें',
-            'Fund Transfer': 'फंड ट्रांसफर',
-            'Online Trading': 'ऑनलाइन ट्रेडिंग',
-            'Back Office': 'बैक ऑफिस',
             'Home': 'होम',
             'History': 'इतिहास',
             'Our Management': 'हमारा प्रबंधन',
             'Careers': 'करियर',
-            'Terms': 'नियम',
-            'Privacy Policies': 'गोपनीयता',
+            'Investor Relations': 'निवेशक संबंध',
+            'Complaint': 'शिकायत',
+            'Terms': 'नियम और शर्तें',
+            'Privacy Policies': 'गोपनीयता नीति',
             'Disclaimer': 'अस्वीकरण',
-            'Policies & Procedures': 'नीतियां',
+            'Policies & Procedures': 'नीतियां और प्रक्रियाएं',
             'Investor Charter': 'निवेशक चार्टर',
             'SEBI': 'सेबी',
             'NSE': 'एनएसई',
@@ -1584,60 +1695,7 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
             'Attention Investor': 'निवेशकों का ध्यान',
             'Need help?': 'मदद चाहिए?',
             'Read more': 'और पढ़ें',
-            'Learn more': 'और जानें',
-            'Menu': 'मेन्यू',
-            'SEBI Investor Complaint & Dispute Resolution': 'सेबी निवेशक शिकायत एवं विवाद समाधान',
-            'File your investment-related complaints quickly and securely through SEBI\'s official grievance redressal platforms.': 'सेबी की आधिकारिक शिकायत निवारण प्लेटफॉर्म के माध्यम से अपनी निवेश संबंधी शिकायतें जल्दी और सुरक्षित रूप से दर्ज करें।',
-            'Register on SCORES': 'स्कोरस पर पंजीकरण करें',
-            'Login to SMARTODR': 'स्मार्टओडीआर में लॉगिन करें',
-            'Official SEBI Grievance Redressal Portals': 'आधिकारिक सेबी शिकायत निवारण पोर्टल',
-            'Learn about SEBI\'s official platforms for investor grievance redressal and online dispute resolution.': 'निवेशक शिकायत निवारण और ऑनलाइन विवाद समाधान के लिए सेबी के आधिकारिक प्लेटफॉर्म के बारे में जानें।',
-            'SCORES Portal': 'स्कोरस पोर्टल',
-            'The SEBI Complaints Redress System (SCORES) enables investors to lodge complaints against listed companies, registered intermediaries, and market participants through an online platform for faster grievance resolution.': 'सेबी शिकायत समाधान प्रणाली (स्कोरस) निवेशकों को तेजी से शिकायत समाधान के लिए ऑनलाइन प्लेटफॉर्म के माध्यम से सूचीबद्ध कंपनियों, पंजीकृत मध्यस्थों और बाजार प्रतिभागियों के खिलाफ शिकायत दर्ज कराने में सक्षम बनाती है।',
-            'Easy Online Registration': 'आसान ऑनलाइन पंजीकरण',
-            'Complaint Tracking': 'शिकायत ट्रैकिंग',
-            'Secure Platform': 'सुरक्षित प्लेटफॉर्म',
-            'Faster Communication': 'तेज़ संचार',
-            'Transparent Resolution Process': 'पारदर्शी समाधान प्रक्रिया',
-            'Visit SCORES Portal': 'स्कोरस पोर्टल देखें',
-            'SMARTODR Portal': 'स्मार्टओडीआर पोर्टल',
-            'SMARTODR provides an online dispute resolution mechanism allowing investors and financial entities to resolve disputes efficiently through mediation and arbitration.': 'स्मार्टओडीआर एक ऑनलाइन विवाद समाधान तंत्र प्रदान करता है जो मध्यस्थता और मध्यस्थता के माध्यम से विवादों को कुशलतापूर्वक हल करने की अनुमति देता है।',
-            'Digital Dispute Resolution': 'डिजिटल विवाद समाधान',
-            'Paperless Process': 'कागज रहित प्रक्रिया',
-            'Secure Communication': 'सुरक्षित संचार',
-            'Time Efficient': 'समय की दक्षता',
-            'Easy Case Management': 'आसान केस प्रबंधन',
-            'Open SMARTODR': 'स्मार्टओडीआर खोलें',
-            'Information Required Before Filing a Complaint': 'शिकायत दर्ज करने से पहले आवश्यक जानकारी',
-            'Ensure you have the following details ready before submitting your grievance on SEBI portals.': 'सेबी पोर्टल पर अपनी शिकायत जमा करने से पहले निम्नलिखित विवरण तैयार रखें।',
-            'Full Name': 'पूरा नाम',
-            'PAN Number': 'पैन नंबर',
-            'Residential Address': 'आवासीय पता',
-            'Mobile Number': 'मोबाइल नंबर',
-            'Email ID': 'ईमेल आईडी',
-            'Ensure all information is accurate to facilitate quicker grievance resolution.': 'तेजी से शिकायत समाधान की सुविधा के लिए सभी जानकारी सटीक सुनिश्चित करें।',
-            'Benefits of Using SEBI Portals': 'सेबी पोर्टल का उपयोग करने के लाभ',
-            'Discover the advantages of using SEBI\'s official grievance redressal platforms.': 'सेबी के आधिकारिक शिकायत निवारण प्लेटफॉर्म का उपयोग करने के लाभों की खोज करें।',
-            'Easy & Quick Complaint Filing': 'आसान और त्वरित शिकायत दर्ज करना',
-            'Effective Communication': 'प्रभावी संचार',
-            'Transparent Process': 'पारदर्शी प्रक्रिया',
-            'Speedy Grievance Resolution': 'शीघ्र शिकायत समाधान',
-            'Online Tracking': 'ऑनलाइन ट्रैकिंग',
-            'Secure Digital Platform': 'सुरक्षित डिजिटल प्लेटफॉर्म',
-            'Time Saving': 'समय बचत',
-            'Investor Protection': 'निवेशक संरक्षण',
-            'Step-by-Step Process': 'चरण-दर-चरण प्रक्रिया',
-            'Register on SCORES or SMARTODR': 'स्कोरस या स्मार्टओडीआर पर पंजीकरण करें',
-            'Provide mandatory details': 'अनिवार्य विवरण प्रदान करें',
-            'Submit complaint/dispute': 'शिकायत/विवाद जमा करें',
-            'Track status online': 'ऑनलाइन स्थिति ट्रैक करें',
-            'Receive updates and resolution': 'अपडेट और समाधान प्राप्त करें',
-            'Official Links': 'आधिकारिक लिंक',
-            'Access SEBI\'s official grievance redressal portals directly.': 'सीधे सेबी के आधिकारिक शिकायत निवारण पोर्टल तक पहुंचें।',
-            'Visit Portal': 'पोर्टल देखें',
-            'Open Portal': 'पोर्टल खोलें',
-            'Disclaimer': 'अस्वीकरण',
-            'This page provides information about SEBI\'s official investor grievance redressal mechanisms. Complaints and disputes are processed only through the official SEBI portals. Please ensure that all submitted information is accurate.': 'यह पृष्ठ सेबी की आधिकारिक निवेशक शिकायत निवारण तंत्र के बारे में जानकारी प्रदान करता है। शिकायतें और विवाद केवल आधिकारिक सेबी पोर्टल के माध्यम से संसाधित किए जाते हैं। कृपया सुनिश्चित करें कि सभी प्रस्तुत जानकारी सटीक है।'
+            'Learn more': 'और जानें'
         }
     };
     
@@ -1706,8 +1764,248 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
         }
     });
     </script>
+    
+    <!-- Google Translate Script -->
+<div id="google_translate_element_hidden" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement(
+      {pageLanguage: 'en', includedLanguages: 'hi,en', layout: google.translate.TranslateElement.InlineLayout.SIMPLE},
+      'google_translate_element_nav'
+    );
+  }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+
+    <!-- Custom Language Translation Script -->
+    <script>
+    const translations = {
+        'hi': {
+            'Products': 'उत्पाद',
+            'About Us': 'हमारे बारे में',
+            'Contact': 'संपर्क',
+            'Login': 'लॉग इन',
+            'Quick Links': 'त्वरित लिंक',
+            'Downloads': 'डाउनलोड',
+            'KYC': 'केवाईसी',
+            'Complaints': 'शिकायतें',
+            'Open Account': 'खाता खोलें',
+            'Open account': 'खाता खोलें',
+            'Open an Account': 'खाता खोलें',
+            'Fund Transfer': 'फंड ट्रांसफर',
+            'Online Trading': 'ऑनलाइन ट्रेडिंग',
+            'Back Office': 'बैक ऑफिस',
+            'Home': 'होम',
+            'History': 'इतिहास',
+            'Our Management': 'हमारा प्रबंधन',
+            'Careers': 'करियर',
+            'Terms': 'नियम',
+            'Privacy Policies': 'गोपनीयता',
+            'Disclaimer': 'अस्वीकरण',
+            'Policies & Procedures': 'नीतियां',
+            'Investor Charter': 'निवेशक चार्टर',
+            'SEBI': 'सेबी',
+            'NSE': 'एनएसई',
+            'BSE': 'बीएसई',
+            'CDSL': 'सीडीएसएल',
+            'Equity': 'इक्विटी',
+            'Equities': 'इक्विटी',
+            'Currency': 'करेंसी',
+            'Commodities': 'कमोडिटी',
+            'IPOs': 'आईपीओ',
+            'Advisory': 'सलाह',
+            'Depository': 'डिपॉजिटरी',
+            'Need help?': 'मदद चाहिए?',
+            'Connect': 'जुड़ें',
+            'Email': 'ईमेल',
+            'Copyright': 'कॉपीराइट',
+            'Attention Investor': 'निवेशकों का ध्यान',
+            'Read more': 'और पढ़ें',
+            'Learn more': 'और जानें',
+            'Menu': 'मेन्यू'
+        }
+    };
+    
+    function setLanguage(lang) {
+        document.documentElement.lang = lang;
+        
+        // Update toggle buttons
+        document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        
+        // Update active class
+        document.getElementById('lang-en').classList.toggle('active', lang === 'en');
+        document.getElementById('lang-hi').classList.toggle('active', lang === 'hi');
+        
+        // Store preference
+        localStorage.setItem('preferredLang', lang);
+        
+        // Translate page content
+        if (lang === 'hi') {
+            translatePageToHindi();
+        } else {
+            location.reload();
+        }
+    }
+    
+    function translatePageToHindi() {
+        const walker = document.createTreeWalker(
+            document.body,
+            NodeFilter.SHOW_TEXT,
+            {
+                acceptNode: function(node) {
+                    const parent = node.parentElement;
+                    if (!parent) return NodeFilter.FILTER_REJECT;
+                    const tagName = parent.tagName.toLowerCase();
+                    if (['script', 'style', 'noscript', 'textarea', 'input'].includes(tagName)) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.hasAttribute('data-translated')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    if (parent.closest('.lang-toggle')) {
+                        return NodeFilter.FILTER_REJECT;
+                    }
+                    return NodeFilter.FILTER_ACCEPT;
+                }
+            }
+        );
+        
+        const textNodes = [];
+        while (walker.nextNode()) {
+            textNodes.push(walker.currentNode);
+        }
+        
+        textNodes.forEach(node => {
+            const text = node.textContent.trim();
+            if (text && translations['hi'][text]) {
+                node.textContent = translations['hi'][text];
+                node.parentElement.setAttribute('data-translated', 'true');
+            }
+        });
+    }
+    
+    // Load saved preference on page load
+    document.addEventListener('DOMContentLoaded', function() {
+        const savedLang = localStorage.getItem('preferredLang');
+        if (savedLang === 'hi') {
+            setLanguage('hi');
+        }
+    });
+    </script>
+
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+    (function() {
+        const toggle = document.getElementById('mobileNavToggle');
+        const panel = document.getElementById('mobileNavPanel');
+        const overlay = document.getElementById('mobileNavOverlay');
+        const closeBtn = document.getElementById('mobileNavClose');
+        const dropdownTriggers = document.querySelectorAll('.mobile-nav-dropdown-trigger');
+        let isOpen = false;
+        let lastFocusedElement = null;
+
+        function openNav() {
+            if (!toggle || !panel) return;
+            isOpen = true;
+            lastFocusedElement = document.activeElement;
+            panel.classList.add('is-active');
+            overlay.classList.add('is-active');
+            panel.setAttribute('aria-hidden', 'false');
+            overlay.setAttribute('aria-hidden', 'false');
+            toggle.setAttribute('aria-expanded', 'true');
+            document.body.style.overflow = 'hidden';
+            // Focus close button
+            if (closeBtn) closeBtn.focus();
+        }
+
+        function closeNav() {
+            if (!panel) return;
+            isOpen = false;
+            panel.classList.remove('is-active');
+            overlay.classList.remove('is-active');
+            panel.setAttribute('aria-hidden', 'true');
+            overlay.setAttribute('aria-hidden', 'true');
+            toggle.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+            // Return focus
+            if (lastFocusedElement) lastFocusedElement.focus();
+            // Close all dropdowns
+            dropdownTriggers.forEach(function(trigger) {
+                trigger.setAttribute('aria-expanded', 'false');
+                const dropdown = trigger.nextElementSibling;
+                if (dropdown) dropdown.classList.remove('is-active');
+            });
+        }
+
+        function toggleNav() {
+            if (isOpen) closeNav(); else openNav();
+        }
+
+        // Toggle button click
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                toggleNav();
+            });
+        }
+
+        // Close button click
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            });
+        }
+
+        // Overlay click
+        if (overlay) {
+            overlay.addEventListener('click', function() {
+                closeNav();
+            });
+        }
+
+        // Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isOpen) {
+                closeNav();
+            }
+        });
+
+        // Dropdown toggles
+        dropdownTriggers.forEach(function(trigger) {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                const expanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', !expanded);
+                const dropdown = this.nextElementSibling;
+                if (dropdown) dropdown.classList.toggle('is-active');
+            });
+        });
+
+        // Tab key trapping
+        panel.addEventListener('keydown', function(e) {
+            if (e.key !== 'Tab') return;
+            const focusable = panel.querySelectorAll('a[href], button, textarea, input, select, [tabindex]:not([tabindex="-1"])');
+            const first = focusable[0];
+            const last = focusable[focusable.length - 1];
+            if (e.shiftKey && document.activeElement === first) {
+                e.preventDefault();
+                last.focus();
+            } else if (!e.shiftKey && document.activeElement === last) {
+                e.preventDefault();
+                first.focus();
+            }
+        });
+    })();
+    </script>
 
 </body>
 
 
 </html>
+
+
+
