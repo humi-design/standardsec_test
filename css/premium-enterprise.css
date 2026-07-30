@@ -2063,10 +2063,6 @@ button:focus {
 .uk-visible { display: block !important; }
 .uk-hidden { display: none !important; }
 
-/* /* ========================================================================
-   MOBILE RESPONSIVE STYLES - HOMEPAGE
-   ======================================================================== */
-
 /* /* Premium Hero Section - Mobile */
 @media (max-width: 767px) {
     .premium-hero {
