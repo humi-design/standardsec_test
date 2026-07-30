@@ -244,28 +244,31 @@ tr:hover {background-color: #B8E2F2;}
                           
                         <!-- main navigation end -->
                     </div>
-                    <!-- Mobile Navigation Toggle - OUTSIDE navbar-wrapper -->
-                    <div class="mobile-nav-toggle-wrapper" id="mobileNavWrapper">
-                        <button
-                            class="mobile-nav-toggle"
-                            id="mobileNavToggle"
-                            type="button"
-                            aria-expanded="false"
-                            aria-controls="mobileNavPanel"
-                            aria-label="Open navigation menu">
-                            <span class="hamburger-icon" aria-hidden="true">☰</span>
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
         <!-- header content end -->
     </header>
 
+    <!-- Mobile Navigation Toggle - AFTER header -->
+    <div class="mobile-nav-toggle-wrapper" id="mobileNavWrapper" style="display:flex !important;visibility:visible !important;opacity:1 !important;position:relative;z-index:99999;align-items:center;justify-content:center;min-width:50px;min-height:50px;padding:5px;">
+        <button
+            class="mobile-nav-toggle"
+            id="mobileNavToggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="mobileNavPanel"
+            aria-label="Open navigation menu"
+            style="display:flex !important;visibility:visible !important;opacity:1 !important;width:44px !important;height:44px !important;min-width:44px !important;min-height:44px !important;border-radius:8px;background:#f8f9fa;border:2px solid #dee2e6;color:#333;font-size:24px;cursor:pointer;align-items:center;justify-content:center;">
+            <span class="hamburger-icon" style="display:flex !important;visibility:visible !important;opacity:1 !important;font-size:24px;font-weight:bold;" aria-hidden="true">☰</span>
+        </button>
+    </div>
+
     <!-- Mobile Navigation Overlay -->
     <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
 
-<nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation" aria-hidden="true">
+    <!-- Mobile Navigation Panel -->
+    <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation" aria-hidden="true">
     <div class="mobile-nav-header">
         <div class="mobile-nav-logo">
             <img src="img/logo.png" alt="Standard Securities logo">

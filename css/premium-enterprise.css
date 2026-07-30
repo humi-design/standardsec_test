@@ -594,16 +594,23 @@ p {
 
 /* Show hamburger on tablet and mobile only */
 @media (max-width: 1023px) {
-    /* Show hamburger - always visible on mobile */
-    .mobile-nav-toggle-wrapper,
+    /* Show hamburger - ALWAYS visible on mobile */
     #mobileNavWrapper,
-    #mobileNavWrapper .mobile-nav-toggle-wrapper,
+    #mobileNavWrapper * {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    .mobile-nav-toggle-wrapper,
     .mobile-nav-toggle {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
         width: 50px !important;
+        height: 50px !important;
         min-width: 50px !important;
+        min-height: 50px !important;
     }
     
     /* Hide desktop nav completely */
@@ -613,6 +620,15 @@ p {
     .premium-topbar .in-header-button {
         display: none !important;
         visibility: hidden !important;
+    }
+}
+
+/* Always show hamburger on mobile (highest priority) */
+@media screen and (max-width: 1023px) {
+    body #mobileNavWrapper {
+        display: flex !important;
+        position: relative !important;
+        z-index: 99999 !important;
     }
 }
 
