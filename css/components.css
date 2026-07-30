@@ -13,13 +13,13 @@
     align-items: center;
     justify-content: center;
     gap: var(--space-2);
-    padding: var(--space-3) var(--space-6);
-    font-size: var(--text-sm);
+    padding: var(--space-3) var(--space-6) !important;
+    font-size: var(--text-sm) !important;
     font-weight: var(--font-semibold);
     line-height: 1;
     text-decoration: none;
-    border: 2px solid transparent;
-    border-radius: var(--radius);
+    border: 2px solid transparent !important;
+    border-radius: var(--radius) !important;
     cursor: pointer;
     transition: all var(--transition-base);
     min-height: var(--target-size-min);
@@ -41,121 +41,121 @@
 /* Button sizes */
 .btn-sm,
 .uk-button-small {
-    padding: var(--space-2) var(--space-4);
-    font-size: var(--text-xs);
+    padding: var(--space-2) var(--space-4) !important;
+    font-size: var(--text-xs) !important;
     min-height: 36px;
 }
 
 .btn-lg,
 .uk-button-large {
-    padding: var(--space-4) var(--space-8);
-    font-size: var(--text-base);
+    padding: var(--space-4) var(--space-8) !important;
+    font-size: var(--text-base) !important;
     min-height: 52px;
 }
 
 .btn-xl {
-    padding: var(--space-5) var(--space-10);
-    font-size: var(--text-lg);
+    padding: var(--space-5) var(--space-10) !important;
+    font-size: var(--text-lg) !important;
     min-height: 60px;
 }
 
 /* Button variants */
 .btn-primary,
 .uk-button-primary {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
     border-color: var(--color-primary);
 }
 
 .btn-primary:hover,
 .uk-button-primary:hover {
-    background: var(--color-primary-hover);
+    background: var(--color-primary-hover) !important;
     border-color: var(--color-primary-hover);
 }
 
 .btn-secondary,
 .uk-button-secondary {
-    background: var(--color-secondary);
-    color: var(--color-white);
+    background: var(--color-secondary) !important;
+    color: var(--color-white) !important;
     border-color: var(--color-secondary);
 }
 
 .btn-secondary:hover,
 .uk-button-secondary:hover {
-    background: var(--color-secondary-light);
+    background: var(--color-secondary-light) !important;
     border-color: var(--color-secondary-light);
 }
 
 .btn-outline,
 .uk-button-outline {
-    background: transparent;
-    color: var(--color-primary);
+    background: transparent !important;
+    color: var(--color-primary) !important;
     border-color: var(--color-primary);
 }
 
 .btn-outline:hover,
 .uk-button-outline:hover {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 .btn-outline-secondary {
-    background: transparent;
-    color: var(--color-secondary);
+    background: transparent !important;
+    color: var(--color-secondary) !important;
     border-color: var(--color-secondary);
 }
 
 .btn-outline-secondary:hover {
-    background: var(--color-secondary);
-    color: var(--color-white);
+    background: var(--color-secondary) !important;
+    color: var(--color-white) !important;
 }
 
 .btn-ghost {
-    background: transparent;
-    color: var(--color-primary);
+    background: transparent !important;
+    color: var(--color-primary) !important;
     border-color: transparent;
 }
 
 .btn-ghost:hover {
-    background: var(--color-gray-100);
+    background: var(--color-gray-100) !important;
 }
 
 .btn-success {
-    background: var(--color-success);
-    color: var(--color-white);
+    background: var(--color-success) !important;
+    color: var(--color-white) !important;
     border-color: var(--color-success);
 }
 
 .btn-success:hover {
-    background: var(--color-success-dark);
+    background: var(--color-success-dark) !important;
     border-color: var(--color-success-dark);
 }
 
 .btn-warning {
-    background: var(--color-warning);
-    color: var(--color-white);
+    background: var(--color-warning) !important;
+    color: var(--color-white) !important;
     border-color: var(--color-warning);
 }
 
 .btn-warning:hover {
-    background: var(--color-warning-dark);
+    background: var(--color-warning-dark) !important;
     border-color: var(--color-warning-dark);
 }
 
 .btn-danger {
-    background: var(--color-danger);
-    color: var(--color-white);
+    background: var(--color-danger) !important;
+    color: var(--color-white) !important;
     border-color: var(--color-danger);
 }
 
 .btn-danger:hover {
-    background: var(--color-danger-dark);
+    background: var(--color-danger-dark) !important;
     border-color: var(--color-danger-dark);
 }
 
 /* Button with icon */
 .btn-icon {
-    padding: var(--space-3);
+    padding: var(--space-3) !important;
     min-width: var(--target-size-min);
 }
 
@@ -186,14 +186,14 @@
    ==================================================================== */
 
 .uk-button-text {
-    background: transparent;
-    color: var(--color-secondary);
-    border: none;
-    padding: var(--space-2) var(--space-3);
+    background: transparent !important;
+    color: var(--color-secondary) !important;
+    border: none !important;
+    padding: var(--space-2) var(--space-3) !important;
 }
 
 .uk-button-text:hover {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 /* ====================================================================
@@ -202,8 +202,8 @@
 
 .card,
 .uk-card {
-    background: var(--surface-card);
-    border-radius: var(--radius-lg);
+    background: var(--surface-card) !important;
+    border-radius: var(--radius-lg) !important;
     box-shadow: var(--shadow-sm);
     overflow: hidden;
     transition: all var(--transition-base);
@@ -215,52 +215,52 @@
 
 .card-body,
 .uk-card-body {
-    padding: var(--space-6);
+    padding: var(--space-6) !important;
 }
 
 .card-header,
 .uk-card-header {
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-6) !important;
     border-bottom: 1px solid var(--color-gray-200);
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .card-footer,
 .uk-card-footer {
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-6) !important;
     border-top: 1px solid var(--color-gray-200);
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .card-title,
 .uk-card-title {
-    font-size: var(--text-xl);
+    font-size: var(--text-xl) !important;
     font-weight: var(--font-semibold);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     margin-bottom: var(--space-4);
 }
 
 /* Card variants */
 .card-primary,
 .uk-card-primary {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 .card-secondary,
 .uk-card-secondary {
-    background: var(--color-secondary);
-    color: var(--color-white);
+    background: var(--color-secondary) !important;
+    color: var(--color-white) !important;
 }
 
 .card-muted,
 .uk-card-muted {
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .card-bordered,
 .uk-card-border {
-    border: 1px solid var(--color-gray-200);
+    border: 1px solid var(--color-gray-200) !important;
     box-shadow: none;
 }
 
@@ -287,32 +287,32 @@
    ==================================================================== */
 
 .uk-tile {
-    padding: var(--space-6);
-    background: var(--surface-card);
-    border-radius: var(--radius-lg);
+    padding: var(--space-6) !important;
+    background: var(--surface-card) !important;
+    border-radius: var(--radius-lg) !important;
     transition: all var(--transition-base);
 }
 
 .uk-tile:hover {
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .uk-tile-default {
-    background: var(--bg-primary);
+    background: var(--bg-primary) !important;
 }
 
 .uk-tile-muted {
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .uk-tile-primary {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 .uk-tile-secondary {
-    background: var(--color-secondary);
-    color: var(--color-white);
+    background: var(--color-secondary) !important;
+    color: var(--color-white) !important;
 }
 
 /* ====================================================================
@@ -327,14 +327,14 @@
 label {
     display: block;
     margin-bottom: var(--space-2);
-    font-size: var(--text-sm);
+    font-size: var(--text-sm) !important;
     font-weight: var(--font-medium);
-    color: var(--color-gray-700);
+    color: var(--color-gray-700) !important;
 }
 
 .form-label.required::after {
     content: ' *';
-    color: var(--color-danger);
+    color: var(--color-danger) !important;
 }
 
 .form-input,
@@ -354,13 +354,13 @@ input[type="week"],
 input[type="color"] {
     display: block;
     width: 100%;
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-4) !important;
+    font-size: var(--text-base) !important;
     line-height: var(--leading-normal);
-    color: var(--color-gray-800);
-    background: var(--color-white);
-    border: 2px solid var(--color-gray-200);
-    border-radius: var(--radius);
+    color: var(--color-gray-800) !important;
+    background: var(--color-white) !important;
+    border: 2px solid var(--color-gray-200) !important;
+    border-radius: var(--radius) !important;
     transition: all var(--transition-base);
     min-height: var(--target-size-min);
 }
@@ -379,12 +379,12 @@ input[type="color"] {
 
 .form-input::placeholder,
 .uk-input::placeholder {
-    color: var(--color-gray-400);
+    color: var(--color-gray-400) !important;
 }
 
 .form-input:disabled,
 .uk-input:disabled {
-    background: var(--color-gray-100);
+    background: var(--color-gray-100) !important;
     cursor: not-allowed;
     opacity: 0.7;
 }
@@ -405,13 +405,13 @@ input[type="color"] {
 textarea {
     display: block;
     width: 100%;
-    padding: var(--space-3) var(--space-4);
-    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-4) !important;
+    font-size: var(--text-base) !important;
     line-height: var(--leading-relaxed);
-    color: var(--color-gray-800);
-    background: var(--color-white);
-    border: 2px solid var(--color-gray-200);
-    border-radius: var(--radius);
+    color: var(--color-gray-800) !important;
+    background: var(--color-white) !important;
+    border: 2px solid var(--color-gray-200) !important;
+    border-radius: var(--radius) !important;
     transition: all var(--transition-base);
     resize: vertical;
     min-height: 120px;
@@ -430,15 +430,15 @@ textarea {
 select {
     display: block;
     width: 100%;
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-3) var(--space-4) !important;
     padding-right: var(--space-10);
-    font-size: var(--text-base);
+    font-size: var(--text-base) !important;
     line-height: var(--leading-normal);
-    color: var(--color-gray-800);
-    background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B7A8A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right var(--space-3) center;
+    color: var(--color-gray-800) !important;
+    background: var(--color-white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236B7A8A' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E") no-repeat right var(--space-3) center !important;
     background-size: 20px;
-    border: 2px solid var(--color-gray-200);
-    border-radius: var(--radius);
+    border: 2px solid var(--color-gray-200) !important;
+    border-radius: var(--radius) !important;
     transition: all var(--transition-base);
     min-height: var(--target-size-min);
     appearance: none;
@@ -493,16 +493,16 @@ input[type="radio"] {
 .uk-form-help {
     display: block;
     margin-top: var(--space-1);
-    font-size: var(--text-sm);
-    color: var(--color-gray-500);
+    font-size: var(--text-sm) !important;
+    color: var(--color-gray-500) !important;
 }
 
 .form-error,
 .uk-form-danger {
     display: block;
     margin-top: var(--space-1);
-    font-size: var(--text-sm);
-    color: var(--color-danger);
+    font-size: var(--text-sm) !important;
+    color: var(--color-danger) !important;
 }
 
 /* ====================================================================
@@ -511,58 +511,58 @@ input[type="radio"] {
 
 .table-wrapper {
     overflow-x: auto;
-    border-radius: var(--radius);
+    border-radius: var(--radius) !important;
 }
 
 .table,
 .uk-table {
     width: 100%;
     border-collapse: collapse;
-    font-size: var(--text-sm);
+    font-size: var(--text-sm) !important;
 }
 
 .table th,
 .uk-table th {
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-3) var(--space-4) !important;
     text-align: left;
     font-weight: var(--font-semibold);
-    color: var(--color-gray-700);
-    background: var(--bg-secondary);
+    color: var(--color-gray-700) !important;
+    background: var(--bg-secondary) !important;
     border-bottom: 2px solid var(--color-gray-200);
 }
 
 .table td,
 .uk-table td {
-    padding: var(--space-3) var(--space-4);
+    padding: var(--space-3) var(--space-4) !important;
     border-bottom: 1px solid var(--color-gray-200);
-    color: var(--color-gray-600);
+    color: var(--color-gray-600) !important;
 }
 
 .table tbody tr:hover,
 .uk-table tbody tr:hover {
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 .table-striped tbody tr:nth-child(odd),
 .uk-table-striped tbody tr:nth-child(odd) {
-    background: var(--color-gray-50);
+    background: var(--color-gray-50) !important;
 }
 
 .table-bordered,
 .uk-table-bordered {
-    border: 1px solid var(--color-gray-200);
+    border: 1px solid var(--color-gray-200) !important;
 }
 
 .table-bordered th,
 .table-bordered td,
 .uk-table-bordered th,
 .uk-table-bordered td {
-    border: 1px solid var(--color-gray-200);
+    border: 1px solid var(--color-gray-200) !important;
 }
 
 .table-hover tbody tr:hover,
 .uk-table-hover tbody tr:hover {
-    background: var(--color-gray-50);
+    background: var(--color-gray-50) !important;
 }
 
 /* ====================================================================
@@ -573,54 +573,54 @@ input[type="radio"] {
 .uk-label {
     display: inline-flex;
     align-items: center;
-    padding: var(--space-1) var(--space-3);
-    font-size: var(--text-xs);
+    padding: var(--space-1) var(--space-3) !important;
+    font-size: var(--text-xs) !important;
     font-weight: var(--font-semibold);
     line-height: 1;
-    border-radius: var(--radius-full);
+    border-radius: var(--radius-full) !important;
     text-transform: uppercase;
     letter-spacing: var(--tracking-wide);
 }
 
 .badge-primary,
 .uk-label-primary {
-    background: var(--color-primary);
-    color: var(--color-white);
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-secondary,
 .uk-label-secondary {
-    background: var(--color-secondary);
-    color: var(--color-white);
+    background: var(--color-secondary) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-success,
 .uk-label-success {
-    background: var(--color-success);
-    color: var(--color-white);
+    background: var(--color-success) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-warning,
 .uk-label-warning {
-    background: var(--color-warning);
-    color: var(--color-white);
+    background: var(--color-warning) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-danger,
 .uk-label-danger {
-    background: var(--color-danger);
-    color: var(--color-white);
+    background: var(--color-danger) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-info,
 .uk-label-info {
-    background: var(--color-info);
-    color: var(--color-white);
+    background: var(--color-info) !important;
+    color: var(--color-white) !important;
 }
 
 .badge-outline {
-    background: transparent;
-    border: 2px solid currentColor;
+    background: transparent !important;
+    border: 2px solid currentColor !important;
 }
 
 /* ====================================================================
@@ -630,49 +630,49 @@ input[type="radio"] {
 .alert,
 .uk-alert {
     position: relative;
-    padding: var(--space-4) var(--space-6);
-    border-radius: var(--radius);
+    padding: var(--space-4) var(--space-6) !important;
+    border-radius: var(--radius) !important;
     margin-bottom: var(--space-4);
-    font-size: var(--text-sm);
+    font-size: var(--text-sm) !important;
 }
 
 .alert-primary {
-    background: rgba(26, 75, 122, 0.1);
+    background: rgba(26, 75, 122, 0.1) !important;
     border-left: 4px solid var(--color-primary);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .alert-success {
-    background: var(--color-success-light);
+    background: var(--color-success-light) !important;
     border-left: 4px solid var(--color-success);
-    color: var(--color-success-dark);
+    color: var(--color-success-dark) !important;
 }
 
 .alert-warning {
-    background: var(--color-warning-light);
+    background: var(--color-warning-light) !important;
     border-left: 4px solid var(--color-warning);
-    color: var(--color-warning-dark);
+    color: var(--color-warning-dark) !important;
 }
 
 .alert-danger {
-    background: var(--color-danger-light);
+    background: var(--color-danger-light) !important;
     border-left: 4px solid var(--color-danger);
-    color: var(--color-danger-dark);
+    color: var(--color-danger-dark) !important;
 }
 
 .alert-info {
-    background: var(--color-info-light);
+    background: var(--color-info-light) !important;
     border-left: 4px solid var(--color-info);
-    color: var(--color-info-dark);
+    color: var(--color-info-dark) !important;
 }
 
 .alert-close {
     position: absolute;
     top: var(--space-2);
     right: var(--space-2);
-    padding: var(--space-2);
-    background: none;
-    border: none;
+    padding: var(--space-2) !important;
+    background: none !important;
+    border: none !important;
     cursor: pointer;
     opacity: 0.6;
 }
@@ -698,8 +698,8 @@ input[type="radio"] {
 .uk-tab::before,
 .uk-tab li a {
     display: block;
-    padding: var(--space-3) var(--space-4);
-    color: var(--color-gray-600);
+    padding: var(--space-3) var(--space-4) !important;
+    color: var(--color-gray-600) !important;
     font-weight: var(--font-medium);
     border-bottom: 2px solid transparent;
     margin-bottom: -2px;
@@ -709,13 +709,13 @@ input[type="radio"] {
 .tabs button:hover,
 .tabs a:hover,
 .uk-tab li a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .tabs button.active,
 .tabs a.active,
 .uk-tab li.uk-active a {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
     border-bottom-color: var(--color-primary);
 }
 
@@ -727,7 +727,7 @@ input[type="radio"] {
 .uk-pagination {
     display: flex;
     gap: var(--space-1);
-    margin: var(--space-4) 0;
+    margin: var(--space-4) 0 !important;
 }
 
 .pagination button,
@@ -738,12 +738,12 @@ input[type="radio"] {
     justify-content: center;
     min-width: var(--target-size-min);
     height: var(--target-size-min);
-    padding: var(--space-2) var(--space-3);
-    font-size: var(--text-sm);
-    color: var(--color-gray-600);
-    background: var(--color-white);
-    border: 1px solid var(--color-gray-200);
-    border-radius: var(--radius);
+    padding: var(--space-2) var(--space-3) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--color-gray-600) !important;
+    background: var(--color-white) !important;
+    border: 1px solid var(--color-gray-200) !important;
+    border-radius: var(--radius) !important;
     text-decoration: none;
     transition: all var(--transition-base);
 }
@@ -751,16 +751,16 @@ input[type="radio"] {
 .pagination button:hover,
 .pagination a:hover,
 .uk-pagination > *:hover {
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
     border-color: var(--color-gray-300);
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .pagination button.active,
 .uk-pagination .uk-active {
-    background: var(--color-primary);
+    background: var(--color-primary) !important;
     border-color: var(--color-primary);
-    color: var(--color-white);
+    color: var(--color-white) !important;
 }
 
 .pagination button:disabled,
@@ -779,9 +779,9 @@ input[type="radio"] {
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-2);
-    padding: var(--space-3) 0;
-    font-size: var(--text-sm);
-    color: var(--color-gray-500);
+    padding: var(--space-3) 0 !important;
+    font-size: var(--text-sm) !important;
+    color: var(--color-gray-500) !important;
 }
 
 .breadcrumb li,
@@ -794,21 +794,21 @@ input[type="radio"] {
 .uk-breadcrumb > li:not(:last-child)::after {
     content: '/';
     margin-left: var(--space-2);
-    color: var(--color-gray-400);
+    color: var(--color-gray-400) !important;
 }
 
 .breadcrumb a,
 .uk-breadcrumb a {
-    color: var(--color-gray-600);
+    color: var(--color-gray-600) !important;
     text-decoration: none;
 }
 
 .breadcrumb a:hover {
-    color: var(--color-primary);
+    color: var(--color-primary) !important;
 }
 
 .breadcrumb [aria-current="page"] {
-    color: var(--color-gray-800);
+    color: var(--color-gray-800) !important;
     font-weight: var(--font-medium);
 }
 
@@ -820,29 +820,29 @@ input[type="radio"] {
 .uk-progress {
     width: 100%;
     height: 8px;
-    background: var(--color-gray-200);
-    border-radius: var(--radius-full);
+    background: var(--color-gray-200) !important;
+    border-radius: var(--radius-full) !important;
     overflow: hidden;
 }
 
 .progress-bar,
 .uk-progress-bar {
     height: 100%;
-    background: var(--color-primary);
-    border-radius: var(--radius-full);
+    background: var(--color-primary) !important;
+    border-radius: var(--radius-full) !important;
     transition: width var(--transition-slow);
 }
 
 .progress-bar-success {
-    background: var(--color-success);
+    background: var(--color-success) !important;
 }
 
 .progress-bar-warning {
-    background: var(--color-warning);
+    background: var(--color-warning) !important;
 }
 
 .progress-bar-danger {
-    background: var(--color-danger);
+    background: var(--color-danger) !important;
 }
 
 /* ====================================================================
@@ -855,11 +855,11 @@ input[type="radio"] {
     justify-content: center;
     width: 48px;
     height: 48px;
-    border-radius: 50%;
-    background: var(--color-primary);
-    color: var(--color-white);
+    border-radius: 50% !important;
+    background: var(--color-primary) !important;
+    color: var(--color-white) !important;
     font-weight: var(--font-semibold);
-    font-size: var(--text-lg);
+    font-size: var(--text-lg) !important;
     overflow: hidden;
 }
 
@@ -872,19 +872,19 @@ input[type="radio"] {
 .avatar-sm {
     width: 32px;
     height: 32px;
-    font-size: var(--text-sm);
+    font-size: var(--text-sm) !important;
 }
 
 .avatar-lg {
     width: 64px;
     height: 64px;
-    font-size: var(--text-xl);
+    font-size: var(--text-xl) !important;
 }
 
 .avatar-xl {
     width: 96px;
     height: 96px;
-    font-size: var(--text-3xl);
+    font-size: var(--text-3xl) !important;
 }
 
 /* ====================================================================
@@ -895,9 +895,9 @@ input[type="radio"] {
 .uk-dropdown {
     position: absolute;
     min-width: 200px;
-    padding: var(--space-2) 0;
-    background: var(--color-white);
-    border-radius: var(--radius);
+    padding: var(--space-2) 0 !important;
+    background: var(--color-white) !important;
+    border-radius: var(--radius) !important;
     box-shadow: var(--shadow-lg);
     z-index: var(--z-dropdown);
     opacity: 0;
@@ -916,22 +916,22 @@ input[type="radio"] {
 .dropdown-item,
 .uk-dropdown-item {
     display: block;
-    padding: var(--space-2) var(--space-4);
-    color: var(--color-gray-700);
+    padding: var(--space-2) var(--space-4) !important;
+    color: var(--color-gray-700) !important;
     text-decoration: none;
     transition: background var(--transition-fast);
 }
 
 .dropdown-item:hover,
 .uk-dropdown-item:hover {
-    background: var(--bg-secondary);
-    color: var(--color-primary);
+    background: var(--bg-secondary) !important;
+    color: var(--color-primary) !important;
 }
 
 .dropdown-divider {
     height: 1px;
-    margin: var(--space-2) 0;
-    background: var(--color-gray-200);
+    margin: var(--space-2) 0 !important;
+    background: var(--color-gray-200) !important;
 }
 
 /* ====================================================================
@@ -941,7 +941,7 @@ input[type="radio"] {
 .modal-backdrop {
     position: fixed;
     inset: 0;
-    background: var(--surface-backdrop);
+    background: var(--surface-backdrop) !important;
     z-index: var(--z-modal-backdrop);
     opacity: 0;
     visibility: hidden;
@@ -962,8 +962,8 @@ input[type="radio"] {
     width: 90%;
     max-width: 500px;
     max-height: 90vh;
-    background: var(--color-white);
-    border-radius: var(--radius-xl);
+    background: var(--color-white) !important;
+    border-radius: var(--radius-xl) !important;
     box-shadow: var(--shadow-xl);
     z-index: var(--z-modal);
     opacity: 0;
@@ -983,32 +983,32 @@ input[type="radio"] {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-6) !important;
     border-bottom: 1px solid var(--color-gray-200);
 }
 
 .modal-title {
-    font-size: var(--text-xl);
+    font-size: var(--text-xl) !important;
     font-weight: var(--font-semibold);
-    color: var(--color-primary);
-    margin: 0;
+    color: var(--color-primary) !important;
+    margin: 0 !important;
 }
 
 .modal-close {
-    padding: var(--space-2);
-    color: var(--color-gray-500);
+    padding: var(--space-2) !important;
+    color: var(--color-gray-500) !important;
     cursor: pointer;
-    border-radius: var(--radius);
+    border-radius: var(--radius) !important;
     transition: all var(--transition-fast);
 }
 
 .modal-close:hover {
-    background: var(--bg-secondary);
-    color: var(--color-gray-700);
+    background: var(--bg-secondary) !important;
+    color: var(--color-gray-700) !important;
 }
 
 .modal-body {
-    padding: var(--space-6);
+    padding: var(--space-6) !important;
     overflow-y: auto;
     max-height: calc(90vh - 140px);
 }
@@ -1017,9 +1017,9 @@ input[type="radio"] {
     display: flex;
     justify-content: flex-end;
     gap: var(--space-3);
-    padding: var(--space-4) var(--space-6);
+    padding: var(--space-4) var(--space-6) !important;
     border-top: 1px solid var(--color-gray-200);
-    background: var(--bg-secondary);
+    background: var(--bg-secondary) !important;
 }
 
 /* ====================================================================
@@ -1028,11 +1028,11 @@ input[type="radio"] {
 
 .tooltip {
     position: absolute;
-    padding: var(--space-2) var(--space-3);
-    font-size: var(--text-sm);
-    color: var(--color-white);
-    background: var(--color-gray-800);
-    border-radius: var(--radius);
+    padding: var(--space-2) var(--space-3) !important;
+    font-size: var(--text-sm) !important;
+    color: var(--color-white) !important;
+    background: var(--color-gray-800) !important;
+    border-radius: var(--radius) !important;
     white-space: nowrap;
     z-index: var(--z-tooltip);
     opacity: 0;

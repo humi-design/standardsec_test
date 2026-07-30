@@ -461,7 +461,7 @@
     vertical-align: middle;
     width: 100%;
     margin-right: var(--space-4);
-    background: var(--color-gray-200);
+    background: var(--color-gray-200) !important;
 }
 
 .uk-heading-line::after {
@@ -517,7 +517,7 @@
     top: 50%;
     width: 100%;
     height: 1px;
-    background: var(--color-gray-200);
+    background: var(--color-gray-200) !important;
 }
 
 .uk-divider-icon::before {
@@ -542,8 +542,8 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
-    background: var(--color-primary);
+    border-radius: 50% !important;
+    background: var(--color-primary) !important;
     margin-right: var(--space-2);
     vertical-align: middle;
 }
@@ -553,8 +553,8 @@
     display: inline-block;
     width: 6px;
     height: 6px;
-    border-radius: 50%;
-    background: var(--color-primary);
+    border-radius: 50% !important;
+    background: var(--color-primary) !important;
     margin-right: var(--space-2);
     vertical-align: middle;
 }
@@ -562,11 +562,11 @@
 .uk-list-striped > li:nth-child(odd) {
     padding-left: var(--space-4);
     padding-right: var(--space-4);
-    background: var(--color-gray-50);
+    background: var(--color-gray-50) !important;
 }
 
 .uk-list-striped > li {
-    padding: var(--space-2) var(--space-4);
+    padding: var(--space-2) var(--space-4) !important;
 }
 
 /* ====================================================================
@@ -575,12 +575,12 @@
 
 .uk-description-list dt {
     font-weight: var(--font-semibold);
-    color: var(--color-gray-800);
+    color: var(--color-gray-800) !important;
 }
 
 .uk-description-list dd {
     margin-left: 0;
-    color: var(--color-gray-600);
+    color: var(--color-gray-600) !important;
     margin-bottom: var(--space-4);
 }
 
@@ -724,7 +724,7 @@
 .uk-dotnav {
     display: flex;
     gap: var(--space-2);
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
 }
 
@@ -736,18 +736,18 @@
     display: block;
     width: 10px;
     height: 10px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50% !important;
+    background: rgba(255, 255, 255, 0.5) !important;
     transition: background-color 0.2s ease;
 }
 
 .uk-dotnav > * > *:hover,
 .uk-dotnav > * > *:focus {
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.8) !important;
 }
 
 .uk-dotnav > .uk-active > * {
-    background: var(--color-white);
+    background: var(--color-white) !important;
 }
 
 /* ====================================================================
@@ -758,7 +758,7 @@
     display: flex;
     gap: var(--space-4);
     overflow: hidden;
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
 }
 
@@ -773,16 +773,16 @@
 .uk-thumbnav {
     display: flex;
     gap: var(--space-2);
-    padding: 0;
+    padding: 0 !important;
     list-style: none;
 }
 
 .uk-thumbnav > * > * {
     display: block;
-    padding: var(--space-2);
-    background: transparent;
-    border: 2px solid transparent;
-    border-radius: var(--radius);
+    padding: var(--space-2) !important;
+    background: transparent !important;
+    border: 2px solid transparent !important;
+    border-radius: var(--radius) !important;
     transition: border-color 0.2s ease;
 }
 
