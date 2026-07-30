@@ -1433,6 +1433,88 @@ tr:hover {background-color: #B8E2F2;}
     <script src="js/config.js"></script>
     <script src="js/search.js"></script>
 
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+    (function() {
+        'use strict';
+        
+        var toggle = document.getElementById('mobileNavToggle');
+        var panel = document.getElementById('mobileNavPanel');
+        var overlay = document.getElementById('mobileNavOverlay');
+        var closeBtn = document.getElementById('mobileNavClose');
+        
+        function openNav() {
+            if (toggle) toggle.setAttribute('aria-expanded', 'true');
+            if (panel) panel.classList.add('is-active');
+            if (overlay) overlay.classList.add('is-active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        function closeNav() {
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            if (panel) panel.classList.remove('is-active');
+            if (overlay) overlay.classList.remove('is-active');
+            document.body.style.overflow = '';
+        }
+        
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            });
+        }
+        
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            });
+        }
+        
+        if (overlay) {
+            overlay.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            });
+        }
+        
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeNav();
+            }
+        });
+        
+        var dropdownTriggers = document.querySelectorAll('.mobile-nav-dropdown-trigger');
+        dropdownTriggers.forEach(function(trigger) {
+            trigger.addEventListener('click', function(e) {
+                e.preventDefault();
+                var dropdown = this.nextElementSibling;
+                var isOpen = this.classList.contains('is-open');
+                
+                dropdownTriggers.forEach(function(t) {
+                    t.classList.remove('is-open');
+                    t.setAttribute('aria-expanded', 'false');
+                });
+                document.querySelectorAll('.mobile-nav-dropdown').forEach(function(d) {
+                    d.classList.remove('is-active');
+                });
+                
+                if (!isOpen) {
+                    this.classList.add('is-open');
+                    this.setAttribute('aria-expanded', 'true');
+                    if (dropdown) dropdown.classList.add('is-active');
+                }
+            });
+        });
+    })();
+    </script>
+
+
     <!-- Container where toolbar will be inserted -->
 
     <!-- Accessibility Floating Menu -->
