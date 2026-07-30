@@ -300,19 +300,25 @@ p {
    ======================================================================== */
 
 /* Mobile Navigation Container */
+.mobile-nav-toggle-wrapper {
+    flex-shrink: 0;
+}
+
 .mobile-nav-toggle {
     display: none;
     width: 44px;
     height: 44px;
+    min-width: 44px;
+    min-height: 44px;
     border-radius: var(--radius);
-    background: var(--color-gray-100);
-    border: none;
-    color: var(--color-gray-700);
-    font-size: var(--text-lg);
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    color: #333;
+    font-size: 20px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
-    transition: all var(--transition-fast);
+    transition: all 0.2s ease;
     flex-shrink: 0;
 }
 
@@ -567,15 +573,37 @@ p {
 
 /* Show hamburger on tablet and mobile only */
 @media (max-width: 1023px) {
-    .mobile-nav-toggle {
-        display: flex;
+    /* Force hamburger to show */
+    .premium-navbar .mobile-nav-toggle-wrapper,
+    .premium-navbar > .uk-container > .uk-flex > .mobile-nav-toggle-wrapper,
+    .mobile-nav-toggle-wrapper {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        position: relative !important;
+        z-index: 9999 !important;
     }
     
-    .premium-navbar .uk-navbar-container.uk-visible@m {
+    .premium-navbar .mobile-nav-toggle,
+    .mobile-nav-toggle {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+    }
+    
+    /* Hide desktop nav */
+    .premium-navbar .uk-navbar-container.uk-visible@m,
+    .premium-navbar .in-navbar-wrapper .uk-navbar-container {
         display: none !important;
+        visibility: hidden !important;
     }
     
     .premium-topbar .in-header-button {
+        display: none !important;
+    }
+    
+    /* Ensure navbar wrapper doesn't block hamburger */
+    .premium-navbar .in-navbar-wrapper {
         display: none !important;
     }
 }
