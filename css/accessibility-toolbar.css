@@ -16,6 +16,8 @@
     justify-content: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     padding: 0;
+    z-index: 9999;
+    pointer-events: auto;
   }
   
   .fab:hover, .fab:focus {
@@ -24,11 +26,20 @@
     outline-offset: 2px;
   }
   
+  /* Accessibility menu container */
+  .accessibility-menu {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 9999;
+    pointer-events: none;
+  }
+  
   /* Panel */
   .accessibility-panel {
     position: fixed;
-    bottom: 120px;
-    right: 50px;
+    bottom: 190px;
+    right: 80px;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -36,7 +47,8 @@
     padding: 12px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    z-index: 1000;
+    z-index: 10000;
+    pointer-events: auto;
   }
   
   /* Panel buttons */
@@ -51,6 +63,7 @@
     cursor: pointer;
     text-align: center;
     text-decoration: none;
+    min-width: 120px;
   }
   
   .accessibility-panel button:hover,
@@ -94,6 +107,17 @@
   }
   
   body.dark-mode footer {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+  }
+  
+  body.dark-mode footer h3,
+  body.dark-mode footer h4,
+  body.dark-mode footer h5,
+  body.dark-mode footer p,
+  body.dark-mode footer li,
+  body.dark-mode footer span,
+  body.dark-mode footer a {
     color: #ffffff !important;
   }
   
@@ -103,4 +127,3 @@
     color: #ffffff !important;
     border-color: #666 !important;
   }
-  

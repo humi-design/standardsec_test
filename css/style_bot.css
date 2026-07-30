@@ -11,7 +11,7 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 9980;
 
     /* Brand colors for chatbox */
     --chatbox-primary: #146CE0;
@@ -22,6 +22,15 @@
     --chatbox-gradient-secondary: linear-gradient(135deg, #146CE0 0%, #4184DD 100%);
     --chatbox-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
     --chatbox-shadow-light: 0 -5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Chatbox button - below accessibility FAB */
+.chatbox__button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9980;
+    text-align: right;
 }
 
 /* CONTENT IS CLOSE */
@@ -47,10 +56,6 @@
 }
 
 /* BUTTON */
-.chatbox__button {
-    text-align: right;
-}
-
 .chatbox__button button,
 .chatbox__button button:focus,
 .chatbox__button button:visited {
