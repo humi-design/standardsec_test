@@ -1219,6 +1219,7 @@ footer::before {
     right: 0;
     height: 4px;
     background: linear-gradient(90deg, var(--ss-secondary), var(--ss-primary), var(--ss-accent));
+    pointer-events: none;
 }
 
 /* Footer Top Section */
@@ -2036,6 +2037,7 @@ footer::before {
     height: 4px !important;
     background: linear-gradient(90deg, var(--ss-secondary), var(--ss-primary), var(--ss-accent)) !important;
     display: block !important;
+    pointer-events: none !important;
 }
 
 footer h4 {
