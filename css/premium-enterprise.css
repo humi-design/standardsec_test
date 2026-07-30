@@ -302,19 +302,24 @@ p {
 /* Mobile Navigation Container */
 .mobile-nav-toggle-wrapper {
     flex-shrink: 0;
+    width: auto;
+    min-width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .mobile-nav-toggle {
-    display: none;
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
-    border-radius: var(--radius);
+    display: flex;
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    min-height: 50px;
+    border-radius: 8px;
     background: #f8f9fa;
     border: 2px solid #dee2e6;
     color: #333;
-    font-size: 20px;
+    font-size: 24px;
     cursor: pointer;
     align-items: center;
     justify-content: center;
@@ -589,35 +594,25 @@ p {
 
 /* Show hamburger on tablet and mobile only */
 @media (max-width: 1023px) {
-    /* Force hamburger to show - it's now outside header */
-    #mobileNavWrapper {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
+    /* Show hamburger - always visible on mobile */
     .mobile-nav-toggle-wrapper,
-    #mobileNavWrapper .mobile-nav-toggle-wrapper {
-        display: flex !important;
-        visibility: visible !important;
-        opacity: 1 !important;
-    }
-    
+    #mobileNavWrapper,
+    #mobileNavWrapper .mobile-nav-toggle-wrapper,
     .mobile-nav-toggle {
         display: flex !important;
         visibility: visible !important;
         opacity: 1 !important;
+        width: 50px !important;
+        min-width: 50px !important;
     }
     
-    /* Hide desktop nav */
+    /* Hide desktop nav completely */
     .premium-navbar .uk-navbar-container.uk-visible@m,
-    .premium-navbar .in-navbar-wrapper .uk-navbar-container,
-    .premium-navbar .uk-navbar-nav {
-        display: none !important;
-    }
-    
+    .premium-navbar .in-navbar-wrapper,
+    .premium-navbar .uk-navbar-nav,
     .premium-topbar .in-header-button {
         display: none !important;
+        visibility: hidden !important;
     }
 }
 
@@ -2353,6 +2348,434 @@ button:focus {
 /* Visibility */
 .uk-visible { display: block !important; }
 .uk-hidden { display: none !important; }
+
+/* ========================================================================
+   MOBILE RESPONSIVE STYLES - HOMEPAGE
+   ======================================================================== */
+
+/* Mobile Navigation Panel - Always Visible When Active */
+.mobile-nav-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 85%;
+    max-width: 320px;
+    background: #fff;
+    z-index: 10000;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    overflow-x: hidden;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.1);
+}
+
+.mobile-nav-panel.is-active {
+    transform: translateX(0);
+}
+
+.mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.mobile-nav-overlay.is-active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.mobile-nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background: #0A2540;
+    color: #fff;
+}
+
+.mobile-nav-logo img {
+    height: 40px;
+}
+
+.mobile-nav-close {
+    width: 44px;
+    height: 44px;
+    border-radius: 8px;
+    background: rgba(255,255,255,0.1);
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-close:hover {
+    background: rgba(255,255,255,0.2);
+}
+
+.mobile-nav-actions {
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-nav-actions a {
+    display: block;
+    width: 100%;
+    padding: 14px 20px;
+    margin-bottom: 10px;
+    background: #0A2540;
+    color: #fff;
+    text-align: center;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.mobile-nav-actions a:last-child {
+    margin-bottom: 0;
+}
+
+.mobile-nav-actions a:hover,
+.mobile-nav-actions a:focus {
+    background: #1a3a5c;
+}
+
+.mobile-nav-links {
+    padding: 10px 0;
+}
+
+.mobile-nav-links ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-nav-links > ul > li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.mobile-nav-links a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 20px;
+    color: #333;
+    text-decoration: none;
+}
+
+.mobile-nav-links a:hover,
+.mobile-nav-links a:focus {
+    background: #f8f9fa;
+    color: #0A2540;
+}
+
+.mobile-nav-dropdown-trigger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 14px 20px;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: left;
+}
+
+.mobile-nav-dropdown {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+}
+
+.mobile-nav-dropdown.is-active {
+    max-height: 500px;
+}
+
+.mobile-nav-dropdown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background: #f8f9fa;
+}
+
+.mobile-nav-dropdown a {
+    padding-left: 40px;
+    font-size: 14px;
+}
+
+.mobile-nav-arrow {
+    font-size: 12px;
+    transition: transform 0.3s ease;
+}
+
+.mobile-nav-dropdown-trigger.is-open .mobile-nav-arrow {
+    transform: rotate(180deg);
+}
+
+/* Premium Hero Section - Mobile */
+@media (max-width: 767px) {
+    .premium-hero {
+        padding: 10px 0;
+    }
+    
+    .in-slideshow {
+        border-radius: 12px;
+        margin: 10px;
+    }
+    
+    .in-slideshow ul.uk-slideshow-items li > div {
+        min-height: 300px !important;
+    }
+    
+    .monee-custom-slideshow {
+        min-height: 300px;
+    }
+    
+    .monee-slide1-text h3 {
+        font-size: 16px !important;
+    }
+    
+    .monee-slide1-text h1 {
+        font-size: 24px !important;
+    }
+    
+    .monee-slide2-text h1 {
+        font-size: 22px !important;
+    }
+    
+    .monee-slide2-text p {
+        font-size: 14px !important;
+    }
+    
+    .uk-slideshow-items li > div > img {
+        min-height: 300px;
+        object-fit: cover;
+    }
+    
+    .uk-dotnav {
+        bottom: 10px;
+        right: 10px;
+    }
+}
+
+/* Premium Account Section - Mobile */
+@media (max-width: 767px) {
+    .premium-account-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-account-section h2 {
+        font-size: 22px !important;
+    }
+    
+    .premium-account-section p {
+        font-size: 14px !important;
+    }
+}
+
+/* Premium Platform Section - Mobile */
+@media (max-width: 767px) {
+    .premium-platform-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-platform-section h2 {
+        font-size: 20px !important;
+    }
+    
+    .premium-platform-section .uk-card {
+        margin-bottom: 15px;
+    }
+}
+
+/* Premium Features Section - Mobile */
+@media (max-width: 767px) {
+    .premium-features-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-features-section h2 {
+        font-size: 20px !important;
+    }
+    
+    .premium-features-grid {
+        display: block;
+    }
+    
+    .premium-features-grid > div {
+        margin-bottom: 15px;
+    }
+}
+
+/* Premium Stats Section - Mobile */
+@media (max-width: 767px) {
+    .premium-stats-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-stats-section h2 {
+        font-size: 18px !important;
+    }
+    
+    .stats-grid {
+        display: block;
+    }
+    
+    .stats-grid > div {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+/* Premium Experience Section - Mobile */
+@media (max-width: 767px) {
+    .premium-experience-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-experience-section h2 {
+        font-size: 20px !important;
+    }
+    
+    .experience-cards {
+        display: block;
+    }
+    
+    .experience-cards > div {
+        margin-bottom: 15px;
+    }
+}
+
+/* Premium Services Section - Mobile */
+@media (max-width: 767px) {
+    .premium-services-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-services-section h2 {
+        font-size: 20px !important;
+    }
+    
+    .services-grid {
+        display: block;
+    }
+    
+    .services-grid > div {
+        margin-bottom: 15px;
+    }
+}
+
+/* Premium Risk Section - Mobile */
+@media (max-width: 767px) {
+    .premium-risk-section {
+        padding: 30px 15px;
+    }
+    
+    .premium-risk-section h2 {
+        font-size: 18px !important;
+    }
+    
+    .premium-risk-section p {
+        font-size: 13px !important;
+    }
+}
+
+/* Premium Footer - Mobile */
+@media (max-width: 767px) {
+    .premium-footer .footer-grid {
+        display: block;
+        text-align: center;
+    }
+    
+    .premium-footer .footer-grid > div {
+        margin-bottom: 30px;
+    }
+    
+    .premium-footer h3 {
+        font-size: 16px !important;
+    }
+    
+    .premium-footer ul {
+        padding-left: 0;
+    }
+    
+    .premium-footer li {
+        list-style: none;
+    }
+    
+    .premium-footer .footer-bottom {
+        text-align: center;
+    }
+}
+
+/* Utility classes for mobile */
+@media (max-width: 767px) {
+    .uk-container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    h1 { font-size: 28px !important; }
+    h2 { font-size: 22px !important; }
+    h3 { font-size: 18px !important; }
+    h4 { font-size: 16px !important; }
+    
+    p { font-size: 14px !important; line-height: 1.6 !important; }
+    
+    .uk-card-body {
+        padding: 15px;
+    }
+    
+    .uk-grid > * {
+        margin-bottom: 15px;
+    }
+    
+    /* Ensure images are responsive */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    
+    /* Touch-friendly buttons */
+    .uk-button {
+        min-height: 44px;
+        padding: 0 20px;
+    }
+    
+    /* Hide elements that don't work well on mobile */
+    .uk-visible@m {
+        display: none !important;
+    }
+    
+    /* Show mobile elements */
+    .uk-hidden\@m {
+        display: block !important;
+    }
+}
+
+/* Tablet specific */
+@media (min-width: 768px) and (max-width: 1023px) {
+    .uk-container {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    
+    h1 { font-size: 32px !important; }
+    h2 { font-size: 26px !important; }
+}
 
 /* Print styles */
 @media print {
