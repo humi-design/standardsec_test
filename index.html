@@ -1893,61 +1893,7 @@ tr:hover {background-color: #B8E2F2;}
     </script>
 
 
-    <!-- Mobile Navigation JavaScript -->
-    <script>
-    (function() {
-        'use strict';
-
-        var toggle = document.getElementById('mobileNavToggle');
-        var panel = document.getElementById('mobileNavPanel');
-        var overlay = document.getElementById('mobileNavOverlay');
-        var closeBtn = document.getElementById('mobileNavClose');
-
-        function openNav() {
-            if (toggle) toggle.setAttribute('aria-expanded', 'true');
-            if (panel) panel.classList.add('is-active');
-            if (overlay) overlay.classList.add('is-active');
-        }
-
-        function closeNav() {
-            if (toggle) toggle.setAttribute('aria-expanded', 'false');
-            if (panel) panel.classList.remove('is-active');
-            if (overlay) overlay.classList.remove('is-active');
-        }
-
-        if (toggle) {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-                if (isExpanded) {
-                    closeNav();
-                } else {
-                    openNav();
-                }
-            });
-        }
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeNav();
-            });
-        }
-
-        if (overlay) {
-            overlay.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeNav();
-            });
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeNav();
-            }
-        });
-    })();
-    </script>
+    
 
 </body>
 

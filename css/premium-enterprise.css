@@ -1,14 +1,14 @@
-/* ========================================================================
+/* /* ========================================================================
    PREMIUM ENTERPRISE DESIGN SYSTEM
    WCAG 2.2 AA Compliant | Financial Services Theme
    Inspired by Goldman Sachs, Morgan Stanley, Stripe, Linear
    ======================================================================== */
 
-/* ========================================================================
+/* /* ========================================================================
    1. CSS CUSTOM PROPERTIES (DESIGN TOKENS)
    ======================================================================== */
 :root {
-    /* Brand Colors - Premium Navy & Gold */
+    /* /* Brand Colors - Premium Navy & Gold */
     --color-primary: #0A2540;
     --color-primary-dark: #061A30;
     --color-primary-light: #1B4B7A;
@@ -20,7 +20,7 @@
     --color-secondary-light: #2A6099;
     --color-accent: #C9A227;
     
-    /* Semantic Colors */
+    /* /* Semantic Colors */
     --color-success: #0D7A5F;
     --color-success-light: #E6F5F0;
     --color-warning: #B45309;
@@ -30,7 +30,7 @@
     --color-info: #0277BD;
     --color-info-light: #E1F5FE;
     
-    /* Neutral Colors - Sophisticated Grays */
+    /* /* Neutral Colors - Sophisticated Grays */
     --color-white: #FFFFFF;
     --color-black: #000000;
     --color-gray-50: #F8FAFB;
@@ -44,7 +44,7 @@
     --color-gray-800: #1F2937;
     --color-gray-900: #111827;
     
-    /* Background & Surface */
+    /* /* Background & Surface */
     --bg-primary: #FFFFFF;
     --bg-secondary: #F8FAFB;
     --bg-tertiary: #F1F4F6;
@@ -52,7 +52,7 @@
     --surface-elevated: #FFFFFF;
     --surface-overlay: rgba(10, 37, 64, 0.6);
     
-    /* Spacing System (8px base) */
+    /* /* Spacing System (8px base) */
     --space-0: 0;
     --space-0-5: 0.125rem;
     --space-1: 0.25rem;
@@ -71,7 +71,7 @@
     --space-24: 6rem;
     --space-32: 8rem;
     
-    /* Border Radius */
+    /* /* Border Radius */
     --radius-xs: 2px;
     --radius-sm: 4px;
     --radius: 8px;
@@ -82,7 +82,7 @@
     --radius-3xl: 32px;
     --radius-full: 9999px;
     
-    /* Shadows - Premium Elevation */
+    /* /* Shadows - Premium Elevation */
     --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
     --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.06), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
@@ -92,19 +92,19 @@
     --shadow-2xl: 0 50px 100px -20px rgba(0, 0, 0, 0.2);
     --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
     
-    /* Transitions */
+    /* /* Transitions */
     --transition-fast: 100ms ease;
     --transition-base: 200ms ease;
     --transition-slow: 300ms ease;
     --transition-slower: 500ms ease;
     --transition-spring: 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
     
-    /* Typography */
+    /* /* Typography */
     --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     --font-heading: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
     --font-mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
     
-    /* Font Sizes */
+    /* /* Font Sizes */
     --text-xs: 0.75rem;
     --text-sm: 0.875rem;
     --text-base: 1rem;
@@ -116,7 +116,7 @@
     --text-5xl: 3rem;
     --text-6xl: 3.75rem;
     
-    /* Line Heights */
+    /* /* Line Heights */
     --leading-none: 1;
     --leading-tight: 1.25;
     --leading-snug: 1.375;
@@ -124,7 +124,7 @@
     --leading-relaxed: 1.625;
     --leading-loose: 2;
     
-    /* Letter Spacing */
+    /* /* Letter Spacing */
     --tracking-tighter: -0.05em;
     --tracking-tight: -0.025em;
     --tracking-normal: 0;
@@ -132,7 +132,7 @@
     --tracking-wider: 0.05em;
     --tracking-widest: 0.1em;
     
-    /* Font Weights */
+    /* /* Font Weights */
     --font-light: 300;
     --font-normal: 400;
     --font-medium: 500;
@@ -140,7 +140,7 @@
     --font-bold: 700;
     --font-extrabold: 800;
     
-    /* Z-Index Scale */
+    /* /* Z-Index Scale */
     --z-base: 0;
     --z-dropdown: 100;
     --z-sticky: 200;
@@ -150,16 +150,16 @@
     --z-tooltip: 600;
     --z-toast: 700;
     
-    /* Target Size (WCAG 2.5.5) */
+    /* /* Target Size (WCAG 2.5.5) */
     --target-size-min: 44px;
     --target-size-recommended: 48px;
 }
 
-/* ========================================================================
+/* /* ========================================================================
    2. BASE STYLES & RESET
    ======================================================================== */
 
-/* Font declarations */
+/* /* Font declarations */
 @font-face {
     font-family: 'Inter';
     font-style: normal;
@@ -200,7 +200,7 @@
     src: local("Inter Bold"), url('https://fonts.gstatic.com/s/inter/v13/UcCO3FwrK3iLTeHuS_fvQtMwCp50KnMw2boKoduKmMEVuFuYAZ9hiJ-Ek-_EeA.woff2') format('woff2');
 }
 
-/* Plus Jakarta Sans for headings */
+/* /* Plus Jakarta Sans for headings */
 @font-face {
     font-family: 'Plus Jakarta Sans';
     font-style: normal;
@@ -217,12 +217,12 @@
     src: local("Plus Jakarta Sans Bold"), url('https://fonts.gstatic.com/s/plusjakartasans/v8/LDIbaomQNQcsA88c7O9yZ4KMCoOg4IA6-91aHEjcWuA_mU79TR_V.woff2') format('woff2');
 }
 
-/* Box sizing reset */
+/* /* Box sizing reset */
 *, *::before, *::after {
     box-sizing: border-box;
 }
 
-/* Body base styles */
+/* /* Body base styles */
 body {
     font-family: var(--font-sans);
     font-size: var(--text-base);
@@ -234,7 +234,7 @@ body {
     text-rendering: optimizeLegibility;
 }
 
-/* ========================================================================
+/* /* ========================================================================
    3. TYPOGRAPHY SYSTEM
    ======================================================================== */
 
@@ -286,7 +286,7 @@ p {
     color: var(--color-gray-600);
 }
 
-/* Text colors */
+/* /* Text colors */
 .uk-text-primary { color: var(--color-primary) !important; }
 .uk-text-secondary { color: var(--color-secondary) !important; }
 .uk-text-muted { color: var(--color-gray-500) !important; }
@@ -295,13 +295,13 @@ p {
 .uk-text-danger { color: var(--color-danger) !important; }
 .uk-text-accent { color: var(--color-primary-accent) !important; }
 
-/* ========================================================================
+/* /* ========================================================================
    4. MOBILE NAVIGATION - RESPONSIVE HEADER
    ======================================================================== */
 
-/* Mobile Navigation Container */
+/* /* Mobile Navigation Container */
 
-/* Hamburger icon styling */
+/* /* Hamburger icon styling */
 .hamburger-icon {
     font-size: 24px;
     font-weight: bold;
@@ -311,40 +311,40 @@ p {
     justify-content: center;
 }
 
-/* Mobile nav close button */
+/* /* Mobile nav close button */
 
-/* Mobile Navigation Overlay */
+/* /* Mobile Navigation Overlay */
 
-/* Mobile Navigation Panel */
+/* /* Mobile Navigation Panel */
 
-/* Mobile Navigation Header */
+/* /* Mobile Navigation Header */
 
-/* Mobile Action Buttons */
+/* /* Mobile Action Buttons */
 
-/* Mobile Navigation Links */
+/* /* Mobile Navigation Links */
 
-/* Mobile Dropdown */
+/* /* Mobile Dropdown */
 
-/* Mobile Nav Accordion Arrow */
+/* /* Mobile Nav Accordion Arrow */
 
-/* Dropdown Trigger */
+/* /* Dropdown Trigger */
 
-/* Hide hamburger on desktop - it's inside .in-navbar-wrapper */
+/* /* Hide hamburger on desktop - it's inside .in-navbar-wrapper */
 
-/* Show hamburger on tablet and mobile only */
+/* /* Show hamburger on tablet and mobile only */
 @media (max-width: 1023px) {
-    /* Show hamburger on mobile */
+    /* /* Show hamburger on mobile */
     
 }
 
-/* Hide desktop elements on mobile/tablet */
+/* /* Hide desktop elements on mobile/tablet */
 @media (max-width: 1023px) {
     .premium-navbar .uk-navbar-nav {
         display: none !important;
     }
 }
 
-/* Screen reader only */
+/* /* Screen reader only */
 .sr-only {
     position: absolute;
     width: 1px;
@@ -357,16 +357,16 @@ p {
     border: 0;
 }
 
-/* Reduced motion */
+/* /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     
 }
 
-/* ========================================================================
+/* /* ========================================================================
    4. HEADER & NAVIGATION - PREMIUM REDESIGN
    ======================================================================== */
 
-/* Main header container */
+/* /* Main header container */
 header {
     background: var(--bg-primary);
     border-bottom: 1px solid var(--color-gray-200);
@@ -381,17 +381,17 @@ header.in-sticky {
     -webkit-backdrop-filter: blur(12px);
 }
 
-/* Top utility bar */
+/* /* Top utility bar */
 .in-header-subnav {
     padding: var(--space-3) 0;
 }
 
-/* Header action buttons container */
+/* /* Header action buttons container */
 .in-header-button {
     padding: var(--space-3) 0;
 }
 
-/* Premium button styling */
+/* /* Premium button styling */
 .in-header-links {
     gap: var(--space-3);
 }
@@ -420,14 +420,14 @@ header.in-sticky {
     outline-offset: 2px;
 }
 
-/* Header divider */
+/* /* Header divider */
 header hr {
     border: none;
     border-top: 1px solid var(--color-gray-200);
     margin: var(--space-0);
 }
 
-/* Logo styling */
+/* /* Logo styling */
 .in-header-logo {
     padding: var(--space-4) 0;
 }
@@ -447,12 +447,12 @@ header.in-sticky .uk-logo img {
     max-height: 44px;
 }
 
-/* Navigation wrapper */
+/* /* Navigation wrapper */
 .in-navbar-wrapper {
     padding: var(--space-2) 0;
 }
 
-/* Premium navigation styling */
+/* /* Premium navigation styling */
 .uk-navbar-nav {
     display: flex;
     align-items: center;
@@ -488,7 +488,7 @@ header.in-sticky .uk-logo img {
     font-weight: var(--font-semibold);
 }
 
-/* Dropdown menus */
+/* /* Dropdown menus */
 .uk-navbar-dropdown {
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-xl);
@@ -524,12 +524,12 @@ header.in-sticky .uk-logo img {
     background: var(--color-gray-100);
 }
 
-/* Quick links dropdown - two columns */
+/* /* Quick links dropdown - two columns */
 .uk-navbar-dropdown-width-2 {
     min-width: 480px;
 }
 
-/* Mobile navigation toggle */
+/* /* Mobile navigation toggle */
 .in-mobile-nav button {
     width: var(--target-size-min);
     height: var(--target-size-min);
@@ -547,7 +547,7 @@ header.in-sticky .uk-logo img {
     color: var(--color-white);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    5. HERO & SLIDESHOW - PREMIUM REDESIGN
    ======================================================================== */
 
@@ -582,7 +582,7 @@ header.in-sticky .uk-logo img {
     position: relative;
 }
 
-/* Hero slide content */
+/* /* Hero slide content */
 .monee-custom-slideshow {
     min-height: 500px;
     display: flex;
@@ -604,7 +604,7 @@ header.in-sticky .uk-logo img {
     color: var(--color-white);
 }
 
-/* Hero CTA Button */
+/* /* Hero CTA Button */
 .monee-slide1-text .uk-button,
 .monee-slide2-text .uk-button {
     background: var(--color-primary-accent);
@@ -627,7 +627,7 @@ header.in-sticky .uk-logo img {
     box-shadow: 0 8px 24px rgba(232, 175, 48, 0.4);
 }
 
-/* Slideshow navigation dots */
+/* /* Slideshow navigation dots */
 .uk-dotnav {
     display: flex;
     gap: var(--space-2);
@@ -650,11 +650,11 @@ header.in-sticky .uk-logo img {
     transform: scale(1.2);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    6. CARDS & COMPONENTS - PREMIUM REDESIGN
    ======================================================================== */
 
-/* Card base */
+/* /* Card base */
 .uk-card {
     background: var(--surface-card);
     border-radius: var(--radius-xl);
@@ -673,7 +673,7 @@ header.in-sticky .uk-logo img {
     padding: var(--space-6);
 }
 
-/* Card variants */
+/* /* Card variants */
 .uk-card-primary {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     color: var(--color-white);
@@ -684,7 +684,7 @@ header.in-sticky .uk-logo img {
     background: var(--color-gray-50);
 }
 
-/* Feature tiles */
+/* /* Feature tiles */
 .monee-custom-tile .uk-tile {
     padding: var(--space-6);
     border-radius: var(--radius-lg);
@@ -720,7 +720,7 @@ header.in-sticky .uk-logo img {
     margin: 0;
 }
 
-/* Service cards (Commodities, Currency, etc.) */
+/* /* Service cards (Commodities, Currency, etc.) */
 .uk-transition-toggle .uk-inline-clip {
     border-radius: var(--radius-xl);
     overflow: hidden;
@@ -751,7 +751,7 @@ header.in-sticky .uk-logo img {
     font-size: var(--text-sm);
 }
 
-/* Icon button overlay */
+/* /* Icon button overlay */
 .uk-icon-button {
     width: var(--target-size-min);
     height: var(--target-size-min);
@@ -772,7 +772,7 @@ header.in-sticky .uk-logo img {
     transform: scale(1.1);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    7. STATS & NUMBERS - PREMIUM
    ======================================================================== */
 
@@ -794,7 +794,7 @@ header.in-sticky .uk-logo img {
     margin: 0;
 }
 
-/* Price ticker */
+/* /* Price ticker */
 .monee-price-ticker {
     background: rgba(10, 37, 64, 0.9);
     backdrop-filter: blur(12px);
@@ -811,7 +811,7 @@ header.in-sticky .uk-logo img {
     font-weight: var(--font-semibold);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    8. FORMS - PREMIUM REDESIGN
    ======================================================================== */
 
@@ -848,7 +848,7 @@ header.in-sticky .uk-logo img {
     color: var(--color-gray-400);
 }
 
-/* Premium buttons */
+/* /* Premium buttons */
 .uk-button {
     display: inline-flex;
     align-items: center;
@@ -900,14 +900,14 @@ header.in-sticky .uk-logo img {
     color: var(--color-white);
 }
 
-/* Button large variant */
+/* /* Button large variant */
 .uk-button-large {
     padding: var(--space-4) var(--space-8);
     font-size: var(--text-lg);
     min-height: 56px;
 }
 
-/* ========================================================================
+/* /* ========================================================================
    9. FOOTER - PREMIUM REDESIGN
    ======================================================================== */
 
@@ -943,7 +943,7 @@ footer a:focus {
     color: var(--color-primary-accent);
 }
 
-/* Footer social icons */
+/* /* Footer social icons */
 .in-footer-socials {
     gap: var(--space-3);
 }
@@ -965,14 +965,14 @@ footer a:focus {
     transform: translateY(-2px);
 }
 
-/* Footer contact info */
+/* /* Footer contact info */
 .in-footer-address p {
     color: rgba(255, 255, 255, 0.7);
     font-size: var(--text-sm);
     line-height: var(--leading-relaxed);
 }
 
-/* Footer copyright */
+/* /* Footer copyright */
 .in-footer-copyright {
     background: rgba(0, 0, 0, 0.2);
     border-radius: var(--radius-lg);
@@ -985,7 +985,7 @@ footer a:focus {
     margin: 0;
 }
 
-/* Footer disclaimer */
+/* /* Footer disclaimer */
 .in-footer-disclaimer {
     background: rgba(0, 0, 0, 0.15);
     border-radius: var(--radius-lg);
@@ -1006,7 +1006,7 @@ footer a:focus {
     line-height: var(--leading-relaxed);
 }
 
-/* Back to top button */
+/* /* Back to top button */
 .in-totop {
     width: 44px;
     height: 44px;
@@ -1025,11 +1025,11 @@ footer a:focus {
     transform: translateY(-4px);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    10. ACCESSIBILITY - WCAG 2.2 AA COMPLIANT
    ======================================================================== */
 
-/* Auto-scrolling animations - respect reduced motion */
+/* /* Auto-scrolling animations - respect reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .scrolling-text ol {
         animation: none;
@@ -1055,7 +1055,7 @@ footer a:focus {
     }
 }
 
-/* Skip link */
+/* /* Skip link */
 .skip-link {
     position: absolute;
     top: -100%;
@@ -1076,7 +1076,7 @@ footer a:focus {
     outline-offset: 2px;
 }
 
-/* Focus visible styles */
+/* /* Focus visible styles */
 a:focus-visible,
 button:focus-visible,
 .uk-button:focus-visible,
@@ -1088,7 +1088,7 @@ textarea:focus-visible,
     outline-offset: 2px;
 }
 
-/* High visibility focus for critical elements */
+/* /* High visibility focus for critical elements */
 .uk-button:focus,
 .skip-link:focus,
 button:focus {
@@ -1096,7 +1096,7 @@ button:focus {
     outline-offset: 3px;
 }
 
-/* Screen reader only */
+/* /* Screen reader only */
 .sr-only,
 .uk-sr-only {
     position: absolute;
@@ -1110,7 +1110,7 @@ button:focus {
     border: 0;
 }
 
-/* Reduced motion */
+/* /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -1122,11 +1122,11 @@ button:focus {
     }
 }
 
-/* ========================================================================
+/* /* ========================================================================
    11. ANIMATIONS & MICRO-INTERACTIONS
    ======================================================================== */
 
-/* Fade in animation */
+/* /* Fade in animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -1142,7 +1142,7 @@ button:focus {
     animation: fadeIn 0.5s ease forwards;
 }
 
-/* Slide up animation */
+/* /* Slide up animation */
 @keyframes slideUp {
     from {
         opacity: 0;
@@ -1158,7 +1158,7 @@ button:focus {
     animation: slideUp 0.6s ease forwards;
 }
 
-/* Scale in animation */
+/* /* Scale in animation */
 @keyframes scaleIn {
     from {
         opacity: 0;
@@ -1174,7 +1174,7 @@ button:focus {
     animation: scaleIn 0.4s ease forwards;
 }
 
-/* Staggered animation for lists */
+/* /* Staggered animation for lists */
 .stagger-item {
     opacity: 0;
     animation: fadeIn 0.5s ease forwards;
@@ -1187,7 +1187,7 @@ button:focus {
 .stagger-item:nth-child(5) { animation-delay: 400ms; }
 .stagger-item:nth-child(6) { animation-delay: 500ms; }
 
-/* Scroll reveal */
+/* /* Scroll reveal */
 [data-uk-scrollspy] {
     opacity: 0;
     transform: translateY(30px);
@@ -1199,11 +1199,11 @@ button:focus {
     transform: translateY(0);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    12. RESPONSIVE DESIGN
    ======================================================================== */
 
-/* Tablet */
+/* /* Tablet */
 @media (max-width: 960px) {
     :root {
         --text-4xl: 2rem;
@@ -1234,7 +1234,7 @@ button:focus {
     }
 }
 
-/* Mobile */
+/* /* Mobile */
 @media (max-width: 640px) {
     :root {
         --text-4xl: 1.75rem;
@@ -1291,11 +1291,11 @@ button:focus {
     }
 }
 
-/* ========================================================================
+/* /* ========================================================================
    14. PREMIUM SECTION STYLES
    ======================================================================== */
 
-/* Premium Header */
+/* /* Premium Header */
 .premium-header {
     background: var(--bg-primary);
 }
@@ -1319,13 +1319,13 @@ button:focus {
     border-bottom: 1px solid var(--color-gray-100);
 }
 
-/* Premium Hero */
+/* /* Premium Hero */
 .premium-hero {
     padding: var(--space-6) 0;
     background: var(--bg-secondary);
 }
 
-/* Premium Account Section */
+/* /* Premium Account Section */
 .premium-account-section {
     background: var(--bg-secondary);
 }
@@ -1338,7 +1338,7 @@ button:focus {
     border: 1px solid var(--color-gray-100);
 }
 
-/* Premium Platform Card */
+/* /* Premium Platform Card */
 .premium-platform-card {
     background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-secondary) 100%);
     border-radius: var(--radius-xl);
@@ -1355,7 +1355,7 @@ button:focus {
     font-size: var(--text-3xl);
 }
 
-/* Premium Features Section */
+/* /* Premium Features Section */
 .premium-features-section {
     background: var(--bg-primary);
 }
@@ -1383,7 +1383,7 @@ button:focus {
     transform: translateY(-4px);
 }
 
-/* Premium Stats Section */
+/* /* Premium Stats Section */
 .premium-stats-section {
     background: var(--bg-secondary);
 }
@@ -1403,7 +1403,7 @@ button:focus {
     background: var(--color-gray-50);
 }
 
-/* Premium Experience Section */
+/* /* Premium Experience Section */
 .premium-experience-section {
     background: var(--bg-primary);
 }
@@ -1428,7 +1428,7 @@ button:focus {
     font-size: var(--text-xl);
 }
 
-/* Premium Services Section */
+/* /* Premium Services Section */
 .premium-services-section {
     background: var(--bg-secondary);
 }
@@ -1467,7 +1467,7 @@ button:focus {
     font-size: var(--text-sm);
 }
 
-/* Premium Risk Section */
+/* /* Premium Risk Section */
 .premium-risk-section {
     background: var(--bg-primary);
 }
@@ -1502,7 +1502,7 @@ button:focus {
     border-bottom: none;
 }
 
-/* Premium Chatbox */
+/* /* Premium Chatbox */
 .premium-chatbox {
     position: fixed;
     bottom: var(--space-6);
@@ -1510,7 +1510,7 @@ button:focus {
     z-index: var(--z-fixed);
 }
 
-/* ========================================================================
+/* /* ========================================================================
    15. BORDER RADIUS UTILITIES
    ======================================================================== */
 
@@ -1530,11 +1530,11 @@ button:focus {
     border-radius: var(--radius-2xl) !important;
 }
 
-/* ========================================================================
+/* /* ========================================================================
    13. PREMIUM FOOTER REDESIGN
    ======================================================================== */
 
-/* Footer Container */
+/* /* Footer Container */
 .premium-footer {
     background: var(--color-primary);
     color: var(--color-white);
@@ -1548,7 +1548,7 @@ button:focus {
     padding: 0 var(--space-10);
 }
 
-/* Footer Top Bar */
+/* /* Footer Top Bar */
 .premium-footer-top {
     display: flex;
     justify-content: space-between;
@@ -1628,7 +1628,7 @@ button:focus {
     transform: translateY(-2px);
 }
 
-/* Footer Grid - 4 Equal Columns */
+/* /* Footer Grid - 4 Equal Columns */
 .premium-footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1693,7 +1693,7 @@ button:focus {
     margin: 0;
 }
 
-/* Footer Bottom - Copyright */
+/* /* Footer Bottom - Copyright */
 .premium-footer-bottom {
     padding-top: var(--space-6);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -1729,7 +1729,7 @@ button:focus {
     opacity: 1;
 }
 
-/* Footer Disclaimer */
+/* /* Footer Disclaimer */
 .premium-footer-disclaimer {
     margin-top: var(--space-8);
     padding: var(--space-6);
@@ -1755,7 +1755,7 @@ button:focus {
     margin-bottom: var(--space-2);
 }
 
-/* Footer Back to Top */
+/* /* Footer Back to Top */
 .in-totop {
     position: absolute;
     right: var(--space-6);
@@ -1780,7 +1780,7 @@ button:focus {
     color: var(--color-primary);
 }
 
-/* Responsive Footer */
+/* /* Responsive Footer */
 @media (max-width: 960px) {
     .premium-footer-inner {
         padding: 0 var(--space-6);
@@ -1836,7 +1836,7 @@ button:focus {
     }
 }
 
-/* ========================================================================
+/* /* ========================================================================
    14. ACCESSIBILITY FLOATING WIDGET
    ======================================================================== */
 
@@ -1851,7 +1851,7 @@ button:focus {
     gap: var(--space-3);
 }
 
-/* Floating Toggle Button */
+/* /* Floating Toggle Button */
 .fab {
     width: 56px;
     height: 56px;
@@ -1882,7 +1882,7 @@ button:focus {
     outline-offset: 2px;
 }
 
-/* Accessibility Panel */
+/* /* Accessibility Panel */
 .accessibility-panel {
     position: absolute;
     bottom: 70px;
@@ -1902,12 +1902,12 @@ button:focus {
     pointer-events: none;
 }
 
-/* Hidden state using class */
+/* /* Hidden state using class */
 .accessibility-panel.is-hidden {
     display: none !important;
 }
 
-/* Visible state */
+/* /* Visible state */
 .accessibility-panel:not(.is-hidden) {
     opacity: 1;
     visibility: visible;
@@ -1949,7 +1949,7 @@ button:focus {
     outline-offset: -3px;
 }
 
-/* Accessibility Panel Header */
+/* /* Accessibility Panel Header */
 .accessibility-panel-header {
     display: flex;
     justify-content: space-between;
@@ -1965,7 +1965,7 @@ button:focus {
     font-size: var(--text-sm);
 }
 
-/* Keyboard Focus Within Panel */
+/* /* Keyboard Focus Within Panel */
 .accessibility-panel:focus-within {
     opacity: 1;
     visibility: visible;
@@ -1973,7 +1973,7 @@ button:focus {
     pointer-events: auto;
 }
 
-/* Reduced Motion */
+/* /* Reduced Motion */
 @media (prefers-reduced-motion: reduce) {
     .accessibility-panel {
         transition: none;
@@ -1985,11 +1985,11 @@ button:focus {
     }
 }
 
-/* ========================================================================
+/* /* ========================================================================
    13. UTILITIES
    ======================================================================== */
 
-/* Container */
+/* /* Container */
 .uk-container {
     max-width: 1280px;
     padding-left: var(--space-6);
@@ -2006,7 +2006,7 @@ button:focus {
     }
 }
 
-/* Section spacing */
+/* /* Section spacing */
 .uk-section {
     padding: var(--space-12) 0;
 }
@@ -2017,7 +2017,7 @@ button:focus {
     }
 }
 
-/* Grid */
+/* /* Grid */
 .uk-grid {
     margin-left: calc(var(--space-6) * -1);
 }
@@ -2036,7 +2036,7 @@ button:focus {
     }
 }
 
-/* Image styling */
+/* /* Image styling */
 .uk-img,
 .uk-border-rounded {
     border-radius: var(--radius-lg);
@@ -2046,12 +2046,12 @@ button:focus {
     border-radius: var(--radius-full);
 }
 
-/* Shadow utilities */
+/* /* Shadow utilities */
 .uk-box-shadow-small { box-shadow: var(--shadow-sm); }
 .uk-box-shadow-medium { box-shadow: var(--shadow-md); }
 .uk-box-shadow-large { box-shadow: var(--shadow-lg); }
 
-/* Text utilities */
+/* /* Text utilities */
 .uk-text-center { text-align: center; }
 .uk-text-left { text-align: left; }
 .uk-text-right { text-align: right; }
@@ -2059,15 +2059,15 @@ button:focus {
 .uk-text-bold { font-weight: var(--font-bold); }
 .uk-text-medium { font-weight: var(--font-medium); }
 
-/* Visibility */
+/* /* Visibility */
 .uk-visible { display: block !important; }
 .uk-hidden { display: none !important; }
 
-/* ========================================================================
+/* /* ========================================================================
    MOBILE RESPONSIVE STYLES - HOMEPAGE
    ======================================================================== */
 
-/* Premium Hero Section - Mobile */
+/* /* Premium Hero Section - Mobile */
 @media (max-width: 767px) {
     .premium-hero {
         padding: 10px 0;
@@ -2113,7 +2113,7 @@ button:focus {
     }
 }
 
-/* Premium Account Section - Mobile */
+/* /* Premium Account Section - Mobile */
 @media (max-width: 767px) {
     .premium-account-section {
         padding: 30px 15px;
@@ -2128,7 +2128,7 @@ button:focus {
     }
 }
 
-/* Premium Platform Section - Mobile */
+/* /* Premium Platform Section - Mobile */
 @media (max-width: 767px) {
     .premium-platform-section {
         padding: 30px 15px;
@@ -2143,7 +2143,7 @@ button:focus {
     }
 }
 
-/* Premium Features Section - Mobile */
+/* /* Premium Features Section - Mobile */
 @media (max-width: 767px) {
     .premium-features-section {
         padding: 30px 15px;
@@ -2162,7 +2162,7 @@ button:focus {
     }
 }
 
-/* Premium Stats Section - Mobile */
+/* /* Premium Stats Section - Mobile */
 @media (max-width: 767px) {
     .premium-stats-section {
         padding: 30px 15px;
@@ -2182,7 +2182,7 @@ button:focus {
     }
 }
 
-/* Premium Experience Section - Mobile */
+/* /* Premium Experience Section - Mobile */
 @media (max-width: 767px) {
     .premium-experience-section {
         padding: 30px 15px;
@@ -2201,7 +2201,7 @@ button:focus {
     }
 }
 
-/* Premium Services Section - Mobile */
+/* /* Premium Services Section - Mobile */
 @media (max-width: 767px) {
     .premium-services-section {
         padding: 30px 15px;
@@ -2220,7 +2220,7 @@ button:focus {
     }
 }
 
-/* Premium Risk Section - Mobile */
+/* /* Premium Risk Section - Mobile */
 @media (max-width: 767px) {
     .premium-risk-section {
         padding: 30px 15px;
@@ -2235,7 +2235,7 @@ button:focus {
     }
 }
 
-/* Premium Footer - Mobile */
+/* /* Premium Footer - Mobile */
 @media (max-width: 767px) {
     .premium-footer .footer-grid {
         display: block;
@@ -2263,7 +2263,7 @@ button:focus {
     }
 }
 
-/* Utility classes for mobile */
+/* /* Utility classes for mobile */
 @media (max-width: 767px) {
     .uk-container {
         padding-left: 15px;
@@ -2285,30 +2285,30 @@ button:focus {
         margin-bottom: 15px;
     }
     
-    /* Ensure images are responsive */
+    /* /* Ensure images are responsive */
     img {
         max-width: 100%;
         height: auto;
     }
     
-    /* Touch-friendly buttons */
+    /* /* Touch-friendly buttons */
     .uk-button {
         min-height: 44px;
         padding: 0 20px;
     }
     
-    /* Hide elements that don't work well on mobile */
+    /* /* Hide elements that don't work well on mobile */
     .uk-visible@m {
         display: none !important;
     }
     
-    /* Show mobile elements */
+    /* /* Show mobile elements */
     .uk-hidden\@m {
         display: block !important;
     }
 }
 
-/* Tablet specific */
+/* /* Tablet specific */
 @media (min-width: 768px) and (max-width: 1023px) {
     .uk-container {
         padding-left: 20px;
@@ -2319,7 +2319,7 @@ button:focus {
     h2 { font-size: 26px !important; }
 }
 
-/* Print styles */
+/* /* Print styles */
 @media print {
     header,
     .in-slideshow,
@@ -2352,16 +2352,16 @@ button:focus {
     }
 }
 
-/* Completely remove mobile nav from DOM on desktop */
+/* /* Completely remove mobile nav from DOM on desktop */
 @media (min-width: 1024px) {
 
 }
 
-/* ========================================================================
+/* /* ========================================================================
    MOBILE NAVIGATION - FIXED VERSION
    ======================================================================== */
 
-/* Mobile Navigation Toggle (Hamburger) */
+/* /* Mobile Navigation Toggle (Hamburger) */
 .mobile-nav-toggle {
     display: none;
     width: 44px;
@@ -2381,12 +2381,12 @@ button:focus {
     outline-offset: 2px;
 }
 
-/* Mobile Navigation Overlay - Hidden by default */
+/* /* Mobile Navigation Overlay - Hidden by default */
 .mobile-nav-overlay {
     display: none;
 }
 
-/* Mobile Navigation Overlay - Visible when active */
+/* /* Mobile Navigation Overlay - Visible when active */
 .mobile-nav-overlay.is-active {
     display: block;
     position: fixed;
@@ -2401,12 +2401,12 @@ button:focus {
     animation: fadeIn 0.3s ease;
 }
 
-/* Mobile Navigation Panel - Hidden by default */
+/* /* Mobile Navigation Panel - Hidden by default */
 .mobile-nav-panel {
     display: none;
 }
 
-/* Mobile Navigation Panel - Visible when active */
+/* /* Mobile Navigation Panel - Visible when active */
 .mobile-nav-panel.is-active {
     display: flex;
     position: fixed;
@@ -2424,7 +2424,7 @@ button:focus {
     animation: slideInRight 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Premium Header */
+/* /* Premium Header */
 .mobile-nav-header {
     display: flex;
     justify-content: space-between;
@@ -2476,7 +2476,7 @@ button:focus {
     line-height: 1;
 }
 
-/* Premium Navigation Links */
+/* /* Premium Navigation Links */
 .mobile-nav-links {
     flex: 1;
     padding: 16px 0;
@@ -2550,7 +2550,7 @@ button:focus {
     background: rgba(59, 130, 246, 0.12);
 }
 
-/* Navigation Icon */
+/* /* Navigation Icon */
 .mobile-nav-icon {
     width: 20px;
     height: 20px;
@@ -2566,7 +2566,7 @@ button:focus {
     color: var(--color-primary);
 }
 
-/* Premium Footer */
+/* /* Premium Footer */
 .mobile-nav-footer {
     padding: 20px 24px;
     background: var(--color-gray-50);
@@ -2579,7 +2579,7 @@ button:focus {
     text-align: center;
 }
 
-/* Hamburger Toggle Button */
+/* /* Hamburger Toggle Button */
 .mobile-nav-toggle {
     display: none;
     width: 44px;
@@ -2610,7 +2610,7 @@ button:focus {
     line-height: 1;
 }
 
-/* Animations */
+/* /* Animations */
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
@@ -2627,21 +2627,21 @@ button:focus {
     }
 }
 
-/* Show hamburger only on mobile/tablet */
+/* /* Show hamburger only on mobile/tablet */
 @media (max-width: 1023px) {
     .mobile-nav-toggle {
         display: flex !important;
     }
 }
 
-/* Hide desktop nav on mobile */
+/* /* Hide desktop nav on mobile */
 @media (max-width: 1023px) {
     .premium-navbar .uk-navbar-nav {
         display: none !important;
     }
 }
 
-/* Reduced motion */
+/* /* Reduced motion */
 @media (prefers-reduced-motion: reduce) {
     .mobile-nav-overlay.is-active,
     .mobile-nav-panel.is-active {
