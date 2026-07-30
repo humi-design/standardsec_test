@@ -8162,37 +8162,37 @@ footer .uk-list li a {
     color: #ffffff !important;
 }
 
-/* Footer text contrast - WHITE text on BLUE background for WCAG AA */
-/* Footer has blue background (var(--color-secondary) = #012c6d) */
+/* Footer text contrast - DARK text on WHITE background for WCAG AA */
+/* Footer has white background */
 footer, footer p, footer li, footer span {
-    color: rgba(255, 255, 255, 0.95) !important;
+    color: #333333 !important;
 }
 
-/* Footer headings - white for contrast */
+/* Footer headings - dark blue for contrast */
 footer h3,
 footer h4,
 footer h5,
 footer .footer h3,
 footer .footer h4,
 footer .footer h5 {
-    color: #ffffff !important;
+    color: #012c6d !important;
     font-weight: bold !important;
 }
 
-/* Footer links - white/light blue for contrast */
+/* Footer links - blue for contrast */
 footer a:not(.uk-icon-button):not(.fab) {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #0066cc !important;
 }
 
 footer a:not(.uk-icon-button):not(.fab):hover {
-    color: #ffffff !important;
+    color: #012c6d !important;
 }
 
 /* Footer subnav items */
 footer .uk-subnav li,
 footer .uk-subnav li a,
 footer .uk-subnav span {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #333333 !important;
 }
 
 /* Price ticker badges */
@@ -8266,32 +8266,32 @@ header .uk-button {
 }
 
 /* WCAG 1.4.3 - Text Contrast Fixes */
-/* Footer headings - WHITE for visibility on blue background */
+/* Footer headings - dark blue for visibility on white background */
 footer h3,
 footer h4,
 footer h5,
 .footer h3,
 .footer h4,
 .footer h5 {
-    color: #ffffff !important;
+    color: #012c6d !important;
     font-weight: bold !important;
     margin-bottom: 12px !important;
     line-height: 1.3 !important;
 }
 
-/* Footer link text - WHITE/LIGHT for visibility on blue background */
+/* Footer link text - dark for visibility on white background */
 footer p,
 footer li,
 footer span:not(.uk-icon-button):not(.fab):not(.fas) {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #333333 !important;
 }
 
 footer a:not(.uk-icon-button) {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #0066cc !important;
 }
 
 footer a:not(.uk-icon-button):hover {
-    color: #ffffff !important;
+    color: #012c6d !important;
 }
 
 /* Footer "Need help?" text */
@@ -8303,7 +8303,7 @@ footer .uk-subnav {
 footer .uk-subnav li,
 footer .uk-subnav li a,
 footer .uk-subnav span {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #333333 !important;
     font-size: inherit !important;
     line-height: 1.5 !important;
 }
