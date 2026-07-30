@@ -1544,6 +1544,41 @@ body * {
     pointer-events: auto !important;
 }
 
+/* ========================================================================
+   HAMBURGER FIX - Ensure clickable at top of page
+   ======================================================================== */
+
+/* Mobile nav toggle wrapper - must be above everything */
+.mobile-nav-toggle-wrapper {
+    position: relative;
+    z-index: 10001 !important;
+}
+
+/* Hamburger button - highest z-index when not scrolled */
+.mobile-nav-toggle {
+    position: relative;
+    z-index: 10001 !important;
+}
+
+/* Hamburger visible on all screen sizes when mobile nav is needed */
+@media (max-width: 1023px) {
+    .mobile-nav-toggle-wrapper,
+    .mobile-nav-toggle {
+        z-index: 10001 !important;
+        display: flex !important;
+        visibility: visible !important;
+    }
+    
+    /* Ensure header doesn't cover hamburger */
+    header {
+        z-index: 1000;
+    }
+    
+    header.in-sticky {
+        z-index: 10000 !important;
+    }
+}
+
 .uk-border-rounded-medium {
     border-radius: var(--radius) !important;
 }
