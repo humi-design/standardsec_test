@@ -1987,3 +1987,120 @@ footer img[src*="visa"]:hover {
         line-height: 1.4;
     }
 }
+
+/* ========================================================================
+   CRITICAL OVERRIDES - Ensure modern.css takes precedence
+   ======================================================================== */
+
+/* Header overrides */
+header .in-header-subnav {
+    background: linear-gradient(135deg, var(--ss-secondary) 0%, var(--ss-primary) 100%) !important;
+}
+
+header .in-header-subnav * {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+header .uk-section {
+    padding: var(--ss-space-4) 0 !important;
+    background: var(--ss-white) !important;
+}
+
+header .uk-navbar-container {
+    background: var(--ss-white) !important;
+    padding: var(--ss-space-3) 0 !important;
+}
+
+header .uk-navbar-nav > li > a {
+    color: var(--ss-gray-700) !important;
+    font-weight: 600 !important;
+}
+
+header .uk-navbar-nav > li > a:hover,
+header .uk-navbar-nav > li.uk-open > a {
+    color: var(--ss-primary) !important;
+}
+
+/* Footer overrides */
+footer {
+    background: linear-gradient(180deg, var(--ss-gray-50) 0%, var(--ss-white) 100%) !important;
+    border-top: 1px solid var(--ss-gray-200) !important;
+}
+
+footer::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    height: 4px !important;
+    background: linear-gradient(90deg, var(--ss-secondary), var(--ss-primary), var(--ss-accent)) !important;
+    display: block !important;
+}
+
+footer h4 {
+    font-size: var(--ss-text-base) !important;
+    font-weight: 700 !important;
+    color: var(--ss-gray-900) !important;
+    border-bottom: 3px solid var(--ss-primary) !important;
+}
+
+footer a {
+    color: var(--ss-gray-600) !important;
+    font-size: var(--ss-text-sm) !important;
+}
+
+footer a:hover {
+    color: var(--ss-primary) !important;
+}
+
+footer p {
+    font-size: var(--ss-text-sm) !important;
+    color: var(--ss-gray-600) !important;
+}
+
+footer ul {
+    list-style: none !important;
+}
+
+/* Hero overrides */
+.in-slideshow {
+    background: linear-gradient(135deg, var(--ss-secondary) 0%, #0a2d5c 40%, var(--ss-primary) 100%) !important;
+    border-radius: var(--ss-radius-2xl) !important;
+    box-shadow: var(--ss-shadow-2xl) !important;
+}
+
+.monee-custom-slideshow .uk-button-primary {
+    background: var(--ss-white) !important;
+    color: var(--ss-primary) !important;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.2) !important;
+}
+
+/* Card overrides */
+.uk-card {
+    background: var(--ss-white) !important;
+    border-radius: var(--ss-radius-xl) !important;
+    box-shadow: var(--ss-shadow-sm) !important;
+}
+
+.uk-card-title {
+    font-size: var(--ss-text-xl) !important;
+    font-weight: 700 !important;
+    color: var(--ss-gray-900) !important;
+}
+
+/* Container overrides */
+.uk-container {
+    max-width: var(--ss-container) !important;
+}
+
+/* Section overrides */
+.uk-section {
+    padding: var(--ss-space-16) 0 !important;
+}
+
+/* Override inline styles that might interfere */
+.in-header-subnav[style],
+header > div[style] {
+    background: linear-gradient(135deg, var(--ss-secondary) 0%, var(--ss-primary) 100%) !important;
+}
