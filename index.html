@@ -243,23 +243,28 @@ tr:hover {background-color: #B8E2F2;}
                           
                           
                         <!-- main navigation end -->
-                        <!-- Mobile Navigation Toggle -->
-<div class="mobile-nav-toggle-wrapper" style="display:flex;align-items:center;gap:12px;">
-    <button 
-        class="mobile-nav-toggle" 
-        id="mobileNavToggle"
-        type="button"
-        aria-expanded="false" 
-        aria-controls="mobileNavPanel"
-        aria-label="Open navigation menu">
-        <i class="fas fa-bars" aria-hidden="true"></i>
-    </button>
-</div>
+                    </div>
+                    <!-- Mobile Navigation Toggle - OUTSIDE navbar-wrapper -->
+                    <div class="mobile-nav-toggle-wrapper" id="mobileNavWrapper">
+                        <button
+                            class="mobile-nav-toggle"
+                            id="mobileNavToggle"
+                            type="button"
+                            aria-expanded="false"
+                            aria-controls="mobileNavPanel"
+                            aria-label="Open navigation menu">
+                            <span class="hamburger-icon" aria-hidden="true">☰</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- header content end -->
+    </header>
 
-<!-- Mobile Navigation Overlay -->
-<div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
 
-<!-- Mobile Navigation Panel -->
 <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation" aria-hidden="true">
     <div class="mobile-nav-header">
         <div class="mobile-nav-logo">
@@ -358,6 +363,8 @@ tr:hover {background-color: #B8E2F2;}
     </div>
 </nav>
 <!-- Mobile Navigation End -->
+
+</nav>
 
                 
                     </div>
