@@ -490,22 +490,23 @@ header .uk-navbar-nav > li > a:focus {
 }
 
 /* ========================================================================
-   FOOTER CUSTOMIZATIONS
+   FOOTER CUSTOMIZATIONS - WHITE BACKGROUND WITH DARK TEXT
    ======================================================================== */
 
 footer {
-    background-color: var(--ss-secondary);
-    color: var(--ss-white);
-    padding: 4rem 0 2rem;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 3rem 0 1rem;
+    border-top: 1px solid #e0e0e0;
 }
 
 footer h4 {
-    color: var(--ss-white);
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-bottom: 1.25rem;
+    color: #012c6d !important;
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
     position: relative;
-    padding-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
 }
 
 footer h4::after {
@@ -513,23 +514,23 @@ footer h4::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 40px;
+    width: 30px;
     height: 2px;
-    background-color: var(--ss-primary);
+    background-color: #146CE0;
 }
 
 footer a {
-    color: rgba(255, 255, 255, 0.8);
+    color: #0066cc;
     transition: all var(--ss-transition-fast);
     display: inline-block;
-    padding: 0.25rem 0;
+    padding: 0.2rem 0;
+    font-size: 0.875rem;
 }
 
 footer a:hover,
 footer a:focus {
-    color: var(--ss-white);
-    text-decoration: none;
-    padding-left: 4px;
+    color: #146CE0;
+    text-decoration: underline;
 }
 
 footer ul {
@@ -539,28 +540,33 @@ footer ul {
 }
 
 footer ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
+}
+
+footer ul li a {
+    padding: 0.2rem 0;
 }
 
 /* Footer social icons */
 footer .uk-icon-button {
-    background-color: rgba(255, 255, 255, 0.1);
-    color: var(--ss-white);
-    border-radius: var(--ss-radius;
+    background-color: #146CE0;
+    color: #ffffff !important;
+    border-radius: var(--ss-radius);
     transition: all var(--ss-transition);
+    width: 36px;
+    height: 36px;
 }
 
 footer .uk-icon-button:hover,
 footer .uk-icon-button:focus {
-    background-color: var(--ss-primary);
-    color: var(--ss-white);
+    background-color: #012c6d !important;
 }
 
 /* Footer bottom */
 .footer-bottom {
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding-top: 2rem;
-    margin-top: 3rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 /* Footer layout improvements */
@@ -573,54 +579,100 @@ footer .uk-child-width-1-4\@m > div:last-child {
 }
 
 footer .in-footer-address p {
-    color: rgba(255, 255, 255, 0.9) !important;
+    color: #333333 !important;
     line-height: 1.8;
-}
-
-footer .in-footer-copyright {
-    color: rgba(255, 255, 255, 0.9) !important;
-}
-
-footer .in-footer-copyright p {
-    color: rgba(255, 255, 255, 0.9) !important;
+    font-size: 0.875rem;
     margin: 0;
 }
 
+footer .in-footer-copyright {
+    color: #333333 !important;
+    font-size: 0.875rem;
+}
+
+footer .in-footer-copyright p {
+    color: #333333 !important;
+    margin: 0;
+    font-size: 0.875rem;
+}
+
 footer .in-footer-disclaimer {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #666666 !important;
+    font-size: 0.75rem;
+    line-height: 1.6;
 }
 
 footer .in-footer-info i {
-    color: var(--ss-primary-light);
+    color: #146CE0;
 }
 
-/* Footer icon buttons - white icons */
-footer .uk-icon-button {
-    color: var(--ss-white) !important;
+footer .in-footer-info {
+    margin: 0;
 }
 
-footer .uk-icon-button:hover,
-footer .uk-icon-button:focus {
-    background-color: var(--ss-primary) !important;
-    color: var(--ss-white) !important;
+footer .in-footer-info .uk-subnav {
+    margin: 0;
+    padding: 0;
+    font-size: 0.875rem;
 }
 
-/* Fix footer copyright card on dark background */
+footer .in-footer-info .uk-subnav li,
+footer .in-footer-info .uk-subnav li a,
+footer .in-footer-info .uk-subnav span {
+    color: #333333 !important;
+    font-size: 0.875rem;
+}
+
+footer .in-footer-info .uk-subnav li i {
+    color: #146CE0;
+}
+
+/* Footer Connect section */
+footer .in-footer-socials {
+    margin: 0;
+}
+
+footer .in-footer-socials span {
+    color: #333333 !important;
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+/* Footer card styling - light gray background */
 footer .uk-card-secondary {
-    background-color: rgba(0, 0, 0, 0.2) !important;
+    background-color: #f5f5f5 !important;
     border: none;
 }
 
 footer .uk-card-secondary .uk-card-body {
-    background-color: transparent !important;
+    background-color: #f5f5f5 !important;
 }
 
 /* Footer disclaimer text */
 footer .in-footer-disclaimer, 
 footer .in-footer-disclaimer p {
-    color: rgba(255, 255, 255, 0.7) !important;
+    color: #666666 !important;
     font-size: 0.75rem;
     line-height: 1.6;
+}
+
+/* Need Help section */
+footer .uk-subnav li {
+    margin-bottom: 0.25rem;
+}
+
+/* Social icons container */
+footer .in-footer-socials .uk-icon-button {
+    width: 36px;
+    height: 36px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer hr styling */
+footer hr {
+    border-color: #e0e0e0;
 }
 
 /* ========================================================================
