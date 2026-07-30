@@ -366,7 +366,34 @@ tr:hover {background-color: #B8E2F2;}
 <!-- Mobile Navigation End -->
 
 
-    <main id="maincontent">
+    
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation" aria-hidden="true">
+    <div class="mobile-nav-header">
+        <div class="mobile-nav-logo">
+            <img src="img/logo.png" alt="Standard Securities logo">
+        </div>
+        <button class="mobile-nav-close" id="mobileNavClose" type="button" aria-label="Close navigation menu">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <div class="mobile-nav-links">
+        <ul>
+            <li><a href="index.html" aria-label="Go to Home page">Home</a></li>
+            <li><a href="about.html" aria-label="Learn about Standard Securities">About Us</a></li>
+            <li><a href="products.html" aria-label="View our products">Products</a></li>
+            <li><a href="customers.html" aria-label="See what our customers say">Customers</a></li>
+            <li><a href="careers.html" aria-label="Join our team">Careers</a></li>
+            <li><a href="contact.html" aria-label="Get in touch with us">Contact</a></li>
+        </ul>
+    </div>
+    </nav>
+<main id="maincontent">
         <!-- Premium Hero Section -->
         <section class="premium-hero" aria-label="Hero section">
             <div class="uk-container">
@@ -1825,6 +1852,63 @@ tr:hover {background-color: #B8E2F2;}
             } else if (!e.shiftKey && document.activeElement === last) {
                 e.preventDefault();
                 first.focus();
+            }
+        });
+    })();
+    </script>
+
+
+    <!-- Mobile Navigation JavaScript -->
+    <script>
+    (function() {
+        'use strict';
+
+        var toggle = document.getElementById('mobileNavToggle');
+        var panel = document.getElementById('mobileNavPanel');
+        var overlay = document.getElementById('mobileNavOverlay');
+        var closeBtn = document.getElementById('mobileNavClose');
+
+        function openNav() {
+            if (toggle) toggle.setAttribute('aria-expanded', 'true');
+            if (panel) panel.classList.add('is-active');
+            if (overlay) overlay.classList.add('is-active');
+        }
+
+        function closeNav() {
+            if (toggle) toggle.setAttribute('aria-expanded', 'false');
+            if (panel) panel.classList.remove('is-active');
+            if (overlay) overlay.classList.remove('is-active');
+        }
+
+        if (toggle) {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+                if (isExpanded) {
+                    closeNav();
+                } else {
+                    openNav();
+                }
+            });
+        }
+
+        if (closeBtn) {
+            closeBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            });
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', function(e) {
+                e.preventDefault();
+                closeNav();
+            });
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeNav();
             }
         });
     })();
