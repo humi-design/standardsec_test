@@ -307,6 +307,8 @@ header {
     transition: background-color ease 300ms, box-shadow ease 300ms;
     background-color: var(--color-white);
     box-shadow: var(--shadow-sm);
+    position: relative;
+    z-index: 100;
 }
 
 header .in-header-subnav {
@@ -391,6 +393,11 @@ header .uk-navbar-nav {
     list-style: none;
     margin: 0;
     padding: 0;
+    pointer-events: auto;
+}
+
+header .uk-navbar-nav > li {
+    pointer-events: auto;
 }
 
 header .uk-navbar-nav > li {
@@ -449,6 +456,11 @@ header .uk-navbar-nav > li > a[aria-current="page"] {
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     box-shadow: var(--shadow-md);
+    z-index: 1000;
+}
+
+.in-sticky .uk-navbar-dropdown {
+    z-index: 1001;
 }
 
 .in-sticky .uk-section {
@@ -1251,6 +1263,7 @@ footer .in-footer-disclaimer {
     bottom: 0;
     background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
     z-index: 1;
+    pointer-events: none;
 }
 
 .in-slideshow .uk-light h1 {
@@ -1282,6 +1295,16 @@ footer .in-footer-disclaimer {
     align-items: center;
     position: relative;
     z-index: 2;
+}
+
+/* Hero slideshow buttons - ensure clickability */
+.monee-custom-slideshow .uk-button,
+.in-slideshow .uk-button,
+.monee-slide1-text .uk-button,
+.monee-slide2-text .uk-button {
+    position: relative;
+    z-index: 10;
+    pointer-events: auto !important;
 }
 
 .monee-custom-slideshow h1,
@@ -8139,15 +8162,43 @@ footer .uk-list li a {
     color: #ffffff !important;
 }
 
-/* Footer text contrast */
+/* Footer text contrast - WHITE text on BLUE background for WCAG AA */
+/* Footer has blue background (var(--color-secondary) = #012c6d) */
 footer, footer p, footer li, footer span {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Footer headings - white for contrast */
+footer h3,
+footer h4,
+footer h5,
+footer .footer h3,
+footer .footer h4,
+footer .footer h5 {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+/* Footer links - white/light blue for contrast */
+footer a:not(.uk-icon-button):not(.fab) {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+footer a:not(.uk-icon-button):not(.fab):hover {
+    color: #ffffff !important;
+}
+
+/* Footer subnav items */
+footer .uk-subnav li,
+footer .uk-subnav li a,
+footer .uk-subnav span {
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 /* Price ticker badges */
 .uk-label {
     color: #ffffff !important;
-    background-color: #333333 !important;
+    background-color: var(--color-primary) !important;
 }
 
 /* Required field indicators */
@@ -8215,32 +8266,32 @@ header .uk-button {
 }
 
 /* WCAG 1.4.3 - Text Contrast Fixes */
-/* Footer headings - Use BLACK for visibility, maintain layout */
+/* Footer headings - WHITE for visibility on blue background */
 footer h3,
 footer h4,
 footer h5,
 .footer h3,
 .footer h4,
 .footer h5 {
-    color: #000000 !important;
+    color: #ffffff !important;
     font-weight: bold !important;
     margin-bottom: 12px !important;
     line-height: 1.3 !important;
 }
 
-/* Footer link text - black for visibility */
+/* Footer link text - WHITE/LIGHT for visibility on blue background */
 footer p,
 footer li,
 footer span:not(.uk-icon-button):not(.fab):not(.fas) {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 footer a:not(.uk-icon-button) {
-    color: #0066cc !important;
+    color: rgba(255, 255, 255, 0.9) !important;
 }
 
 footer a:not(.uk-icon-button):hover {
-    color: #004080 !important;
+    color: #ffffff !important;
 }
 
 /* Footer "Need help?" text */
@@ -8252,7 +8303,7 @@ footer .uk-subnav {
 footer .uk-subnav li,
 footer .uk-subnav li a,
 footer .uk-subnav span {
-    color: #333333 !important;
+    color: rgba(255, 255, 255, 0.9) !important;
     font-size: inherit !important;
     line-height: 1.5 !important;
 }
@@ -8340,7 +8391,7 @@ nav a:focus,
 /* WCAG 1.4.13 - Content on Hover or Focus */
 /* Dropdown menus must be dismissible, hoverable, and persistent */
 
-/* Make dropdowns hoverable with delay */
+/* Make dropdowns visible on hover - ensure proper z-index and pointer-events */
 .uk-navbar-dropdown {
     display: none;
     position: absolute;
@@ -8351,12 +8402,14 @@ nav a:focus,
     padding: 15px;
     background: #fff;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    pointer-events: auto;
 }
 
-/* Show on hover with delay */
+/* Show on hover - let UIkit handle this via its own classes but ensure visibility */
 .uk-navbar-nav li:hover > .uk-navbar-dropdown,
-.uk-navbar-nav li:focus-within > .uk-navbar-dropdown {
-    display: block;
+.uk-navbar-nav li:focus-within > .uk-navbar-dropdown,
+.uk-navbar-nav li.uk-open > .uk-navbar-dropdown {
+    display: block !important;
 }
 
 /* Dropdown items */
@@ -8989,6 +9042,10 @@ p {
     max-width: 1400px;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @media (max-width: 640px) {
@@ -8996,6 +9053,12 @@ p {
         padding-left: 1rem;
         padding-right: 1rem;
     }
+}
+
+/* Ensure main sections use consistent container */
+main .uk-section > .uk-container,
+footer .uk-section > .uk-container {
+    max-width: 1400px;
 }
 
 /* ========================================================================

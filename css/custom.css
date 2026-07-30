@@ -186,9 +186,11 @@ header .uk-navbar-nav > li > a:focus {
 
 .in-slideshow {
     border-radius: var(--ss-radius-2xl);
-    overflow: hidden;
+    overflow: visible;
     box-shadow: var(--ss-shadow-xl);
     margin: 1.5rem;
+    position: relative;
+    z-index: 1;
 }
 
 .in-slideshow .uk-overlay {
@@ -281,6 +283,14 @@ header .uk-navbar-nav > li > a:focus {
 .uk-card-secondary {
     background-color: var(--ss-secondary);
     border-color: var(--ss-secondary);
+    color: var(--ss-white);
+}
+
+.uk-card-secondary .uk-card-title,
+.uk-card-secondary p,
+.uk-card-secondary li,
+.uk-card-secondary span {
+    color: var(--ss-white);
 }
 
 /* Service cards */
@@ -461,6 +471,7 @@ header .uk-navbar-nav > li > a:focus {
 
 .uk-section-secondary {
     background-color: var(--ss-gray-100);
+    color: var(--ss-gray-800);
 }
 
 /* Section titles */
@@ -550,6 +561,66 @@ footer .uk-icon-button:focus {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     padding-top: 2rem;
     margin-top: 3rem;
+}
+
+/* Footer layout improvements */
+footer .uk-child-width-1-4\@m > div {
+    margin-bottom: 1.5rem;
+}
+
+footer .uk-child-width-1-4\@m > div:last-child {
+    margin-bottom: 0;
+}
+
+footer .in-footer-address p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    line-height: 1.8;
+}
+
+footer .in-footer-copyright {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+footer .in-footer-copyright p {
+    color: rgba(255, 255, 255, 0.9) !important;
+    margin: 0;
+}
+
+footer .in-footer-disclaimer {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+footer .in-footer-info i {
+    color: var(--ss-primary-light);
+}
+
+/* Footer icon buttons - white icons */
+footer .uk-icon-button {
+    color: var(--ss-white) !important;
+}
+
+footer .uk-icon-button:hover,
+footer .uk-icon-button:focus {
+    background-color: var(--ss-primary) !important;
+    color: var(--ss-white) !important;
+}
+
+/* Fix footer copyright card on dark background */
+footer .uk-card-secondary {
+    background-color: rgba(0, 0, 0, 0.2) !important;
+    border: none;
+}
+
+footer .uk-card-secondary .uk-card-body {
+    background-color: transparent !important;
+}
+
+/* Footer disclaimer text */
+footer .in-footer-disclaimer, 
+footer .in-footer-disclaimer p {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.75rem;
+    line-height: 1.6;
 }
 
 /* ========================================================================
