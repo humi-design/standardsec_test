@@ -13,9 +13,8 @@
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <!-- CSS -->
     <link rel="stylesheet" href="css/uikit.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/accessibility.css">
-    
+    <link rel="stylesheet" href="css/premium-enterprise.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/style_bot.css">
 
     <script src="https://www.google.com/recaptcha/api.js"></script>
@@ -367,69 +366,7 @@ tr:hover {background-color: #B8E2F2;}
 <!-- Mobile Navigation End -->
 
 
-    
-    <!-- Mobile Navigation Overlay -->
-    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
-
-    <!-- Mobile Navigation Panel -->
-    <nav class="mobile-nav-panel" id="mobileNavPanel" aria-label="Mobile navigation" aria-hidden="true">
-    <div class="mobile-nav-header">
-        <div class="mobile-nav-logo">
-            <img src="img/logo.png" alt="Standard Securities logo">
-        </div>
-        <button class="mobile-nav-close" id="mobileNavClose" type="button" aria-label="Close navigation menu">
-            <span aria-hidden="true">&times;</span>
-        </button>
-    </div>
-
-    <!-- Navigation Links -->
-    <div class="mobile-nav-links">
-        <ul>
-            <li>
-                <a href="index.html" aria-label="Go to Home page">
-                    <span class="mobile-nav-icon" aria-hidden="true">🏠</span>
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="about.html" aria-label="Learn about Standard Securities">
-                    <span class="mobile-nav-icon" aria-hidden="true">ℹ️</span>
-                    <span>About Us</span>
-                </a>
-            </li>
-            <li>
-                <a href="products.html" aria-label="View our products">
-                    <span class="mobile-nav-icon" aria-hidden="true">📦</span>
-                    <span>Products</span>
-                </a>
-            </li>
-            <li>
-                <a href="customers.html" aria-label="See what our customers say">
-                    <span class="mobile-nav-icon" aria-hidden="true">👥</span>
-                    <span>Customers</span>
-                </a>
-            </li>
-            <li>
-                <a href="careers.html" aria-label="Join our team">
-                    <span class="mobile-nav-icon" aria-hidden="true">💼</span>
-                    <span>Careers</span>
-                </a>
-            </li>
-            <li>
-                <a href="contact.html" aria-label="Get in touch with us">
-                    <span class="mobile-nav-icon" aria-hidden="true">📞</span>
-                    <span>Contact</span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    
-    <!-- Mobile Navigation Footer -->
-    <div class="mobile-nav-footer">
-        <p class="mobile-nav-footer-text">© 2024 Standard Securities & Investment</p>
-    </div>
-    </nav>
-<main id="maincontent">
+    <main id="maincontent">
         <!-- Premium Hero Section -->
         <section class="premium-hero" aria-label="Hero section">
             <div class="uk-container">
@@ -1259,11 +1196,240 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     <script src="js/vendor/uikit.min.js"></script>
     <script src="js/vendor/jquery.min.js"></script>
     <script src="js/vendor/in-core.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/navigation.js"></script>
-    <script src="js/accessibility.js"></script>
-    <script src="js/forms.js"></script>
-    <script src="js/utilities.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/search.js"></script>
+
+    <!-- Container where toolbar will be inserted -->
+
+        <!-- Accessibility Floating Widget -->
+    <div class="accessibility-menu" aria-label="Accessibility Tools">
+        <button 
+            id="accessibilityToggle" 
+            class="fab" 
+            aria-expanded="false" 
+            aria-controls="accessibilityPanel"
+            aria-haspopup="true"
+            type="button">
+            <span aria-hidden="true">♿</span>
+            <span class="sr-only">Accessibility Options</span>
+        </button>
+
+        <div 
+            id="accessibilityPanel" 
+            class="accessibility-panel is-hidden"
+            role="dialog"
+            aria-label="Accessibility options"
+            aria-hidden="true">
+            <div class="accessibility-panel-header">
+                <span class="accessibility-panel-title">Accessibility</span>
+            </div>
+            <button type="button" onclick="changeFontSize(1)" aria-label="Increase text size">
+                <span aria-hidden="true">A+</span>
+                <span class="sr-only">Increase text size</span>
+            </button>
+            <button type="button" onclick="changeFontSize(-1)" aria-label="Decrease text size">
+                <span aria-hidden="true">A-</span>
+                <span class="sr-only">Decrease text size</span>
+            </button>
+            <button type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode" id="darkModeBtn">
+                <span aria-hidden="true">🌙</span>
+                <span>Dark Mode</span>
+            </button>
+            <button type="button" onclick="readContent()" aria-label="Read page content aloud">
+                <span aria-hidden="true">🔊</span>
+                <span>Read Aloud</span>
+            </button>
+            <a href="accessibility.html" aria-label="View Accessibility Statement">
+                <span aria-hidden="true">♿</span>
+                <span>Accessibility Statement</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Dark Mode CSS -->
+    <style>
+    body.dark-mode { background-color: #121212 !important; color: #ffffff !important; }
+    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
+    body.dark-mode p, body.dark-mode li, body.dark-mode a, body.dark-mode span, body.dark-mode strong { color: #ffffff !important; }
+    body.dark-mode header { background: #1a1a1a !important; }
+    body.dark-mode footer, body.dark-mode .premium-footer { background: #0a0a0a !important; }
+    body.dark-mode .uk-card, body.dark-mode .uk-tile { background: #1a1a1a !important; }
+    body.dark-mode input, body.dark-mode textarea, body.dark-mode select { background: #2a2a2a !important; color: #ffffff !important; border-color: #444 !important; }
+    body.dark-mode a { color: #6db3ff !important; }
+    body.dark-mode .accessibility-panel { background: #1a1a1a !important; border: 1px solid #333; }
+    body.dark-mode .accessibility-panel button, body.dark-mode .accessibility-panel a { background: #2a2a2a !important; color: #ffffff !important; }
+    body.dark-mode .accessibility-panel button:hover, body.dark-mode .accessibility-panel a:hover { background: var(--color-primary) !important; }
+    </style>
+
+    <!-- Accessibility Widget JavaScript -->
+    <script>
+    (function() {
+        var toggleBtn = document.getElementById("accessibilityToggle");
+        var panel = document.getElementById("accessibilityPanel");
+        var isOpen = false;
+        
+        function openPanel() {
+            isOpen = true;
+            panel.classList.remove("is-hidden");
+            panel.setAttribute("aria-hidden", "false");
+            toggleBtn.setAttribute("aria-expanded", "true");
+            var firstBtn = panel.querySelector("button, a");
+            if (firstBtn) firstBtn.focus();
+        }
+        
+        function closePanel() {
+            isOpen = false;
+            panel.classList.add("is-hidden");
+            panel.setAttribute("aria-hidden", "true");
+            toggleBtn.setAttribute("aria-expanded", "false");
+            toggleBtn.focus();
+        }
+        
+        function togglePanel() {
+            if (isOpen) { closePanel(); } 
+            else { openPanel(); }
+        }
+        
+        if (toggleBtn && panel) {
+            toggleBtn.addEventListener("click", function(e) {
+                e.preventDefault();
+                togglePanel();
+            });
+            
+            toggleBtn.addEventListener("keydown", function(e) {
+                if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    togglePanel();
+                }
+            });
+        }
+        
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape" && isOpen) { closePanel(); }
+        });
+        
+        document.addEventListener("click", function(e) {
+            if (isOpen && !panel.contains(e.target) && !toggleBtn.contains(e.target)) {
+                closePanel();
+            }
+        });
+    })();
+    
+    function changeFontSize(delta) {
+        var html = document.documentElement;
+        var current = parseFloat(window.getComputedStyle(html).fontSize) || 16;
+        var newSize = Math.max(12, Math.min(24, current + (delta * 2)));
+        html.style.fontSize = newSize + "px";
+    }
+    
+    function toggleDarkMode() {
+        document.body.classList.toggle("dark-mode");
+        var isDark = document.body.classList.contains("dark-mode");
+        localStorage.setItem("darkMode", isDark);
+    }
+    
+    function readContent() {
+        var content = document.querySelector("main") || document.body;
+        var text = content.innerText;
+        if (window.speechSynthesis) {
+            window.speechSynthesis.cancel();
+            var utterance = new SpeechSynthesisUtterance(text);
+            utterance.lang = "en-IN";
+            utterance.rate = 1;
+            utterance.pitch = 1;
+            window.speechSynthesis.speak(utterance);
+        }
+    }
+    
+    if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+    }
+    <\/script> html>
+<html lang="en" dir="ltr">
+
+<head>
+    <!-- Standard Meta -->
+    <meta charset="utf-8">
+    <meta name="description" content="Premium HTML Template by Indonez">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#4184dd" />
+    <!-- Site Properties -->
+    <title>Standard Securities & Investment Intermediates Ltd.</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/uikit.css">
+    <link rel="stylesheet" href="css/premium-enterprise.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style_bot.css">
+
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+    
+    
+    <style>
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #B8E2F2;}
+</style>
+</head>
+
+<body>
+
+    <style>
+    .lang-toggle {
+        display: inline-flex !important;
+        gap: 6px;
+        margin-left: 15px;
+        vertical-align: middle;
+    }
+    .lang-toggle button {
+        padding: 3px 8px;
+        border: 1px solid rgba(255,255,255,0.6);
+        background: rgba(0,0,0,0.2);
+        color: #fff;
+        border-radius: 3px;
+        cursor: pointer;
+        font-size: 11px;
+        font-family: inherit;
+        transition: all 0.2s ease;
+    }
+    .lang-toggle button:hover {
+        background: rgba(255,255,255,0.2);
+    }
+    .lang-toggle button.active,
+    .lang-toggle button[aria-pressed="true"] {
+        background: rgba(255,255,255,0.3);
+        border-color: #fff;
+        font-weight: bold;
+    }
+    .lang-toggle button:focus {
+        outline: 2px solid #fff;
+        outline-offset: 2px;
+    }
+    </style>
+    
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+
+    
+
+    <!-- Premium Enterprise Header -->
+
+    <!-- Javascript -->
+    <script src="js/vendor/uikit.min.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <script src="js/vendor/in-core.js"></script>
+    <script src="js/app.js"></script>
     <script src="js/config.js"></script>
     <script src="js/search.js"></script>
 
@@ -1661,123 +1827,10 @@ MSEI (SEBI REGN. NO)-INE260805437;SEBI REGISTRATION NO. CDSL :- IN-DP-386-2018 (
     })();
     </script>
 
-
-    <!-- Mobile Navigation JavaScript -->
-    <script>
-    (function() {
-        'use strict';
-
-        var toggle = document.getElementById('mobileNavToggle');
-        var panel = document.getElementById('mobileNavPanel');
-        var overlay = document.getElementById('mobileNavOverlay');
-        var closeBtn = document.getElementById('mobileNavClose');
-
-        function openNav() {
-            if (toggle) toggle.setAttribute('aria-expanded', 'true');
-            if (panel) panel.classList.add('is-active');
-            if (overlay) overlay.classList.add('is-active');
-        }
-
-        function closeNav() {
-            if (toggle) toggle.setAttribute('aria-expanded', 'false');
-            if (panel) panel.classList.remove('is-active');
-            if (overlay) overlay.classList.remove('is-active');
-        }
-
-        if (toggle) {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                var isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-                if (isExpanded) {
-                    closeNav();
-                } else {
-                    openNav();
-                }
-            });
-        }
-
-        if (closeBtn) {
-            closeBtn.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeNav();
-            });
-        }
-
-        if (overlay) {
-            overlay.addEventListener('click', function(e) {
-                e.preventDefault();
-                closeNav();
-            });
-        }
-
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeNav();
-            }
-        });
-    })();
-    </script>
-
-    <!-- Accessibility Floating Widget -->
-    <div class="accessibility-menu" aria-label="Accessibility Tools">
-        <button 
-            id="accessibilityToggle" 
-            class="fab" 
-            aria-expanded="false" 
-            aria-controls="accessibilityPanel"
-            aria-haspopup="true"
-            type="button">
-            <span aria-hidden="true">♿</span>
-            <span class="sr-only">Accessibility Options</span>
-        </button>
-
-        <div 
-            id="accessibilityPanel" 
-            class="accessibility-panel is-hidden"
-            role="dialog"
-            aria-label="Accessibility options"
-            aria-hidden="true">
-            <div class="accessibility-panel-header">
-                <span class="accessibility-panel-title">Accessibility</span>
-            </div>
-            <button type="button" onclick="changeFontSize(1)" aria-label="Increase text size">
-                <span aria-hidden="true">A+</span>
-                <span class="sr-only">Increase text size</span>
-            </button>
-            <button type="button" onclick="changeFontSize(-1)" aria-label="Decrease text size">
-                <span aria-hidden="true">A-</span>
-                <span class="sr-only">Decrease text size</span>
-            </button>
-            <button type="button" onclick="toggleDarkMode()" aria-label="Toggle dark mode" id="darkModeBtn">
-                <span aria-hidden="true">🌙</span>
-                <span>Dark Mode</span>
-            </button>
-            <button type="button" onclick="readContent()" aria-label="Read page content aloud">
-                <span aria-hidden="true">🔊</span>
-                <span>Read Aloud</span>
-            </button>
-            <a href="accessibility.html" aria-label="View Accessibility Statement">
-                <span aria-hidden="true">♿</span>
-                <span>Accessibility Statement</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Dark Mode CSS -->
-    <style>
-    body.dark-mode { background-color: #121212 !important; color: #ffffff !important; }
-    body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode h4, body.dark-mode h5, body.dark-mode h6,
-    body.dark-mode p, body.dark-mode li, body.dark-mode a, body.dark-mode span, body.dark-mode strong { color: #ffffff !important; }
-    body.dark-mode header { background: #1a1a1a !important; }
-    body.dark-mode footer, body.dark-mode .premium-footer { background: #0a0a0a !important; }
-    body.dark-mode .uk-card, body.dark-mode .uk-tile { background: #1a1a1a !important; }
-    body.dark-mode input, body.dark-mode textarea, body.dark-mode select { background: #2a2a2a !important; color: #ffffff !important; border-color: #444 !important; }
-    body.dark-mode a { color: #6db3ff !important; }
-    body.dark-mode .accessibility-panel { background: #1a1a1a !important; border: 1px solid #333; }
-    body.dark-mode .accessibility-panel button, body.dark-mode .accessibility-panel a { background: #2a2a2a !important; color: #ffffff !important; }
-    body.dark-mode .accessibility-panel button:hover, body.dark-mode .accessibility-panel a:hover { background: var(--color-primary) !important; }
-    </style>
-
 </body>
 
+
 </html>
+
+
+
