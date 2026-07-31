@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
@@ -412,6 +413,10 @@
         document.documentElement.lang = lang;
         
         // Update toggle buttons
+        document.getElementById('mobile-lang-en')?.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('mobile-lang-hi')?.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        document.getElementById('mobile-lang-en')?.classList.toggle('active', lang === 'en');
+        document.getElementById('mobile-lang-hi')?.classList.toggle('active', lang === 'hi');
         document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
         
@@ -538,6 +543,10 @@
         document.documentElement.lang = lang;
         
         // Update toggle buttons
+        document.getElementById('mobile-lang-en')?.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('mobile-lang-hi')?.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        document.getElementById('mobile-lang-en')?.classList.toggle('active', lang === 'en');
+        document.getElementById('mobile-lang-hi')?.classList.toggle('active', lang === 'hi');
         document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
         
@@ -602,6 +611,7 @@
     });
     </script>
 
+    <script src="js/mobile-navigation.js"></script>
 </body>
 
 </html>
