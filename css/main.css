@@ -2,15 +2,25 @@
    STANDARD SECURITIES - UNIFIED DESIGN SYSTEM
    Premium Enterprise Financial Platform
    WCAG 2.2 AA Compliant | Modern Responsive Design
+   
+   CSS Loading Order:
+   1. Base/Reset styles
+   2. Design tokens (variables)
+   3. Desktop styles (preserve existing layout)
+   4. Mobile styles (new mobile-first implementation)
+   5. Component-specific styles
+   6. Accessibility styles
+   7. Animations
    ======================================================================== */
 
-/* Import all CSS modules */
+/* CSS imports - Desktop first, then Mobile */
 @import url('variables.css');
 @import url('reset.css');
 @import url('typography.css');
 @import url('layout.css');
 @import url('components.css');
 @import url('utilities.css');
-@import url('responsive.css');
 @import url('accessibility.css');
 @import url('animations.css');
+@import url('desktop.css');
+@import url('mobile.css');

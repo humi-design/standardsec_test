@@ -14,6 +14,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/uikit.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
@@ -323,7 +324,144 @@
             </div>
         </div>
         <!-- header content end -->
-    </header>
+    
+    <!-- Mobile Navigation -->
+    <div class="mobile-nav-wrapper">
+        <button type="button" 
+                id="mobileNavToggle" 
+                class="mobile-nav-toggle"
+                aria-expanded="false"
+                aria-controls="mobileNavPanel"
+                aria-label="Open navigation menu">
+            <span class="hamburger-icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+    </div>
+
+    <!-- Mobile Navigation Overlay -->
+    <div class="mobile-nav-overlay" id="mobileNavOverlay" aria-hidden="true"></div>
+
+    <!-- Mobile Navigation Panel -->
+    <div class="mobile-nav-panel" id="mobileNavPanel" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Navigation menu">
+        <div class="mobile-nav-header">
+            <h3>Menu</h3>
+            <button type="button" id="mobileNavClose" class="mobile-nav-close" aria-label="Close navigation menu">
+                <span>×</span>
+            </button>
+        </div>
+        
+        <!-- Mobile Navigation Actions -->
+        <div class="mobile-nav-actions">
+            <a href="https://ekyc.standardsec.net:8002" aria-label="Open a new trading account">Open Account</a>
+            <a href="http://122.160.199.154:9002/fundTransfer.aspx" aria-label="Transfer funds securely">Fund Transfer</a>
+            <a href="https://etrade.standardsec.com:3000/#/app" aria-label="Access online trading portal">Online Trading</a>
+            <a href="https://backoffice.standardsec.net:8085/capexweb/capexweb/" aria-label="Access back office system">Back Office</a>
+        </div>
+        
+        <!-- Mobile Navigation Content -->
+        <nav class="mobile-nav-content" aria-label="Mobile navigation">
+            <ul class="mobile-nav-list" role="menu">
+                <li class="mobile-nav-item" role="none">
+                    <a href="index.html" class="mobile-nav-link" role="menuitem">Home</a>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="products.html" class="mobile-nav-link" role="menuitem">Products</a>
+                </li>
+                <li class="mobile-nav-item has-dropdown" role="none">
+                    <button type="button" class="mobile-nav-link mobile-nav-dropdown-trigger" role="menuitem" aria-expanded="false" aria-haspopup="true">
+                        About Us
+                        <span class="mobile-nav-arrow" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="mobile-nav-dropdown" role="menu">
+                        <ul class="mobile-nav-dropdown-list">
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="about.html" class="mobile-nav-dropdown-link" role="menuitem">History</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="management.html" class="mobile-nav-dropdown-link" role="menuitem">Our Management</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="careers.html" class="mobile-nav-dropdown-link" role="menuitem">Careers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="contact.html" class="mobile-nav-link" role="menuitem">Contact</a>
+                </li>
+                <li class="mobile-nav-item has-dropdown" role="none">
+                    <button type="button" class="mobile-nav-link mobile-nav-dropdown-trigger" role="menuitem" aria-expanded="false" aria-haspopup="true">
+                        Login
+                        <span class="mobile-nav-arrow" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="mobile-nav-dropdown" role="menu">
+                        <ul class="mobile-nav-dropdown-list">
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="signin.html" class="mobile-nav-dropdown-link" role="menuitem">Customer Login</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="https://ekyc.standardsec.net:8002" class="mobile-nav-dropdown-link" role="menuitem">Open Account</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mobile-nav-item has-dropdown" role="none">
+                    <button type="button" class="mobile-nav-link mobile-nav-dropdown-trigger" role="menuitem" aria-expanded="false" aria-haspopup="true">
+                        Resources
+                        <span class="mobile-nav-arrow" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="mobile-nav-dropdown" role="menu">
+                        <ul class="mobile-nav-dropdown-list">
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="downloads.html" class="mobile-nav-dropdown-link" role="menuitem">Downloads</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="news.html" class="mobile-nav-dropdown-link" role="menuitem">News & Updates</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="customers.html" class="mobile-nav-dropdown-link" role="menuitem">Customers</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mobile-nav-item has-dropdown" role="none">
+                    <button type="button" class="mobile-nav-link mobile-nav-dropdown-trigger" role="menuitem" aria-expanded="false" aria-haspopup="true">
+                        Legal
+                        <span class="mobile-nav-arrow" aria-hidden="true">▼</span>
+                    </button>
+                    <div class="mobile-nav-dropdown" role="menu">
+                        <ul class="mobile-nav-dropdown-list">
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="Terms.html" class="mobile-nav-dropdown-link" role="menuitem">Terms</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="privacy.html" class="mobile-nav-dropdown-link" role="menuitem">Privacy Policies</a>
+                            </li>
+                            <li class="mobile-nav-dropdown-item" role="none">
+                                <a href="disclaimer.html" class="mobile-nav-dropdown-link" role="menuitem">Disclaimer</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="mobile-nav-item" role="none">
+                    <a href="complaint.html" class="mobile-nav-link" role="menuitem">Complaints</a>
+                </li>
+            </ul>
+        </nav>
+        
+        <!-- Mobile Navigation Footer -->
+        <div class="mobile-nav-footer">
+            <div class="mobile-nav-lang" role="group" aria-label="Language selection">
+                <button type="button" onclick="setLanguage('en')" id="mobile-lang-en" aria-pressed="true">English</button>
+                <button type="button" onclick="setLanguage('hi')" id="mobile-lang-hi" aria-pressed="false">हिंदी</button>
+            </div>
+        </div>
+    </div>
+
+</header>
 
     <main id="main-content">
         <!-- section content begin -->
@@ -409,6 +547,10 @@
         document.documentElement.lang = lang;
         
         // Update toggle buttons
+        document.getElementById('mobile-lang-en')?.setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
+        document.getElementById('mobile-lang-hi')?.setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
+        document.getElementById('mobile-lang-en')?.classList.toggle('active', lang === 'en');
+        document.getElementById('mobile-lang-hi')?.classList.toggle('active', lang === 'hi');
         document.getElementById('lang-en').setAttribute('aria-pressed', lang === 'en' ? 'true' : 'false');
         document.getElementById('lang-hi').setAttribute('aria-pressed', lang === 'hi' ? 'true' : 'false');
         
@@ -473,6 +615,7 @@
     });
     </script>
 
+    <script src="js/mobile-navigation.js"></script>
 </body>
 
 </html>
